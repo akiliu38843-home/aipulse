@@ -2,10 +2,11 @@
 用法: python3 build_news.py [zh|en]     默认 zh
 输出: site/news.html (zh) 或 site/news-en.html (en)"""
 import json, os, re, sys, sqlite3, collections
+from translate import translate
 
 LANG = (sys.argv[1] if len(sys.argv)>1 else "zh").lower()
 ZH = LANG == "zh"
-def t(zh, en): return zh if ZH else en
+def t(zh, en): return zh if ZH else (en if en else translate(zh, "AI news"))
 OUT = "site/news.html" if ZH else "site/news-en.html"
 
 def L(fp, d=None):

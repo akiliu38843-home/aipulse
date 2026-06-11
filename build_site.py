@@ -2,10 +2,11 @@
 用法: python3 build_site.py [zh|en]    默认 zh
 输出: site/index.html (zh) 或 site/index-en.html (en)"""
 import json, os, re, sys, sqlite3, statistics, collections
+from translate import translate
 
 LANG = (sys.argv[1] if len(sys.argv)>1 else "zh").lower()
 ZH = LANG == "zh"
-def t(zh, en): return zh if ZH else en
+def t(zh, en): return zh if ZH else (en if en else translate(zh, "AI job market"))
 OUT = "site/index.html" if ZH else "site/index-en.html"
 
 def L(fp,d=None):
