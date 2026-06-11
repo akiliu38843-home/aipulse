@@ -6,7 +6,11 @@ from translate import translate_to_zh
 
 LANG = (sys.argv[1] if len(sys.argv)>1 else "zh").lower()
 ZH = LANG == "zh"
-def t(zh, en): return (translate_to_zh(en, "AI news") if not zh else zh) if ZH else (en if en else en)
+def t(zh, en):
+    if ZH:
+        return translate_to_zh(en, "AI news") if (not zh or not zh.strip()) else zh
+    else:
+        return en if en else en
 OUT = "site/news.html" if ZH else "site/news-en.html"
 
 def L(fp, d=None):
@@ -62,7 +66,7 @@ for j in (jw.get("jobs") or []):
     except: pass
     loc=(t("远程","Remote") if str(j.get("is_remote")).lower() in("true","1") else str(j.get("location","")).strip())
     co=str(j.get("company","")).strip()
-    jobs.append({"hl":esc(t(tit, tit)),"mt":esc(f"{co} · {loc}"),"dg":esc(t(brief, brief)),
+    jobs.append({"hl":esc(t("", tit)),"mt":esc(f"{co} · {loc}"),"dg":esc(t("", brief)),
         "ft":(f'<span class="sal">{sal}</span> <span style="color:var(--mut)">{t("/ 年","/ yr")}</span>' if sal else ''),
         "more":[[t("公司","Company"),esc(co)],[t("地点","Location"),esc(loc)]]+
               ([[t("薪资","Salary"),sal+t(" / 年"," / yr")]] if sal else [])+
@@ -118,8 +122,8 @@ hire_cards=[
 talk=[{"src":i.get("source",""),"t":i.get("title",""),"date":i.get("date",""),
        "link":i.get("link",""),"sum":clean(i.get("summary",""),175)} for i in (blg.get("items") or [])]
 talk.sort(key=lambda x:x["date"],reverse=True)
-talk_cards=[{"author":initials(x["src"]),"hl":esc(t(x["t"], x["t"])),
-    "mt":esc(f'{x["src"]} · {x["date"]}'),"dg":esc(t(x["sum"], x["sum"]) if x["sum"] else t("（该 RSS 源未提供摘要）","(this RSS source provides no summary)")),
+talk_cards=[{"author":initials(x["src"]),"hl":esc(t("", x["t"])),
+    "mt":esc(f'{x["src"]} · {x["date"]}'),"dg":esc(t("", x["sum"]) if x["sum"] else t("（该 RSS 源未提供摘要）","(this RSS source provides no summary)")),
     "more":[[t("作者","Author"),esc(x["src"])],[t("日期","Date"),esc(x["date"])]]} for x in talk[:12]]
 # HN 热议——单独成栏（b4）。每条 story 一张卡；摘要从 hn_summaries.json 真实抓取（w4_hn_enrich.py 跑）。
 hn_hot=[h for h in (hn.get("hot_ai_stories") or [])][:8]
@@ -144,8 +148,8 @@ hn_hot_cards=[{
 # 研究前沿
 arx=[{"t":p.get("title",""),"date":p.get("date",""),"au":p.get("authors",""),
       "link":p.get("link",""),"sum":clean(p.get("summary",""),200)} for p in ((ex.get("arxiv") or {}).get("papers") or [])][:12]
-arx_cards=[{"subj":{"label":"arXiv","color":"#2A6FDB"},"hl":esc(t(a["t"], a["t"])),
-    "mt":esc(f'{a["date"]} · {a["au"]}'),"dg":esc(t(a["sum"], a["sum"])),
+arx_cards=[{"subj":{"label":"arXiv","color":"#2A6FDB"},"hl":esc(t("", a["t"])),
+    "mt":esc(f'{a["date"]} · {a["au"]}'),"dg":esc(t("", a["sum"])),
     "more":[[t("日期","Date"),esc(a["date"])],[t("作者","Authors"),esc(a["au"])]]} for a in arx]
 
 # 开源项目 & 模型

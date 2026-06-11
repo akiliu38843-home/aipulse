@@ -6,7 +6,11 @@ from translate import translate_to_zh
 
 LANG = (sys.argv[1] if len(sys.argv)>1 else "zh").lower()
 ZH = LANG == "zh"
-def t(zh, en): return (translate_to_zh(en, "AI job market") if not zh else zh) if ZH else (en if en else en)
+def t(zh, en):
+    if ZH:
+        return translate_to_zh(en, "AI job market") if (not zh or not zh.strip()) else zh
+    else:
+        return en if en else en
 OUT = "site/index.html" if ZH else "site/index-en.html"
 
 def L(fp,d=None):
