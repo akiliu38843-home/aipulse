@@ -1,0 +1,1412 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NorthStar — 北美 AI 简讯（设计样张）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,30..100&family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBFAF7;
+  --paper:#FFFFFF;
+  --ink:#161318;
+  --ink-2:#2A262C;
+  --body:#45464C;
+  --mut:#8B8C93;
+  --mut-2:#B5B4AE;
+  --line:#E8E7E2;
+  --line-2:#D9D7D0;
+  --soft:#F4F2EC;
+  --acc:#CC3B1B;
+  --acc-ink:#8A2812;
+  --gold:#9A6B1F;
+  --pos:#1F6F4A;
+
+  --sans:"Geist","Söhne","Helvetica Neue",-apple-system,system-ui,sans-serif;
+  --serif:"Fraunces","Iowan Old Style",Palatino,Georgia,serif;
+  --mono:"Geist Mono","JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{
+  margin:0;background:var(--bg);color:var(--body);
+  font:15px/1.62 var(--sans);
+  font-feature-settings:"ss01","cv11";
+}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--acc);color:#fff}
+
+/* ───── Top bar ───── */
+.topbar{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1.5px solid var(--ink)}
+.topbar-inner{
+  max-width:1320px;margin:0 auto;padding:18px 32px 16px;
+  display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
+}
+.brand{
+  font-family:var(--serif);font-weight:600;
+  font-size:38px;line-height:1;letter-spacing:-.025em;
+  color:var(--ink);margin:0;
+  font-variation-settings:"SOFT" 30,"opsz" 144;
+}
+.brand .star{color:var(--acc);font-size:.78em;vertical-align:.06em;margin:0 -.03em;display:inline-block;transform:translateY(-.04em)}
+.tabs{display:flex;gap:28px;align-items:flex-end;padding-bottom:4px}
+.tabs a{
+  font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--mut);padding-bottom:8px;position:relative;
+}
+.tabs a.on{color:var(--ink)}
+.tabs a.on::after{
+  content:"";position:absolute;left:0;right:0;bottom:-1px;height:2.5px;background:var(--acc);
+}
+/* 中/EN 语言切换 */
+.lang{display:flex;gap:0;align-items:flex-end;padding-bottom:4px;margin-right:24px;border-right:1px solid var(--line);padding-right:24px}
+.lang a{
+  font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.10em;
+  color:var(--mut-2);padding:0 8px 8px;position:relative;text-transform:uppercase;
+}
+.lang a.on{color:var(--ink)}
+.lang a.on::after{
+  content:"";position:absolute;left:6px;right:6px;bottom:-1px;height:2.5px;background:var(--ink);
+}
+.lang a:hover{color:var(--ink)}
+
+/* ───── Issue strip ───── */
+.issueline{border-bottom:1px solid var(--line);background:var(--bg)}
+.issueline-inner{
+  max-width:1320px;margin:0 auto;padding:9px 32px;
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:11px;letter-spacing:.10em;
+  text-transform:uppercase;color:var(--mut);
+}
+.issueline .iss-no{color:var(--ink);font-weight:600}
+.issueline .dot{color:var(--mut-2)}
+
+/* ───── Wrap ───── */
+.wrap{max-width:1320px;margin:0 auto;padding:0 32px 80px;position:relative}
+
+/* ───── Hero ───── */
+.hero{padding:44px 0 38px;border-bottom:1px solid var(--line)}
+.hero-grid{
+  display:grid;grid-template-columns:1fr 320px;gap:56px;align-items:start;
+}
+.hk{
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.20em;
+  text-transform:uppercase;color:var(--acc);
+  display:flex;align-items:center;gap:10px;
+}
+.hk::before{content:"";width:24px;height:1.5px;background:var(--acc);display:inline-block}
+.hk::after{content:"";flex:1;height:1px;background:var(--line);max-width:none}
+
+.tldr{
+  list-style:none;padding:0;margin:18px 0 22px;
+  counter-reset:t;
+  display:flex;flex-direction:column;gap:4px;
+}
+.tldr li{
+  counter-increment:t;
+  font-family:var(--serif);font-weight:400;
+  font-size:26px;line-height:1.36;color:var(--ink);
+  letter-spacing:-.012em;
+  font-variation-settings:"opsz" 36,"SOFT" 50;
+  padding:14px 0 14px 56px;
+  border-top:1px solid var(--line);
+  position:relative;
+  text-wrap:pretty;
+}
+.tldr li:last-child{border-bottom:1px solid var(--line)}
+.tldr li::before{
+  content:counter(t,decimal-leading-zero);
+  position:absolute;left:0;top:18px;
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.12em;
+  color:var(--acc);
+}
+.tldr em{
+  font-style:normal;color:var(--acc-ink);
+  background:linear-gradient(transparent 62%, rgba(204,59,27,.18) 62%, rgba(204,59,27,.18) 92%, transparent 92%);
+  padding:0 .04em;
+}
+
+.chips-block{margin-top:6px;display:flex;flex-direction:column;gap:10px}
+.chips-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cl{
+  font-family:var(--mono);font-size:10.5px;font-weight:500;
+  letter-spacing:.10em;text-transform:uppercase;color:var(--mut);
+  margin-right:6px;
+}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:12px;font-weight:500;color:var(--ink-2);
+  background:var(--paper);border:1px solid var(--line-2);
+  border-radius:999px;padding:4px 11px;
+  transition:.15s;
+}
+.chip:hover{border-color:var(--ink);background:var(--soft)}
+.chip.pred{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip.pred::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--acc)}
+
+/* hero side stat */
+.hero-stat{
+  background:var(--paper);border:1px solid var(--line);
+  padding:20px 22px 22px;
+  position:relative;
+}
+.hero-stat::before{
+  content:"";position:absolute;top:-1px;left:-1px;width:36px;height:3px;background:var(--acc);
+}
+.stat-label{
+  font-family:var(--mono);font-size:10.5px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--mut);
+  margin-bottom:14px;
+}
+.stat-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:18px 14px;
+}
+.stat-grid > div{display:flex;flex-direction:column;gap:2px}
+.stat-grid b{
+  font-family:var(--serif);font-weight:500;
+  font-size:34px;line-height:1;letter-spacing:-.02em;color:var(--ink);
+  font-variation-settings:"opsz" 72,"SOFT" 30;
+}
+.stat-grid span{
+  font-size:11px;color:var(--mut);letter-spacing:.04em;
+}
+
+/* ───── Band ───── */
+.band{
+  display:grid;grid-template-columns:280px 1fr;gap:40px;
+  padding:36px 0;border-bottom:1px solid var(--line);
+  position:relative;
+}
+.band:last-of-type{border-bottom:none}
+.bh{position:sticky;top:96px;align-self:start}
+.bh .num{
+  font-family:var(--serif);font-weight:400;
+  font-size:64px;line-height:.85;letter-spacing:-.04em;
+  color:var(--ink);
+  font-variation-settings:"opsz" 144,"SOFT" 20;
+  display:block;margin-bottom:10px;
+}
+.bh .num em{font-style:normal;color:var(--acc)}
+.bh .k{
+  font-size:16px;font-weight:600;color:var(--ink);letter-spacing:-.005em;
+  line-height:1.3;
+}
+.bh .cnt{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--mut);margin-top:6px;
+}
+.bh .pp{
+  font-size:13px;color:var(--body);line-height:1.55;margin-top:14px;
+  padding-left:12px;border-left:2px solid var(--acc);
+  text-wrap:pretty;
+}
+
+/* ───── Rail ───── */
+.rail-wrap{position:relative;min-width:0;display:flex;flex-direction:column}
+.rail-wrap::after{
+  content:"";position:absolute;top:0;bottom:14px;right:-1px;width:48px;
+  background:linear-gradient(90deg,transparent,var(--bg) 85%);
+  pointer-events:none;z-index:2;opacity:1;transition:.2s;
+}
+.rail-wrap.at-end::after{opacity:0}
+.rail{
+  flex:1;
+  display:flex;gap:14px;overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding:4px 2px 14px;
+  scrollbar-width:thin;scrollbar-color:var(--line-2) transparent;
+  align-items:stretch;
+}
+.rail::-webkit-scrollbar{height:6px}
+.rail::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:3px}
+.rail::-webkit-scrollbar-thumb:hover{background:var(--mut)}
+
+/* ───── Band lede — section digest（本栏要点，放进左侧栏） ───── */
+.bh .band-lede{
+  margin-top:18px;padding-top:14px;
+  border-top:1px solid var(--line);
+  font-family:var(--serif);font-size:13.5px;line-height:1.62;
+  color:var(--ink-2);text-wrap:pretty;
+  font-variation-settings:"opsz" 36,"SOFT" 50;
+}
+.bh .band-lede .lede-kick{
+  display:block;margin-bottom:8px;
+  font-family:var(--mono);font-size:9.5px;font-weight:600;
+  letter-spacing:.20em;text-transform:uppercase;color:var(--acc);
+  font-style:normal;
+}
+.bh .band-lede em{font-style:italic;color:var(--ink);font-weight:500;font-variation-settings:"opsz" 36,"SOFT" 50}
+.bh .band-lede b{font-weight:600;color:var(--ink);font-family:var(--serif)}
+
+/* ───── Cards ───── */
+.rc{
+  flex:0 0 296px;scroll-snap-align:start;
+  background:var(--paper);border:1px solid var(--line);
+  border-radius:10px;padding:18px 20px 16px;
+  display:flex;flex-direction:column;
+  min-height:280px;
+  transition:border-color .18s, box-shadow .18s, flex-basis .3s cubic-bezier(.2,.7,.2,1), transform .18s;
+  cursor:pointer;position:relative;
+}
+.rc:hover{border-color:var(--ink-2);box-shadow:0 1px 0 var(--line),0 14px 28px -22px rgba(22,19,24,.22)}
+.rc.soft{background:var(--soft);border-color:var(--line)}
+
+.rc .hl{
+  font-size:15.5px;line-height:1.38;font-weight:600;color:var(--ink);
+  letter-spacing:-.005em;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+  text-wrap:pretty;
+}
+.rc.expanded .hl{-webkit-line-clamp:unset;display:block}
+.rc:hover .hl{color:var(--ink)}
+
+.rc .mt{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--mut);
+  margin:10px 0 8px;
+  display:flex;align-items:center;gap:8px;
+}
+.rc .mt .pip{width:4px;height:4px;border-radius:50%;background:var(--acc);flex:0 0 auto}
+
+.rc .dg{
+  font-size:13.5px;line-height:1.58;color:var(--body);
+  display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;
+  text-wrap:pretty;
+}
+.rc.expanded .dg{-webkit-line-clamp:unset;display:block}
+
+.rc .ft{
+  margin-top:auto;padding-top:12px;
+  font-family:var(--mono);font-size:11px;color:var(--mut);
+  letter-spacing:.02em;
+  border-top:1px dashed var(--line);
+}
+.rc .sal{color:var(--ink);font-weight:600;font-family:var(--serif);font-size:15px;letter-spacing:-.01em}
+
+/* Expanded state */
+.rc.expanded{
+  flex:0 0 520px;
+  border-color:var(--ink);
+  box-shadow:0 1px 0 var(--line),0 26px 60px -28px rgba(22,19,24,.32);
+}
+.rc.expanded .more{display:block}
+.rc .more{
+  display:none;margin-top:14px;padding-top:14px;
+  border-top:1px solid var(--line);
+  font-size:13px;line-height:1.6;color:var(--body);
+}
+.rc .more dl{margin:0;display:flex;flex-direction:column;gap:0}
+.rc .more .row{
+  display:flex;align-items:baseline;gap:8px;
+  padding:6px 0;
+}
+.rc .more .row:last-child{}
+.rc .more .row dt{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.10em;
+  text-transform:uppercase;color:var(--mut);
+  flex:0 0 auto;white-space:nowrap;
+}
+.rc .more .row .leaders{
+  flex:1;align-self:flex-end;
+  border-bottom:1px dotted var(--mut-2);
+  height:.85em;min-width:14px;margin:0 4px;
+  opacity:.7;
+}
+.rc .more .row dd{
+  margin:0;color:var(--ink);font-size:13px;
+  flex:0 0 auto;text-align:right;white-space:nowrap;
+}
+.rc .closer{
+  position:absolute;top:10px;right:10px;width:24px;height:24px;border-radius:50%;
+  border:1px solid var(--line-2);background:var(--paper);color:var(--mut);
+  display:none;align-items:center;justify-content:center;font-size:14px;line-height:1;
+  cursor:pointer;
+}
+.rc.expanded .closer{display:flex}
+.rc.expanded:hover .closer{color:var(--ink);border-color:var(--ink)}
+
+/* Expand hint */
+.rc::after{
+  content:"↗";position:absolute;bottom:14px;right:16px;
+  font-family:var(--mono);font-size:13px;color:var(--mut-2);
+  opacity:0;transition:.18s;
+}
+.rc:hover::after{opacity:1;color:var(--mut)}
+.rc.expanded::after{display:none}
+
+/* Tags inside cards */
+.tg{
+  display:inline-block;background:var(--soft);border:1px solid var(--line);
+  color:var(--ink-2);border-radius:4px;padding:2px 8px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;
+  margin:3px 4px 0 0;
+}
+
+/* Stat-style card (band 02 salary) */
+.rc.stat-card{justify-content:flex-start}
+.rc.stat-card .stat-big{
+  font-family:var(--serif);font-weight:500;
+  font-size:46px;line-height:1;letter-spacing:-.025em;
+  color:var(--ink);margin:14px 0 4px;
+  font-variation-settings:"opsz" 144,"SOFT" 30;
+}
+.rc.stat-card .stat-sub{font-size:11.5px;color:var(--mut);font-family:var(--mono);letter-spacing:.04em}
+.rc.stat-card .axis{
+  margin-top:14px;display:flex;justify-content:space-between;
+  font-family:var(--mono);font-size:10px;color:var(--mut-2);letter-spacing:.04em;
+}
+.rc.stat-card .axis-bar{
+  height:6px;background:var(--line);border-radius:3px;margin-top:4px;position:relative;
+  overflow:hidden;
+}
+.rc.stat-card .axis-bar > i{
+  position:absolute;top:0;bottom:0;background:var(--acc);
+  border-radius:3px;
+}
+.rc.stat-card .axis-bar > b{
+  position:absolute;top:-3px;width:2px;height:12px;background:var(--ink);
+  font-style:normal;
+}
+
+/* HN frequency bars */
+.freqlist{display:flex;flex-direction:column;gap:7px;margin-top:6px}
+.freqrow{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--ink-2)}
+.freqrow .name{flex:0 0 60px;font-family:var(--mono);font-size:11px;color:var(--ink)}
+.freqrow .bar{
+  flex:1;height:6px;background:var(--soft);border-radius:3px;overflow:hidden;
+}
+.freqrow .bar > i{display:block;height:100%;background:var(--acc);border-radius:3px}
+.freqrow .num{flex:0 0 22px;text-align:right;font-family:var(--mono);font-size:11px;color:var(--mut)}
+
+/* Adoption (band 06) — scale + bar */
+.adopt{margin-top:auto;padding-top:8px}
+.adopt .big{
+  font-family:var(--serif);font-weight:500;font-size:40px;line-height:1;
+  color:var(--ink);letter-spacing:-.02em;
+  font-variation-settings:"opsz" 144;
+}
+.adopt .unit{font-family:var(--mono);font-size:11px;color:var(--mut);margin-left:4px}
+.adopt .scale{
+  margin-top:10px;height:8px;background:var(--soft);border-radius:4px;position:relative;
+  border:1px solid var(--line);
+}
+.adopt .scale > i{
+  position:absolute;top:0;bottom:0;left:0;background:var(--acc);border-radius:3px;
+}
+.adopt .scale > .ref{
+  position:absolute;top:-3px;width:1px;height:14px;background:var(--mut-2);
+}
+.adopt .ticks{
+  display:flex;justify-content:space-between;
+  margin-top:6px;font-family:var(--mono);font-size:10px;color:var(--mut-2);
+  letter-spacing:.02em;
+}
+
+/* Stars w/ momentum (band 05) */
+.starline{
+  margin-top:auto;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;
+  padding-top:10px;border-top:1px dashed var(--line);
+}
+.starline .s-big{font-family:var(--serif);font-size:22px;color:var(--ink);font-weight:500;letter-spacing:-.015em}
+.starline .s-delta{
+  font-family:var(--mono);font-size:11px;color:var(--pos);
+  background:rgba(31,111,74,.10);padding:1.5px 7px;border-radius:3px;
+}
+.starline .s-heat{font-size:12px;color:var(--acc)}
+
+/* Warn box (legacy) */
+.warn-line{color:#9a6b1f;font-size:12.5px;line-height:1.55;background:#FBF6EA;border-left:2px solid #9a6b1f;padding:8px 10px;border-radius:0 4px 4px 0;margin-top:4px}
+
+/* Editor's "TK" note — magazine-style placeholder */
+.editors-note{
+  display:flex;align-items:flex-start;gap:10px;
+  margin-top:4px;
+  font-family:var(--serif);font-style:italic;font-size:14.5px;line-height:1.55;
+  color:var(--ink-2);font-variation-settings:"opsz" 36,"SOFT" 50;
+  text-wrap:pretty;
+}
+.editors-note .tk{
+  flex:0 0 auto;
+  font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.14em;
+  background:var(--gold);color:#fff;
+  padding:2.5px 7px;border-radius:2px;
+  font-style:normal;text-transform:uppercase;
+  margin-top:3px;line-height:1;
+}
+.editors-note .body{flex:1;min-width:0}
+.editors-note .body em{font-style:italic;font-weight:500;color:var(--gold);font-variation-settings:"opsz" 36,"SOFT" 50}
+
+/* ───── Hero KPI deltas ───── */
+.kpi-row{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  margin:24px 0 22px;
+}
+.kpi-cell{
+  padding:13px 18px 13px 0;border-right:1px solid var(--line);
+}
+.kpi-cell:last-child{border-right:none;padding-right:0}
+.kpi-cell:not(:first-child){padding-left:18px}
+.kpi-lbl{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--mut);margin-bottom:6px;
+  display:flex;align-items:center;gap:5px;
+}
+.kpi-lbl::before{content:"Δ";font-style:italic;color:var(--acc);font-weight:600}
+.kpi-val{
+  display:flex;align-items:baseline;gap:6px;
+  font-family:var(--serif);font-size:24px;font-weight:500;letter-spacing:-.018em;
+  color:var(--ink);line-height:1;
+  font-variation-settings:"opsz" 72,"SOFT" 30;
+}
+.kpi-val .pct{color:var(--pos);font-size:16px}
+.kpi-val .arrow{font-size:13px;color:var(--pos);margin-left:-2px}
+.kpi-val.down{color:var(--ink)}
+.kpi-val.down .pct,.kpi-val.down .arrow{color:var(--acc)}
+.kpi-sub{
+  font-family:var(--mono);font-size:10px;color:var(--mut-2);letter-spacing:.04em;margin-top:4px;
+}
+
+/* ───── Card marks & accents ───── */
+.rc{overflow:hidden}
+.card-rule{
+  position:absolute;top:0;left:0;right:0;height:3px;z-index:1;
+  pointer-events:none;
+}
+.author-mark{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:28px;height:28px;border-radius:50%;
+  font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.02em;
+  background:var(--ink);color:#fff;
+  margin-bottom:10px;
+}
+.subj-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.05em;
+  padding:3px 9px;border-radius:3px;color:#fff;margin-bottom:10px;align-self:flex-start;
+}
+.subj-pill::before{content:"";width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.7)}
+.mono-mark{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:7px;
+  font-family:var(--serif);font-size:19px;font-weight:600;color:#fff;
+  margin-bottom:10px;letter-spacing:-.02em;align-self:flex-start;
+  font-variation-settings:"opsz" 144,"SOFT" 30;
+}
+/* company card stronger title */
+.rc.co .hl{
+  font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:-.02em;
+  font-variation-settings:"opsz" 72,"SOFT" 30;line-height:1.1;
+  -webkit-line-clamp:unset;display:block;
+}
+
+/* ───── Sparkline cards (band 06) ───── */
+.adopt-card{margin-top:auto;padding-top:8px;display:flex;flex-direction:column;gap:6px;max-width:360px}
+.adopt-num{display:flex;align-items:baseline;gap:6px;flex-wrap:nowrap;white-space:nowrap}
+.adopt-num .big{
+  font-family:var(--serif);font-size:36px;font-weight:500;line-height:1;letter-spacing:-.022em;
+  color:var(--ink);font-variation-settings:"opsz" 144,"SOFT" 30;
+}
+.adopt-num .unit{font-family:var(--mono);font-size:11px;color:var(--mut);white-space:nowrap}
+.spark{display:block;width:100%;height:52px;margin-top:2px}
+.adopt-foot{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:10.5px;color:var(--mut);letter-spacing:.04em;
+  padding-top:6px;border-top:1px dashed var(--line);
+}
+.adopt-foot > *{white-space:nowrap}
+.adopt-foot .lbl{color:var(--mut-2);text-transform:uppercase;letter-spacing:.08em;font-size:10px}
+.adopt-foot .delta{color:var(--pos);font-weight:600;background:rgba(31,111,74,.10);padding:1.5px 6px;border-radius:3px}
+.adopt-foot .delta.down{color:var(--acc);background:rgba(204,59,27,.10)}
+.adopt-foot .rel{color:var(--mut)}
+
+/* ───── Weighted skills (band 02) ───── */
+.weighted{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;
+  margin-top:10px;font-family:var(--serif);color:var(--ink);
+  font-variation-settings:"opsz" 72,"SOFT" 30;letter-spacing:-.015em;
+  line-height:1.05;
+}
+.weighted span{position:relative;font-weight:500}
+.weighted span sub{
+  font-family:var(--mono);font-size:9.5px;color:var(--mut);
+  font-weight:400;vertical-align:super;margin-left:2px;
+  letter-spacing:.02em;
+}
+.weighted span.dim{color:var(--mut)}
+
+/* ───── Lede / Drop cap ───── */
+.lede{
+  font-family:var(--serif);font-size:19px;line-height:1.6;
+  color:var(--ink-2);margin:18px 0 4px;max-width:62ch;
+  text-wrap:pretty;
+  font-variation-settings:"opsz" 36,"SOFT" 50;
+}
+.lede::first-letter{
+  font-family:var(--serif);font-weight:500;
+  font-size:78px;line-height:.82;
+  float:left;margin:8px 12px -2px 0;color:var(--acc);
+  font-variation-settings:"opsz" 144,"SOFT" 30;
+  letter-spacing:-.04em;
+}
+.byline{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.10em;
+  text-transform:uppercase;color:var(--mut);
+  margin:14px 0 0;display:flex;align-items:center;gap:10px;
+}
+.byline b{color:var(--ink);font-weight:600;font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:0;font-size:12.5px}
+.byline .rule{flex:1;height:1px;background:var(--line);max-width:120px}
+
+/* ───── Inside this issue (TOC) ───── */
+.toc{
+  padding:34px 0 32px;border-bottom:1px solid var(--line);
+}
+.toc-head{
+  display:flex;align-items:baseline;justify-content:space-between;
+  margin-bottom:18px;gap:20px;flex-wrap:wrap;
+}
+.toc-title{
+  font-family:var(--serif);font-size:24px;font-weight:500;
+  color:var(--ink);letter-spacing:-.015em;line-height:1;
+  font-variation-settings:"opsz" 72,"SOFT" 30;
+}
+.toc-title em{font-style:italic;color:var(--acc);font-weight:400;margin-left:6px}
+.toc-sub{
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--mut);
+}
+.toc-list{
+  list-style:none;padding:0;margin:0;
+  display:grid;grid-template-columns:1fr 1fr;
+  column-gap:48px;
+  border-top:1px solid var(--ink);
+}
+.toc-list li{
+  border-bottom:1px solid var(--line);
+}
+.toc-list a{
+  display:grid;grid-template-columns:38px 1fr auto;
+  align-items:baseline;gap:12px;
+  padding:14px 4px 14px 0;
+  transition:.15s;
+}
+.toc-list a:hover{background:var(--soft)}
+.toc-list a:hover .tnum{color:var(--acc)}
+.toc-list a:hover .tk{color:var(--acc)}
+.toc-list .tnum{
+  font-family:var(--mono);font-size:11px;font-weight:600;
+  letter-spacing:.06em;color:var(--ink);
+}
+.toc-list .tcol{display:flex;flex-direction:column;gap:2px;min-width:0}
+.toc-list .tk{
+  font-family:var(--serif);font-size:18px;font-weight:500;
+  color:var(--ink);letter-spacing:-.012em;line-height:1.2;
+  font-variation-settings:"opsz" 36,"SOFT" 30;
+}
+.toc-list .tpp{
+  font-size:12.5px;color:var(--mut);line-height:1.5;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.toc-list .tmeta{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;
+  color:var(--mut-2);white-space:nowrap;
+  display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right;
+}
+.toc-list .tmeta b{color:var(--ink);font-weight:600;font-family:var(--serif);font-size:14px;letter-spacing:-.01em}
+.toc-leaders{
+  flex:1;border-bottom:1px dotted var(--mut-2);
+  height:.85em;align-self:flex-end;margin:0 8px;min-width:14px;
+}
+
+/* ───── Folio (page no.) ───── */
+.folio{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--mut);
+  display:flex;align-items:center;gap:6px;
+  margin-bottom:8px;
+}
+.folio b{color:var(--ink);font-weight:600}
+.folio .sep{color:var(--mut-2)}
+
+/* ───── Evidence / Predictions block ───── */
+.evidence{
+  display:grid;grid-template-columns:1.2fr 1fr;
+  gap:0;margin-top:18px;
+  border-top:1px solid var(--line);
+}
+.evidence > div{
+  padding:16px 24px 4px 0;min-width:0;
+}
+.evidence > div + div{
+  padding-left:24px;border-left:1px solid var(--line);padding-right:0;
+}
+.ev-label{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--mut);
+  margin-bottom:12px;display:flex;align-items:center;gap:8px;
+}
+.ev-label::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--acc);flex:0 0 auto}
+.ev-label em{font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:0;font-size:12px;color:var(--ink-2);margin-left:auto;font-weight:400}
+.ev-tags{
+  display:flex;flex-wrap:wrap;gap:4px 22px;align-items:baseline;
+  font-family:var(--serif);color:var(--ink);
+  font-variation-settings:"opsz" 36,"SOFT" 30;letter-spacing:-.012em;line-height:1.2;
+}
+.ev-tags span{position:relative;font-size:20px;font-weight:500}
+.ev-tags sub{
+  font-family:var(--mono);font-size:10.5px;color:var(--acc);
+  font-weight:600;vertical-align:super;margin-left:2px;letter-spacing:.02em;
+  top:auto;
+}
+.ev-preds{
+  list-style:none;padding:0;margin:0;
+  display:flex;flex-direction:column;gap:8px;
+  font-family:var(--serif);font-style:italic;font-size:16px;
+  color:var(--ink-2);line-height:1.35;
+  font-variation-settings:"opsz" 36,"SOFT" 50;
+}
+.ev-preds li{position:relative;padding-left:20px;text-wrap:pretty}
+.ev-preds li::before{
+  content:"→";position:absolute;left:0;top:0;color:var(--acc);
+  font-style:normal;font-family:var(--sans);font-size:13px;font-weight:500;
+  line-height:1.5;
+}
+@media(max-width:760px){
+  .evidence{grid-template-columns:1fr}
+  .evidence > div + div{padding-left:0;border-left:none;border-top:1px solid var(--line);padding-top:14px;margin-top:6px}
+}
+
+/* ───── Reading progress ───── */
+.progress{
+  position:fixed;top:0;left:0;right:0;height:2px;
+  background:transparent;z-index:50;pointer-events:none;
+}
+.progress > i{
+  display:block;height:100%;background:var(--acc);width:0;
+  transition:width 80ms linear;transform-origin:left;
+}
+
+/* ───── Asterism between bands ───── */
+.band{position:relative}
+.band + .band::before{
+  content:"✻";
+  position:absolute;top:-9px;left:50%;
+  transform:translateX(-50%);
+  background:var(--bg);
+  font-family:var(--serif);font-size:14px;color:var(--mut-2);
+  padding:0 18px;line-height:1;
+  font-variation-settings:"opsz" 72;
+}
+
+/* ───── End mark after band positioning ───── */
+.bh .pp{position:relative}
+.bh .pp::after{
+  content:"";display:block;width:20px;height:1.5px;background:var(--acc);
+  margin-top:12px;opacity:.55;
+}
+
+/* ───── Sparkline animation ───── */
+.spark .spark-line{
+  stroke-dasharray:1;stroke-dashoffset:1;
+}
+.spark.in .spark-line{
+  transition:stroke-dashoffset 1.5s cubic-bezier(.22,.61,.36,1);
+}
+.spark .spark-area{opacity:0}
+.spark .spark-dot{opacity:0}
+.spark.in .spark-area{opacity:1;transition:opacity 1.2s ease-out .2s}
+.spark.in .spark-dot{opacity:1;transition:opacity .35s ease-out 1.1s}
+
+/* Number reveal */
+.count-pending{opacity:.4}
+
+/* ───── Side nav ───── */
+.sidenav{
+  position:fixed;top:50%;right:18px;transform:translateY(-50%);
+  z-index:20;
+  display:flex;flex-direction:column;gap:0;
+  background:var(--paper);border:1px solid var(--line);
+  padding:6px 8px;border-radius:999px;
+}
+.sidenav a{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;
+  color:var(--mut-2);padding:6px 8px;
+  display:flex;align-items:center;gap:8px;
+  position:relative;font-weight:500;
+}
+.sidenav a .pip{
+  width:6px;height:6px;border-radius:50%;background:var(--mut-2);
+  flex:0 0 auto;transition:.18s;
+}
+.sidenav a .lbl{
+  max-width:0;overflow:hidden;white-space:nowrap;
+  transition:max-width .25s ease, opacity .15s;opacity:0;
+  color:var(--ink-2);
+}
+.sidenav:hover a .lbl{max-width:160px;opacity:1;padding-left:0}
+.sidenav a.on{color:var(--ink)}
+.sidenav a.on .pip{background:var(--acc);box-shadow:0 0 0 3px rgba(204,59,27,.15)}
+.sidenav a:hover{color:var(--ink)}
+
+/* ───── Footer ───── */
+footer{
+  max-width:1320px;margin:0 auto;padding:28px 32px 64px;
+  font-family:var(--mono);font-size:11px;color:var(--mut);
+  letter-spacing:.04em;line-height:1.7;
+  border-top:1px solid var(--line);
+}
+footer .rule{display:flex;align-items:center;gap:10px;color:var(--mut-2);margin-bottom:10px}
+footer .rule b{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--ink);font-size:14px;letter-spacing:0}
+
+/* ───── Responsive ───── */
+@media(max-width:1100px){
+  .sidenav{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .hero-stat{order:-1}
+}
+@media(max-width:760px){
+  .topbar-inner{padding:14px 18px 12px}
+  .brand{font-size:30px}
+  .wrap{padding:0 18px 50px}
+  .hero{padding:28px 0}
+  .tldr li{font-size:20px;padding-left:42px}
+  .band{grid-template-columns:1fr;gap:18px;padding:28px 0}
+  .bh{position:static;max-height:none}
+  .bh .num{font-size:48px;margin-bottom:6px}
+  .rc{flex-basis:82vw}
+  .rc.expanded{flex-basis:82vw}
+  footer{padding:20px 18px 50px}
+}
+</style>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><i></i></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <h1 class="brand">North<span class="star">★</span>Star</h1>
+    <div style="display:flex;align-items:flex-end">
+      <!--LANG_SLOT-->
+      <nav class="tabs"><!--TAB_SLOT--></nav>
+    </div>
+  </div>
+</header>
+
+<div class="issueline">
+  <div class="issueline-inner">
+    <span class="iss-no">第 1 期</span>
+    <span class="dot">·</span>
+    <span>数据截至 2026-05-19</span>
+    <span class="dot">·</span>
+    <span>北美 AI Landscape 简讯</span>
+    <span class="dot">·</span>
+    <span>学习导向</span>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section class="hero" data-screen-label="Hero">
+    <div class="hero-grid">
+      <div class="hero-main">
+        <div class="hk">本周判断 / TL;DR</div>
+        <p class="lede">本周共扫描北美在招 JD、社区文章、arXiv 论文与大厂 10-K 四类来源，提炼出 4 条交叉印证的信号；以下是 30 秒可读的核心判断。</p>
+        <div class="byline"><span class="rule"></span><b>By NorthStar 编辑部</b> · 2026-05-19</div>
+        <ol class="tldr">
+          <li>北美 AI 岗门槛正从"会调 LLM API"上移到"会编排 <em>Agent</em> + 会做 <em>Eval</em> + 会用 <em>AI 编码 agent</em> 干活"</li>
+          <li><em>多模态</em>采纳最猛</li>
+          <li><em>Serving</em> 是领先招聘 6–12 月的卡位点</li>
+        </ol>
+
+        <div class="kpi-row" aria-label="本周变化（vs 上周）">
+          <div class="kpi-cell">
+            <div class="kpi-lbl">Agent 提及</div>
+            <div class="kpi-val"><span class="pct">+18%</span><span class="arrow">▲</span></div>
+            <div class="kpi-sub">JD + Article 合并</div>
+          </div>
+          <div class="kpi-cell">
+            <div class="kpi-lbl">Serving JD</div>
+            <div class="kpi-val"><span class="pct">+6</span><span class="arrow">▲</span></div>
+            <div class="kpi-sub">绝对值 / 周</div>
+          </div>
+          <div class="kpi-cell">
+            <div class="kpi-lbl">litellm 下载</div>
+            <div class="kpi-val"><span class="pct">+13%</span><span class="arrow">▲</span></div>
+            <div class="kpi-sub">月环比</div>
+          </div>
+          <div class="kpi-cell">
+            <div class="kpi-lbl">多模态 论文</div>
+            <div class="kpi-val"><span class="pct">+9%</span><span class="arrow">▲</span></div>
+            <div class="kpi-sub">arXiv 周环比</div>
+          </div>
+        </div>
+
+        <div class="evidence">
+          <div>
+            <div class="ev-label">交叉印证 <em>cross-evidence ≥2 sources</em></div>
+            <div class="ev-tags">
+              <span>AI Agents<sub>4</sub></span>
+              <span>Eval<sub>3</sub></span>
+              <span>多模态<sub>3</sub></span>
+              <span>Serving<sub>3</sub></span>
+            </div>
+          </div>
+          <div>
+            <div class="ev-label">可证伪预测 <em>due 2026-08</em></div>
+            <ul class="ev-preds">
+              <li>AI编码agent 频次是否升</li>
+              <li>Serving 是否进招聘</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <aside class="hero-stat">
+        <div class="stat-label">本期样本</div>
+        <div class="stat-grid">
+          <div><b>63</b><span>岗样本</span></div>
+          <div><b>14</b><span>篇文章</span></div>
+          <div><b>12</b><span>篇论文</span></div>
+          <div><b>$185k</b><span>年薪中位</span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="toc" data-screen-label="Inside this issue">
+    <header class="toc-head">
+      <div class="toc-title">本期目录<em>/ Inside this issue</em></div>
+      <div class="toc-sub">8 SECTIONS · ~22 CARDS · 5 MIN READ</div>
+    </header>
+    <ol class="toc-list" id="toc-list"></ol>
+  </section>
+
+  <div id="bands"></div>
+
+</main>
+
+<nav class="sidenav" aria-label="Sections">
+  <a href="#b1" data-anchor="b1"><span class="pip"></span><span class="lbl">01 岗位动态</span></a>
+  <a href="#b2" data-anchor="b2"><span class="pip"></span><span class="lbl">02 招聘市场风向</span></a>
+  <a href="#b3" data-anchor="b3"><span class="pip"></span><span class="lbl">03 AI 明星 &amp; 社区</span></a>
+  <a href="#b4" data-anchor="b4"><span class="pip"></span><span class="lbl">04 研究前沿</span></a>
+  <a href="#b5" data-anchor="b5"><span class="pip"></span><span class="lbl">05 开源项目 &amp; 模型</span></a>
+  <a href="#b6" data-anchor="b6"><span class="pip"></span><span class="lbl">06 库采纳曲线</span></a>
+  <a href="#b7" data-anchor="b7"><span class="pip"></span><span class="lbl">07 大公司状况</span></a>
+  <a href="#b8" data-anchor="b8"><span class="pip"></span><span class="lbl">08 签证 &amp; 权威年报</span></a>
+</nav>
+
+<footer>
+  <div class="rule"><b>设计样张</b> · v2 / refined editorial</div>
+  每栏 3 张示例卡（生产版数据更多，横向滑动浏览） · 结构 / 配色 / 版式与生产版一致，用于设计优化
+</footer>
+
+<script>
+/* ─────────────────────────────────────────────
+   Bands — content preserved verbatim from source.
+   Visual treatments (bars, scales, momentum) are
+   re-renderings of existing data, not new content.
+   ───────────────────────────────────────────── */
+
+/* SVG sparkline */
+function sparkSvg(data, opts){
+  opts = opts || {};
+  const w = opts.width || 260, h = opts.height || 50, pad = 3;
+  const max = Math.max.apply(null, data);
+  const min = Math.min.apply(null, data);
+  const range = (max - min) || 1;
+  const step = (w - pad*2) / (data.length - 1);
+  const pts = data.map(function(v,i){
+    const x = pad + i*step;
+    const y = h - pad - ((v - min)/range) * (h - pad*2);
+    return [x.toFixed(1), y.toFixed(1)];
+  });
+  const linePath = pts.map(function(p,i){return (i?'L':'M')+p[0]+','+p[1]}).join(' ');
+  const areaPath = linePath + ' L'+pts[pts.length-1][0]+','+h+' L'+pts[0][0]+','+h+' Z';
+  const last = pts[pts.length-1];
+  const color = opts.color || '#CC3B1B';
+  return '<svg class="spark" viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none" aria-hidden="true">'
+    + '<path class="spark-area" d="'+areaPath+'" fill="'+color+'" fill-opacity=".10"/>'
+    + '<path class="spark-line" d="'+linePath+'" fill="none" stroke="'+color+'" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>'
+    + '<circle class="spark-dot" cx="'+last[0]+'" cy="'+last[1]+'" r="2.5" fill="'+color+'"/>'
+    + '</svg>';
+}
+
+const bands = [
+  {
+    id:"b1", n:"01", k:"岗位动态", pp:"北美 AI 在招什么、给多少钱", cnt:"63 岗样本",
+    cards:[
+      {hl:"Forward Deployed AI Engineer", mt:"Charta Health · San Francisco",
+       dg:"落地部署 AI 方案、与医疗客户共建工作流，要 LLM/prompt 工程与快速原型能力。",
+       ft:'<span class="sal">$150–250k</span> <span style="color:var(--mut)">/ 年</span>',
+       more:[["类型","Forward Deployed"],["地点","San Francisco"],["薪资","$150–250k / 年"],["关键词","LLM · Prompt · Prototype"]]},
+      {hl:"Senior Data Engineer", mt:"Sekai · Remote",
+       dg:"为 AI 消费产品建数据地基，BigQuery/PostHog，产品向数据 owner。",
+       ft:'<span class="sal">$168–210k</span> <span style="color:var(--mut)">/ 年</span>',
+       more:[["类型","Data Engineering"],["地点","Remote"],["薪资","$168–210k / 年"],["关键词","BigQuery · PostHog"]]},
+      {hl:"AI Engineer", mt:"Metriport · San Francisco",
+       dg:"建自治 SDLC 管线，把 LLM agent 当杠杆，要 evals/prompt 版本/成本控制。",
+       ft:'<span class="sal">$160–220k</span> <span style="color:var(--mut)">/ 年</span>',
+       more:[["类型","AI Engineering"],["地点","San Francisco"],["薪资","$160–220k / 年"],["关键词","Agent · Eval · Cost"]]}
+    ]
+  },
+  {
+    id:"b2", n:"02", k:"招聘市场风向", pp:"薪资水位 + 真实技能需求",
+    cards:[
+      {soft:true, custom:`
+        <div class="hl">年薪中位</div>
+        <div class="mt"><span class="pip"></span>北美 AI 岗 · n=22</div>
+        <div class="stat-big">$185,000</div>
+        <div class="stat-sub">自报 n=22</div>
+        <div class="axis-bar"><i style="left:18%;width:64%"></i><b style="left:50%"></b></div>
+        <div class="axis"><span>$120k</span><span>中位</span><span>$260k</span></div>
+      `, stat:true,
+        more:[["指标","年薪中位"],["样本","自报 n=22"],["范围","≈ $120k – $260k"]]},
+      {soft:true, custom:`
+        <div class="hl">JD 高频技能</div>
+        <div class="mt"><span class="pip"></span>简历该往这些词靠</div>
+        <div class="weighted" aria-label="按 JD 提及频次加权">
+          <span style="font-size:34px">Python<sub>24</sub></span>
+          <span style="font-size:28px">LLM<sub>21</sub></span>
+          <span style="font-size:22px">AWS<sub>15</sub></span>
+          <span style="font-size:20px">Agents<sub>13</sub></span>
+          <span style="font-size:17px" class="dim">RAG<sub>10</sub></span>
+          <span style="font-size:15px" class="dim">Eval<sub>8</sub></span>
+        </div>
+      `, more:[["来源","63 份 JD 文本"],["高频","Python · LLM · AWS"],["上升","Agents · Eval"]]},
+      {soft:true, custom:`
+        <div class="hl">HN Who-is-hiring</div>
+        <div class="mt"><span class="pip"></span>200 条招聘贴</div>
+        <div class="dg" style="-webkit-line-clamp:unset;display:block">提及频次</div>
+        <div class="freqlist">
+          <div class="freqrow"><span class="name">Python</span><span class="bar"><i style="width:100%"></i></span><span class="num">24</span></div>
+          <div class="freqrow"><span class="name">TS</span><span class="bar"><i style="width:42%"></i></span><span class="num">10</span></div>
+          <div class="freqrow"><span class="name">RAG</span><span class="bar"><i style="width:25%"></i></span><span class="num">6</span></div>
+        </div>
+        <div class="ft">补 JobSpy 抓不到的早期/小厂</div>
+      `, more:[["数据源","HN Who-is-hiring 200 条"],["补足","JobSpy 抓不到的早期/小厂"]]}
+    ]
+  },
+  {
+    id:"b3", n:"03", k:"AI 明星 & 社区", pp:"他们认为接下来什么重要", cnt:"14 篇",
+    cards:[
+      {author:"SW",
+       hl:"The last six months in LLMs in five minutes",
+       mt:"Simon Willison · 2026-05-19",
+       dg:"过去半年 LLM 关键进展五分钟速览：编码 agent、价格、推理与多模态。",
+       more:[["作者","Simon Willison"],["日期","2026-05-19"],["关键","编码 agent · 价格 · 推理 · 多模态"]]},
+      {author:"SR",
+       hl:"Components of a Coding Agent",
+       mt:"Sebastian Raschka · 2026-04-04",
+       dg:"拆解一个编码 agent 的组成模块与设计取舍。",
+       more:[["作者","Sebastian Raschka"],["日期","2026-04-04"],["主题","Coding Agent 组成模块"]]},
+      {soft:true, custom:`
+        <div class="hl">🔥 Hacker News 热议</div>
+        <div class="mt"><span class="pip"></span>社区在吵什么</div>
+        <div class="dg" style="-webkit-line-clamp:unset;display:block">
+          · Codex 进企业本地部署 (412)<br>
+          · 开源多模态新王 (388)
+        </div>
+      `, more:[["话题 1","Codex 进企业本地部署 (412)"],["话题 2","开源多模态新王 (388)"]]}
+    ]
+  },
+  {
+    id:"b4", n:"04", k:"研究前沿", pp:"arXiv cs.AI/LG/CL 最新", cnt:"12 篇",
+    cards:[
+      {subj:{label:"cs.LG", color:"#2A6FDB"},
+       hl:"DashAttention: Differentiable and Adaptive Sparse Hierarchical Attention",
+       mt:"2026-05-19 · Z. Lin, et al.",
+       dg:"提出可微、自适应的稀疏分层注意力，降低长上下文推理成本。",
+       more:[["日期","2026-05-19"],["作者","Z. Lin, et al."],["类别","注意力机制 / 长上下文"]]},
+      {subj:{label:"cs.AI", color:"#CC3B1B"},
+       hl:"ReasoningBank: Agents Learn from Experience",
+       mt:"2026-04-21 · Google Research",
+       dg:"让 agent 把过往经验沉淀为可复用记忆库，提升复杂任务表现。",
+       more:[["日期","2026-04-21"],["机构","Google Research"],["类别","Agent 记忆 / 经验复用"]]},
+      {subj:{label:"cs.CL", color:"#1F6F4A"},
+       hl:"Adaptive Parallel Reasoning",
+       mt:"2026-05-08 · Berkeley BAIR",
+       dg:"高效推理 scaling 的新范式：自适应并行推理。",
+       more:[["日期","2026-05-08"],["机构","Berkeley BAIR"],["类别","推理 scaling"]]}
+    ]
+  },
+  {
+    id:"b5", n:"05", k:"开源项目 & 模型", pp:"哪些框架/模型在火",
+    cards:[
+      {mono:{letter:"V", color:"#5B3FB8"},
+       hl:"vllm-project/vllm", mt:"Serving 推理",
+       dg:"高吞吐 LLM 推理/部署引擎，自托管上线模型的主力。",
+       custom_ft:`<div class="starline"><span class="s-big">★80,418</span><span class="s-delta">近4周 +796</span><span class="s-heat">🔥猛</span></div>`,
+       more:[["分类","Serving / 推理"],["近 4 周新增","+796 ★"],["热度","🔥 猛"]]},
+      {mono:{letter:"D", color:"#1F6F4A"},
+       hl:"confident-ai/deepeval", mt:"Eval 评测",
+       dg:"LLM/Agent 的单元测试式评测框架，回答\"我的 AI 到底准不准\"。",
+       custom_ft:`<div class="starline"><span class="s-big">★15,541</span><span class="s-delta">近4周 +254</span><span class="s-heat">🔥猛</span></div>`,
+       more:[["分类","Eval / 评测"],["近 4 周新增","+254 ★"],["热度","🔥 猛"]]},
+      {soft:true, custom:`
+        <div class="hl">HuggingFace trending</div>
+        <div class="mt"><span class="pip"></span>本周最热模型</div>
+        <div class="dg" style="-webkit-line-clamp:unset;display:block;margin-top:4px">
+          · MiniCPM-V-4.6 <span class="tg">多模态</span><br>
+          · DeepSeek-V4-Pro <span class="tg">文本生成</span>
+        </div>
+      `, more:[["热门 1","MiniCPM-V-4.6 (多模态)"],["热门 2","DeepSeek-V4-Pro (文本生成)"]]}
+    ]
+  },
+  {
+    id:"b6", n:"06", k:"库采纳曲线", pp:"PyPI 月下载＝真实采纳",
+    cards:[
+      {soft:true, custom:`
+        <div class="hl">litellm</div>
+        <div class="mt"><span class="pip"></span>统一多家 LLM API 网关</div>
+        <div class="adopt-card">
+          <div class="adopt-num"><span class="big">446M</span><span class="unit">下载 / 月</span></div>
+          ${sparkSvg([62,78,95,115,138,168,198,235,282,335,392,446],{color:'#CC3B1B'})}
+          <div class="adopt-foot">
+            <span class="lbl">12mo</span>
+            <span class="delta">+619%</span>
+            <span class="rel">基准 100%</span>
+          </div>
+        </div>
+      `, more:[["类别","LLM API 网关"],["月下载","446M"],["12 月增速","+619%"],["相对","100% (基准)"]]},
+      {soft:true, custom:`
+        <div class="hl">openai</div>
+        <div class="mt"><span class="pip"></span>OpenAI 官方 SDK</div>
+        <div class="adopt-card">
+          <div class="adopt-num"><span class="big">298M</span><span class="unit">下载 / 月</span></div>
+          ${sparkSvg([142,158,172,188,205,222,238,252,265,278,289,298],{color:'#1F6F4A'})}
+          <div class="adopt-foot">
+            <span class="lbl">12mo</span>
+            <span class="delta">+110%</span>
+            <span class="rel">66.8% of peak</span>
+          </div>
+        </div>
+      `, more:[["类别","官方 SDK"],["月下载","298M"],["12 月增速","+110%"],["相对","66.8% of litellm"]]},
+      {soft:true, custom:`
+        <div class="hl">langchain</div>
+        <div class="mt"><span class="pip"></span>LLM 应用编排框架</div>
+        <div class="adopt-card">
+          <div class="adopt-num"><span class="big">242M</span><span class="unit">下载 / 月</span></div>
+          ${sparkSvg([218,226,232,238,244,248,252,250,247,245,244,242],{color:'#8B8C93'})}
+          <div class="adopt-foot">
+            <span class="lbl">12mo</span>
+            <span class="delta down">+11%</span>
+            <span class="rel">54.3% · 已平台化</span>
+          </div>
+        </div>
+      `, more:[["类别","编排框架"],["月下载","242M"],["12 月增速","+11% (平台化)"],["相对","54.3% of litellm"]]}
+    ]
+  },
+  {
+    id:"b7", n:"07", k:"大公司状况", pp:"大厂真金白银押什么", cnt:"SEC 10-K",
+    cards:[
+      {kind:"co", accent:"#76B900", hl:"NVIDIA", mt:"2026-02-25 · 10-K",
+       dg:"自称\"数据中心规模 AI 基础设施公司\"；CUDA+Blackwell+万卡互联，押 Serving/推理基建。",
+       more:[["来源","10-K · 2026-02-25"],["定位","数据中心规模 AI 基建"],["押注","Serving / 推理基建"]]},
+      {kind:"co", accent:"#0F1419", hl:"Palantir", mt:"2026-02-17 · 10-K",
+       dg:"AIP：平台+生成式 LLM 带到\"每个决策\"；Ontology 数据→语境，押企业 Agent。",
+       more:[["来源","10-K · 2026-02-17"],["产品","AIP"],["押注","企业 Agent · Ontology"]]},
+      {kind:"co", accent:"#0866FF", hl:"Meta", mt:"2026-01-29 · 10-K",
+       dg:"Meta AI 助手 + AI 眼镜(多模态) + 排序推荐 + 生成式广告。",
+       more:[["来源","10-K · 2026-01-29"],["产品","Meta AI · AI 眼镜"],["押注","多模态 · 生成式广告"]]}
+    ]
+  },
+  {
+    id:"b8", n:"08", k:"签证 & 权威年报", pp:"北美落地参照",
+    cards:[
+      {soft:true, custom:`
+        <div class="hl">北美签证 / H-1B</div>
+        <div class="mt"><span class="pip"></span>诚实占位</div>
+        <div class="editors-note">
+          <span class="tk">TK</span>
+          <span class="body">可先出<em>"哪些 AI 公司 sponsor + 批准量趋势"</em>，薪资维度待 DOL 专项</span>
+        </div>
+        <div class="ft">USCIS Hub 可达 / DOL 薪资 403 被挡</div>
+      `, more:[["状态","占位 · 待专项"],["可做","Sponsor 公司 + 批准量趋势"],["阻挡","DOL 薪资 403"]]},
+      {soft:true, hl:"Stanford HAI · AI Index Report", mt:"年度 · 非实时",
+       dg:"AI 人才/教育/岗位/R&D 最权威统计。",
+       more:[["机构","Stanford HAI"],["类型","年度 · 非实时"],["覆盖","人才 · 教育 · 岗位 · R&D"]]},
+      {soft:true, hl:"State of AI Report", mt:"年度 · 非实时",
+       dg:"研究/产业/资本/安全综述，看大势拐点。",
+       more:[["类型","年度 · 非实时"],["覆盖","研究 · 产业 · 资本 · 安全"]]}
+    ]
+  }
+];
+
+function moreDl(arr){
+  if(!arr || !arr.length) return "";
+  return `<div class="more"><dl>${
+    arr.map(([k,v])=>`<div class="row"><dt>${k}</dt><i class="leaders"></i><dd>${v}</dd></div>`).join("")
+  }</dl></div>`;
+}
+
+function renderCard(c){
+  const cls = `rc${c.soft?' soft':''}${c.stat?' stat-card':''}${c.kind?(' '+c.kind):''}`;
+  const rule = c.accent ? `<i class="card-rule" style="background:${c.accent}"></i>` : "";
+  if(c.custom){
+    return `<article class="${cls}" tabindex="0">
+      ${rule}
+      <button class="closer" aria-label="收起">×</button>
+      ${c.custom}
+      ${moreDl(c.more)}
+    </article>`;
+  }
+  let mark = "";
+  if(c.author) mark = `<span class="author-mark">${c.author}</span>`;
+  else if(c.subj) mark = `<span class="subj-pill" style="background:${c.subj.color}">${c.subj.label}</span>`;
+  else if(c.mono) mark = `<span class="mono-mark" style="background:${c.mono.color}">${c.mono.letter}</span>`;
+  const hl = c.hl ? `<div class="hl">${c.hl}</div>` : "";
+  const mt = c.mt ? `<div class="mt"><span class="pip"></span>${c.mt}</div>` : "";
+  const dg = c.dg ? `<div class="dg">${c.dg}</div>` : "";
+  const ft = c.custom_ft ? c.custom_ft : (c.ft ? `<div class="ft">${c.ft}</div>` : "");
+  return `<article class="${cls}" tabindex="0">
+    ${rule}
+    <button class="closer" aria-label="收起">×</button>
+    ${mark}${hl}${mt}${dg}${ft}
+    ${moreDl(c.more)}
+  </article>`;
+}
+
+function renderBand(b, total){
+  return `<section class="band" id="${b.id}" data-screen-label="${b.n} ${b.k}">
+    <header class="bh">
+      <div class="folio"><span>Page</span><b>${b.n}</b><span class="sep">/</span><span>${total}</span></div>
+      <span class="num"><em>${b.n}</em></span>
+      <div class="k">${b.k}</div>
+      ${b.cnt?`<div class="cnt">${b.cnt}</div>`:""}
+      <div class="pp">${b.pp}</div>
+      ${b.digest ? `<div class="band-lede"><span class="lede-kick">本栏要点</span>${b.digest}</div>` : ""}
+    </header>
+    <div class="rail-wrap">
+      <div class="rail">${b.cards.map(renderCard).join("")}</div>
+    </div>
+  </section>`;
+}
+
+const TOTAL = String(bands.length).padStart(2,"0");
+document.getElementById("bands").innerHTML = bands.map(b=>renderBand(b,TOTAL)).join("");
+
+/* Inside this issue — TOC */
+document.getElementById("toc-list").innerHTML = bands.map(b=>(
+  `<li><a href="#${b.id}" data-anchor="${b.id}">
+    <span class="tnum">${b.n}</span>
+    <span class="tcol">
+      <span class="tk">${b.k}</span>
+      <span class="tpp">${b.pp}</span>
+    </span>
+    <span class="tmeta">
+      <b>${b.cards.length}</b>
+      <span>${b.cnt ? b.cnt : "卡片"}</span>
+    </span>
+  </a></li>`
+)).join("");
+
+/* ─── Card expand interaction ─── */
+document.querySelectorAll(".rc").forEach(card=>{
+  card.addEventListener("click",(e)=>{
+    if(e.target.closest(".closer")){
+      card.classList.remove("expanded");
+      return;
+    }
+    // collapse siblings in same rail
+    const rail = card.closest(".rail");
+    rail.querySelectorAll(".rc.expanded").forEach(c=>{if(c!==card)c.classList.remove("expanded")});
+    card.classList.toggle("expanded");
+    if(card.classList.contains("expanded")){
+      // ensure visible
+      setTimeout(()=>{
+        const r = card.getBoundingClientRect();
+        const railR = rail.getBoundingClientRect();
+        if(r.right > railR.right - 8){
+          rail.scrollBy({left: r.right - railR.right + 24, behavior:"smooth"});
+        }
+      }, 80);
+    }
+  });
+  card.addEventListener("keydown",(e)=>{
+    if(e.key==="Enter"||e.key===" "){ e.preventDefault(); card.click(); }
+    if(e.key==="Escape" && card.classList.contains("expanded")){ card.classList.remove("expanded"); }
+  });
+});
+
+/* ─── Rail end-of-scroll fade ─── */
+document.querySelectorAll(".rail-wrap").forEach(wrap=>{
+  const rail = wrap.querySelector(".rail");
+  const sync = ()=>{
+    const atEnd = rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 4;
+    wrap.classList.toggle("at-end", atEnd);
+  };
+  rail.addEventListener("scroll",sync,{passive:true});
+  new ResizeObserver(sync).observe(rail);
+  sync();
+});
+
+/* ─── Sidenav scrollspy ─── */
+const navLinks = [...document.querySelectorAll(".sidenav a")];
+const bandEls = navLinks.map(a=>document.getElementById(a.dataset.anchor));
+const setActive = (id)=>{
+  navLinks.forEach(a=>a.classList.toggle("on", a.dataset.anchor===id));
+};
+const io = new IntersectionObserver((entries)=>{
+  // pick the entry closest to top with intersection
+  const visible = entries.filter(e=>e.isIntersecting)
+    .sort((a,b)=>a.boundingClientRect.top - b.boundingClientRect.top);
+  if(visible[0]) setActive(visible[0].target.id);
+},{rootMargin:"-30% 0px -55% 0px",threshold:0});
+bandEls.forEach(el=>el&&io.observe(el));
+
+navLinks.forEach(a=>{
+  a.addEventListener("click",(e)=>{
+    e.preventDefault();
+    const el = document.getElementById(a.dataset.anchor);
+    if(!el) return;
+    const y = el.getBoundingClientRect().top + window.scrollY - 90;
+    window.scrollTo({top:y, behavior:"smooth"});
+  });
+});
+
+/* Smooth scroll for TOC links too */
+document.querySelectorAll("#toc-list a[data-anchor]").forEach(a=>{
+  a.addEventListener("click",(e)=>{
+    e.preventDefault();
+    const el = document.getElementById(a.dataset.anchor);
+    if(!el) return;
+    const y = el.getBoundingClientRect().top + window.scrollY - 90;
+    window.scrollTo({top:y, behavior:"smooth"});
+  });
+});
+
+/* ─────────────────────────────────────────────
+   Dynamic newsroom touches
+   ───────────────────────────────────────────── */
+
+/* Reading progress */
+(function(){
+  const bar = document.querySelector(".progress > i");
+  if(!bar) return;
+  let raf = null;
+  function update(){
+    raf = null;
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    bar.style.width = pct.toFixed(2) + "%";
+  }
+  window.addEventListener("scroll", ()=>{
+    if(raf) return;
+    raf = requestAnimationFrame(update);
+  }, {passive:true});
+  update();
+})();
+
+/* Sparkline draw-in */
+(function(){
+  const sparks = document.querySelectorAll(".spark");
+  sparks.forEach(svg=>{
+    const line = svg.querySelector(".spark-line");
+    if(!line) return;
+    try{
+      const len = line.getTotalLength();
+      line.style.strokeDasharray = len;
+      line.style.strokeDashoffset = len;
+    }catch(e){}
+  });
+  if(!("IntersectionObserver" in window)){
+    sparks.forEach(s=>s.classList.add("in"));
+    return;
+  }
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const svg = e.target;
+        svg.classList.add("in");
+        const line = svg.querySelector(".spark-line");
+        if(line) line.style.strokeDashoffset = "0";
+        io.unobserve(svg);
+      }
+    });
+  }, {threshold:.3});
+  sparks.forEach(s=>io.observe(s));
+})();
+
+/* Number count-up */
+(function(){
+  function animate(el){
+    if(el.dataset.counted) return;
+    el.dataset.counted = "1";
+    const txt = (el.textContent || "").trim();
+    const m = txt.match(/-?[\d,]+(?:\.\d+)?/);
+    if(!m){ return; }
+    const numStr = m[0];
+    const target = parseFloat(numStr.replace(/,/g,""));
+    if(!isFinite(target)) return;
+    const prefix = txt.substring(0, m.index);
+    const suffix = txt.substring(m.index + numStr.length);
+    const hasComma = numStr.includes(",");
+    const hasDecimal = numStr.includes(".");
+    const decPlaces = hasDecimal ? numStr.split(".")[1].length : 0;
+    const duration = Math.min(1400, 700 + Math.log10(Math.max(target,10)) * 220);
+    const start = performance.now();
+    function fmt(v){
+      let out = hasDecimal ? v.toFixed(decPlaces) : String(Math.round(v));
+      if(hasComma){
+        const parts = out.split(".");
+        parts[0] = Number(parts[0]).toLocaleString();
+        out = parts.join(".");
+      }
+      return prefix + out + suffix;
+    }
+    function tick(now){
+      const t = Math.min((now-start)/duration, 1);
+      const eased = 1 - Math.pow(1-t, 3);
+      el.textContent = fmt(target * eased);
+      if(t<1) requestAnimationFrame(tick);
+    }
+    el.textContent = fmt(0);
+    requestAnimationFrame(tick);
+  }
+  const sel = [
+    ".stat-grid b",
+    ".kpi-val .pct",
+    ".adopt-num .big",
+    ".adopt-foot .delta",
+    ".stat-big",
+    ".s-big",
+    ".s-delta",
+    ".ev-tags sub",
+    ".toc-list .tmeta b"
+  ].join(",");
+  if(!("IntersectionObserver" in window)){
+    document.querySelectorAll(sel).forEach(animate);
+    return;
+  }
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        animate(e.target);
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:.4});
+  document.querySelectorAll(sel).forEach(el=>{
+    io.observe(el);
+  });
+})();
+</script>
+
+<template id="__bundler_thumbnail" data-bg-color="#FBFAF7">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#FBFAF7"/>
+    <text x="600" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="220" font-weight="600" fill="#161318" letter-spacing="-6">N</text>
+    <text x="600" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="160" fill="#CC3B1B" dy="0">★</text>
+    <text x="600" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="220" font-weight="600" fill="#161318" letter-spacing="-6">  S</text>
+    <text x="600" y="500" text-anchor="middle" font-family="ui-monospace, monospace" font-size="38" letter-spacing="14" fill="#8B8C93">NORTHSTAR</text>
+    <line x1="450" y1="540" x2="750" y2="540" stroke="#CC3B1B" stroke-width="3"/>
+    <text x="600" y="600" text-anchor="middle" font-family="ui-monospace, monospace" font-size="28" letter-spacing="6" fill="#8B8C93">№ 001 · 2026-05-19</text>
+  </svg>
+</template>
+
+</body>
+</html>

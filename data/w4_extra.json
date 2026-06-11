@@ -1,0 +1,147 @@
+{
+ "collected_at": "2026-06-10T02:43:31",
+ "arxiv": {
+  "status": "ok:12",
+  "papers": [
+   {
+    "title": "When to Align, When to Predict: A Phase Diagram for Multimodal Learning",
+    "date": "2026-06-09",
+    "authors": "Ilay Kamai, Hugues Van Assel, Aviv Regev",
+    "summary": "Cross-modal alignment (CA) and cross-modal prediction (CP) are the dominant paradigms for multimodal representation learning, yet there is no systematic understanding of when each succeeds, when each ",
+    "link": "https://arxiv.org/abs/2606.11190v1"
+   },
+   {
+    "title": "A Unifying Lens on Supervised Fine-Tuning Through Target Distribution Design",
+    "date": "2026-06-09",
+    "authors": "Tong Xie, Yuanhao Ban, Yunqi Hong",
+    "summary": "Supervised fine-tuning (SFT) typically maximizes the likelihood of every token in a demonstrated trajectory. However, an observed token can be non-unique, noisy, or misaligned with the model prior. St",
+    "link": "https://arxiv.org/abs/2606.11189v1"
+   },
+   {
+    "title": "EEVEE: Towards Test-time Prompt Learning in the Real World for Self-Improving Agents",
+    "date": "2026-06-09",
+    "authors": "Weixian Xu, Shilong Liu, Mengdi Wang",
+    "summary": "In this paper, we propose EEVEE, the first multi-dataset test-time prompt learning framework for LLM agents, enabling test-time prompt learning under real-world task streams. Existing methods are larg",
+    "link": "https://arxiv.org/abs/2606.11182v1"
+   },
+   {
+    "title": "Data Journalist Agent: Transforming Data into Verifiable Multimodal Stories",
+    "date": "2026-06-09",
+    "authors": "Kevin Qinghong Lin, Batu EI, Yuhong Shi",
+    "summary": "Data tells stories that shape society; the data journalist's job is to turn raw information into stories non-experts can trust. A high-quality news feature takes a newsroom team weeks: hunting for con",
+    "link": "https://arxiv.org/abs/2606.11176v1"
+   },
+   {
+    "title": "The Role of Feedback Alignment in Self-Distillation",
+    "date": "2026-06-09",
+    "authors": "Semih Kara, Oğuzhan Ersoy",
+    "summary": "Conditioning a language model on additional context, such as feedback on a previous attempt, typically improves its response. Self-distillation trains the model to retain this improvement when the con",
+    "link": "https://arxiv.org/abs/2606.11173v1"
+   },
+   {
+    "title": "Predicting Future Behaviors in Reasoning Models Enables Better Steering",
+    "date": "2026-06-09",
+    "authors": "Evgenii Kortukov, Piotr Komorowski, Florian Klein",
+    "summary": "Deployed large reasoning models (LRMs) often behave unexpectedly. Test-time steering controls LRM outputs by intervening on their hidden representations, but it can degrade output quality. We argue th",
+    "link": "https://arxiv.org/abs/2606.11172v1"
+   },
+   {
+    "title": "Algorithmic and Minimax Complexities in Kernel Bandits",
+    "date": "2026-06-09",
+    "authors": "Yunbei Xu",
+    "summary": "Gaussian-process upper confidence bound (GP-UCB) and decision-estimation-coefficient (DEC) methods may appear, at first sight, to belong to different theories. This paper places the two viewpoints in ",
+    "link": "https://arxiv.org/abs/2606.11171v1"
+   },
+   {
+    "title": "Piper: A Programmable Distributed Training System",
+    "date": "2026-06-09",
+    "authors": "Megan Frisella, Shubham Tiwari, Andy Ruan",
+    "summary": "Large-scale model training increasingly relies on composing multiple parallelism strategies, such as data, pipeline, and expert parallelism, together with memory-saving optimizations like ZeRO. Deploy",
+    "link": "https://arxiv.org/abs/2606.11169v1"
+   },
+   {
+    "title": "Multi-Faceted Interactivity Alignment in Full-Duplex Speech Models",
+    "date": "2026-06-09",
+    "authors": "Atsumoto Ohashi, Neil Zeghidour, Alexandre Défossez",
+    "summary": "Full-duplex spoken dialogue models can listen and speak simultaneously, making them a promising architecture for natural conversation. However, current models are trained solely with supervised learni",
+    "link": "https://arxiv.org/abs/2606.11167v1"
+   },
+   {
+    "title": "Flaws in the LLM Automation Narrative",
+    "date": "2026-06-09",
+    "authors": "George Perrett, Javae Elliott, Jennifer Hill",
+    "summary": "Large Language Models (LLMs) are increasingly described as performing at the level of human experts on knowledge economy tasks. These claims are primarily based on how LLMs perform on benchmarking tas",
+    "link": "https://arxiv.org/abs/2606.11166v1"
+   },
+   {
+    "title": "ReasonAlloc: Hierarchical Decoding-Time KV Cache Budget Allocation for Reasoning Models",
+    "date": "2026-06-09",
+    "authors": "Wenhao Liu, Hao Shi, Yunhe Li",
+    "summary": "Long chain-of-thought (CoT) trajectories in large language model (LLM) reasoning cause severe inference bottlenecks due to rapid key-value (KV) cache growth. Current decoding-time compression methods ",
+    "link": "https://arxiv.org/abs/2606.11164v1"
+   },
+   {
+    "title": "COGENT: Continuous Graph Emulators with Neural Ordinary Differential Equations for Long-Term Physical Forecasting",
+    "date": "2026-06-09",
+    "authors": "Zesheng Liu, Maryam Rahnemoonfar",
+    "summary": "In this work, we present COGENT, a continuous graph emulator with Neural Ordinary Differential Equations for long-term physical forecasting on irregular geospatial meshes. COGENT encodes a finite hist",
+    "link": "https://arxiv.org/abs/2606.11162v1"
+   }
+  ]
+ },
+ "pypi": {
+  "status": "ok:10/10",
+  "libs": [
+   {
+    "pkg": "litellm",
+    "last_month": 568284095,
+    "last_week": 171372860
+   },
+   {
+    "pkg": "openai",
+    "last_month": 327949980,
+    "last_week": 83169477
+   },
+   {
+    "pkg": "langchain",
+    "last_month": 309491804,
+    "last_week": 76110395
+   },
+   {
+    "pkg": "huggingface-hub",
+    "last_month": 288342572,
+    "last_week": 84189443
+   },
+   {
+    "pkg": "transformers",
+    "last_month": 148963868,
+    "last_week": 37643801
+   },
+   {
+    "pkg": "anthropic",
+    "last_month": 136741567,
+    "last_week": 35302133
+   },
+   {
+    "pkg": "langgraph",
+    "last_month": 58600972,
+    "last_week": 14159486
+   },
+   {
+    "pkg": "crewai",
+    "last_month": 15164510,
+    "last_week": 2662468
+   },
+   {
+    "pkg": "llama-index",
+    "last_month": 11866161,
+    "last_week": 2043516
+   },
+   {
+    "pkg": "vllm",
+    "last_month": 6241928,
+    "last_week": 1612051
+   }
+  ]
+ }
+}

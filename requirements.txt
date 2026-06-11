@@ -1,0 +1,6 @@
+# Python ≥ 3.10
+python-jobspy
+edgartools
+feedparser
+huggingface_hub
+socksio

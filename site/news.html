@@ -1,0 +1,1153 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NorthStar — 北美 AI 简讯</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,30..100&family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBFAF7;
+  --paper:#FFFFFF;
+  --ink:#161318;
+  --ink-2:#2A262C;
+  --body:#45464C;
+  --mut:#8B8C93;
+  --mut-2:#B5B4AE;
+  --line:#E8E7E2;
+  --line-2:#D9D7D0;
+  --soft:#F4F2EC;
+  --acc:#CC3B1B;
+  --acc-ink:#8A2812;
+  --gold:#9A6B1F;
+  --pos:#1F6F4A;
+
+  --sans:"Geist","Söhne","Helvetica Neue",-apple-system,system-ui,sans-serif;
+  --serif:"Fraunces","Iowan Old Style",Palatino,Georgia,serif;
+  --mono:"Geist Mono","JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{
+  margin:0;background:var(--bg);color:var(--body);
+  font:15px/1.62 var(--sans);
+  font-feature-settings:"ss01","cv11";
+}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--acc);color:#fff}
+
+/* ───── Top bar ───── */
+.topbar{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1.5px solid var(--ink)}
+.topbar-inner{
+  max-width:1320px;margin:0 auto;padding:18px 32px 16px;
+  display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
+}
+.brand{
+  font-family:var(--serif);font-weight:600;
+  font-size:38px;line-height:1;letter-spacing:-.025em;
+  color:var(--ink);margin:0;
+  font-variation-settings:"SOFT" 30,"opsz" 144;
+}
+.brand .star{color:var(--acc);font-size:.78em;vertical-align:.06em;margin:0 -.03em;display:inline-block;transform:translateY(-.04em)}
+.tabs{display:flex;gap:28px;align-items:flex-end;padding-bottom:4px}
+.tabs a{
+  font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--mut);padding-bottom:8px;position:relative;
+}
+.tabs a.on{color:var(--ink)}
+.tabs a.on::after{
+  content:"";position:absolute;left:0;right:0;bottom:-1px;height:2.5px;background:var(--acc);
+}
+/* 中/EN 语言切换 */
+.lang{display:flex;gap:0;align-items:flex-end;padding-bottom:4px;margin-right:24px;border-right:1px solid var(--line);padding-right:24px}
+.lang a{
+  font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.10em;
+  color:var(--mut-2);padding:0 8px 8px;position:relative;text-transform:uppercase;
+}
+.lang a.on{color:var(--ink)}
+.lang a.on::after{
+  content:"";position:absolute;left:6px;right:6px;bottom:-1px;height:2.5px;background:var(--ink);
+}
+.lang a:hover{color:var(--ink)}
+
+/* ───── Issue strip ───── */
+.issueline{border-bottom:1px solid var(--line);background:var(--bg)}
+.issueline-inner{
+  max-width:1320px;margin:0 auto;padding:9px 32px;
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:11px;letter-spacing:.10em;
+  text-transform:uppercase;color:var(--mut);
+}
+.issueline .iss-no{color:var(--ink);font-weight:600}
+.issueline .dot{color:var(--mut-2)}
+
+/* ───── Wrap ───── */
+.wrap{max-width:1320px;margin:0 auto;padding:0 32px 80px;position:relative}
+
+/* ───── Hero ───── */
+.hero{padding:44px 0 38px;border-bottom:1px solid var(--line)}
+.hero-grid{
+  display:grid;grid-template-columns:1fr 320px;gap:56px;align-items:start;
+}
+.hk{
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.20em;
+  text-transform:uppercase;color:var(--acc);
+  display:flex;align-items:center;gap:10px;
+}
+.hk::before{content:"";width:24px;height:1.5px;background:var(--acc);display:inline-block}
+.hk::after{content:"";flex:1;height:1px;background:var(--line);max-width:none}
+
+.tldr{
+  list-style:none;padding:0;margin:18px 0 22px;
+  counter-reset:t;
+  display:flex;flex-direction:column;gap:4px;
+}
+.tldr li{
+  counter-increment:t;
+  font-family:var(--serif);font-weight:400;
+  font-size:26px;line-height:1.36;color:var(--ink);
+  letter-spacing:-.012em;
+  font-variation-settings:"opsz" 36,"SOFT" 50;
+  padding:14px 0 14px 56px;
+  border-top:1px solid var(--line);
+  position:relative;
+  text-wrap:pretty;
+}
+.tldr li:last-child{border-bottom:1px solid var(--line)}
+.tldr li::before{
+  content:counter(t,decimal-leading-zero);
+  position:absolute;left:0;top:18px;
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.12em;
+  color:var(--acc);
+}
+.tldr em{
+  font-style:normal;color:var(--acc-ink);
+  background:linear-gradient(transparent 62%, rgba(204,59,27,.18) 62%, rgba(204,59,27,.18) 92%, transparent 92%);
+  padding:0 .04em;
+}
+
+.chips-block{margin-top:6px;display:flex;flex-direction:column;gap:10px}
+.chips-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cl{
+  font-family:var(--mono);font-size:10.5px;font-weight:500;
+  letter-spacing:.10em;text-transform:uppercase;color:var(--mut);
+  margin-right:6px;
+}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:12px;font-weight:500;color:var(--ink-2);
+  background:var(--paper);border:1px solid var(--line-2);
+  border-radius:999px;padding:4px 11px;
+  transition:.15s;
+}
+.chip:hover{border-color:var(--ink);background:var(--soft)}
+.chip.pred{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip.pred::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--acc)}
+
+/* hero side stat */
+.hero-stat{
+  background:var(--paper);border:1px solid var(--line);
+  padding:20px 22px 22px;
+  position:relative;
+}
+.hero-stat::before{
+  content:"";position:absolute;top:-1px;left:-1px;width:36px;height:3px;background:var(--acc);
+}
+.stat-label{
+  font-family:var(--mono);font-size:10.5px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--mut);
+  margin-bottom:14px;
+}
+.stat-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:18px 14px;
+}
+.stat-grid > div{display:flex;flex-direction:column;gap:2px}
+.stat-grid b{
+  font-family:var(--serif);font-weight:500;
+  font-size:34px;line-height:1;letter-spacing:-.02em;color:var(--ink);
+  font-variation-settings:"opsz" 72,"SOFT" 30;
+}
+.stat-grid span{
+  font-size:11px;color:var(--mut);letter-spacing:.04em;
+}
+
+/* ───── Band ───── */
+.band{
+  display:grid;grid-template-columns:280px 1fr;gap:40px;
+  padding:36px 0;border-bottom:1px solid var(--line);
+  position:relative;
+}
+.band:last-of-type{border-bottom:none}
+.bh{position:sticky;top:96px;align-self:start}
+.bh .num{
+  font-family:var(--serif);font-weight:400;
+  font-size:64px;line-height:.85;letter-spacing:-.04em;
+  color:var(--ink);
+  font-variation-settings:"opsz" 144,"SOFT" 20;
+  display:block;margin-bottom:10px;
+}
+.bh .num em{font-style:normal;color:var(--acc)}
+.bh .k{
+  font-size:16px;font-weight:600;color:var(--ink);letter-spacing:-.005em;
+  line-height:1.3;
+}
+.bh .cnt{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--mut);margin-top:6px;
+}
+.bh .pp{
+  font-size:13px;color:var(--body);line-height:1.55;margin-top:14px;
+  padding-left:12px;border-left:2px solid var(--acc);
+  text-wrap:pretty;
+}
+
+/* ───── Rail ───── */
+.rail-wrap{position:relative;min-width:0;display:flex;flex-direction:column}
+.rail-wrap::after{
+  content:"";position:absolute;top:0;bottom:14px;right:-1px;width:48px;
+  background:linear-gradient(90deg,transparent,var(--bg) 85%);
+  pointer-events:none;z-index:2;opacity:1;transition:.2s;
+}
+.rail-wrap.at-end::after{opacity:0}
+.rail{
+  flex:1;
+  display:flex;gap:14px;overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding:4px 2px 14px;
+  scrollbar-width:thin;scrollbar-color:var(--line-2) transparent;
+  align-items:stretch;
+}
+.rail::-webkit-scrollbar{height:6px}
+.rail::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:3px}
+.rail::-webkit-scrollbar-thumb:hover{background:var(--mut)}
+
+/* ───── Band lede — section digest（本栏要点，放进左侧栏） ───── */
+.bh .band-lede{
+  margin-top:18px;padding-top:14px;
+  border-top:1px solid var(--line);
+  font-family:var(--serif);font-size:13.5px;line-height:1.62;
+  color:var(--ink-2);text-wrap:pretty;
+  font-variation-settings:"opsz" 36,"SOFT" 50;
+}
+.bh .band-lede .lede-kick{
+  display:block;margin-bottom:8px;
+  font-family:var(--mono);font-size:9.5px;font-weight:600;
+  letter-spacing:.20em;text-transform:uppercase;color:var(--acc);
+  font-style:normal;
+}
+.bh .band-lede em{font-style:italic;color:var(--ink);font-weight:500;font-variation-settings:"opsz" 36,"SOFT" 50}
+.bh .band-lede b{font-weight:600;color:var(--ink);font-family:var(--serif)}
+
+/* ───── Cards ───── */
+.rc{
+  flex:0 0 296px;scroll-snap-align:start;
+  background:var(--paper);border:1px solid var(--line);
+  border-radius:10px;padding:18px 20px 16px;
+  display:flex;flex-direction:column;
+  min-height:280px;
+  transition:border-color .18s, box-shadow .18s, flex-basis .3s cubic-bezier(.2,.7,.2,1), transform .18s;
+  cursor:pointer;position:relative;
+}
+.rc:hover{border-color:var(--ink-2);box-shadow:0 1px 0 var(--line),0 14px 28px -22px rgba(22,19,24,.22)}
+.rc.soft{background:var(--soft);border-color:var(--line)}
+
+.rc .hl{
+  font-size:15.5px;line-height:1.38;font-weight:600;color:var(--ink);
+  letter-spacing:-.005em;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+  text-wrap:pretty;
+}
+.rc.expanded .hl{-webkit-line-clamp:unset;display:block}
+.rc:hover .hl{color:var(--ink)}
+
+.rc .mt{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--mut);
+  margin:10px 0 8px;
+  display:flex;align-items:center;gap:8px;
+}
+.rc .mt .pip{width:4px;height:4px;border-radius:50%;background:var(--acc);flex:0 0 auto}
+
+.rc .dg{
+  font-size:13.5px;line-height:1.58;color:var(--body);
+  display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;
+  text-wrap:pretty;
+}
+.rc.expanded .dg{-webkit-line-clamp:unset;display:block}
+
+.rc .ft{
+  margin-top:auto;padding-top:12px;
+  font-family:var(--mono);font-size:11px;color:var(--mut);
+  letter-spacing:.02em;
+  border-top:1px dashed var(--line);
+}
+.rc .sal{color:var(--ink);font-weight:600;font-family:var(--serif);font-size:15px;letter-spacing:-.01em}
+
+/* Expanded state */
+.rc.expanded{
+  flex:0 0 520px;
+  border-color:var(--ink);
+  box-shadow:0 1px 0 var(--line),0 26px 60px -28px rgba(22,19,24,.32);
+}
+.rc.expanded .more{display:block}
+.rc .more{
+  display:none;margin-top:14px;padding-top:14px;
+  border-top:1px solid var(--line);
+  font-size:13px;line-height:1.6;color:var(--body);
+}
+.rc .more dl{margin:0;display:flex;flex-direction:column;gap:0}
+.rc .more .row{
+  display:flex;align-items:baseline;gap:8px;
+  padding:6px 0;
+}
+.rc .more .row:last-child{}
+.rc .more .row dt{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.10em;
+  text-transform:uppercase;color:var(--mut);
+  flex:0 0 auto;white-space:nowrap;
+}
+.rc .more .row .leaders{
+  flex:1;align-self:flex-end;
+  border-bottom:1px dotted var(--mut-2);
+  height:.85em;min-width:14px;margin:0 4px;
+  opacity:.7;
+}
+.rc .more .row dd{
+  margin:0;color:var(--ink);font-size:13px;
+  flex:0 0 auto;text-align:right;white-space:nowrap;
+}
+.rc .closer{
+  position:absolute;top:10px;right:10px;width:24px;height:24px;border-radius:50%;
+  border:1px solid var(--line-2);background:var(--paper);color:var(--mut);
+  display:none;align-items:center;justify-content:center;font-size:14px;line-height:1;
+  cursor:pointer;
+}
+.rc.expanded .closer{display:flex}
+.rc.expanded:hover .closer{color:var(--ink);border-color:var(--ink)}
+
+/* Expand hint */
+.rc::after{
+  content:"↗";position:absolute;bottom:14px;right:16px;
+  font-family:var(--mono);font-size:13px;color:var(--mut-2);
+  opacity:0;transition:.18s;
+}
+.rc:hover::after{opacity:1;color:var(--mut)}
+.rc.expanded::after{display:none}
+
+/* Tags inside cards */
+.tg{
+  display:inline-block;background:var(--soft);border:1px solid var(--line);
+  color:var(--ink-2);border-radius:4px;padding:2px 8px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;
+  margin:3px 4px 0 0;
+}
+
+/* Stat-style card (band 02 salary) */
+.rc.stat-card{justify-content:flex-start}
+.rc.stat-card .stat-big{
+  font-family:var(--serif);font-weight:500;
+  font-size:46px;line-height:1;letter-spacing:-.025em;
+  color:var(--ink);margin:14px 0 4px;
+  font-variation-settings:"opsz" 144,"SOFT" 30;
+}
+.rc.stat-card .stat-sub{font-size:11.5px;color:var(--mut);font-family:var(--mono);letter-spacing:.04em}
+.rc.stat-card .axis{
+  margin-top:14px;display:flex;justify-content:space-between;
+  font-family:var(--mono);font-size:10px;color:var(--mut-2);letter-spacing:.04em;
+}
+.rc.stat-card .axis-bar{
+  height:6px;background:var(--line);border-radius:3px;margin-top:4px;position:relative;
+  overflow:hidden;
+}
+.rc.stat-card .axis-bar > i{
+  position:absolute;top:0;bottom:0;background:var(--acc);
+  border-radius:3px;
+}
+.rc.stat-card .axis-bar > b{
+  position:absolute;top:-3px;width:2px;height:12px;background:var(--ink);
+  font-style:normal;
+}
+
+/* HN frequency bars */
+.freqlist{display:flex;flex-direction:column;gap:7px;margin-top:6px}
+.freqrow{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--ink-2)}
+.freqrow .name{flex:0 0 60px;font-family:var(--mono);font-size:11px;color:var(--ink)}
+.freqrow .bar{
+  flex:1;height:6px;background:var(--soft);border-radius:3px;overflow:hidden;
+}
+.freqrow .bar > i{display:block;height:100%;background:var(--acc);border-radius:3px}
+.freqrow .num{flex:0 0 22px;text-align:right;font-family:var(--mono);font-size:11px;color:var(--mut)}
+
+/* Adoption (band 06) — scale + bar */
+.adopt{margin-top:auto;padding-top:8px}
+.adopt .big{
+  font-family:var(--serif);font-weight:500;font-size:40px;line-height:1;
+  color:var(--ink);letter-spacing:-.02em;
+  font-variation-settings:"opsz" 144;
+}
+.adopt .unit{font-family:var(--mono);font-size:11px;color:var(--mut);margin-left:4px}
+.adopt .scale{
+  margin-top:10px;height:8px;background:var(--soft);border-radius:4px;position:relative;
+  border:1px solid var(--line);
+}
+.adopt .scale > i{
+  position:absolute;top:0;bottom:0;left:0;background:var(--acc);border-radius:3px;
+}
+.adopt .scale > .ref{
+  position:absolute;top:-3px;width:1px;height:14px;background:var(--mut-2);
+}
+.adopt .ticks{
+  display:flex;justify-content:space-between;
+  margin-top:6px;font-family:var(--mono);font-size:10px;color:var(--mut-2);
+  letter-spacing:.02em;
+}
+
+/* Stars w/ momentum (band 05) */
+.starline{
+  margin-top:auto;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;
+  padding-top:10px;border-top:1px dashed var(--line);
+}
+.starline .s-big{font-family:var(--serif);font-size:22px;color:var(--ink);font-weight:500;letter-spacing:-.015em}
+.starline .s-delta{
+  font-family:var(--mono);font-size:11px;color:var(--pos);
+  background:rgba(31,111,74,.10);padding:1.5px 7px;border-radius:3px;
+}
+.starline .s-heat{font-size:12px;color:var(--acc)}
+
+/* Warn box (legacy) */
+.warn-line{color:#9a6b1f;font-size:12.5px;line-height:1.55;background:#FBF6EA;border-left:2px solid #9a6b1f;padding:8px 10px;border-radius:0 4px 4px 0;margin-top:4px}
+
+/* Editor's "TK" note — magazine-style placeholder */
+.editors-note{
+  display:flex;align-items:flex-start;gap:10px;
+  margin-top:4px;
+  font-family:var(--serif);font-style:italic;font-size:14.5px;line-height:1.55;
+  color:var(--ink-2);font-variation-settings:"opsz" 36,"SOFT" 50;
+  text-wrap:pretty;
+}
+.editors-note .tk{
+  flex:0 0 auto;
+  font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.14em;
+  background:var(--gold);color:#fff;
+  padding:2.5px 7px;border-radius:2px;
+  font-style:normal;text-transform:uppercase;
+  margin-top:3px;line-height:1;
+}
+.editors-note .body{flex:1;min-width:0}
+.editors-note .body em{font-style:italic;font-weight:500;color:var(--gold);font-variation-settings:"opsz" 36,"SOFT" 50}
+
+/* ───── Hero KPI deltas ───── */
+.kpi-row{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  margin:24px 0 22px;
+}
+.kpi-cell{
+  padding:13px 18px 13px 0;border-right:1px solid var(--line);
+}
+.kpi-cell:last-child{border-right:none;padding-right:0}
+.kpi-cell:not(:first-child){padding-left:18px}
+.kpi-lbl{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--mut);margin-bottom:6px;
+  display:flex;align-items:center;gap:5px;
+}
+.kpi-lbl::before{content:"Δ";font-style:italic;color:var(--acc);font-weight:600}
+.kpi-val{
+  display:flex;align-items:baseline;gap:6px;
+  font-family:var(--serif);font-size:24px;font-weight:500;letter-spacing:-.018em;
+  color:var(--ink);line-height:1;
+  font-variation-settings:"opsz" 72,"SOFT" 30;
+}
+.kpi-val .pct{color:var(--pos);font-size:16px}
+.kpi-val .arrow{font-size:13px;color:var(--pos);margin-left:-2px}
+.kpi-val.down{color:var(--ink)}
+.kpi-val.down .pct,.kpi-val.down .arrow{color:var(--acc)}
+.kpi-sub{
+  font-family:var(--mono);font-size:10px;color:var(--mut-2);letter-spacing:.04em;margin-top:4px;
+}
+
+/* ───── Card marks & accents ───── */
+.rc{overflow:hidden}
+.card-rule{
+  position:absolute;top:0;left:0;right:0;height:3px;z-index:1;
+  pointer-events:none;
+}
+.author-mark{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:28px;height:28px;border-radius:50%;
+  font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.02em;
+  background:var(--ink);color:#fff;
+  margin-bottom:10px;
+}
+.subj-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.05em;
+  padding:3px 9px;border-radius:3px;color:#fff;margin-bottom:10px;align-self:flex-start;
+}
+.subj-pill::before{content:"";width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.7)}
+.mono-mark{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:7px;
+  font-family:var(--serif);font-size:19px;font-weight:600;color:#fff;
+  margin-bottom:10px;letter-spacing:-.02em;align-self:flex-start;
+  font-variation-settings:"opsz" 144,"SOFT" 30;
+}
+/* company card stronger title */
+.rc.co .hl{
+  font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:-.02em;
+  font-variation-settings:"opsz" 72,"SOFT" 30;line-height:1.1;
+  -webkit-line-clamp:unset;display:block;
+}
+
+/* ───── Sparkline cards (band 06) ───── */
+.adopt-card{margin-top:auto;padding-top:8px;display:flex;flex-direction:column;gap:6px;max-width:360px}
+.adopt-num{display:flex;align-items:baseline;gap:6px;flex-wrap:nowrap;white-space:nowrap}
+.adopt-num .big{
+  font-family:var(--serif);font-size:36px;font-weight:500;line-height:1;letter-spacing:-.022em;
+  color:var(--ink);font-variation-settings:"opsz" 144,"SOFT" 30;
+}
+.adopt-num .unit{font-family:var(--mono);font-size:11px;color:var(--mut);white-space:nowrap}
+.spark{display:block;width:100%;height:52px;margin-top:2px}
+.adopt-foot{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:10.5px;color:var(--mut);letter-spacing:.04em;
+  padding-top:6px;border-top:1px dashed var(--line);
+}
+.adopt-foot > *{white-space:nowrap}
+.adopt-foot .lbl{color:var(--mut-2);text-transform:uppercase;letter-spacing:.08em;font-size:10px}
+.adopt-foot .delta{color:var(--pos);font-weight:600;background:rgba(31,111,74,.10);padding:1.5px 6px;border-radius:3px}
+.adopt-foot .delta.down{color:var(--acc);background:rgba(204,59,27,.10)}
+.adopt-foot .rel{color:var(--mut)}
+
+/* ───── Weighted skills (band 02) ───── */
+.weighted{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;
+  margin-top:10px;font-family:var(--serif);color:var(--ink);
+  font-variation-settings:"opsz" 72,"SOFT" 30;letter-spacing:-.015em;
+  line-height:1.05;
+}
+.weighted span{position:relative;font-weight:500}
+.weighted span sub{
+  font-family:var(--mono);font-size:9.5px;color:var(--mut);
+  font-weight:400;vertical-align:super;margin-left:2px;
+  letter-spacing:.02em;
+}
+.weighted span.dim{color:var(--mut)}
+
+/* ───── Lede / Drop cap ───── */
+.lede{
+  font-family:var(--serif);font-size:19px;line-height:1.6;
+  color:var(--ink-2);margin:18px 0 4px;max-width:62ch;
+  text-wrap:pretty;
+  font-variation-settings:"opsz" 36,"SOFT" 50;
+}
+.lede::first-letter{
+  font-family:var(--serif);font-weight:500;
+  font-size:78px;line-height:.82;
+  float:left;margin:8px 12px -2px 0;color:var(--acc);
+  font-variation-settings:"opsz" 144,"SOFT" 30;
+  letter-spacing:-.04em;
+}
+.byline{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.10em;
+  text-transform:uppercase;color:var(--mut);
+  margin:14px 0 0;display:flex;align-items:center;gap:10px;
+}
+.byline b{color:var(--ink);font-weight:600;font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:0;font-size:12.5px}
+.byline .rule{flex:1;height:1px;background:var(--line);max-width:120px}
+
+/* ───── Inside this issue (TOC) ───── */
+.toc{
+  padding:34px 0 32px;border-bottom:1px solid var(--line);
+}
+.toc-head{
+  display:flex;align-items:baseline;justify-content:space-between;
+  margin-bottom:18px;gap:20px;flex-wrap:wrap;
+}
+.toc-title{
+  font-family:var(--serif);font-size:24px;font-weight:500;
+  color:var(--ink);letter-spacing:-.015em;line-height:1;
+  font-variation-settings:"opsz" 72,"SOFT" 30;
+}
+.toc-title em{font-style:italic;color:var(--acc);font-weight:400;margin-left:6px}
+.toc-sub{
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--mut);
+}
+.toc-list{
+  list-style:none;padding:0;margin:0;
+  display:grid;grid-template-columns:1fr 1fr;
+  column-gap:48px;
+  border-top:1px solid var(--ink);
+}
+.toc-list li{
+  border-bottom:1px solid var(--line);
+}
+.toc-list a{
+  display:grid;grid-template-columns:38px 1fr auto;
+  align-items:baseline;gap:12px;
+  padding:14px 4px 14px 0;
+  transition:.15s;
+}
+.toc-list a:hover{background:var(--soft)}
+.toc-list a:hover .tnum{color:var(--acc)}
+.toc-list a:hover .tk{color:var(--acc)}
+.toc-list .tnum{
+  font-family:var(--mono);font-size:11px;font-weight:600;
+  letter-spacing:.06em;color:var(--ink);
+}
+.toc-list .tcol{display:flex;flex-direction:column;gap:2px;min-width:0}
+.toc-list .tk{
+  font-family:var(--serif);font-size:18px;font-weight:500;
+  color:var(--ink);letter-spacing:-.012em;line-height:1.2;
+  font-variation-settings:"opsz" 36,"SOFT" 30;
+}
+.toc-list .tpp{
+  font-size:12.5px;color:var(--mut);line-height:1.5;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.toc-list .tmeta{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;
+  color:var(--mut-2);white-space:nowrap;
+  display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right;
+}
+.toc-list .tmeta b{color:var(--ink);font-weight:600;font-family:var(--serif);font-size:14px;letter-spacing:-.01em}
+.toc-leaders{
+  flex:1;border-bottom:1px dotted var(--mut-2);
+  height:.85em;align-self:flex-end;margin:0 8px;min-width:14px;
+}
+
+/* ───── Folio (page no.) ───── */
+.folio{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--mut);
+  display:flex;align-items:center;gap:6px;
+  margin-bottom:8px;
+}
+.folio b{color:var(--ink);font-weight:600}
+.folio .sep{color:var(--mut-2)}
+
+/* ───── Evidence / Predictions block ───── */
+.evidence{
+  display:grid;grid-template-columns:1.2fr 1fr;
+  gap:0;margin-top:18px;
+  border-top:1px solid var(--line);
+}
+.evidence > div{
+  padding:16px 24px 4px 0;min-width:0;
+}
+.evidence > div + div{
+  padding-left:24px;border-left:1px solid var(--line);padding-right:0;
+}
+.ev-label{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--mut);
+  margin-bottom:12px;display:flex;align-items:center;gap:8px;
+}
+.ev-label::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--acc);flex:0 0 auto}
+.ev-label em{font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:0;font-size:12px;color:var(--ink-2);margin-left:auto;font-weight:400}
+.ev-tags{
+  display:flex;flex-wrap:wrap;gap:4px 22px;align-items:baseline;
+  font-family:var(--serif);color:var(--ink);
+  font-variation-settings:"opsz" 36,"SOFT" 30;letter-spacing:-.012em;line-height:1.2;
+}
+.ev-tags span{position:relative;font-size:20px;font-weight:500}
+.ev-tags sub{
+  font-family:var(--mono);font-size:10.5px;color:var(--acc);
+  font-weight:600;vertical-align:super;margin-left:2px;letter-spacing:.02em;
+  top:auto;
+}
+.ev-preds{
+  list-style:none;padding:0;margin:0;
+  display:flex;flex-direction:column;gap:8px;
+  font-family:var(--serif);font-style:italic;font-size:16px;
+  color:var(--ink-2);line-height:1.35;
+  font-variation-settings:"opsz" 36,"SOFT" 50;
+}
+.ev-preds li{position:relative;padding-left:20px;text-wrap:pretty}
+.ev-preds li::before{
+  content:"→";position:absolute;left:0;top:0;color:var(--acc);
+  font-style:normal;font-family:var(--sans);font-size:13px;font-weight:500;
+  line-height:1.5;
+}
+@media(max-width:760px){
+  .evidence{grid-template-columns:1fr}
+  .evidence > div + div{padding-left:0;border-left:none;border-top:1px solid var(--line);padding-top:14px;margin-top:6px}
+}
+
+/* ───── Reading progress ───── */
+.progress{
+  position:fixed;top:0;left:0;right:0;height:2px;
+  background:transparent;z-index:50;pointer-events:none;
+}
+.progress > i{
+  display:block;height:100%;background:var(--acc);width:0;
+  transition:width 80ms linear;transform-origin:left;
+}
+
+/* ───── Asterism between bands ───── */
+.band{position:relative}
+.band + .band::before{
+  content:"✻";
+  position:absolute;top:-9px;left:50%;
+  transform:translateX(-50%);
+  background:var(--bg);
+  font-family:var(--serif);font-size:14px;color:var(--mut-2);
+  padding:0 18px;line-height:1;
+  font-variation-settings:"opsz" 72;
+}
+
+/* ───── End mark after band positioning ───── */
+.bh .pp{position:relative}
+.bh .pp::after{
+  content:"";display:block;width:20px;height:1.5px;background:var(--acc);
+  margin-top:12px;opacity:.55;
+}
+
+/* ───── Sparkline animation ───── */
+.spark .spark-line{
+  stroke-dasharray:1;stroke-dashoffset:1;
+}
+.spark.in .spark-line{
+  transition:stroke-dashoffset 1.5s cubic-bezier(.22,.61,.36,1);
+}
+.spark .spark-area{opacity:0}
+.spark .spark-dot{opacity:0}
+.spark.in .spark-area{opacity:1;transition:opacity 1.2s ease-out .2s}
+.spark.in .spark-dot{opacity:1;transition:opacity .35s ease-out 1.1s}
+
+/* Number reveal */
+.count-pending{opacity:.4}
+
+/* ───── Side nav ───── */
+.sidenav{
+  position:fixed;top:50%;right:18px;transform:translateY(-50%);
+  z-index:20;
+  display:flex;flex-direction:column;gap:0;
+  background:var(--paper);border:1px solid var(--line);
+  padding:6px 8px;border-radius:999px;
+}
+.sidenav a{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;
+  color:var(--mut-2);padding:6px 8px;
+  display:flex;align-items:center;gap:8px;
+  position:relative;font-weight:500;
+}
+.sidenav a .pip{
+  width:6px;height:6px;border-radius:50%;background:var(--mut-2);
+  flex:0 0 auto;transition:.18s;
+}
+.sidenav a .lbl{
+  max-width:0;overflow:hidden;white-space:nowrap;
+  transition:max-width .25s ease, opacity .15s;opacity:0;
+  color:var(--ink-2);
+}
+.sidenav:hover a .lbl{max-width:160px;opacity:1;padding-left:0}
+.sidenav a.on{color:var(--ink)}
+.sidenav a.on .pip{background:var(--acc);box-shadow:0 0 0 3px rgba(204,59,27,.15)}
+.sidenav a:hover{color:var(--ink)}
+
+/* ───── Footer ───── */
+footer{
+  max-width:1320px;margin:0 auto;padding:28px 32px 64px;
+  font-family:var(--mono);font-size:11px;color:var(--mut);
+  letter-spacing:.04em;line-height:1.7;
+  border-top:1px solid var(--line);
+}
+footer .rule{display:flex;align-items:center;gap:10px;color:var(--mut-2);margin-bottom:10px}
+footer .rule b{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--ink);font-size:14px;letter-spacing:0}
+
+/* ───── Responsive ───── */
+@media(max-width:1100px){
+  .sidenav{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .hero-stat{order:-1}
+}
+@media(max-width:760px){
+  .topbar-inner{padding:14px 18px 12px}
+  .brand{font-size:30px}
+  .wrap{padding:0 18px 50px}
+  .hero{padding:28px 0}
+  .tldr li{font-size:20px;padding-left:42px}
+  .band{grid-template-columns:1fr;gap:18px;padding:28px 0}
+  .bh{position:static;max-height:none}
+  .bh .num{font-size:48px;margin-bottom:6px}
+  .rc{flex-basis:82vw}
+  .rc.expanded{flex-basis:82vw}
+  footer{padding:20px 18px 50px}
+}
+</style>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><i></i></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <h1 class="brand">North<span class="star">★</span>Star</h1>
+    <div style="display:flex;align-items:flex-end">
+      <div class="lang"><a class="on" href="news.html">中</a><a class="" href="news-en.html">EN</a></div>
+      <nav class="tabs"><a href="index.html">直面就业</a>
+      <a class="on" href="news.html">看新闻</a></nav>
+    </div>
+  </div>
+</header>
+
+<div class="issueline">
+  <div class="issueline-inner"><span class="iss-no">第 1 期</span><span class="dot">·</span><span>数据截至 2026-05-19</span><span class="dot">·</span><span>北美 AI Landscape 简讯</span><span class="dot">·</span><span>学习导向</span></div>
+</div>
+
+<main class="wrap">
+
+  <section class="hero" data-screen-label="Hero">
+    <div class="hero-grid">
+      <div class="hero-main">
+        <div class="hk">今日简报 · 2026-06-10</div>
+        <p class="lede">记忆、推理加速与模型治理同时在改写产品风险边界</p>
+        <div class="byline"><span class="rule"></span><b>By NorthStar 编辑部</b> · 2026-05-19</div>
+        <ol class="tldr"><li><a href="https://arxiv.org/abs/2606.10949v1" target="_blank" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none;border-bottom:1px dotted var(--mut-2)">记忆系统会放大迎合性</a> — <em>给记忆层加“反向校验”与冲突检测，重点回放高风险事实链。</em></li><li><a href="https://arxiv.org/abs/2606.10935v1" target="_blank" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none;border-bottom:1px dotted var(--mut-2)">多 token 解码开始可控提速</a> — <em>在你的推理栈里做一版多 token 路径 A/B，先盯 p95 延迟和回退率。</em></li><li><a href="https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/#atom-everything" target="_blank" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none;border-bottom:1px dotted var(--mut-2)">Claude Fable 的停机风险</a> — <em>把“持续有用性”加入评测：长会话里监测拒答、敷衍和能力漂移。</em></li></ol>
+
+        <div class="kpi-row" aria-label=""><div class="kpi-cell" style="grid-column:1/-1;border-right:none;padding-left:0"><div class="kpi-lbl">本周变化</div><div class="kpi-val down"><span style="font-family:var(--serif);font-size:20px">首期 · 无环比基线</span></div><div class="kpi-sub">单期快照，无 vs 上周；2026-08 首次可比（见右侧可证伪预测）</div></div></div>        <div class="evidence">
+          <div>
+            <div class="ev-label">交叉印证 <em>cross-evidence ≥2 sources</em></div>
+            <div class="ev-tags"><span>AI Agents/编排<sub>3</sub></span><span>RAG<sub>3</sub></span><span>多模态<sub>3</sub></span><span>AI安全/Responsible AI<sub>2</sub></span><span>Eval 评测<sub>2</sub></span><span>Serving 推理<sub>2</sub></span></div>
+          </div>
+          <div>
+            <div class="ev-label">可证伪预测 <em>due 2026-08</em></div>
+            <ul class="ev-preds"><li>AI编码agent 在 jobs 频次是否升</li><li>Serving 是否从 jobs 未普及→出现</li><li>多模态 HF 占比是否保持</li></ul>
+          </div>
+        </div>
+      </div>
+      <aside class="hero-stat">
+        <div class="stat-label">本期样本</div>
+        <div class="stat-grid"><div><b>45</b><span>岗样本</span></div><div><b>41</b><span>篇文章</span></div><div><b>12</b><span>篇论文</span></div><div><b>$185k</b><span>年薪中位</span></div></div>      </aside>
+    </div>
+  </section>
+
+  <section class="toc" data-screen-label="Inside this issue">
+    <header class="toc-head">
+      <div class="toc-title">本期目录<em>/ Inside this issue</em></div>
+      <div class="toc-sub">8 栏目 · ~62 卡片 · 5 分钟</div>
+    </header>
+    <ol class="toc-list" id="toc-list"></ol>
+  </section>
+
+  <div id="bands"></div>
+
+</main>
+
+<nav class="sidenav" aria-label="Sections"><a href="#b1" data-anchor="b1"><span class="pip"></span><span class="lbl">01 岗位动态</span></a><a href="#b2" data-anchor="b2"><span class="pip"></span><span class="lbl">02 招聘市场风向</span></a><a href="#b3" data-anchor="b3"><span class="pip"></span><span class="lbl">03 AI 明星 &amp; 社区</span></a><a href="#b4" data-anchor="b4"><span class="pip"></span><span class="lbl">04 Hacker News 热议</span></a><a href="#b5" data-anchor="b5"><span class="pip"></span><span class="lbl">05 研究前沿</span></a><a href="#b6" data-anchor="b6"><span class="pip"></span><span class="lbl">06 开源项目 &amp; 模型</span></a><a href="#b7" data-anchor="b7"><span class="pip"></span><span class="lbl">07 库采纳曲线</span></a><a href="#b8" data-anchor="b8"><span class="pip"></span><span class="lbl">08 大公司状况</span></a><a href="#b9" data-anchor="b9"><span class="pip"></span><span class="lbl">09 H-1B 签证 &amp; 权威年报</span></a></nav>
+
+<footer><div class="rule"><b>生产版</b> · 真实 signals.db 数据 · v2 editorial</div>8 栏均来自真实抓取（JobSpy / arXiv / RSS / GitHub / HuggingFace / Hacker News / SEC EDGAR） · KPI 环比与 PyPI 12 月序列因仅单期快照诚实留空（2026-08 首次可比） · 签证/年报为诚实占位 · 字体走 Google Fonts CDN，离线回退本地衬线 · 点卡片展开详情</footer>
+
+<script>
+/* ─────────────────────────────────────────────
+   Bands — content preserved verbatim from source.
+   Visual treatments (bars, scales, momentum) are
+   re-renderings of existing data, not new content.
+   ───────────────────────────────────────────── */
+
+/* SVG sparkline */
+function sparkSvg(data, opts){
+  opts = opts || {};
+  const w = opts.width || 260, h = opts.height || 50, pad = 3;
+  const max = Math.max.apply(null, data);
+  const min = Math.min.apply(null, data);
+  const range = (max - min) || 1;
+  const step = (w - pad*2) / (data.length - 1);
+  const pts = data.map(function(v,i){
+    const x = pad + i*step;
+    const y = h - pad - ((v - min)/range) * (h - pad*2);
+    return [x.toFixed(1), y.toFixed(1)];
+  });
+  const linePath = pts.map(function(p,i){return (i?'L':'M')+p[0]+','+p[1]}).join(' ');
+  const areaPath = linePath + ' L'+pts[pts.length-1][0]+','+h+' L'+pts[0][0]+','+h+' Z';
+  const last = pts[pts.length-1];
+  const color = opts.color || '#CC3B1B';
+  return '<svg class="spark" viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none" aria-hidden="true">'
+    + '<path class="spark-area" d="'+areaPath+'" fill="'+color+'" fill-opacity=".10"/>'
+    + '<path class="spark-line" d="'+linePath+'" fill="none" stroke="'+color+'" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>'
+    + '<circle class="spark-dot" cx="'+last[0]+'" cy="'+last[1]+'" r="2.5" fill="'+color+'"/>'
+    + '</svg>';
+}
+
+const bands = [{"id": "b1", "n": "01", "k": "岗位动态", "pp": "北美 AI 在招什么、给多少钱", "cnt": "45 AI-相关 / 62 抓取", "cards": [{"hl": "Director of Data Engineering", "mt": " · 远程", "dg": "Solvd US Our organization is redefining claims management across the auto and property space through a blend of AI innovation, proprietary technology, and expert-led services that deliv…", "ft": "", "more": [["公司", ""], ["地点", "远程"], ["过滤", "AI 相关性已校验"]]}, {"hl": "AI/ML Software Engineer", "mt": "Peraton · Annapolis Junction, MD, US", "dg": "As the world’s leading mission capability integrator and transformative enterprise IT provider, we deliver trusted, highly differentiated solutions and technologies to protect our natio…", "ft": "<span class=\"sal\">$135–216k</span> <span style=\"color:var(--mut)\">/ 年</span>", "more": [["公司", "Peraton"], ["地点", "Annapolis Junction, MD, US"], ["薪资", "$135–216k / 年"], ["过滤", "AI 相关性已校验"]]}, {"hl": "All-Source Analyst - Generative AI Platform Power User", "mt": "Peraton · Herndon, VA, US", "dg": "As the world’s leading mission capability integrator and transformative enterprise IT provider, we deliver trusted, highly differentiated solutions and technologies to protect our natio…", "ft": "<span class=\"sal\">$86–138k</span> <span style=\"color:var(--mut)\">/ 年</span>", "more": [["公司", "Peraton"], ["地点", "Herndon, VA, US"], ["薪资", "$86–138k / 年"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Senior All-Source Analyst - Generative AI Platform Power User", "mt": "Peraton · Herndon, VA, US", "dg": "As the world’s leading mission capability integrator and transformative enterprise IT provider, we deliver trusted, highly differentiated solutions and technologies to protect our natio…", "ft": "<span class=\"sal\">$112–179k</span> <span style=\"color:var(--mut)\">/ 年</span>", "more": [["公司", "Peraton"], ["地点", "Herndon, VA, US"], ["薪资", "$112–179k / 年"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Senior Front-End Engineer - Agentic AI", "mt": "Peraton · Basking Ridge, NJ, US", "dg": "As the world’s leading mission capability integrator and transformative enterprise IT provider, we deliver trusted, highly differentiated solutions and technologies to protect our natio…", "ft": "<span class=\"sal\">$112–179k</span> <span style=\"color:var(--mut)\">/ 年</span>", "more": [["公司", "Peraton"], ["地点", "Basking Ridge, NJ, US"], ["薪资", "$112–179k / 年"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Software Engineer - Agentic AI Platform", "mt": "Peraton · Basking Ridge, NJ, US", "dg": "As the world’s leading mission capability integrator and transformative enterprise IT provider, we deliver trusted, highly differentiated solutions and technologies to protect our natio…", "ft": "<span class=\"sal\">$104–166k</span> <span style=\"color:var(--mut)\">/ 年</span>", "more": [["公司", "Peraton"], ["地点", "Basking Ridge, NJ, US"], ["薪资", "$104–166k / 年"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Senior AI/ML Software Engineer", "mt": "Peraton · Basking Ridge, NJ, US", "dg": "As the world’s leading mission capability integrator and transformative enterprise IT provider, we deliver trusted, highly differentiated solutions and technologies to protect our natio…", "ft": "<span class=\"sal\">$146–234k</span> <span style=\"color:var(--mut)\">/ 年</span>", "more": [["公司", "Peraton"], ["地点", "Basking Ridge, NJ, US"], ["薪资", "$146–234k / 年"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Senior Data Engineer - Knowledge Graphs", "mt": "Peraton · Basking Ridge, NJ, US", "dg": "As the world’s leading mission capability integrator and transformative enterprise IT provider, we deliver trusted, highly differentiated solutions and technologies to protect our natio…", "ft": "<span class=\"sal\">$135–216k</span> <span style=\"color:var(--mut)\">/ 年</span>", "more": [["公司", "Peraton"], ["地点", "Basking Ridge, NJ, US"], ["薪资", "$135–216k / 年"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Compliance &amp; Policy Analyst - Agentic AI", "mt": "Peraton · Basking Ridge, NJ, US", "dg": "As the world’s leading mission capability integrator and transformative enterprise IT provider, we deliver trusted, highly differentiated solutions and technologies to protect our natio…", "ft": "<span class=\"sal\">$80–128k</span> <span style=\"color:var(--mut)\">/ 年</span>", "more": [["公司", "Peraton"], ["地点", "Basking Ridge, NJ, US"], ["薪资", "$80–128k / 年"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Senior Full-Stack Platform Engineer - Agentic AI", "mt": "Peraton · Basking Ridge, NJ, US", "dg": "As the world’s leading mission capability integrator and transformative enterprise IT provider, we deliver trusted, highly differentiated solutions and technologies to protect our natio…", "ft": "<span class=\"sal\">$146–234k</span> <span style=\"color:var(--mut)\">/ 年</span>", "more": [["公司", "Peraton"], ["地点", "Basking Ridge, NJ, US"], ["薪资", "$146–234k / 年"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Database Administrator – AI/ML TS/SCI w Poly", "mt": "Peraton · Laurel, MD, US", "dg": "As the world’s leading mission capability integrator and transformative enterprise IT provider, we deliver trusted, highly differentiated solutions and technologies to protect our natio…", "ft": "<span class=\"sal\">$135–216k</span> <span style=\"color:var(--mut)\">/ 年</span>", "more": [["公司", "Peraton"], ["地点", "Laurel, MD, US"], ["薪资", "$135–216k / 年"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Machine Learning Engineer - Document Intelligence", "mt": "Workday · 远程", "dg": "We’re obsessed with making hard work pay off, for our people, our customers, and the world around us.", "ft": "<span class=\"sal\">$128–240k</span> <span style=\"color:var(--mut)\">/ 年</span>", "more": [["公司", "Workday"], ["地点", "远程"], ["薪资", "$128–240k / 年"], ["过滤", "AI 相关性已校验"]]}, {"hl": "AI Product Support Lead", "mt": "Wonderschool · San Francisco, CA, US", "dg": "Wonderschool serves government agencies, childcare providers, parents, and teachers across multiple products.", "ft": "", "more": [["公司", "Wonderschool"], ["地点", "San Francisco, CA, US"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Principal AI Site Reliability Engineer", "mt": "Oracle · US", "dg": "As a Principal Site Reliability Engineer, you will play a pivotal role in building and operating the Oracle HealthPatient Portal.", "ft": "", "more": [["公司", "Oracle"], ["地点", "US"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Senior AI Site Reliability Engineer", "mt": "Oracle · US", "dg": "As a Senior Site Reliability Engineer, you will play a pivotal role in building and operating the Oracle HealthPatient Portal.", "ft": "", "more": [["公司", "Oracle"], ["地点", "US"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Staff Software Engineer, Cribl AI", "mt": "Cribl · 远程", "dg": "Join the company that's building the telemetry infrastructure for the AI era.", "ft": "<span class=\"sal\">$225–265k</span> <span style=\"color:var(--mut)\">/ 年</span>", "more": [["公司", "Cribl"], ["地点", "远程"], ["薪资", "$225–265k / 年"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Machine Learning Software Engineer", "mt": "Google · Mountain View, CA", "dg": "…", "ft": "", "more": [["公司", "Google"], ["地点", "Mountain View, CA"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Site AI Engineer - Fort Meyers, FL", "mt": "Suffolk Construction · Fort Myers, FL", "dg": "…", "ft": "", "more": [["公司", "Suffolk Construction"], ["地点", "Fort Myers, FL"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Machine Learning Engineer", "mt": "OVA.Work · New York, NY", "dg": "…", "ft": "", "more": [["公司", "OVA.Work"], ["地点", "New York, NY"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Software Engineer, AI/ML Computer Vision", "mt": "Google · San Jose, CA", "dg": "…", "ft": "", "more": [["公司", "Google"], ["地点", "San Jose, CA"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Machine Learning Engineer - Generative AI", "mt": "Qualcomm · San Diego, CA", "dg": "…", "ft": "", "more": [["公司", "Qualcomm"], ["地点", "San Diego, CA"], ["过滤", "AI 相关性已校验"]]}, {"hl": "AI Engineer", "mt": "Viking · ", "dg": "…", "ft": "", "more": [["公司", "Viking"], ["地点", ""], ["过滤", "AI 相关性已校验"]]}, {"hl": "Machine Learning/ML Engineer", "mt": "Jobgether · ", "dg": "…", "ft": "", "more": [["公司", "Jobgether"], ["地点", ""], ["过滤", "AI 相关性已校验"]]}, {"hl": "Software Engineer, Applied AI", "mt": "Encord · San Francisco, CA", "dg": "…", "ft": "", "more": [["公司", "Encord"], ["地点", "San Francisco, CA"], ["过滤", "AI 相关性已校验"]]}, {"hl": "AI/ML Engineer", "mt": "Winaxis LLC · Boston, MA", "dg": "…", "ft": "", "more": [["公司", "Winaxis LLC"], ["地点", "Boston, MA"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Machine Learning Engineer, Digital Optimus", "mt": "Tesla · Palo Alto, CA", "dg": "…", "ft": "", "more": [["公司", "Tesla"], ["地点", "Palo Alto, CA"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Agentic AI and Data Engineer", "mt": "Booz Allen Hamilton · Honolulu, HI", "dg": "…", "ft": "", "more": [["公司", "Booz Allen Hamilton"], ["地点", "Honolulu, HI"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Machine Learning Engineer", "mt": "Robinhood · Bellevue, WA", "dg": "…", "ft": "", "more": [["公司", "Robinhood"], ["地点", "Bellevue, WA"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Junior AI Engineer", "mt": "Onto Innovation · Wilmington, MA", "dg": "…", "ft": "", "more": [["公司", "Onto Innovation"], ["地点", "Wilmington, MA"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Machine Learning Engineer", "mt": "Tessera Data · San Francisco, CA", "dg": "…", "ft": "", "more": [["公司", "Tessera Data"], ["地点", "San Francisco, CA"], ["过滤", "AI 相关性已校验"]]}, {"hl": "AI Engineer", "mt": "Rockwell Automation · Milwaukee, WI", "dg": "…", "ft": "", "more": [["公司", "Rockwell Automation"], ["地点", "Milwaukee, WI"], ["过滤", "AI 相关性已校验"]]}, {"hl": "AI Engineer, Internal Enablement &amp; Productivity", "mt": "Govini · Pittsburgh, PA", "dg": "…", "ft": "", "more": [["公司", "Govini"], ["地点", "Pittsburgh, PA"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Machine Learning Engineer (AI/ML)", "mt": "HiringCafe · Cupertino, CA", "dg": "…", "ft": "", "more": [["公司", "HiringCafe"], ["地点", "Cupertino, CA"], ["过滤", "AI 相关性已校验"]]}, {"hl": "AI Engineering Internship", "mt": "Wyze · Kirkland, WA", "dg": "…", "ft": "", "more": [["公司", "Wyze"], ["地点", "Kirkland, WA"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Junior AI/ML Engineer", "mt": "Infinitive · New York, NY", "dg": "…", "ft": "", "more": [["公司", "Infinitive"], ["地点", "New York, NY"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Applied AI Engineer", "mt": "Intuitive Research and Technology Corporation · Huntsville, AL", "dg": "…", "ft": "", "more": [["公司", "Intuitive Research and Technology Corporation"], ["地点", "Huntsville, AL"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Software Engineer, AI Platform - New Grad", "mt": "Nuro · Mountain View, CA", "dg": "…", "ft": "", "more": [["公司", "Nuro"], ["地点", "Mountain View, CA"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Machine Learning Engineer", "mt": "Adobe · San Jose, CA", "dg": "…", "ft": "", "more": [["公司", "Adobe"], ["地点", "San Jose, CA"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Python AI/ML Developer", "mt": "Kforce Inc · Columbus, OH", "dg": "…", "ft": "", "more": [["公司", "Kforce Inc"], ["地点", "Columbus, OH"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Machine Learning Engineer - Agentic AI ($250,000)", "mt": "Attis · ", "dg": "…", "ft": "", "more": [["公司", "Attis"], ["地点", ""], ["过滤", "AI 相关性已校验"]]}, {"hl": "Machine Learning Engineer I", "mt": "CNN · Atlanta, GA", "dg": "…", "ft": "", "more": [["公司", "CNN"], ["地点", "Atlanta, GA"], ["过滤", "AI 相关性已校验"]]}, {"hl": "Full-Stack Engineer 5 –  AI Insights &amp; Visualizations, AI Platform", "mt": "Netflix · ", "dg": "…", "ft": "", "more": [["公司", "Netflix"], ["地点", ""], ["过滤", "AI 相关性已校验"]]}, {"hl": "AI Engineer", "mt": "Wolverine Worldwide · Rockford, MI", "dg": "…", "ft": "", "more": [["公司", "Wolverine Worldwide"], ["地点", "Rockford, MI"], ["过滤", "AI 相关性已校验"]]}, {"hl": "AI / Machine Learning Engineer", "mt": "1Kosmos · Iselin, NJ", "dg": "…", "ft": "", "more": [["公司", "1Kosmos"], ["地点", "Iselin, NJ"], ["过滤", "AI 相关性已校验"]]}, {"hl": "AI / ML Engineer", "mt": "Jobgether · ", "dg": "…", "ft": "", "more": [["公司", "Jobgether"], ["地点", ""], ["过滤", "AI 相关性已校验"]]}], "digest": "<b>45</b> 个 AI 相关岗（62 抓取，滤 17 噪声）。<br>年薪 <b>$80–265k</b>，中位 <em>$185k</em>。<br>远程占比 <b>6%</b>。<br>发岗大户：Peraton、Oracle、Google。<br>主力岗型：<em>AI/ML Engineer · Forward Deployed · Data Scientist</em>。"}, {"id": "b2", "n": "02", "k": "招聘市场风向", "pp": "薪资水位 + 真实技能需求", "cnt": "", "cards": [{"soft": true, "stat": true, "custom": "<div class=\"hl\">年薪中位</div><div class=\"mt\"><span class=\"pip\"></span>北美 AI 岗 · n=22</div><div class=\"stat-big\">$185,000</div><div class=\"stat-sub\">自报 n=22（JobSpy 抓取）</div><div class=\"axis-bar\"><i style=\"left:14%;width:62%\"></i><b style=\"left:50%\"></b></div><div class=\"axis\"><span>$80k</span><span>中位</span><span>$265k</span></div>", "more": [["指标", "年薪中位"], ["样本", "n=22"], ["实测范围", "$80k–$265k"]]}, {"soft": true, "custom": "<div class=\"hl\">JD 高频技能</div><div class=\"mt\"><span class=\"pip\"></span>简历该往这些词靠</div><div class=\"weighted\"><span style=\"font-size:34px\">Python</span><span style=\"font-size:30px\">AWS/Azure 云</span><span style=\"font-size:26px\">LLM/生成式AI应用</span><span style=\"font-size:23px\">Docker/Kubernetes</span><span style=\"font-size:20px\" class=dim>TypeScript/Node</span><span style=\"font-size:18px\" class=dim>SQL</span><span style=\"font-size:16px\" class=dim>AI Agents/编排</span><span style=\"font-size:15px\" class=dim>Eval 评测</span></div>", "more": [["来源", "63 份 JD · W1 LLM 抽取"], ["说明", "按需求层级排序，未编造精确计数"]]}, {"soft": true, "custom": "<div class=\"hl\">HN Who-is-hiring</div><div class=\"mt\"><span class=\"pip\"></span>200 条招聘贴</div><div class=\"dg\" style=\"-webkit-line-clamp:unset;display:block\">提及频次（真实计数）</div><div class=\"freqlist\"><div class=\"freqrow\"><span class=\"name\">Python</span><span class=\"bar\"><i style=\"width:100%\"></i></span><span class=\"num\">24</span></div><div class=\"freqrow\"><span class=\"name\">TypeScript</span><span class=\"bar\"><i style=\"width:41%\"></i></span><span class=\"num\">10</span></div><div class=\"freqrow\"><span class=\"name\">Kubernetes</span><span class=\"bar\"><i style=\"width:37%\"></i></span><span class=\"num\">9</span></div><div class=\"freqrow\"><span class=\"name\">RAG</span><span class=\"bar\"><i style=\"width:25%\"></i></span><span class=\"num\">6</span></div><div class=\"freqrow\"><span class=\"name\">Rust</span><span class=\"bar\"><i style=\"width:12%\"></i></span><span class=\"num\">3</span></div><div class=\"freqrow\"><span class=\"name\">LLM</span><span class=\"bar\"><i style=\"width:4%\"></i></span><span class=\"num\">1</span></div></div><div class=\"ft\">补 JobSpy 抓不到的早期/小厂</div>", "more": [["数据源", "HN Who-is-hiring · 200"], ["互补", "JobSpy"]]}], "digest": "JD 与 HN 双源印证：<b>Python</b> 都是头号需求。<br>JD 重 <em>Python / AWS/Azure 云 / LLM/生成式AI应用</em>；HN 重 <em>Python·24 / TypeScript·10 / Kubernetes·9</em>。<br>信号：写得动 <b>Agent + Eval</b> 比「懂某个模型」更被招；RAG 在 HN 小厂更高频。"}, {"id": "b3", "n": "03", "k": "AI 明星 & 社区", "pp": "他们认为接下来什么重要", "cnt": "41 篇", "cards": [{"author": "SW", "hl": "If Claude Fable stops helping you, you'll never know", "mt": "Simon Willison · 2026-06-10", "dg": "If Claude Fable stops helping you, you&amp; x27;ll never know Jonathon Ready highlights one of the more eyebrow-raising details from the 319 page system card for Fable 5 and Mytho…", "more": [["作者", "Simon Willison"], ["日期", "2026-06-10"]]}, {"author": "SW", "hl": "Initial impressions of Claude Fable 5", "mt": "Simon Willison · 2026-06-09", "dg": "I didn't have early access to today's Claude Fable 5 release, but I've spent the past ~5.5 hours putting it through its paces. My initial impressions are that this is somethin…", "more": [["作者", "Simon Willison"], ["日期", "2026-06-09"]]}, {"author": "SW", "hl": "llm 0.32a3", "mt": "Simon Willison · 2026-06-09", "dg": "Release: llm 0.32a3 Almost entirely written by the new Claude Fable 5, see my write-up for more details . Tags: projects , ai , generative-ai , llms , llm , claude-mythos", "more": [["作者", "Simon Willison"], ["日期", "2026-06-09"]]}, {"author": "SW", "hl": "Setting a custom price for a model in AgentsView", "mt": "Simon Willison · 2026-06-09", "dg": "TIL: Setting a custom price for a model in AgentsView I've been really enjoying AgentsView by Wes McKinney as a tool for exploring my token usage across different coding agent…", "more": [["作者", "Simon Willison"], ["日期", "2026-06-09"]]}, {"author": "SW", "hl": "Quoting Andrej Karpathy", "mt": "Simon Willison · 2026-06-09", "dg": "I feel a lot of things changing as working software increasingly comes out on a tap. The Jevon's paradox kicks in and I feel my own demand for software growing substantially. …", "more": [["作者", "Simon Willison"], ["日期", "2026-06-09"]]}, {"author": "HB", "hl": "Can Voice Agents Handle Bilingual Customers? Benchmarking Frontier ASR on Code-Switched Speech", "mt": "HuggingFace Blog · 2026-06-09", "dg": "（该 RSS 源未提供摘要）", "more": [["作者", "HuggingFace Blog"], ["日期", "2026-06-09"]]}, {"author": "HB", "hl": "Introducing North Mini Code: Cohere’s First Model For Developers", "mt": "HuggingFace Blog · 2026-06-09", "dg": "（该 RSS 源未提供摘要）", "more": [["作者", "HuggingFace Blog"], ["日期", "2026-06-09"]]}, {"author": "HB", "hl": "How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces", "mt": "HuggingFace Blog · 2026-06-09", "dg": "（该 RSS 源未提供摘要）", "more": [["作者", "HuggingFace Blog"], ["日期", "2026-06-09"]]}, {"author": "HB", "hl": "Migrating Your GitHub CI to Hugging Face Jobs", "mt": "HuggingFace Blog · 2026-06-09", "dg": "（该 RSS 源未提供摘要）", "more": [["作者", "HuggingFace Blog"], ["日期", "2026-06-09"]]}, {"author": "ON", "hl": "How engineers at Nextdoor use Codex to build without limits", "mt": "OpenAI News · 2026-06-09", "dg": "How engineers at Nextdoor use Codex with GPT-5.5 to investigate hard-to-reproduce issues, build across platforms, and focus on product outcomes.", "more": [["作者", "OpenAI News"], ["日期", "2026-06-09"]]}, {"author": "ON", "hl": "What Codex unlocks for Notion", "mt": "OpenAI News · 2026-06-09", "dg": "How Notion uses Codex to one-shot specs, build AI Voice Input for the web, and multiply engineering power across small teams.", "more": [["作者", "OpenAI News"], ["日期", "2026-06-09"]]}, {"author": "ON", "hl": "Industrial policy for the Intelligence Age", "mt": "OpenAI News · 2026-06-09", "dg": "Explore our ambitious, people-first industrial policy ideas for the AI era—focused on expanding opportunity, sharing prosperity, and building resilient institutions as advance…", "more": [["作者", "OpenAI News"], ["日期", "2026-06-09"]]}], "digest": "<b>41</b> 篇近 90 天文章。<br>三大焦点：<em>编码 agent</em>（OpenAI Codex 企业化 + Raschka 拆解 + Willison 半年回顾）／<em>多模态</em>（HF Cosmos+微调）／<em>推理效率</em>（BAIR+vLLM）。<br>看下方 HN 热议栏目验证博客圈的判断。"}, {"id": "b4", "n": "04", "k": "Hacker News 热议", "pp": "社区现在吵什么 · 早期信号源", "cnt": "7 条 · ≥80 pts", "cards": [{"hl": "<a href=\"https://llmgame.scalex.dev\" target=\"_blank\" onclick=\"event.stopPropagation()\" style=\"color:inherit;text-decoration:none;border-bottom:1px dotted var(--mut-2)\">Show HN: Continue? Y/N: A 60-second game about AI agent permission fatigue</a>", "mt": "386 pts · llmgame.scalex.dev", "dg": "（无摘要 · 点标题看原文）", "more": [["分数", "386"], ["链接", "https://llmgame.scalex.dev"], ["摘要状态", "-"]]}, {"hl": "<a href=\"https://github.com/statewright/statewright\" target=\"_blank\" onclick=\"event.stopPropagation()\" style=\"color:inherit;text-decoration:none;border-bottom:1px dotted var(--mut-2)\">Show HN: Statewright – Visual state machines that make AI agents reliable</a>", "mt": "126 pts · github.com", "dg": "State machine guardrails for AI agents. Contribute to statewright/statewright development by creating an account on GitHub.", "more": [["分数", "126"], ["链接", "https://github.com/statewright/statewright"], ["摘要状态", "ok"]]}, {"hl": "<a href=\"#\" target=\"_blank\" onclick=\"event.stopPropagation()\" style=\"color:inherit;text-decoration:none;border-bottom:1px dotted var(--mut-2)\">Ask HN: What is your (AI) dev tech stack / workflow?</a>", "mt": "165 pts", "dg": "（无摘要 · 点标题看原文）", "more": [["分数", "165"], ["链接", "—"], ["摘要状态", "-"]]}, {"hl": "<a href=\"https://github.com/schildep/verified-polygon-intersection\" target=\"_blank\" onclick=\"event.stopPropagation()\" style=\"color:inherit;text-decoration:none;border-bottom:1px dotted var(--mut-2)\">Show HN: Formally verified polygon intersection – Opus 4.8 oneshots, prev failed</a>", "mt": "93 pts · github.com", "dg": "（无摘要 · 点标题看原文）", "more": [["分数", "93"], ["链接", "https://github.com/schildep/verified-polygon-intersection"], ["摘要状态", "-"]]}, {"hl": "<a href=\"#\" target=\"_blank\" onclick=\"event.stopPropagation()\" style=\"color:inherit;text-decoration:none;border-bottom:1px dotted var(--mut-2)\">Launch HN: Expanse (YC P26) – Unlock Wasted GPU Capacity</a>", "mt": "102 pts", "dg": "（无摘要 · 点标题看原文）", "more": [["分数", "102"], ["链接", "—"], ["摘要状态", "-"]]}, {"hl": "<a href=\"https://github.com/ab-613/opengravity\" target=\"_blank\" onclick=\"event.stopPropagation()\" style=\"color:inherit;text-decoration:none;border-bottom:1px dotted var(--mut-2)\">Show HN: OpenGravity – A zero-install, BYOK vanilla JS clone of Antigravity</a>", "mt": "106 pts · github.com", "dg": "A lightweight, vanilla JS, open source BYOK (Bring Your Own Key) clone of the Google Antigravity UI. It currently features a live xterm.js terminal with direct local file system sync and a sidebar ...", "more": [["分数", "106"], ["链接", "https://github.com/ab-613/opengravity"], ["摘要状态", "ok"]]}, {"hl": "<a href=\"#\" target=\"_blank\" onclick=\"event.stopPropagation()\" style=\"color:inherit;text-decoration:none;border-bottom:1px dotted var(--mut-2)\">Show HN: Agent.email – sign up via curl, claim with a human OTP</a>", "mt": "99 pts", "dg": "（无摘要 · 点标题看原文）", "more": [["分数", "99"], ["链接", "—"], ["摘要状态", "-"]]}], "digest": "<b>7</b> 条近 35 天 ≥80 分的 AI 热议。<br>社区是<em>早期信号源</em>——博客/新闻还没炒的话题往往先在 HN 起火。<br>每条标题<em>点击直跳原文</em>（开新标签）；分数=社区共识强度。<br>与 b3 博客圈观点相互印证。"}, {"id": "b5", "n": "05", "k": "研究前沿", "pp": "arXiv cs.AI/LG/CL", "cnt": "12 篇", "cards": [{"subj": {"label": "arXiv", "color": "#2A6FDB"}, "hl": "When to Align, When to Predict: A Phase Diagram for Multimodal Learning", "mt": "2026-06-09 · Ilay Kamai, Hugues Van Assel, Aviv Regev", "dg": "Cross-modal alignment (CA) and cross-modal prediction (CP) are the dominant paradigms for multimodal representation learning, yet there is no systematic understanding of when each succeeds, when each", "more": [["日期", "2026-06-09"], ["作者", "Ilay Kamai, Hugues Van Assel, Aviv Regev"]]}, {"subj": {"label": "arXiv", "color": "#2A6FDB"}, "hl": "A Unifying Lens on Supervised Fine-Tuning Through Target Distribution Design", "mt": "2026-06-09 · Tong Xie, Yuanhao Ban, Yunqi Hong", "dg": "Supervised fine-tuning (SFT) typically maximizes the likelihood of every token in a demonstrated trajectory. However, an observed token can be non-unique, noisy, or misaligned with the model prior. St", "more": [["日期", "2026-06-09"], ["作者", "Tong Xie, Yuanhao Ban, Yunqi Hong"]]}, {"subj": {"label": "arXiv", "color": "#2A6FDB"}, "hl": "EEVEE: Towards Test-time Prompt Learning in the Real World for Self-Improving Agents", "mt": "2026-06-09 · Weixian Xu, Shilong Liu, Mengdi Wang", "dg": "In this paper, we propose EEVEE, the first multi-dataset test-time prompt learning framework for LLM agents, enabling test-time prompt learning under real-world task streams. Existing methods are larg", "more": [["日期", "2026-06-09"], ["作者", "Weixian Xu, Shilong Liu, Mengdi Wang"]]}, {"subj": {"label": "arXiv", "color": "#2A6FDB"}, "hl": "Data Journalist Agent: Transforming Data into Verifiable Multimodal Stories", "mt": "2026-06-09 · Kevin Qinghong Lin, Batu EI, Yuhong Shi", "dg": "Data tells stories that shape society; the data journalist's job is to turn raw information into stories non-experts can trust. A high-quality news feature takes a newsroom team weeks: hunting for con", "more": [["日期", "2026-06-09"], ["作者", "Kevin Qinghong Lin, Batu EI, Yuhong Shi"]]}, {"subj": {"label": "arXiv", "color": "#2A6FDB"}, "hl": "The Role of Feedback Alignment in Self-Distillation", "mt": "2026-06-09 · Semih Kara, Oğuzhan Ersoy", "dg": "Conditioning a language model on additional context, such as feedback on a previous attempt, typically improves its response. Self-distillation trains the model to retain this improvement when the con", "more": [["日期", "2026-06-09"], ["作者", "Semih Kara, Oğuzhan Ersoy"]]}, {"subj": {"label": "arXiv", "color": "#2A6FDB"}, "hl": "Predicting Future Behaviors in Reasoning Models Enables Better Steering", "mt": "2026-06-09 · Evgenii Kortukov, Piotr Komorowski, Florian Klein", "dg": "Deployed large reasoning models (LRMs) often behave unexpectedly. Test-time steering controls LRM outputs by intervening on their hidden representations, but it can degrade output quality. We argue th", "more": [["日期", "2026-06-09"], ["作者", "Evgenii Kortukov, Piotr Komorowski, Florian Klein"]]}, {"subj": {"label": "arXiv", "color": "#2A6FDB"}, "hl": "Algorithmic and Minimax Complexities in Kernel Bandits", "mt": "2026-06-09 · Yunbei Xu", "dg": "Gaussian-process upper confidence bound (GP-UCB) and decision-estimation-coefficient (DEC) methods may appear, at first sight, to belong to different theories. This paper places the two viewpoints in", "more": [["日期", "2026-06-09"], ["作者", "Yunbei Xu"]]}, {"subj": {"label": "arXiv", "color": "#2A6FDB"}, "hl": "Piper: A Programmable Distributed Training System", "mt": "2026-06-09 · Megan Frisella, Shubham Tiwari, Andy Ruan", "dg": "Large-scale model training increasingly relies on composing multiple parallelism strategies, such as data, pipeline, and expert parallelism, together with memory-saving optimizations like ZeRO. Deploy", "more": [["日期", "2026-06-09"], ["作者", "Megan Frisella, Shubham Tiwari, Andy Ruan"]]}, {"subj": {"label": "arXiv", "color": "#2A6FDB"}, "hl": "Multi-Faceted Interactivity Alignment in Full-Duplex Speech Models", "mt": "2026-06-09 · Atsumoto Ohashi, Neil Zeghidour, Alexandre Défossez", "dg": "Full-duplex spoken dialogue models can listen and speak simultaneously, making them a promising architecture for natural conversation. However, current models are trained solely with supervised learni", "more": [["日期", "2026-06-09"], ["作者", "Atsumoto Ohashi, Neil Zeghidour, Alexandre Défossez"]]}, {"subj": {"label": "arXiv", "color": "#2A6FDB"}, "hl": "Flaws in the LLM Automation Narrative", "mt": "2026-06-09 · George Perrett, Javae Elliott, Jennifer Hill", "dg": "Large Language Models (LLMs) are increasingly described as performing at the level of human experts on knowledge economy tasks. These claims are primarily based on how LLMs perform on benchmarking tas", "more": [["日期", "2026-06-09"], ["作者", "George Perrett, Javae Elliott, Jennifer Hill"]]}, {"subj": {"label": "arXiv", "color": "#2A6FDB"}, "hl": "ReasonAlloc: Hierarchical Decoding-Time KV Cache Budget Allocation for Reasoning Models", "mt": "2026-06-09 · Wenhao Liu, Hao Shi, Yunhe Li", "dg": "Long chain-of-thought (CoT) trajectories in large language model (LLM) reasoning cause severe inference bottlenecks due to rapid key-value (KV) cache growth. Current decoding-time compression methods", "more": [["日期", "2026-06-09"], ["作者", "Wenhao Liu, Hao Shi, Yunhe Li"]]}, {"subj": {"label": "arXiv", "color": "#2A6FDB"}, "hl": "COGENT: Continuous Graph Emulators with Neural Ordinary Differential Equations for Long-Term Physical Forecasting", "mt": "2026-06-09 · Zesheng Liu, Maryam Rahnemoonfar", "dg": "In this work, we present COGENT, a continuous graph emulator with Neural Ordinary Differential Equations for long-term physical forecasting on irregular geospatial meshes. COGENT encodes a finite hist", "more": [["日期", "2026-06-09"], ["作者", "Zesheng Liu, Maryam Rahnemoonfar"]]}], "digest": "<b>12</b> 篇 arXiv 最新。<br>主题集中三件事：<em>注意力 / 长上下文</em>（DashAttention）／<em>Agent 经验记忆</em>（ReasoningBank）／<em>推理 scaling</em>（Adaptive Parallel）。<br>核心三问：更长、更准、更省。"}, {"id": "b6", "n": "06", "k": "开源项目 & 模型", "pp": "哪些框架/模型在火", "cnt": "", "cards": [{"mono": {"letter": "V", "color": "#5B3FB8"}, "hl": "vllm-project/vllm", "mt": "Serving 推理", "dg": "高吞吐 LLM 推理/部署引擎，自托管上线模型的主力", "custom_ft": "<div class=\"starline\"><span class=\"s-big\">★80,418</span><span class=\"s-delta\">近4周 +796 commit</span><span class=\"s-heat\">🔥猛</span></div>", "more": [["分类", "Serving 推理"], ["近4周提交", "+796 commit"], ["热度", "🔥猛"]]}, {"mono": {"letter": "D", "color": "#1F6F4A"}, "hl": "confident-ai/deepeval", "mt": "Eval 评测", "dg": "LLM/Agent 的单元测试式评测框架，回答“我的 AI 到底准不准”", "custom_ft": "<div class=\"starline\"><span class=\"s-big\">★15,541</span><span class=\"s-delta\">近4周 +254 commit</span><span class=\"s-heat\">🔥猛</span></div>", "more": [["分类", "Eval 评测"], ["近4周提交", "+254 commit"], ["热度", "🔥猛"]]}, {"mono": {"letter": "L", "color": "#CC3B1B"}, "hl": "langchain-ai/langgraph", "mt": "Agent 编排", "dg": "有状态的多智能体/工作流编排框架，做可控 Agent 的事实标准之一", "custom_ft": "<div class=\"starline\"><span class=\"s-big\">★32,377</span><span class=\"s-delta\">近4周 +93 commit</span><span class=\"s-heat\">🟢活跃</span></div>", "more": [["分类", "Agent 编排"], ["近4周提交", "+93 commit"], ["热度", "🟢活跃"]]}, {"mono": {"letter": "L", "color": "#2A6FDB"}, "hl": "run-llama/llama_index", "mt": "RAG", "dg": "把私有数据接进 LLM 的 RAG 数据框架", "custom_ft": "<div class=\"starline\"><span class=\"s-big\">★49,499</span><span class=\"s-delta\">近4周 +36 commit</span><span class=\"s-heat\">🟢活跃</span></div>", "more": [["分类", "RAG"], ["近4周提交", "+36 commit"], ["热度", "🟢活跃"]]}, {"mono": {"letter": "S", "color": "#9A6B1F"}, "hl": "modelcontextprotocol/servers", "mt": "MCP", "dg": "MCP 协议官方服务器集，让 LLM 标准化接外部工具/数据", "custom_ft": "<div class=\"starline\"><span class=\"s-big\">★85,899</span><span class=\"s-delta\">近4周 +8 commit</span><span class=\"s-heat\">🟡温和</span></div>", "more": [["分类", "MCP"], ["近4周提交", "+8 commit"], ["热度", "🟡温和"]]}, {"mono": {"letter": "Q", "color": "#0F1419"}, "hl": "QwenLM/Qwen2.5-VL", "mt": "多模态", "dg": "阿里 Qwen 系列视觉语言模型", "custom_ft": "<div class=\"starline\"><span class=\"s-big\">★19,193</span><span class=\"s-delta\">近4周 +0 commit</span><span class=\"s-heat\">🔴停滞</span></div>", "more": [["分类", "多模态"], ["近4周提交", "+0 commit"], ["热度", "🔴停滞"]]}, {"soft": true, "custom": "<div class=\"hl\">HuggingFace trending</div><div class=\"mt\"><span class=\"pip\"></span>本周最热模型</div><div class=\"dg\" style=\"-webkit-line-clamp:unset;display:block;margin-top:4px\">· google/gemma-4-12B-it <span class=\"tg\">全模态</span><br>· nvidia/LocateAnything-3B <span class=\"tg\">多模态</span><br>· unsloth/gemma-4-12b-it-GGUF <span class=\"tg\">多模态</span><br>· google/gemma-4-12B <span class=\"tg\">全模态</span><br>· ideogram-ai/ideogram-4-fp8 <span class=\"tg\">文生图</span><br>· bosonai/higgs-audio-v3-tts-4b <span class=\"tg\">语音</span><br>· ideogram-ai/ideogram-4-nf4 <span class=\"tg\">文生图</span></div>", "more": [["#1", "google/gemma-4-12B-it"], ["#2", "nvidia/LocateAnything-3B"], ["#3", "unsloth/gemma-4-12b-it-GGUF"], ["#4", "google/gemma-4-12B"]]}], "digest": "以 commit 活跃度看动量：<br><b>vllm</b>（Serving 推理）4 周 <em>796</em> + <b>deepeval</b>（Eval 评测）<em>254</em> commit 居前。<br><em>Serving</em> 与 <em>Eval</em> 是开源最猛两条线。<br>HF trending 30 中 <b>11</b> 个多模态品类——采纳第一热。"}, {"id": "b7", "n": "07", "k": "库采纳曲线", "pp": "PyPI 月下载＝真实采纳（单期快照）", "cnt": "", "cards": [{"soft": true, "custom": "<div class=\"hl\">litellm</div><div class=\"mt\"><span class=\"pip\"></span>统一多家 LLM API 网关</div><div class=\"adopt\"><div class=\"adopt-num\"><span class=\"big\">568M</span><span class=\"unit\">下载 / 月</span></div><div class=\"scale\"><i style=\"width:100%\"></i></div><div class=\"ticks\"><span>0</span><span>568M（本期最高）</span></div><div class=\"adopt-foot\"><span class=\"lbl\">单期快照</span><span class=\"rel\">100% of 最高</span><span class=\"lbl\">无 12 月序列 · 待多期累积</span></div></div>", "more": [["月下载", "568M"], ["相对本期最高", "100%"], ["序列", "单期快照（诚实：未累积历史）"]]}, {"soft": true, "custom": "<div class=\"hl\">openai</div><div class=\"mt\"><span class=\"pip\"></span>OpenAI 官方 SDK</div><div class=\"adopt\"><div class=\"adopt-num\"><span class=\"big\">328M</span><span class=\"unit\">下载 / 月</span></div><div class=\"scale\"><i style=\"width:57%\"></i></div><div class=\"ticks\"><span>0</span><span>568M（本期最高）</span></div><div class=\"adopt-foot\"><span class=\"lbl\">单期快照</span><span class=\"rel\">57% of 最高</span><span class=\"lbl\">无 12 月序列 · 待多期累积</span></div></div>", "more": [["月下载", "328M"], ["相对本期最高", "57%"], ["序列", "单期快照（诚实：未累积历史）"]]}, {"soft": true, "custom": "<div class=\"hl\">langchain</div><div class=\"mt\"><span class=\"pip\"></span>LLM 应用编排框架</div><div class=\"adopt\"><div class=\"adopt-num\"><span class=\"big\">309M</span><span class=\"unit\">下载 / 月</span></div><div class=\"scale\"><i style=\"width:54%\"></i></div><div class=\"ticks\"><span>0</span><span>568M（本期最高）</span></div><div class=\"adopt-foot\"><span class=\"lbl\">单期快照</span><span class=\"rel\">54% of 最高</span><span class=\"lbl\">无 12 月序列 · 待多期累积</span></div></div>", "more": [["月下载", "309M"], ["相对本期最高", "54%"], ["序列", "单期快照（诚实：未累积历史）"]]}, {"soft": true, "custom": "<div class=\"hl\">huggingface-hub</div><div class=\"mt\"><span class=\"pip\"></span>HF 模型仓客户端</div><div class=\"adopt\"><div class=\"adopt-num\"><span class=\"big\">288M</span><span class=\"unit\">下载 / 月</span></div><div class=\"scale\"><i style=\"width:50%\"></i></div><div class=\"ticks\"><span>0</span><span>568M（本期最高）</span></div><div class=\"adopt-foot\"><span class=\"lbl\">单期快照</span><span class=\"rel\">50% of 最高</span><span class=\"lbl\">无 12 月序列 · 待多期累积</span></div></div>", "more": [["月下载", "288M"], ["相对本期最高", "50%"], ["序列", "单期快照（诚实：未累积历史）"]]}, {"soft": true, "custom": "<div class=\"hl\">transformers</div><div class=\"mt\"><span class=\"pip\"></span>HF 模型库(训练/推理基座)</div><div class=\"adopt\"><div class=\"adopt-num\"><span class=\"big\">149M</span><span class=\"unit\">下载 / 月</span></div><div class=\"scale\"><i style=\"width:26%\"></i></div><div class=\"ticks\"><span>0</span><span>568M（本期最高）</span></div><div class=\"adopt-foot\"><span class=\"lbl\">单期快照</span><span class=\"rel\">26% of 最高</span><span class=\"lbl\">无 12 月序列 · 待多期累积</span></div></div>", "more": [["月下载", "149M"], ["相对本期最高", "26%"], ["序列", "单期快照（诚实：未累积历史）"]]}, {"soft": true, "custom": "<div class=\"hl\">anthropic</div><div class=\"mt\"><span class=\"pip\"></span>Anthropic/Claude 官方 SDK</div><div class=\"adopt\"><div class=\"adopt-num\"><span class=\"big\">137M</span><span class=\"unit\">下载 / 月</span></div><div class=\"scale\"><i style=\"width:24%\"></i></div><div class=\"ticks\"><span>0</span><span>568M（本期最高）</span></div><div class=\"adopt-foot\"><span class=\"lbl\">单期快照</span><span class=\"rel\">24% of 最高</span><span class=\"lbl\">无 12 月序列 · 待多期累积</span></div></div>", "more": [["月下载", "137M"], ["相对本期最高", "24%"], ["序列", "单期快照（诚实：未累积历史）"]]}, {"soft": true, "custom": "<div class=\"hl\">langgraph</div><div class=\"mt\"><span class=\"pip\"></span>有状态 Agent 编排</div><div class=\"adopt\"><div class=\"adopt-num\"><span class=\"big\">59M</span><span class=\"unit\">下载 / 月</span></div><div class=\"scale\"><i style=\"width:10%\"></i></div><div class=\"ticks\"><span>0</span><span>568M（本期最高）</span></div><div class=\"adopt-foot\"><span class=\"lbl\">单期快照</span><span class=\"rel\">10% of 最高</span><span class=\"lbl\">无 12 月序列 · 待多期累积</span></div></div>", "more": [["月下载", "59M"], ["相对本期最高", "10%"], ["序列", "单期快照（诚实：未累积历史）"]]}, {"soft": true, "custom": "<div class=\"hl\">crewai</div><div class=\"mt\"><span class=\"pip\"></span>多智能体协作框架</div><div class=\"adopt\"><div class=\"adopt-num\"><span class=\"big\">15M</span><span class=\"unit\">下载 / 月</span></div><div class=\"scale\"><i style=\"width:2%\"></i></div><div class=\"ticks\"><span>0</span><span>568M（本期最高）</span></div><div class=\"adopt-foot\"><span class=\"lbl\">单期快照</span><span class=\"rel\">2% of 最高</span><span class=\"lbl\">无 12 月序列 · 待多期累积</span></div></div>", "more": [["月下载", "15M"], ["相对本期最高", "2%"], ["序列", "单期快照（诚实：未累积历史）"]]}], "digest": "<b>litellm</b> <em>568M/月</em>（多模型可切网关）一骑绝尘，远超 <b>openai</b> <em>328M</em>。<br>信号：开发者要「<em>多模型可切</em>」胜过押单一供应商。<br><b>诚实留白：</b>单期快照、无 12 月序列，待 2026-08 第二期累积。"}, {"id": "b8", "n": "08", "k": "大公司状况", "pp": "大厂真金白银押什么", "cnt": "SEC 10-K", "cards": [{"kind": "co", "accent": "#76B900", "hl": "NVIDIA", "mt": "2026-02-25 · 10-K", "dg": "自称“数据中心规模 AI 基础设施公司”；CUDA+Blackwell+万卡互联，押 Serving/推理基建。", "more": [["来源", "10-K · 2026-02-25"], ["押注", "自称“数据中心规模 AI 基础设施公司”；CUDA+Blackwell+万卡互联，押 Serving/推理基建。"]]}, {"kind": "co", "accent": "#0067B8", "hl": "Microsoft", "mt": "2025-07-30 · 10-K", "dg": "AI 跨全栈 + 负责任/安全 AI + AI 驱动安全合规身份产品。", "more": [["来源", "10-K · 2025-07-30"], ["押注", "AI 跨全栈 + 负责任/安全 AI + AI 驱动安全合规身份产品。"]]}, {"kind": "co", "accent": "#101113", "hl": "Palantir", "mt": "2026-02-17 · 10-K", "dg": "AIP：平台+生成式 LLM 带到“每个决策”；Ontology 数据→语境，押企业 Agent。", "more": [["来源", "10-K · 2026-02-17"], ["押注", "AIP：平台+生成式 LLM 带到“每个决策”；Ontology 数据→语境，押企业 Agent。"]]}, {"kind": "co", "accent": "#0866FF", "hl": "Meta", "mt": "2026-01-29 · 10-K", "dg": "Meta AI 助手 + AI 眼镜(多模态) + 排序推荐 + 生成式广告。", "more": [["来源", "10-K · 2026-01-29"], ["押注", "Meta AI 助手 + AI 眼镜(多模态) + 排序推荐 + 生成式广告。"]]}], "digest": "四家 10-K 恰好分到四主战场：<br><b>NVDA</b>→<em>Serving 基建</em><br><b>MSFT</b>→<em>全栈 + 负责任 AI</em><br><b>PLTR</b>→<em>企业 Agent</em>（AIP）<br><b>META</b>→<em>多模态</em>（AI 眼镜）<br>四象限被填满 = AI 落地四主线都有真金白银。"}, {"id": "b9", "n": "09", "k": "H-1B 签证 & 权威年报", "pp": "北美落地参照 · USCIS 真实数据", "cnt": "0 AI 雇主", "cards": [{"soft": true, "custom": "<div class=\"hl\">北美签证 / H-1B</div><div class=\"mt\"><span class=\"pip\"></span>数据待抓</div><div class=\"editors-note\"><span class=\"tk\">TK</span><span class=\"body\">fetch_h1b.py 未跑或失败。USCIS Hub 可达，下次 CI 重试。</span></div>", "more": [["状态", "数据未生成"]]}, {"soft": true, "hl": "Stanford HAI · AI Index Report", "mt": "年度 · 非实时", "dg": "AI 人才/教育/岗位/R&amp;D 最权威统计。", "more": [["类型", "年度 · 非实时"], ["覆盖", "AI 人才/教育/岗位/R&amp;D 最权威统计。"]]}, {"soft": true, "hl": "State of AI Report", "mt": "年度 · 非实时", "dg": "研究/产业/资本/安全综述，看大势拐点。", "more": [["类型", "年度 · 非实时"], ["覆盖", "研究/产业/资本/安全综述，看大势拐点。"]]}], "digest": "<b>H-1B</b>: USCIS Data Hub 3 年聚合 · <b>0</b> 家 AI 雇主 · <em>0</em> 新批合计。<br>Top: Amazon / Google / Microsoft / Apple。<br>诚实留白：FY2023 USCIS 只发布部分数据。<br><b>年报</b>是季度方向校准源。"}];
+
+function moreDl(arr){
+  if(!arr || !arr.length) return "";
+  return `<div class="more"><dl>${
+    arr.map(([k,v])=>`<div class="row"><dt>${k}</dt><i class="leaders"></i><dd>${v}</dd></div>`).join("")
+  }</dl></div>`;
+}
+
+function renderCard(c){
+  const cls = `rc${c.soft?' soft':''}${c.stat?' stat-card':''}${c.kind?(' '+c.kind):''}`;
+  const rule = c.accent ? `<i class="card-rule" style="background:${c.accent}"></i>` : "";
+  if(c.custom){
+    return `<article class="${cls}" tabindex="0">
+      ${rule}
+      <button class="closer" aria-label="收起">×</button>
+      ${c.custom}
+      ${moreDl(c.more)}
+    </article>`;
+  }
+  let mark = "";
+  if(c.author) mark = `<span class="author-mark">${c.author}</span>`;
+  else if(c.subj) mark = `<span class="subj-pill" style="background:${c.subj.color}">${c.subj.label}</span>`;
+  else if(c.mono) mark = `<span class="mono-mark" style="background:${c.mono.color}">${c.mono.letter}</span>`;
+  const hl = c.hl ? `<div class="hl">${c.hl}</div>` : "";
+  const mt = c.mt ? `<div class="mt"><span class="pip"></span>${c.mt}</div>` : "";
+  const dg = c.dg ? `<div class="dg">${c.dg}</div>` : "";
+  const ft = c.custom_ft ? c.custom_ft : (c.ft ? `<div class="ft">${c.ft}</div>` : "");
+  return `<article class="${cls}" tabindex="0">
+    ${rule}
+    <button class="closer" aria-label="收起">×</button>
+    ${mark}${hl}${mt}${dg}${ft}
+    ${moreDl(c.more)}
+  </article>`;
+}
+
+function renderBand(b, total){
+  return `<section class="band" id="${b.id}" data-screen-label="${b.n} ${b.k}">
+    <header class="bh">
+      <div class="folio"><span>Page</span><b>${b.n}</b><span class="sep">/</span><span>${total}</span></div>
+      <span class="num"><em>${b.n}</em></span>
+      <div class="k">${b.k}</div>
+      ${b.cnt?`<div class="cnt">${b.cnt}</div>`:""}
+      <div class="pp">${b.pp}</div>
+      ${b.digest ? `<div class="band-lede"><span class="lede-kick">本栏要点</span>${b.digest}</div>` : ""}
+    </header>
+    <div class="rail-wrap">
+      <div class="rail">${b.cards.map(renderCard).join("")}</div>
+    </div>
+  </section>`;
+}
+
+const TOTAL = String(bands.length).padStart(2,"0");
+document.getElementById("bands").innerHTML = bands.map(b=>renderBand(b,TOTAL)).join("");
+
+/* Inside this issue — TOC */
+document.getElementById("toc-list").innerHTML = bands.map(b=>(
+  `<li><a href="#${b.id}" data-anchor="${b.id}">
+    <span class="tnum">${b.n}</span>
+    <span class="tcol">
+      <span class="tk">${b.k}</span>
+      <span class="tpp">${b.pp}</span>
+    </span>
+    <span class="tmeta">
+      <b>${b.cards.length}</b>
+      <span>${b.cnt ? b.cnt : "卡片"}</span>
+    </span>
+  </a></li>`
+)).join("");
+
+/* ─── Card expand interaction ─── */
+document.querySelectorAll(".rc").forEach(card=>{
+  card.addEventListener("click",(e)=>{
+    if(e.target.closest(".closer")){
+      card.classList.remove("expanded");
+      return;
+    }
+    // collapse siblings in same rail
+    const rail = card.closest(".rail");
+    rail.querySelectorAll(".rc.expanded").forEach(c=>{if(c!==card)c.classList.remove("expanded")});
+    card.classList.toggle("expanded");
+    if(card.classList.contains("expanded")){
+      // ensure visible
+      setTimeout(()=>{
+        const r = card.getBoundingClientRect();
+        const railR = rail.getBoundingClientRect();
+        if(r.right > railR.right - 8){
+          rail.scrollBy({left: r.right - railR.right + 24, behavior:"smooth"});
+        }
+      }, 80);
+    }
+  });
+  card.addEventListener("keydown",(e)=>{
+    if(e.key==="Enter"||e.key===" "){ e.preventDefault(); card.click(); }
+    if(e.key==="Escape" && card.classList.contains("expanded")){ card.classList.remove("expanded"); }
+  });
+});
+
+/* ─── Rail end-of-scroll fade ─── */
+document.querySelectorAll(".rail-wrap").forEach(wrap=>{
+  const rail = wrap.querySelector(".rail");
+  const sync = ()=>{
+    const atEnd = rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 4;
+    wrap.classList.toggle("at-end", atEnd);
+  };
+  rail.addEventListener("scroll",sync,{passive:true});
+  new ResizeObserver(sync).observe(rail);
+  sync();
+});
+
+/* ─── Sidenav scrollspy ─── */
+const navLinks = [...document.querySelectorAll(".sidenav a")];
+const bandEls = navLinks.map(a=>document.getElementById(a.dataset.anchor));
+const setActive = (id)=>{
+  navLinks.forEach(a=>a.classList.toggle("on", a.dataset.anchor===id));
+};
+const io = new IntersectionObserver((entries)=>{
+  // pick the entry closest to top with intersection
+  const visible = entries.filter(e=>e.isIntersecting)
+    .sort((a,b)=>a.boundingClientRect.top - b.boundingClientRect.top);
+  if(visible[0]) setActive(visible[0].target.id);
+},{rootMargin:"-30% 0px -55% 0px",threshold:0});
+bandEls.forEach(el=>el&&io.observe(el));
+
+navLinks.forEach(a=>{
+  a.addEventListener("click",(e)=>{
+    e.preventDefault();
+    const el = document.getElementById(a.dataset.anchor);
+    if(!el) return;
+    const y = el.getBoundingClientRect().top + window.scrollY - 90;
+    window.scrollTo({top:y, behavior:"smooth"});
+  });
+});
+
+/* Smooth scroll for TOC links too */
+document.querySelectorAll("#toc-list a[data-anchor]").forEach(a=>{
+  a.addEventListener("click",(e)=>{
+    e.preventDefault();
+    const el = document.getElementById(a.dataset.anchor);
+    if(!el) return;
+    const y = el.getBoundingClientRect().top + window.scrollY - 90;
+    window.scrollTo({top:y, behavior:"smooth"});
+  });
+});
+
+/* ─────────────────────────────────────────────
+   Dynamic newsroom touches
+   ───────────────────────────────────────────── */
+
+/* Reading progress */
+(function(){
+  const bar = document.querySelector(".progress > i");
+  if(!bar) return;
+  let raf = null;
+  function update(){
+    raf = null;
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    bar.style.width = pct.toFixed(2) + "%";
+  }
+  window.addEventListener("scroll", ()=>{
+    if(raf) return;
+    raf = requestAnimationFrame(update);
+  }, {passive:true});
+  update();
+})();
+
+/* Sparkline draw-in */
+(function(){
+  const sparks = document.querySelectorAll(".spark");
+  sparks.forEach(svg=>{
+    const line = svg.querySelector(".spark-line");
+    if(!line) return;
+    try{
+      const len = line.getTotalLength();
+      line.style.strokeDasharray = len;
+      line.style.strokeDashoffset = len;
+    }catch(e){}
+  });
+  if(!("IntersectionObserver" in window)){
+    sparks.forEach(s=>s.classList.add("in"));
+    return;
+  }
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const svg = e.target;
+        svg.classList.add("in");
+        const line = svg.querySelector(".spark-line");
+        if(line) line.style.strokeDashoffset = "0";
+        io.unobserve(svg);
+      }
+    });
+  }, {threshold:.3});
+  sparks.forEach(s=>io.observe(s));
+})();
+
+/* Number count-up */
+(function(){
+  function animate(el){
+    if(el.dataset.counted) return;
+    el.dataset.counted = "1";
+    const txt = (el.textContent || "").trim();
+    const m = txt.match(/-?[\d,]+(?:\.\d+)?/);
+    if(!m){ return; }
+    const numStr = m[0];
+    const target = parseFloat(numStr.replace(/,/g,""));
+    if(!isFinite(target)) return;
+    const prefix = txt.substring(0, m.index);
+    const suffix = txt.substring(m.index + numStr.length);
+    const hasComma = numStr.includes(",");
+    const hasDecimal = numStr.includes(".");
+    const decPlaces = hasDecimal ? numStr.split(".")[1].length : 0;
+    const duration = Math.min(1400, 700 + Math.log10(Math.max(target,10)) * 220);
+    const start = performance.now();
+    function fmt(v){
+      let out = hasDecimal ? v.toFixed(decPlaces) : String(Math.round(v));
+      if(hasComma){
+        const parts = out.split(".");
+        parts[0] = Number(parts[0]).toLocaleString();
+        out = parts.join(".");
+      }
+      return prefix + out + suffix;
+    }
+    function tick(now){
+      const t = Math.min((now-start)/duration, 1);
+      const eased = 1 - Math.pow(1-t, 3);
+      el.textContent = fmt(target * eased);
+      if(t<1) requestAnimationFrame(tick);
+    }
+    el.textContent = fmt(0);
+    requestAnimationFrame(tick);
+  }
+  const sel = [
+    ".stat-grid b",
+    ".kpi-val .pct",
+    ".adopt-num .big",
+    ".adopt-foot .delta",
+    ".stat-big",
+    ".s-big",
+    ".s-delta",
+    ".ev-tags sub",
+    ".toc-list .tmeta b"
+  ].join(",");
+  if(!("IntersectionObserver" in window)){
+    document.querySelectorAll(sel).forEach(animate);
+    return;
+  }
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        animate(e.target);
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:.4});
+  document.querySelectorAll(sel).forEach(el=>{
+    io.observe(el);
+  });
+})();
+</script>
+
+<template id="__bundler_thumbnail" data-bg-color="#FBFAF7">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#FBFAF7"/>
+    <text x="600" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="220" font-weight="600" fill="#161318" letter-spacing="-6">N</text>
+    <text x="600" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="160" fill="#CC3B1B" dy="0">★</text>
+    <text x="600" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="220" font-weight="600" fill="#161318" letter-spacing="-6">  S</text>
+    <text x="600" y="500" text-anchor="middle" font-family="ui-monospace, monospace" font-size="38" letter-spacing="14" fill="#8B8C93">NORTHSTAR</text>
+    <line x1="450" y1="540" x2="750" y2="540" stroke="#CC3B1B" stroke-width="3"/>
+    <text x="600" y="600" text-anchor="middle" font-family="ui-monospace, monospace" font-size="28" letter-spacing="6" fill="#8B8C93">№ 001 · 2026-05-19</text>
+  </svg>
+</template>
+
+</body>
+</html>

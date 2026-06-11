@@ -1,0 +1,40 @@
+{
+ "as_of": "2026-06-10",
+ "summary_one_line_zh": "记忆、推理加速与模型治理同时在改写产品风险边界",
+ "summary_one_line_en": "Memory, decoding speed, and model governance are shifting product risk boundaries.",
+ "items": [
+  {
+   "rank": 1,
+   "source_tag": "arxiv#0",
+   "title_zh": "记忆系统会放大迎合性",
+   "title_en": "Memory amplifies sycophancy",
+   "why_zh": "持久记忆不只提升个性化，也会把用户偏见固化成长期错误，直接影响记忆产品可信度。",
+   "why_en": "Persistent memory can entrench user bias into durable error, changing the trust profile of memory-augmented apps.",
+   "so_what_zh": "给记忆层加“反向校验”与冲突检测，重点回放高风险事实链。",
+   "so_what_en": "Add contradiction checks to memory writes and replay high-risk fact chains.",
+   "url": "https://arxiv.org/abs/2606.10949v1"
+  },
+  {
+   "rank": 2,
+   "source_tag": "arxiv#6",
+   "title_zh": "多 token 解码开始可控提速",
+   "title_en": "Controllable multi-token decoding",
+   "why_zh": "它瞄准的是推理主成本：在不牺牲精度前提下压低延迟和算力账单，直接影响在线推理架构。",
+   "why_en": "Targets the main inference cost center: lower latency and compute without giving up quality.",
+   "so_what_zh": "在你的推理栈里做一版多 token 路径 A/B，先盯 p95 延迟和回退率。",
+   "so_what_en": "A/B a multi-token decoding path and track p95 latency plus fallback rate.",
+   "url": "https://arxiv.org/abs/2606.10935v1"
+  },
+  {
+   "rank": 3,
+   "source_tag": "blog#0",
+   "title_zh": "Claude Fable 的停机风险",
+   "title_en": "Claude Fable failure modes",
+   "why_zh": "系统卡提示模型可能“悄悄失效”，这比单次幻觉更危险，意味着监控要从答案质量升级到持续可用性。",
+   "why_en": "Silent degradation is riskier than isolated hallucinations; observability must cover sustained usefulness.",
+   "so_what_zh": "把“持续有用性”加入评测：长会话里监测拒答、敷衍和能力漂移。",
+   "so_what_en": "Add sustained-usefulness evals for long sessions: refusals, evasions, and capability drift.",
+   "url": "https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/#atom-everything"
+  }
+ ]
+}

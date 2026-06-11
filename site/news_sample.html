@@ -1,0 +1,92 @@
+<!doctype html><html lang=zh><head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>NorthStar — 北美 AI 简讯（设计样张）</title><style>
+:root{--bg:#FFFFFF;--ink:#15151A;--body:#45464C;--mut:#8B8C93;--line:#E8E7E2;--soft:#F7F6F3;--acc:#CC3B1B}
+*{box-sizing:border-box}html{-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--body);font:16px/1.6 -apple-system,"Segoe UI",system-ui,sans-serif}
+.serif{font-family:"Iowan Old Style",Palatino,Georgia,"Times New Roman",serif}
+a{color:inherit;text-decoration:none}
+.top{max-width:1280px;margin:0 auto;padding:18px 26px;display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--ink)}
+.brand{font-size:30px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin:0}.brand .s{color:var(--acc)}
+.tabs a{font-size:13px;font-weight:700;color:var(--mut);margin-left:22px}
+.tabs a.on{color:var(--ink);border-bottom:2px solid var(--acc);padding-bottom:6px}
+.issue{max-width:1280px;margin:0 auto;padding:9px 26px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line)}
+.wrap{max-width:1280px;margin:0 auto;padding:0 26px 64px}
+.hero{padding:34px 0 30px;border-bottom:1px solid var(--line)}
+.hk{font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--acc)}
+.hero .lead{font-size:27px;line-height:1.42;color:var(--ink);font-weight:600;margin:12px 0 16px;max-width:60ch}
+.chips span{display:inline-block;border:1px solid var(--line);color:var(--body);border-radius:999px;padding:4px 12px;font-size:12.5px;margin:4px 6px 0 0;background:var(--soft)}
+.chips .p{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cl{font-size:12px;font-weight:700;color:var(--mut);margin-right:6px}
+.band{display:flex;gap:30px;padding:26px 0;border-bottom:1px solid var(--line)}
+.bh{flex:0 0 196px}
+.bh .k{font-size:13px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--ink)}
+.bh .k i{font-style:normal;color:var(--acc)}
+.bh .cnt{font-size:12px;color:var(--mut);margin-top:6px}
+.bh .pp{font-size:13px;color:var(--mut);line-height:1.5;margin-top:10px;border-left:2px solid var(--acc);padding-left:10px}
+.rail{flex:1;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 14px;scrollbar-width:thin}
+.rail::-webkit-scrollbar{height:8px}.rail::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+.rc{flex:0 0 296px;scroll-snap-align:start;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:16px 17px;display:flex;flex-direction:column;min-height:172px;transition:.15s}
+.rc:hover{border-color:var(--ink)}
+.rc .hl{font-size:16px;line-height:1.36;font-weight:700;color:var(--ink);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.rc a.hl:hover{color:var(--acc)}
+.rc .mt{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin:8px 0 7px}
+.rc .dg{font-size:13.5px;line-height:1.55;color:var(--body);display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.rc .ft{margin-top:auto;padding-top:10px;font-size:12px;color:var(--mut)}
+.rc .sal{color:var(--acc);font-weight:700}
+.tg{display:inline-block;background:var(--soft);border:1px solid var(--line);color:#7a5240;border-radius:5px;padding:1px 7px;font-size:11px;margin:2px 4px 0 0}
+.bar{height:7px;background:var(--acc);border-radius:4px;display:inline-block;vertical-align:middle;margin-top:6px}
+.warn{color:#9a6b1f}.rc.soft{background:var(--soft)}
+footer{max-width:1280px;margin:0 auto;padding:20px 26px 50px;font-size:12px;color:var(--mut);font-style:italic}
+@media(max-width:760px){.band{flex-direction:column;gap:14px}.bh{flex:auto}.hero .lead{font-size:22px}}
+</style></head><body>
+<div class=top><h1 class="brand serif">North<span class=s>★</span>Star</h1>
+<div class=tabs><a href=#>直面就业</a><a class=on href=#>看新闻</a></div></div>
+<div class=issue>第 1 期 · 数据截至 2026-05-19 · 北美 AI Landscape 简讯 · 学习导向</div>
+<div class=wrap>
+<div class=hero>
+ <div class=hk>本周判断 / TL;DR</div>
+ <div class="lead serif">北美 AI 岗门槛正从“会调 LLM API”上移到“会编排 Agent + 会做 Eval + 会用 AI 编码 agent 干活”；多模态采纳最猛；Serving 是领先招聘 6–12 月的卡位点。</div>
+ <div class=chips><span class=cl>前瞻交叉印证 ≥2源</span><span>AI Agents · 4源</span><span>Eval · 3源</span><span>多模态 · 3源</span><span>Serving · 3源</span></div>
+ <div class=chips style=margin-top:6px><span class=cl>📌 可证伪预测 · 2026-08 回看</span><span class=p>AI编码agent 频次是否升</span><span class=p>Serving 是否进招聘</span></div>
+</div>
+<div id=g></div></div>
+<footer>设计样张：每栏 3 张示例卡（生产版数据更多，横向滑动浏览） · 结构/配色/版式与生产版一致，用于设计优化</footer>
+<script>
+const g=document.getElementById('g');
+const card=(hl,mt,dg,ft,soft)=>`<div class="rc${soft?' soft':''}"><a class=hl href=#>${hl}</a>${mt?`<div class=mt>${mt}</div>`:''}${dg?`<div class=dg>${dg}</div>`:''}${ft?`<div class=ft>${ft}</div>`:''}</div>`;
+function band(k,pp,cnt,cards){let d=document.createElement('div');d.className='band';
+ d.innerHTML=`<div class=bh><div class=k>${k}</div>${cnt?`<div class=cnt>${cnt}</div>`:''}<div class=pp>${pp}</div></div><div class=rail>${cards.join('')}</div>`;g.append(d);}
+band('<i>01</i> 岗位动态','北美 AI 在招什么、给多少钱','63 岗样本',[
+ card('Forward Deployed AI Engineer','Charta Health · San Francisco','落地部署 AI 方案、与医疗客户共建工作流，要 LLM/prompt 工程与快速原型能力。','<span class=sal>$150–250k</span> / 年'),
+ card('Senior Data Engineer','Sekai · Remote','为 AI 消费产品建数据地基，BigQuery/PostHog，产品向数据 owner。','<span class=sal>$168–210k</span> / 年'),
+ card('AI Engineer','Metriport · San Francisco','建自治 SDLC 管线，把 LLM agent 当杠杆，要 evals/prompt 版本/成本控制。','<span class=sal>$160–220k</span> / 年')]);
+band('<i>02</i> 招聘市场风向','薪资水位 + 真实技能需求','',[
+ card('年薪中位','北美 AI 岗','','<span class=sal style=font-size:20px>$185,000</span><br>自报 n=22',1),
+ card('JD 高频技能','简历该往这些词靠','<span class=tg>Python</span><span class=tg>LLM</span><span class=tg>AWS</span><span class=tg>Agents</span><span class=tg>RAG</span><span class=tg>Eval</span>','',1),
+ card('HN Who-is-hiring','200 条招聘贴','提及频次 Python·24 / TS·10 / RAG·6','补 JobSpy 抓不到的早期/小厂',1)]);
+band('<i>03</i> AI 明星 & 社区','他们认为接下来什么重要','14 篇',[
+ card('The last six months in LLMs in five minutes','Simon Willison · 2026-05-19','过去半年 LLM 关键进展五分钟速览：编码 agent、价格、推理与多模态。',''),
+ card('Components of a Coding Agent','Sebastian Raschka · 2026-04-04','拆解一个编码 agent 的组成模块与设计取舍。',''),
+ card('🔥 Hacker News 热议','社区在吵什么','· Codex 进企业本地部署 (412)<br>· 开源多模态新王 (388)','',1)]);
+band('<i>04</i> 研究前沿','arXiv cs.AI/LG/CL 最新','12 篇',[
+ card('DashAttention: Differentiable and Adaptive Sparse Hierarchical Attention','2026-05-19 · Z. Lin, et al.','提出可微、自适应的稀疏分层注意力，降低长上下文推理成本。',''),
+ card('ReasoningBank: Agents Learn from Experience','2026-04-21 · Google Research','让 agent 把过往经验沉淀为可复用记忆库，提升复杂任务表现。',''),
+ card('Adaptive Parallel Reasoning','2026-05-08 · Berkeley BAIR','高效推理 scaling 的新范式：自适应并行推理。','')]);
+band('<i>05</i> 开源项目 & 模型','哪些框架/模型在火','',[
+ card('vllm-project/vllm','Serving 推理','高吞吐 LLM 推理/部署引擎，自托管上线模型的主力。','★80,418 · 近4周 796 · 🔥猛'),
+ card('confident-ai/deepeval','Eval 评测','LLM/Agent 的单元测试式评测框架，回答“我的 AI 到底准不准”。','★15,541 · 近4周 254 · 🔥猛'),
+ card('HuggingFace trending','本周最热模型','· MiniCPM-V-4.6 <span class=tg>多模态</span><br>· DeepSeek-V4-Pro <span class=tg>文本生成</span>','',1)]);
+band('<i>06</i> 库采纳曲线','PyPI 月下载＝真实采纳','',[
+ card('litellm','统一多家 LLM API 网关','','<b class=sal>446M</b>/月<br><span class=bar style=width:210px></span>',1),
+ card('openai','OpenAI 官方 SDK','','<b class=sal>298M</b>/月<br><span class=bar style=width:140px></span>',1),
+ card('langchain','LLM 应用编排框架','','<b class=sal>242M</b>/月<br><span class=bar style=width:114px></span>',1)]);
+band('<i>07</i> 大公司状况','大厂真金白银押什么','SEC 10-K',[
+ card('NVIDIA','2026-02-25','自称“数据中心规模 AI 基础设施公司”；CUDA+Blackwell+万卡互联，押 Serving/推理基建。','',1),
+ card('Palantir','2026-02-17','AIP：平台+生成式 LLM 带到“每个决策”；Ontology 数据→语境，押企业 Agent。','',1),
+ card('Meta','2026-01-29','Meta AI 助手 + AI 眼镜(多模态) + 排序推荐 + 生成式广告。','',1)]);
+band('<i>08</i> 签证 & 权威年报','北美落地参照','',[
+ card('北美签证 / H-1B','诚实占位','<span class=warn>占位·待专项：可先出“哪些 AI 公司 sponsor + 批准量趋势”，薪资维度待 DOL 专项</span>','USCIS Hub 可达 / DOL 薪资 403 被挡',1),
+ card('Stanford HAI · AI Index Report','年度 · 非实时','AI 人才/教育/岗位/R&D 最权威统计。','',1),
+ card('State of AI Report','年度 · 非实时','研究/产业/资本/安全综述，看大势拐点。','',1)]);
+</script></body></html>

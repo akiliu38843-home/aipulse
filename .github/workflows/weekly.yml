@@ -1,0 +1,85 @@
+name: Weekly Data Refresh
+
+on:
+  schedule:
+    # 每周一 00:00 UTC = 北京 08:00 周一早
+    - cron: '0 0 * * 1'
+  workflow_dispatch:  # 允许在 Actions 页面手动点 "Run workflow" 触发，方便测试
+
+permissions:
+  contents: write    # 允许 push 回 main 分支
+
+jobs:
+  refresh-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Refresh high-velocity sources (RSS / HN / HF / arXiv / PyPI / HN summaries)
+        run: |
+          python3 rss_w2.py            || echo "  ✗ rss_w2 failed (soft, continuing)"
+          python3 w3_sources.py        || echo "  ✗ w3_sources failed (soft, continuing)"
+          python3 fix_hf.py            || echo "  ✗ fix_hf failed (soft, continuing)"
+          python3 w4_extra_sources.py  || echo "  ✗ w4_extra failed (soft, continuing)"
+          python3 w4_hn_enrich.py      || echo "  ✗ w4_hn_enrich failed (soft, continuing)"
+
+      - name: Refresh JobSpy (招聘) — cloud IP 易被反爬，允许失败
+        continue-on-error: true
+        run: |
+          python3 scrape_jobs_w1.py
+          python3 build_jobs_json.py
+
+      - name: Refresh H-1B sponsors (USCIS Data Hub, 3 FY 聚合) — 允许部分失败
+        continue-on-error: true
+        run: python3 fetch_h1b.py
+
+      - name: Rebuild signals.db base (jobs + OSS signals + W1 hardcoded enterprise/blog fallback)
+        run: |
+          python3 build_db.py
+          python3 add_llm_signals.py
+
+      - name: LLM extract (覆盖 enterprise/blog signals + 写 alias_map 表) — 无 LLM key 时 graceful skip
+        continue-on-error: true
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: python3 llm_extract.py
+
+      - name: Build canonical ontology (uses LLM alias_map if present, else hardcoded fallback)
+        run: python3 theme_ontology.py
+
+      - name: Rebuild P2.1 personalize inputs (LLM 拿到最新真数据)
+        run: python3 build_personalize_inputs.py
+
+      - name: Build site (zh + en × 直面就业 + 看新闻)
+        run: |
+          for L in zh en; do
+            python3 build_site.py $L
+            python3 build_news.py $L
+          done
+
+      - name: Commit refresh + push (触发 Vercel 自动重发)
+        run: |
+          git config user.name "northstar-bot"
+          git config user.email "northstar-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "无变化，跳过 commit"
+          else
+            git commit -m "weekly: data refresh + rebuild $(date -u +%Y-%m-%d)"
+            git push
+            echo "✓ pushed; Vercel 应该会自动重发"
+          fi

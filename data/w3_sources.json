@@ -1,0 +1,254 @@
+{
+ "collected_at": "2026-06-10T02:43:29",
+ "hf": {
+  "status": "ok:30 sort=trendingScore",
+  "tag_freq": {
+   "text-generation": 10,
+   "image-text-to-text": 6,
+   "any-to-any": 4,
+   "text-to-image": 2,
+   "text-to-speech": 2,
+   "unknown": 2,
+   "automatic-speech-recognition": 1,
+   "text-to-audio": 1,
+   "image-text-to-video": 1,
+   "text-to-video": 1
+  },
+  "trending": [
+   {
+    "id": "google/gemma-4-12B-it",
+    "pipeline": "any-to-any",
+    "downloads": 581354,
+    "likes": 817
+   },
+   {
+    "id": "nvidia/LocateAnything-3B",
+    "pipeline": "image-text-to-text",
+    "downloads": 123922,
+    "likes": 1733
+   },
+   {
+    "id": "unsloth/gemma-4-12b-it-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 660140,
+    "likes": 532
+   },
+   {
+    "id": "google/gemma-4-12B",
+    "pipeline": "any-to-any",
+    "downloads": 122464,
+    "likes": 480
+   },
+   {
+    "id": "ideogram-ai/ideogram-4-fp8",
+    "pipeline": "text-to-image",
+    "downloads": 5915,
+    "likes": 442
+   },
+   {
+    "id": "bosonai/higgs-audio-v3-tts-4b",
+    "pipeline": "text-to-speech",
+    "downloads": 16207,
+    "likes": 285
+   },
+   {
+    "id": "ideogram-ai/ideogram-4-nf4",
+    "pipeline": "text-to-image",
+    "downloads": 5250,
+    "likes": 288
+   },
+   {
+    "id": "nvidia/nemotron-3.5-asr-streaming-0.6b",
+    "pipeline": "automatic-speech-recognition",
+    "downloads": 4181,
+    "likes": 321
+   },
+   {
+    "id": "sapientinc/HRM-Text-1B",
+    "pipeline": "text-generation",
+    "downloads": 133351,
+    "likes": 734
+   },
+   {
+    "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+    "pipeline": "image-text-to-text",
+    "downloads": 2983909,
+    "likes": 1596
+   },
+   {
+    "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+    "pipeline": "text-generation",
+    "downloads": 56864,
+    "likes": 175
+   },
+   {
+    "id": "MisoLabs/MisoTTS",
+    "pipeline": "text-to-speech",
+    "downloads": 0,
+    "likes": 175
+   },
+   {
+    "id": "unsloth/gemma-4-12B-it-qat-GGUF",
+    "pipeline": "any-to-any",
+    "downloads": 127332,
+    "likes": 172
+   },
+   {
+    "id": "google/magenta-realtime-2",
+    "pipeline": "text-to-audio",
+    "downloads": 18216,
+    "likes": 164
+   },
+   {
+    "id": "CohereLabs/North-Mini-Code-1.0",
+    "pipeline": "text-generation",
+    "downloads": 1784,
+    "likes": 163
+   },
+   {
+    "id": "nex-agi/Nex-N2-Pro",
+    "pipeline": "text-generation",
+    "downloads": 783,
+    "likes": 162
+   },
+   {
+    "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
+    "pipeline": "text-generation",
+    "downloads": 71818,
+    "likes": 153
+   },
+   {
+    "id": "stepfun-ai/Step-3.7-Flash",
+    "pipeline": "image-text-to-text",
+    "downloads": 46729,
+    "likes": 359
+   },
+   {
+    "id": "OBLITERATUS/Gemma-4-12B-OBLITERATED",
+    "pipeline": "text-generation",
+    "downloads": 8106,
+    "likes": 143
+   },
+   {
+    "id": "JetBrains/Mellum2-12B-A2.5B-Thinking",
+    "pipeline": "text-generation",
+    "downloads": 17571,
+    "likes": 273
+   },
+   {
+    "id": "LiquidAI/LFM2.5-8B-A1B",
+    "pipeline": "text-generation",
+    "downloads": 137138,
+    "likes": 572
+   },
+   {
+    "id": "ByteDance/Bernini-R",
+    "pipeline": "image-text-to-video",
+    "downloads": 281,
+    "likes": 196
+   },
+   {
+    "id": "deepseek-ai/DeepSeek-V4-Pro",
+    "pipeline": "text-generation",
+    "downloads": 4302553,
+    "likes": 4740
+   },
+   {
+    "id": "jdopensource/JoyAI-Echo",
+    "pipeline": "text-to-video",
+    "downloads": 4502,
+    "likes": 115
+   },
+   {
+    "id": "Comfy-Org/Ideogram-4",
+    "pipeline": "unknown",
+    "downloads": 0,
+    "likes": 113
+   },
+   {
+    "id": "nex-agi/Nex-N2-mini",
+    "pipeline": "text-generation",
+    "downloads": 748,
+    "likes": 111
+   },
+   {
+    "id": "unsloth/gemma-4-26B-A4B-it-qat-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 96059,
+    "likes": 115
+   },
+   {
+    "id": "google/gemma-4-12B-it-qat-q4_0-gguf",
+    "pipeline": "any-to-any",
+    "downloads": 63049,
+    "likes": 115
+   },
+   {
+    "id": "nvidia/Cosmos3-Nano",
+    "pipeline": "unknown",
+    "downloads": 36739,
+    "likes": 214
+   },
+   {
+    "id": "PaddlePaddle/PaddleOCR-VL-1.6",
+    "pipeline": "image-text-to-text",
+    "downloads": 10139,
+    "likes": 281
+   }
+  ]
+ },
+ "hn": {
+  "thread": {
+   "title": "Ask HN: Who is hiring right now?",
+   "objectID": "22665398",
+   "created": "2020-03-23T16:13:49Z"
+  },
+  "who_is_hiring_comments": 200,
+  "skill_freq_in_hiring": {
+   "Python": 24,
+   "TypeScript": 10,
+   "Kubernetes": 9,
+   "RAG": 6,
+   "Rust": 3,
+   "LLM": 1
+  },
+  "hot_ai_stories": [
+   {
+    "title": "Show HN: Continue? Y/N: A 60-second game about AI agent permission fatigue",
+    "points": 386,
+    "url": "https://llmgame.scalex.dev"
+   },
+   {
+    "title": "Show HN: Statewright – Visual state machines that make AI agents reliable",
+    "points": 126,
+    "url": "https://github.com/statewright/statewright"
+   },
+   {
+    "title": "Ask HN: What is your (AI) dev tech stack / workflow?",
+    "points": 165,
+    "url": null
+   },
+   {
+    "title": "Show HN: Formally verified polygon intersection – Opus 4.8 oneshots, prev failed",
+    "points": 93,
+    "url": "https://github.com/schildep/verified-polygon-intersection"
+   },
+   {
+    "title": "Launch HN: Expanse (YC P26) – Unlock Wasted GPU Capacity",
+    "points": 102,
+    "url": null
+   },
+   {
+    "title": "Show HN: OpenGravity – A zero-install, BYOK vanilla JS clone of Antigravity",
+    "points": 106,
+    "url": "https://github.com/ab-613/opengravity"
+   },
+   {
+    "title": "Show HN: Agent.email – sign up via curl, claim with a human OTP",
+    "points": 99,
+    "url": null
+   }
+  ],
+  "status": "ok"
+ }
+}

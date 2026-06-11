@@ -1,0 +1,586 @@
+{
+ "as_of": "2026-05-19",
+ "jobs_n": 63,
+ "blog_n": 42,
+ "jobs": [
+  {
+   "t": "Senior DevSecOps / Security Engineer – Application & Cloud (Ecommerce)",
+   "co": "Thorne",
+   "loc": "Remote",
+   "sal": "$150–180k",
+   "link": "https://www.indeed.com/viewjob?jk=7f7be3e52d3af700",
+   "brief": "Each day begins with a mission to help others discover and achieve their best health."
+  },
+  {
+   "t": "Software Engineering Internship",
+   "co": "Brivo",
+   "loc": "Bethesda, MD, US",
+   "sal": "",
+   "link": "https://www.indeed.com/viewjob?jk=64d0860f73a9bc19",
+   "brief": "You'll work alongside senior engineers on real production systems, shipping features and fixes that reach customers globally."
+  },
+  {
+   "t": "Senior Digital Engineer - Apriso",
+   "co": "Capgemini",
+   "loc": "Remote",
+   "sal": "$82–193k",
+   "link": "https://www.indeed.com/viewjob?jk=4f21a6f256b5e797",
+   "brief": "At Capgemini Engineering, the world leader in engineering services, we bring together a global team of engineers, scientists, and architects to help the world’s most innovative companie…"
+  },
+  {
+   "t": "Senior Data Engineer",
+   "co": "sekai",
+   "loc": "Remote",
+   "sal": "",
+   "link": "https://www.indeed.com/viewjob?jk=c829e4ca7714f806",
+   "brief": "Sekai is building the TikTok for mini apps — an AI-driven consumer platform where people create, remix, share, and play interactive content instantly."
+  },
+  {
+   "t": "Tech Lead / Engineering Manager",
+   "co": "Aurelian",
+   "loc": "Seattle, WA, US",
+   "sal": "$160–240k",
+   "link": "https://www.indeed.com/viewjob?jk=8b0aacee88554ace",
+   "brief": "AVA is a conversational AI agent that answers non-emergency calls; the agent routes, triages, and resolves the calls without any human intervention."
+  },
+  {
+   "t": "Forward Deployed AI Engineer",
+   "co": "Charta Health",
+   "loc": "New York, NY, US",
+   "sal": "$90–140k",
+   "link": "https://www.indeed.com/viewjob?jk=18629a3d15d91ffe",
+   "brief": "We're building the operating system for modern healthcare organizations."
+  },
+  {
+   "t": "Software Engineer, Staff",
+   "co": "Charta Health",
+   "loc": "New York, NY, US",
+   "sal": "$210–270k",
+   "link": "https://www.indeed.com/viewjob?jk=d47b7887f8cb1a2f",
+   "brief": "We're building the operating system for modern healthcare organizations."
+  },
+  {
+   "t": "Founding Security Reliability Engineer",
+   "co": "Charta Health",
+   "loc": "San Francisco, CA, US",
+   "sal": "$150–250k",
+   "link": "https://www.indeed.com/viewjob?jk=d6e6706314cc90ed",
+   "brief": "We're building the operating system for modern healthcare organizations."
+  },
+  {
+   "t": "Software Engineer, Senior",
+   "co": "Charta Health",
+   "loc": "San Francisco, CA, US",
+   "sal": "$150–210k",
+   "link": "https://www.indeed.com/viewjob?jk=17956a2d4c5efe6a",
+   "brief": "We're building the operating system for modern healthcare organizations."
+  },
+  {
+   "t": "Senior / Staff Forward Deployed AI Engineer",
+   "co": "Charta Health",
+   "loc": "San Francisco, CA, US",
+   "sal": "$150–250k",
+   "link": "https://www.indeed.com/viewjob?jk=2d386b1651805186",
+   "brief": "We're building the operating system for modern healthcare organizations."
+  },
+  {
+   "t": "Head of Business Operations",
+   "co": "Artie",
+   "loc": "San Francisco, CA, US",
+   "sal": "$200–300k",
+   "link": "https://www.indeed.com/viewjob?jk=53cb110708e527cd",
+   "brief": "We make high-volume data replication simple, reliable, and scalable for engineering teams."
+  },
+  {
+   "t": "Technical Facilities Electrical Engineer",
+   "co": "Etched",
+   "loc": "San Jose, CA, US",
+   "sal": "",
+   "link": "https://www.indeed.com/viewjob?jk=781423ac0f6984ea",
+   "brief": "With Etched ASICs, you can build products that would be impossible with GPUs, like real-time video generation models and extremely deep & parallel chain-of-thought reasoning agents."
+  },
+  {
+   "t": "Accelerator Software Engineer",
+   "co": "Etched",
+   "loc": "San Jose, CA, US",
+   "sal": "",
+   "link": "https://www.indeed.com/viewjob?jk=bf0977aa8bc842c8",
+   "brief": "With Etched ASICs, you can build products that would be impossible with GPUs, like real-time video generation models and extremely deep & parallel chain-of-thought reasoning agents."
+  },
+  {
+   "t": "Technical Facilities Project Manager",
+   "co": "Etched",
+   "loc": "San Jose, CA, US",
+   "sal": "",
+   "link": "https://www.indeed.com/viewjob?jk=2f58e5d1ecd6dcf9",
+   "brief": "With Etched ASICs, you can build products that would be impossible with GPUs, like real-time video generation models and extremely deep & parallel chain-of-thought reasoning agents."
+  }
+ ],
+ "hire": {
+  "wih_comments": 200,
+  "wih_skills": {
+   "Python": 24,
+   "TypeScript": 10,
+   "Kubernetes": 9,
+   "RAG": 6,
+   "Rust": 3,
+   "LLM": 1
+  },
+  "now_skills": [
+   "Python",
+   "AWS/Azure 云",
+   "LLM/生成式AI应用",
+   "Docker/Kubernetes",
+   "TypeScript/Node",
+   "SQL",
+   "AI Agents/编排",
+   "Prompt engineering",
+   "Eval 评测",
+   "RAG",
+   "AI系统可观测性",
+   "MLOps/LLMOps",
+   "AI编码agent(Claude Code/Cursor)当必备技能",
+   "Token/成本可观测",
+   "Prompt injection/AI安全"
+  ],
+  "salary_med": 185000,
+  "salary_n": 22
+ },
+ "talk": [
+  {
+   "src": "Simon Willison",
+   "t": "The last six months in LLMs in five minutes",
+   "date": "2026-05-19",
+   "link": "https://simonwillison.net/2026/May/19/5-minute-llms/#atom-everything",
+   "sum": "I put together these annotated slides from my five minute lightning talk at PyCon US 2026, using the latest iteration of my annotated presentation tool . I presented this ligh…"
+  },
+  {
+   "src": "Simon Willison",
+   "t": "Glaucous-winged Gull, Brown Pelican, Snowy Egret, Canada Goose",
+   "date": "2026-05-18",
+   "link": "https://simonwillison.net/2026/May/18/sighting-362781627/#atom-everything",
+   "sum": "Glaucous-winged Gull, Brown Pelican, Snowy Egret, Canada Goose, in Los Angeles River, CA, US I'm heading home from PyCon US today so I went on a last morning walk to try and s…"
+  },
+  {
+   "src": "HuggingFace Blog",
+   "t": "Fine-Tuning NVIDIA Cosmos Predict 2.5 with LoRA/DoRA for Robot Video Generation",
+   "date": "2026-05-18",
+   "link": "https://huggingface.co/blog/nvidia/cosmos-fine-tuning-for-robot-video-generation",
+   "sum": ""
+  },
+  {
+   "src": "HuggingFace Blog",
+   "t": "PaddleOCR 3.5: Running OCR and Document Parsing Tasks with a Transformers Backend",
+   "date": "2026-05-18",
+   "link": "https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
+   "sum": ""
+  },
+  {
+   "src": "HuggingFace Blog",
+   "t": "The Open Agent Leaderboard",
+   "date": "2026-05-18",
+   "link": "https://huggingface.co/blog/ibm-research/open-agent-leaderboard",
+   "sum": ""
+  },
+  {
+   "src": "OpenAI News",
+   "t": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments",
+   "date": "2026-05-18",
+   "link": "https://openai.com/index/dell-codex-enterprise-partnership",
+   "sum": "OpenAI and Dell partner to bring Codex to hybrid and on-premise environments, helping enterprises deploy AI coding agents securely across data and workflows."
+  },
+  {
+   "src": "Simon Willison",
+   "t": "GDS weighs in on the NHS's decision to retreat from Open Source",
+   "date": "2026-05-17",
+   "link": "https://simonwillison.net/2026/May/17/gds-weighs-in/#atom-everything",
+   "sum": "GDS weighs in on the NHS& x27;s decision to retreat from Open Source Terence Eden continues his coverage of the NHS' poorly considered decision to close down access to their o…"
+  },
+  {
+   "src": "Simon Willison",
+   "t": "Warelay -> OpenClaw",
+   "date": "2026-05-16",
+   "link": "https://simonwillison.net/2026/May/16/openclaw-names/#atom-everything",
+   "sum": "In preparation for a lightning talk I'm giving at PyCon US this afternoon I decided to figure out how many names OpenClaw has actually had since that first commit back in Nove…"
+  },
+  {
+   "src": "Simon Willison",
+   "t": "Quoting Julia Evans",
+   "date": "2026-05-16",
+   "link": "https://simonwillison.net/2026/May/16/julia-evans/#atom-everything",
+   "sum": "[...] in the last 10 years I’ve learned to really love and respect CSS as a technology. So I decided years ago that I wanted to react to “CSS is hard” by getting better at CSS…"
+  },
+  {
+   "src": "Sebastian Raschka",
+   "t": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
+   "date": "2026-05-16",
+   "link": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+   "sum": "From Gemma 4 to DeepSeek V4, How New Open-Weight LLMs Are Reducing Long-Context Costs"
+  },
+  {
+   "src": "OpenAI News",
+   "t": "OpenAI and Malta partner to bring ChatGPT Plus to all citizens",
+   "date": "2026-05-16",
+   "link": "https://openai.com/index/malta-chatgpt-plus-partnership",
+   "sum": "OpenAI and Malta partner to expand AI access, offering ChatGPT Plus and training to help citizens build practical AI skills and use AI responsibly."
+  },
+  {
+   "src": "Simon Willison",
+   "t": "inaturalist-clumper 0.1",
+   "date": "2026-05-15",
+   "link": "https://simonwillison.net/2026/May/15/inaturalist-clumper/#atom-everything",
+   "sum": "Release: inaturalist-clumper 0.1 Part of the infrastructure I use for publishing my iNaturalist sightings on my blog . I've been running this in production for a few weeks now…"
+  },
+  {
+   "src": "Simon Willison",
+   "t": "Western Gull, Rock Pigeon",
+   "date": "2026-05-15",
+   "link": "https://simonwillison.net/2026/May/15/sighting-361818285/#atom-everything",
+   "sum": "Western Gull, Rock Pigeon, in Los Angeles Area (custom), CA, US I went for a bird walk in the morning before PyCon, and we spotted a local seagull enjoying a Starbucks."
+  },
+  {
+   "src": "Simon Willison",
+   "t": "QR code generator",
+   "date": "2026-05-15",
+   "link": "https://simonwillison.net/2026/May/15/qr-code-generator/#atom-everything",
+   "sum": "Tool: QR code generator Claude helped me build this tool for creating QR codes, for both text/URLs and for connecting to WiFi networks. Tags: vibe-coding , tools , generative-…"
+  }
+ ],
+ "hn": [
+  {
+   "t": "Show HN: A Karpathy-style LLM wiki your agents maintain (Markdown and Git)",
+   "pts": 260,
+   "link": "https://github.com/nex-crm/wuphf"
+  },
+  {
+   "t": "Show HN: Statewright – Visual state machines that make AI agents reliable",
+   "pts": 126,
+   "link": "https://github.com/statewright/statewright"
+  },
+  {
+   "t": "Show HN: Agent-desktop – Native desktop automation CLI for AI agents",
+   "pts": 99,
+   "link": "https://github.com/lahfir/agent-desktop"
+  },
+  {
+   "t": "Show HN: LangAlpha – what if Claude Code was built for Wall Street?",
+   "pts": 148,
+   "link": "https://github.com/ginlix-ai/langalpha"
+  },
+  {
+   "t": "Launch HN: Kampala (YC W26) – Reverse-Engineer Apps into APIs",
+   "pts": 100,
+   "link": "https://www.zatanna.ai/kampala"
+  },
+  {
+   "t": "Show HN: Mediator.ai – Using Nash bargaining and LLMs to systematize fairness",
+   "pts": 160,
+   "link": "https://mediator.ai/"
+  },
+  {
+   "t": "Show HN: OpenGravity – A zero-install, BYOK vanilla JS clone of Antigravity",
+   "pts": 106,
+   "link": "https://github.com/ab-613/opengravity"
+  }
+ ],
+ "arx": [
+  {
+   "t": "DashAttention: Differentiable and Adaptive Sparse Hierarchical Attention",
+   "date": "2026-05-18",
+   "au": "Yuxiang Huang, Nuno M. T. Gonçalves, Federico Alvetreti",
+   "link": "https://arxiv.org/abs/2605.18753v1",
+   "sum": "Current hierarchical attention methods, such as NSA and InfLLMv2, select the top-k relevant key-value (KV) blocks based on coarse attention scores and subsequently apply fine-grained softmax attention"
+  },
+  {
+   "t": "A Readiness-Driven Runtime for Pipeline-Parallel Training under Runtime Variability",
+   "date": "2026-05-18",
+   "au": "Ruitao Liu, Xinyang Tian, Shuo Chen",
+   "link": "https://arxiv.org/abs/2605.18750v1",
+   "sum": "Pipeline parallelism is a key technique for scaling large-model training, but modern workloads exhibit runtime variability in computation and communication. Existing pipeline systems typically consume"
+  },
+  {
+   "t": "Code as Agent Harness",
+   "date": "2026-05-18",
+   "au": "Xuying Ning, Katherine Tieu, Dongqi Fu",
+   "link": "https://arxiv.org/abs/2605.18747v1",
+   "sum": "Recent large language models (LLMs) have demonstrated strong capabilities in understanding and generating code, from competitive programming to repository-level software engineering. In emerging agent"
+  },
+  {
+   "t": "ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop",
+   "date": "2026-05-18",
+   "au": "Yining Hong, Jiageng Liu, Han Yin",
+   "link": "https://arxiv.org/abs/2605.18746v1",
+   "sum": "Spatial intelligence unfolds through a perception-action loop: agents act to acquire observations, and reason about how observations vary as a function of action. Rather than passively processing what"
+  },
+  {
+   "t": "SURGE: Approximation-free Training Free Particle Filter for Diffusion Surrogate",
+   "date": "2026-05-18",
+   "au": "Lifu Wei, Yinuo Ren, Naichen Shi",
+   "link": "https://arxiv.org/abs/2605.18745v1",
+   "sum": "Diffusion-based generative models increasingly rely on inference-time guidance, adding a drift term or reweighting mixture of experts, to improve sample quality on task-specific objectives. However, m"
+  },
+  {
+   "t": "Actionable World Representation",
+   "date": "2026-05-18",
+   "au": "Kunqi Xu, Jitao Li, Jianglong Ye",
+   "link": "https://arxiv.org/abs/2605.18743v1",
+   "sum": "Inspired by the emergent behaviors in large language models that generalized human intelligence, the research community is pursuing similar emergent capabilities within world models, with a emphasis o"
+  },
+  {
+   "t": "Vision-OPD: Learning to See Fine Details for Multimodal LLMs via On-Policy Self-Distillation",
+   "date": "2026-05-18",
+   "au": "Qianhao Yuan, Jie Lou, Xing Yu",
+   "link": "https://arxiv.org/abs/2605.18740v1",
+   "sum": "Multimodal Large Language Models (MLLMs) still struggle with fine-grained visual understanding, where answers often depend on small but decisive evidence in the full image. We observe a regional-to-gl"
+  },
+  {
+   "t": "What Does the AI Doctor Value? Auditing Pluralism in the Clinical Ethics of Language Models",
+   "date": "2026-05-18",
+   "au": "Payal Chandak, Victoria Alkin, David Wu",
+   "link": "https://arxiv.org/abs/2605.18738v1",
+   "sum": "Medicine is inherently pluralistic. Principles such as autonomy, beneficence, nonmaleficence, and justice routinely conflict, and such ethical dilemmas often sharply divide reasonable physicians. Good"
+  },
+  {
+   "t": "PIXLRelight: Controllable Relighting via Intrinsic Conditioning",
+   "date": "2026-05-18",
+   "au": "Miguel Farinha, Ronald Clark",
+   "link": "https://arxiv.org/abs/2605.18735v1",
+   "sum": "We present PIXLRelight, a feed-forward approach for physically controllable single-image relighting. Existing methods either provide limited lighting control (e.g. through text or environment maps), a"
+  },
+  {
+   "t": "Predictable Confabulations: Factual Recall by LLMs Scales with Model Size and Topic Frequency",
+   "date": "2026-05-18",
+   "au": "Matthew L. Smith, Jonathan P. Shock, Samuel T. Segun",
+   "link": "https://arxiv.org/abs/2605.18732v1",
+   "sum": "While scaling laws govern aggregate large language model performance, no scaling law has linked factual recall to both model size and training-data composition. We evaluated 38 models on over 8,900 sc"
+  },
+  {
+   "t": "DexHoldem: Playing Texas Hold'em with Dexterous Embodied System",
+   "date": "2026-05-18",
+   "au": "Feng Chen, Tianzhe Chu, Li Sun",
+   "link": "https://arxiv.org/abs/2605.18727v1",
+   "sum": "Evaluating embodied systems on real dexterous hardware requires more than isolated primitive skills: an agent must perceive a changing tabletop scene, choose a context-appropriate action, execute it w"
+  },
+  {
+   "t": "General Preference Reinforcement Learning",
+   "date": "2026-05-18",
+   "au": "Muhammad Umer, Muhammad Ahmed Mohsin, Ahsan Bilal",
+   "link": "https://arxiv.org/abs/2605.18721v1",
+   "sum": "Post-training has split large language model (LLM) alignment into two largely disconnected tracks. Online reinforcement learning (RL) with verifiable rewards drives emergent reasoning on math and code"
+  }
+ ],
+ "proj": [
+  {
+   "repo": "vllm-project/vllm",
+   "dir": "Serving 推理",
+   "stars": 80418,
+   "c4w": 796,
+   "heat": "🔥猛",
+   "link": "https://github.com/vllm-project/vllm",
+   "gloss": "高吞吐 LLM 推理/部署引擎，自托管上线模型的主力"
+  },
+  {
+   "repo": "confident-ai/deepeval",
+   "dir": "Eval 评测",
+   "stars": 15541,
+   "c4w": 254,
+   "heat": "🔥猛",
+   "link": "https://github.com/confident-ai/deepeval",
+   "gloss": "LLM/Agent 的单元测试式评测框架，回答'我的 AI 到底准不准'"
+  },
+  {
+   "repo": "langchain-ai/langgraph",
+   "dir": "Agent 编排",
+   "stars": 32377,
+   "c4w": 93,
+   "heat": "🟢活跃",
+   "link": "https://github.com/langchain-ai/langgraph",
+   "gloss": "有状态的多智能体/工作流编排框架，做可控 Agent 的事实标准之一"
+  },
+  {
+   "repo": "run-llama/llama_index",
+   "dir": "RAG",
+   "stars": 49499,
+   "c4w": 36,
+   "heat": "🟢活跃",
+   "link": "https://github.com/run-llama/llama_index",
+   "gloss": "把私有数据接进 LLM 的 RAG 数据框架"
+  },
+  {
+   "repo": "modelcontextprotocol/servers",
+   "dir": "MCP",
+   "stars": 85899,
+   "c4w": 8,
+   "heat": "🟡温和",
+   "link": "https://github.com/modelcontextprotocol/servers",
+   "gloss": "MCP 协议官方服务器集，让 LLM 标准化接外部工具/数据"
+  },
+  {
+   "repo": "QwenLM/Qwen2.5-VL",
+   "dir": "多模态",
+   "stars": 19193,
+   "c4w": 0,
+   "heat": "🔴停滞",
+   "link": "https://github.com/QwenLM/Qwen3-VL",
+   "gloss": "阿里 Qwen 系列视觉语言模型"
+  }
+ ],
+ "hf": [
+  {
+   "id": "openbmb/MiniCPM-V-4.6",
+   "pipe": "image-text-to-text",
+   "g": "看图说话/文档理解(多模态)"
+  },
+  {
+   "id": "SulphurAI/Sulphur-2-base",
+   "pipe": "text-to-video",
+   "g": "文生视频"
+  },
+  {
+   "id": "Supertone/supertonic-3",
+   "pipe": "text-to-speech",
+   "g": "语音合成"
+  },
+  {
+   "id": "unsloth/Qwen3.6-27B-MTP-GGUF",
+   "pipe": "image-text-to-text",
+   "g": "看图说话/文档理解(多模态)"
+  },
+  {
+   "id": "unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
+   "pipe": "image-text-to-text",
+   "g": "看图说话/文档理解(多模态)"
+  },
+  {
+   "id": "circlestone-labs/Anima",
+   "pipe": "unknown",
+   "g": ""
+  },
+  {
+   "id": "ResembleAI/Dramabox",
+   "pipe": "text-to-speech",
+   "g": "语音合成"
+  },
+  {
+   "id": "deepseek-ai/DeepSeek-V4-Pro",
+   "pipe": "text-generation",
+   "g": "文本/对话生成"
+  },
+  {
+   "id": "froggeric/Qwen-Fixed-Chat-Templates",
+   "pipe": "unknown",
+   "g": ""
+  },
+  {
+   "id": "TencentARC/Pixal3D",
+   "pipe": "image-to-3d",
+   "g": "图生3D"
+  }
+ ],
+ "pypi": [
+  {
+   "pkg": "litellm",
+   "m": 446523749,
+   "g": "统一多家 LLM API 网关"
+  },
+  {
+   "pkg": "openai",
+   "m": 298562218,
+   "g": "OpenAI 官方 SDK"
+  },
+  {
+   "pkg": "huggingface-hub",
+   "m": 247731269,
+   "g": "HF 模型仓客户端"
+  },
+  {
+   "pkg": "langchain",
+   "m": 242265769,
+   "g": "LLM 应用编排框架"
+  },
+  {
+   "pkg": "transformers",
+   "m": 145484674,
+   "g": "HuggingFace 模型库(训练/推理基座)"
+  },
+  {
+   "pkg": "llama-index",
+   "m": 11836492,
+   "g": "RAG 数据框架"
+  }
+ ],
+ "ent": [
+  [
+   "NVIDIA",
+   "2026-02-25",
+   "自称'数据中心规模 AI 基础设施公司'；CUDA+Blackwell+万卡互联，押 Serving/推理基建"
+  ],
+  [
+   "Microsoft",
+   "2025-07-30",
+   "AI 跨全栈 + 负责任/安全 AI + AI 驱动安全合规身份产品"
+  ],
+  [
+   "Palantir",
+   "2026-02-17",
+   "AIP：平台+生成式 LLM 带到'每个决策'；Ontology 数据→语境，押企业 Agent"
+  ],
+  [
+   "Meta",
+   "2026-01-29",
+   "Meta AI 助手 + AI 眼镜(多模态) + 排序推荐 + 生成式广告"
+  ]
+ ],
+ "fore": [
+  {
+   "t": "AI Agents/编排",
+   "n": 4
+  },
+  {
+   "t": "Eval 评测",
+   "n": 3
+  },
+  {
+   "t": "RAG",
+   "n": 3
+  },
+  {
+   "t": "Serving 推理",
+   "n": 3
+  },
+  {
+   "t": "多模态",
+   "n": 3
+  },
+  {
+   "t": "AI安全/Responsible AI",
+   "n": 2
+  },
+  {
+   "t": "AI编码agent当硬技能",
+   "n": 2
+  }
+ ],
+ "f3": "北美 AI 岗门槛正从'会调 LLM API'上移到'会编排 Agent + 会做 Eval + 会用 AI 编码 agent 干活'；多模态采纳最猛；Serving 是领先招聘 6–12 月的卡位点。",
+ "checkpoints": [
+  "AI编码agent 在 jobs 频次是否升",
+  "Serving 是否从 jobs 未普及→出现",
+  "多模态 HF 占比是否保持"
+ ],
+ "visa": {
+  "status": "占位·待专项：可先出'北美哪些 AI 公司 sponsor + 批准量趋势'，薪资维度待 DOL 专项",
+  "note": "W3 探针：USCIS H-1B Data Hub 可达 / DOL 薪资 LCA 403 被挡 / h1bdata.info 灰色"
+ },
+ "reports": [
+  {
+   "t": "Stanford HAI · AI Index Report",
+   "note": "年度·AI 人才/教育/岗位/R&D 最权威统计",
+   "link": "https://aiindex.stanford.edu/report/"
+  },
+  {
+   "t": "State of AI Report",
+   "note": "年度·研究/产业/资本/安全综述，看大势拐点",
+   "link": "https://www.stateof.ai/"
+  }
+ ]
+}

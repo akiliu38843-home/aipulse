@@ -1,0 +1,281 @@
+{
+ "as_of": "2026-05-19",
+ "jobs_n": 63,
+ "salary": {
+  "median_yearly": 185000,
+  "n": 22
+ },
+ "now_skills": [
+  "Python",
+  "AWS/Azure 云",
+  "LLM/生成式AI应用",
+  "Docker/Kubernetes",
+  "TypeScript/Node",
+  "SQL",
+  "AI Agents/编排",
+  "Prompt engineering",
+  "Eval 评测",
+  "RAG",
+  "AI系统可观测性",
+  "MLOps/LLMOps",
+  "AI编码agent(Claude Code/Cursor)当必备技能",
+  "Token/成本可观测",
+  "Prompt injection/AI安全"
+ ],
+ "baseline": [
+  "LLM/生成式AI应用",
+  "AWS/Azure 云",
+  "Docker/Kubernetes",
+  "Prompt engineering",
+  "Python",
+  "SQL",
+  "TypeScript/Node"
+ ],
+ "foresight": [
+  {
+   "theme": "AI Agents/编排",
+   "layer": "foresight",
+   "n": 4,
+   "srcs": "blog,enterprise,jobs,oss"
+  },
+  {
+   "theme": "Eval 评测",
+   "layer": "foresight",
+   "n": 3,
+   "srcs": "blog,jobs,oss"
+  },
+  {
+   "theme": "RAG",
+   "layer": "foresight",
+   "n": 3,
+   "srcs": "hn,jobs,oss"
+  },
+  {
+   "theme": "Serving 推理",
+   "layer": "foresight",
+   "n": 3,
+   "srcs": "blog,enterprise,oss"
+  },
+  {
+   "theme": "多模态",
+   "layer": "foresight",
+   "n": 3,
+   "srcs": "enterprise,hf,oss"
+  },
+  {
+   "theme": "AI安全/Responsible AI",
+   "layer": "foresight",
+   "n": 2,
+   "srcs": "enterprise,jobs"
+  },
+  {
+   "theme": "AI编码agent当硬技能",
+   "layer": "foresight",
+   "n": 2,
+   "srcs": "blog,jobs"
+  },
+  {
+   "theme": "AI系统可观测性/成本",
+   "layer": "foresight",
+   "n": 1,
+   "srcs": "jobs"
+  },
+  {
+   "theme": "LLM架构(attention/MoE)",
+   "layer": "research",
+   "n": 1,
+   "srcs": "blog"
+  },
+  {
+   "theme": "MCP 协议",
+   "layer": "foresight",
+   "n": 1,
+   "srcs": "oss"
+  },
+  {
+   "theme": "MLOps/LLMOps",
+   "layer": "foresight",
+   "n": 1,
+   "srcs": "jobs"
+  },
+  {
+   "theme": "与AI协作的工作方式",
+   "layer": "meta",
+   "n": 1,
+   "srcs": "blog"
+  },
+  {
+   "theme": "开放权重/微调(LoRA/DoRA)",
+   "layer": "foresight",
+   "n": 1,
+   "srcs": "blog"
+  }
+ ],
+ "f3": {
+  "oneliner": "未来 12 个月：北美 AI 岗硬门槛从'会调 LLM API'上移到'会编排 Agent + 会做 Eval + 会用 AI 编码 agent 干活'；多模态采纳最猛；Serving 是领先招聘 6–12 月的卡位点。",
+  "tiers": [
+   [
+    "P0 现在补",
+    "Agent 编排 + RAG",
+    "已是硬门槛 (4源/3源)"
+   ],
+   [
+    "P0 现在补",
+    "会用 Claude Code/Cursor/Codex 干真活",
+    "新硬门槛 (2源,持续印证,多数人没当回事)"
+   ],
+   [
+    "P1 提前学",
+    "Eval/评测能力",
+    "高级岗分水岭 (3源)"
+   ],
+   [
+    "P1 卡位",
+    "Serving/推理工程基础",
+    "招聘未普及但全前瞻源在烧 (领先6-12月)"
+   ],
+   [
+    "P2 跟进",
+    "多模态(VLM)应用",
+    "采纳最猛 (HF 第一热)"
+   ]
+  ],
+  "checkpoints": [
+   "2026-08 回看：AI编码agent 在 jobs 频次是否升",
+   "Serving 是否从 jobs 未普及→出现",
+   "多模态 HF 占比是否保持",
+   "任一反向 → 记 FAIL 不补丁"
+  ]
+ },
+ "health": [
+  {
+   "src": "jobs(JobSpy)",
+   "age_days": 0,
+   "status": "🟢新鲜"
+  },
+  {
+   "src": "oss(GitHub)",
+   "age_days": 0,
+   "status": "🟢新鲜"
+  },
+  {
+   "src": "enterprise(SEC)",
+   "age_days": 0,
+   "status": "🟢新鲜"
+  },
+  {
+   "src": "blog(RSS)",
+   "age_days": 0,
+   "status": "🟢新鲜"
+  },
+  {
+   "src": "hf+hn",
+   "age_days": 0,
+   "status": "🟢新鲜"
+  },
+  {
+   "src": "signals.db",
+   "age_days": 0,
+   "status": "🟢新鲜"
+  }
+ ],
+ "personas": [
+  {
+   "name": "转行后端工程师",
+   "desc": "有 Python/AWS/Docker，没碰过 AI 应用",
+   "has": [
+    "Python",
+    "AWS/Azure 云",
+    "Docker/Kubernetes",
+    "SQL"
+   ],
+   "baseline_gap": [
+    "LLM/生成式AI应用"
+   ],
+   "foresight_gap": [
+    "AI Agents/编排",
+    "Eval 评测",
+    "RAG",
+    "Serving 推理",
+    "多模态",
+    "AI安全/Responsible AI",
+    "AI编码agent当硬技能"
+   ],
+   "learn_next": [
+    "基线:LLM/生成式AI应用",
+    "前瞻:AI Agents/编排",
+    "前瞻:Eval 评测",
+    "前瞻:RAG",
+    "前瞻:Serving 推理",
+    "前瞻:多模态"
+   ]
+  },
+  {
+   "name": "应届 CS 毕业生",
+   "desc": "学过 Python/算法，无工程与 AI 经验",
+   "has": [
+    "Python"
+   ],
+   "baseline_gap": [
+    "SQL",
+    "Docker/Kubernetes",
+    "AWS/Azure 云",
+    "LLM/生成式AI应用"
+   ],
+   "foresight_gap": [
+    "AI Agents/编排",
+    "Eval 评测",
+    "RAG",
+    "Serving 推理",
+    "多模态",
+    "AI安全/Responsible AI",
+    "AI编码agent当硬技能"
+   ],
+   "learn_next": [
+    "基线:SQL",
+    "基线:Docker/Kubernetes",
+    "基线:AWS/Azure 云",
+    "前瞻:AI Agents/编排",
+    "前瞻:Eval 评测",
+    "前瞻:RAG"
+   ]
+  },
+  {
+   "name": "非技术产品经理转 AI PM",
+   "desc": "懂产品不写代码",
+   "has": [],
+   "baseline_gap": [
+    "Python",
+    "SQL",
+    "Docker/Kubernetes",
+    "AWS/Azure 云",
+    "LLM/生成式AI应用"
+   ],
+   "foresight_gap": [
+    "AI Agents/编排",
+    "Eval 评测",
+    "RAG",
+    "Serving 推理",
+    "多模态",
+    "AI安全/Responsible AI",
+    "AI编码agent当硬技能"
+   ],
+   "learn_next": [
+    "基线:Python",
+    "基线:SQL",
+    "基线:Docker/Kubernetes",
+    "前瞻:AI Agents/编排",
+    "前瞻:Eval 评测",
+    "前瞻:RAG"
+   ]
+  }
+ ],
+ "snapshots_n": 6,
+ "limits": [
+  "样本小(63岗/42博客/4公司/6源)方向性非统计",
+  "个性化为样例persona(无真实简历)",
+  "真人验证未做(需5真人)",
+  "H-1B签证视图未实装(DOL薪资数据被挡)",
+  "gpt-researcher工具未接(无API key,F-3由LLM合成)"
+ ]
+}

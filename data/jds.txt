@@ -1,0 +1,1549 @@
+
+===== JD#1 | Senior DevSecOps / Security Engineer – Application & Cloud (Ecommerce) @ Thorne | remote=True | $150000.0-180000.0 yearly =====
+### **Description**
+
+  
+
+**At Thorne, we work to deliver high\-quality, science\-backed solutions to empower individuals to take a proactive approach to their well\-being. Each day begins with a mission to help others discover and achieve their best health. We count on our team members to challenge and push the boundaries to make that happen. At Thorne, you’ll be joining a team of more than 750 passionate individuals committed to our cause of providing superior health solutions at every age and life stage.**  
+
+  
+
+Thorne is seeking a Senior DevSecOps / Security Engineer – Application \& Cloud (Ecommerce) to secure and scale our digital platforms, including Thorne.com, mobile applications, and emerging AI capabilities. This role sits at the intersection of application security, DevSecOps, and AWS cloud infrastructure, with a strong focus on protecting ecommerce systems, customer data, and high\-traffic web applications. The ideal candidate will balance remediations and hands\-on execution, ensuring systems are resilient, performant, and secure, while embedding security throughout the development lifecycle.### **RESPONSIBILITIES**
+
+  
+
+Application \& Ecommerce Security* Identify and remediate vulnerabilities in Java\-based applications (Spring Boot, APIs, microservices)
+* Address OWASP Top 10 and ecommerce\-specific risks, including:
+
+
+o Injection (SQL/NoSQL), XSS, CSRF  
+
+
+  
+
+o Broken authentication / session management  
+
+
+  
+
+o Business logic flaws (checkout, pricing, promotions, abuse scenarios)  
+
+
+  
+
+o Account takeover, credential stuffing, bot attacks  
+
+
+  
+
+* Secure checkout flows, payment integrations, subscriptions, and customer data handling
+  
+
+  
+
+* Conduct secure code reviews and support threat modeling for new features
+  
+
+  
+
+API \& Integration Security  
+
+
+  
+
+* Secure REST/GraphQL APIs (authentication, authorization, rate limiting)
+  
+
+  
+
+* Prevent API abuse, scraping, and data exfiltration
+  
+
+  
+
+* Implement and enforce secure patterns (OAuth2, JWT, token management)
+  
+
+  
+
+DevSecOps \& CI/CD Security  
+
+
+  
+
+* Implement and manage security tooling in CI/CD pipelines:
+  
+
+  
+
+o SAST (Java\-focused), DAST, SCA (dependencies), secrets scanning  
+
+
+  
+
+* Secure build and deployment pipelines
+  
+
+  
+
+* Enforce secure coding standards and automate policy checks
+  
+
+  
+
+* Own infrastructure\-as\-code security (Terraform) for app environments
+  
+
+  
+
+AWS Cloud Security (Critical)  
+
+
+  
+
+* Secure application workloads on AWS (EKS/ECS, EC2, Lambda, API Gateway, S3, RDS)
+  
+
+  
+
+* Implement and validate:
+  
+
+  
+
+o IAM roles and least privilege access  
+
+
+  
+
+o Network segmentation (VPCs, security groups, private/public boundaries)  
+
+
+  
+
+o Secrets management (AWS Secrets Manager, Parameter Store)  
+
+
+  
+
+o Data protection (encryption at rest/in transit)  
+
+
+  
+
+* Partner with Infra to ensure alignment with enterprise guardrails, while owning app\-layer cloud security
+  
+
+  
+
+Runtime Protection \& Detection  
+
+
+  
+
+* Implement and tune WAF, bot protection, and rate limiting for ecommerce surfaces
+  
+
+  
+
+* Partner with Infra on CrowdStrike coverage for application workloads
+  
+
+  
+
+* Support detection and response improvements for:
+  
+
+  
+
+o Web/app\-layer attacks  
+
+
+  
+
+o API abuse  
+
+
+  
+
+* Triage and remediate findings from:
+  
+
+  
+
+o Pen tests  
+
+
+  
+
+o Purple team exercises  
+
+
+  
+
+o Assumed breach scenarios  
+
+
+  
+
+Security Program Execution  
+
+
+  
+
+* Translate security findings into prioritized engineering work
+
+===== JD#2 | Software Engineering Internship @ Brivo | remote=False | $20.0-25.0 hourly =====
+### **Description**
+
+  
+
+The Anthill Tigers team within Engineering \- Access is looking for a motivated Software Engineering Intern to  
+
+contribute to the backend and cloud services powering Brivo's physical security platform. You'll work alongside senior  
+
+engineers on real production systems, shipping features and fixes that reach customers globally.  
+
+This is a hands\-on internship — not busywork. You'll be treated as a junior engineer: attending standups, participating  
+
+in code reviews, and owning deliverables end\-to\-end.  
+
+  
+
+Key Responsibilities  
+
+* Design, build, and test features on backend services using Java or Node.js/TypeScript
+* Contribute to RESTful API development and integration with cloud infrastructure on AWS
+* Write unit and integration tests; participate in code reviews
+* Debug and resolve issues in distributed services running on Kubernetes (EKS)
+* Collaborate with the team on architecture discussions and sprint planning
+* Document your work clearly in code comments, pull requests, and team wikis
+### **Skills, Knowledge, and Expertise**
+
+  
+
+Required  
+
+* Currently pursuing a BS or MS in Computer Science, Software Engineering, or a related field
+* Proficiency in at least one of: Java, Spring Boot, and TypeScript/Node.js
+* Familiarity with REST APIs and HTTP fundamentals
+* Basic understanding of Git and version control workflows
+* Strong problem\-solving skills and willingness to ask questions
+
+  
+
+Nice to Have  
+
+* Experience with cloud platforms (AWS preferred)
+* Exposure to Docker or containerized environments
+* Familiarity with SQL databases
+* Familiar with writing Playwright tests
+### **Highly Desirable Skills**
+
+* Direct experience with developing AI\-enabled services, familiarity with the OpenAI API, and advanced context
+
+
+engineering techniques.  
+
+* Deep expertise in authentication and authorization, including OAuth 2\.0, OIDC, Auth0, SCIM, and role\-based access
+
+
+control for secure, multi\-tenant enterprise platforms.  
+
+  
+
+What you'll learn  
+
+* Building and operating microservices at scale in a cloud\-native environment
+* Agile/Scrum development practices on a real product team
+* Security\-first engineering (access control is our core domain)
+* How physical security infrastructure and software intersect
+
+### **About Brivo**
+
+  
+
+Brivo and Eagle Eye Networks have come together to create a category\-defining, cloud\-first platform at the intersection of AI and the physical world. Our mission is simple and ambitious: to make physical spaces safer, smarter, and more autonomous—from single\-site businesses to global enterprises.  
+
+  
+
+As the unified global leaders in cloud\-based access control and video surveillance, we provide a comprehensive digital foundation for the built environment. By combining Brivo’s pioneering building access platform with Eagle Eye’s AI\-powered video management system (VMS), we have created a system of intelligence that protects over 600 million square feet across 90\+ countries. Every door, camera, and credential in our ecosystem acts as a real\-time sensor, leveraging AI to prevent incidents, improve operations, and enable entirely new workflows across sectors, including commercial real estate, retail, healthcare, education, and critical infrastructure.  
+
+  
+
+With a global footprint spanning headquarters in Bethesda, Maryland, and Austin, Texas, and international offices in Amsterdam, London, Bangalore, and Tokyo, we are leveraging our open APIs and cyber\-secure
+
+===== JD#3 | Senior Digital Engineer - Apriso @ Capgemini | remote=True | $82082.0-193440.0 yearly =====
+At Capgemini Engineering, the world leader in engineering services, we bring together a global team of engineers, scientists, and architects to help the world’s most innovative companies unleash their potential. From autonomous cars to life\-saving robots, our digital and software technology experts think outside the box as they provide unique R\&D and engineering services across all industries. Join us for a career full of opportunities. Where you can make a difference. Where no two days are the same
+
+
+**Location:** Remote anywhere in US.
+
+  
+
+**About the job you're considering:**
+
+
+We are seeking a highly experienced Apriso MES / Delmia Specialist to lead the design, development, and implementation of MES solutions across complex manufacturing environments. The ideal candidate will bring deep hands‑on expertise in Dassault Systems Delmia/Apriso platforms, full‑stack .NET engineering, enterprise integrations, ETL pipelines, and multi‑site MES/ERP orchestration.
+
+  
+
+**Your Role:**
+
+  
+
+* Architect, configure, and customize Apriso MES solutions for multi‑site, global manufacturing organizations.
+* Develop MES integrations with ERP systems including SAP MII and other middleware platforms
+* Build, enhance, and troubleshoot MES modules including Quality, Material Management, Machine Integration, and Production flows.
+* Develop robust .NET applications, APIs, and services used for MES‑ERP interoperability, provider portals, and enterprise web applications.
+* Modernize and upgrade legacy .NET applications, including security enhancements, encryption, and performance improvements.
+* Create REST/SOAP APIs, perform complex SQL development (PL/SQL, T‑SQL), and support ETL pipelines across diverse platforms.
+* Leverage cloud architecture expertise across platforms to support MES hosting, migration, and automation solutions while deploying and managing distributed development environments, CI/CD pipelines, and cloud\-based MES integrations.
+* Led development teams by providing architectural guidance, code reviews, and delivery oversight while driving end\-to\-end MES/ERP implementations for Fortune 500 and government clients and partnering with business stakeholders to define technical strategies, resolve challenges, conduct UAT, and ensure compliance.
+  
+
+**Your Skills and Experience:**
+
+  
+
+* Strong programming skills in C\# and .NET for developing and maintaining applications.
+* Experience with MES platforms, including Delmia Apriso 9\.x, to support and enhance manufacturing systems.
+* 7\-10 years of prior experience architecting scalable solutions, troubleshooting mission‑critical systems, and guiding cross‑functional teams.
+* Proficiency in working with SQL Server databases for data management and optimization.
+* Hands\-on experience with cloud platforms such as AWS or Azure.
+* Solid understanding of MQ services, event buses, and message queues, with the ability to support real\-time plant floor integrations.
+* Deep knowledge of discrete, batch, and continuous manufacturing processes across various industries.
+* MES Dassault Systems Delmia/Apriso Certified Architect
+* Demonstrated ability to manage complex technical projects with competing priorities
+* High‑level communication skills and cross‑functional leadership experience
+* Expertise in both hands‑on development and architectural oversight
+* Aerospace or heavy manufacturing industry experience in regulated environments
+* Large enterprise MES deployments with multi‑site/multi‑country footp
+
+===== JD#4 | Senior Data Engineer @ sekai | remote=True | $-  =====
+Sekai is building the TikTok for mini apps — an AI\-driven consumer platform where people create, remix, share, and play interactive content instantly.
+
+
+We are a Series A company backed by Khosla, a16z, Mayfield, and A\*, with $30M raised to date. We are remote\-first across all positions and are looking for ambitious, AI\-native builders who want to help shape the next generation of consumer social products.
+
+
+Here are Sekai’s download links:
+
+* Android: https://play.google.com/store/apps/details?id\=chat.sekai.app\&hl\=en\_US
+* IOS: https://apps.apple.com/us/app/sekai\-create\-remix\-play/id6504506653
+
+ **About this Role**
+
+
+We are looking for a **Senior Data Engineer** to own the data foundation behind Sekai’s product, growth, and company decision\-making.
+
+
+This is one of the most important infrastructure roles at Sekai. You will build the systems that help the company understand how users behave, how the product performs, and where we should invest next.
+
+
+This role sits at the intersection of **data engineering, backend instrumentation, product analytics, business intelligence, and AI\-ready internal data tooling**. The ideal candidate is not just a pipeline builder — they are a product\-minded data owner who can turn ambiguous consumer product questions into scalable, trusted data systems.
+
+
+You will work closely with Product, Engineering, Growth, and Leadership, with hands\-on ownership across **BigQuery, PostHog, and Amplitude**.
+
+**What You’ll Own**
+-------------------
+
+* Own and evolve Sekai’s data warehouse architecture, with BigQuery as the core analytical platform.
+* Build reliable data pipelines, data models, and intermediate tables for product, growth, and company\-level analysis.
+* Manage product analytics integrations across PostHog, Amplitude, and internal data sources.
+* Partner with Product and Backend Engineering on event instrumentation, tracking quality, and user journey visibility.
+* Create trusted source\-of\-truth datasets that help teams make faster and more consistent decisions.
+* Build clean reporting workflows, dashboards, and self\-serve analytics foundations for internal teams.
+* Improve data quality, freshness, documentation, observability, and access patterns.
+* Optimize BigQuery cost and performance through thoughtful architecture, table design, and query practices.
+
+**Background We’re Looking For**
+--------------------------------
+
+* 5\+ years of professional experience in data engineering, data platform engineering, or a closely related role.
+* Strong hands\-on experience with SQL, Python, and large\-scale analytical data systems.
+* Deep experience with BigQuery, including warehouse design, query optimization, and cost\-aware data modeling.
+* Experience working with product analytics tools such as PostHog, Amplitude, or similar platforms.
+* Strong understanding of consumer app analytics, including funnels, retention, cohorts, activation, engagement, and user journeys.
+* Ability to understand business and product needs, then translate them into scalable data architecture.
+* Comfortable working with backend engineers on tracking, data contracts, APIs, logs, and production data flows.
+* High ownership mindset; able to operate independently in a fast\-moving startup environment.
+
+**Bonus Points**
+----------------
+
+* Experience as an early data hire or primary owner of a startup data platform.
+* Experience building or rebuilding a data warehouse from 0 to 1\.
+* Background in consumer apps, social produc
+
+===== JD#5 | Tech Lead / Engineering Manager @ Aurelian | remote=False | $160000.0-240000.0 yearly =====
+**About Aurelian**
+==================
+
+Aurelian builds AI tools that help 911 centers handle more with less, so telecommunicators can stay focused on what matters most and communities get the response they need.
+
+
+AVA is a conversational AI agent that answers non\-emergency calls; the agent routes, triages, and resolves the calls without any human intervention. By handling administrative calls like noise complaints, lost dogs, and parking inquiries, AVA eliminates hold times and lets call\-takers focus their energy on actual emergencies.
+
+
+CORA supports call\-takers on the calls that matter most. CORA is an on\-screen assistant that delivers real\-time SOP checklists, smart reminders, and contextual guidance as an emergency call unfolds, so dispatchers stay calm, consistent, and confident when every second counts. When AVA detects an emergency mid\-call, it transfers the caller to a telecommunicator and passes along the caller details, location, incident type, and key statements directly into CORA. The call\-taker never starts from scratch.
+
+
+The problem we're solving is serious. The average emergency communications center is 30% understaffed nationwide. Staffing shortages drive burnout and attrition, which makes the shortage worse. Meanwhile, 60\-80% of the calls coming in aren't even emergencies at all. Aurelian addresses both sides of that equation: AVA reduces unnecessary call volume, and CORA makes every emergency call more manageable for the people handling it.
+
+  
+
+Aurelian is live in centers across the country, answering thousands of non\-emergency calls every day, and is backed by New Enterprise Associates and Y Combinator. Aurelian is growing rapidly; we are hiring people who want to help scale this work and make a real difference in public safety infrastructure for communities across the country.
+
+**Why Join Us**
+===============
+
+
+We're hiring a Tech Lead / Engineering Manager to lead a small pod and own a key surface area of the product. **This is a hands\-on, player\-coach role on a path to a full EM seat.** You'll write code every week, set technical direction, mentor your pod, and help with hiring. \~70% IC and 30% leadership to start \- the hands\-on phase is the runway, not the destination.
+
+
+This role is for the engineer who already leads without the title \- you mentor other engineers, you drive projects that need coordination across people, you're who teammates go to before they go to their manager. You want your next chapter to be about growing a team, without having to put the keyboard down on day one. If that's you, we want to talk.
+
+**What You'll Be Doing**
+------------------------
+
+* **Lead a small pod.** 3\-4 engineers in your surface area. Own technical direction and code review. As the team grows, you'll pick up 1:1s, growth plans, and performance work.
+* **Stay hands\-on.** Ship code, review code, debug production issues. You should never get more than a few days away from the codebase.
+* **Develop the engineers around you.** Pair, mentor, coach. Help the engineers on your pod grow toward bigger scope and impact.
+* **Be involved in hiring for your team.** Help us bring in the next engineers on your pod.
+* **Work directly with customers.** Our users are 9\-1\-1 dispatchers and PSAP administrators. You'll visit dispatch centers, watch how they use the product, and use that context to drive what your team builds next.
+* **Grow into a full EM seat.** As we scale, you'll move into a fuller Engineering Manager sco
+
+===== JD#6 | Forward Deployed AI Engineer @ Charta Health | remote=False | $90000.0-140000.0 yearly =====
+**About Charta Health**
+-----------------------
+
+  
+
+In an industry where the focus should rightly be on delivering quality care to patients, healthcare providers remain burdened by the complexities of non\-clinical operations. Charta is changing that.
+
+  
+
+We're building the operating system for modern healthcare organizations. Our AI platform streamlines critical workflows across revenue cycle, clinical operations, and administrative functions, helping providers and payers operate more efficiently and deliver better patient care. Backed by Bain Capital Ventures, Charta is on a mission to make every healthcare dollar accountable and every chart accurate, reimagining healthcare infrastructure from the ground up.
+
+**About the Opportunity**
+-------------------------
+
+  
+
+As a Forward Deployed AI Engineer at Charta Health, you will be at the forefront of deploying and customizing AI\-powered solutions for our clients. You will work directly with healthcare providers to understand their unique challenges and translate them into practical, data\-driven solutions using AI and machine learning. This role requires a blend of technical expertise, problem\-solving skills, and a strong customer\-centric mindset. You will thrive in a dynamic environment, rapidly deploying and iterating on solutions to deliver immediate value.
+
+  
+
+**What you’ll do:**
+-------------------
+
+* Collaborate closely with healthcare clients to understand their workflows and identify opportunities to leverage AI and machine learning.
+* Customize and deploy Charta Health's AI\-driven platforms to address specific client needs.
+* Rapidly prototype and iterate on solutions, adapting to client feedback and evolving requirements.
+* Break down complex projects into actionable steps and deliver results in ambiguous environments.
+* Explore and integrate a wide range of AI/ML technologies, adapting to the diverse needs of our clients.
+* Provide technical expertise and support to clients, ensuring successful deployment and adoption of our solutions.
+* Work closely with our internal engineering team to provide feedback and contribute to product development.
+* Stay up\-to\-date with the latest advancements in AI/ML and their applications in healthcare.
+
+  
+
+**You'd be a great fit if you have:**
+-------------------------------------
+
+* Proficiency and practical coding skills, with a focus on delivering tangible results.
+* Adaptability and the ability to quickly learn and master new technologies and concepts.
+* A priority on delivering business value over solving purely theoretical challenges.
+* A desire to explore a wide range of technologies and problems, rather than specializing in one area.
+* The ability to thrive in ambiguous environments and rapidly produce results.
+* The ability to excel at breaking down complex projects into actionable steps.
+* Resilience and resourcefulness, allowing you to overcome obstacles and find creative solutions.
+* Ambition and a desire for a high\-growth opportunity.
+* Strong emotional intelligence, excellent communication, and interpersonal skills.
+* Excitement about working with external customers and building strong relationships.
+* A genuine interest in the medical field and a passion for improving healthcare.
+
+  
+
+**Nice to have:**
+-----------------
+
+* Experience and/or demonstrated interest in healthcare
+* Proficiency in Python.
+* Experience with Large Language Models (LLMs) and prompt engineering.
+* Experience with neural networks and machine lea
+
+===== JD#7 | Software Engineer, Staff @ Charta Health | remote=False | $210000.0-270000.0 yearly =====
+**About Charta Health**
+-----------------------
+
+  
+
+In an industry where the focus should rightly be on delivering quality care to patients, healthcare providers remain burdened by the complexities of non\-clinical operations. Charta is changing that.
+
+  
+
+We're building the operating system for modern healthcare organizations. Our AI platform streamlines critical workflows across revenue cycle, clinical operations, and administrative functions, helping providers and payers operate more efficiently and deliver better patient care. Backed by Bain Capital Ventures, Charta is on a mission to make every healthcare dollar accountable and every chart accurate, reimagining healthcare infrastructure from the ground up.
+
+**About the Opportunity**
+-------------------------
+
+  
+
+At Charta, we prioritize results compared to methods used to achieve those results. As a Staff Software Engineer, you're responsible for the software solutions you develop. The role demands making informed decisions about project priorities, keeping in mind the product's future and its roadmap. You'll leverage technology to resolve problems, design customer\-centric products and features, and maintain systems that can be scaled extensively.
+
+  
+
+**Joining our multidisciplinary team, your tasks would include:**
+-----------------------------------------------------------------
+
+* Determining team objectives and priorities,
+* Being involved from the outset in product ideation and development,
+* Taking initiatives for product discovery and refinement sessions,
+* Being responsible for problem analysis, crafting solutions and architectures,
+* Delivering top\-quality code and thorough documentation, and ensuring smooth deployment.
+
+  
+
+**You'd be a great fit, if you have:**
+--------------------------------------
+
+* Bachelor’s and/or Master’s degree in Computer Science or related field
+* At least 7 years of professional experience in software development shipping production code.
+* Fluent in one or more backend languages such as Python, Node.js, Java or C/C\+\+. Next.js and/or React experience is a plus.
+* Experience building, testing and deploying microservices.
+* Interest or experience developing or leveraging modern generative AI technologies, including both proprietary and open\-source large language models is a plus.
+* Distributed systems development experience. Performance optimization is a plus.
+* Experience with AWS, PostgreSQL, Docker and ECS/Kubernetes is a plus.
+* Strong communication skills to be used across engineering, product and other functional teams.
+
+**What we offer:**
+------------------
+
+* Competitive salary and comprehensive benefits package, including health, dental, and vision.
+* Equity \& growth opportunities in a fast\-growing, innovative tech startup.
+* Ongoing professional development and access to cutting\-edge AI and healthcare tools.
+* Lively, in\-person work culture at our SF Headquarters or NYC office
+* $210,000 \- $270,000 USD depending on experience \+ Equity \+ Benefits
+* Annual performance based bonus up to 30%
+
+**Our Commitment to Diversity**
+-------------------------------
+
+  
+
+We are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.
+
+===== JD#8 | Founding Security Reliability Engineer @ Charta Health | remote=False | $150000.0-250000.0 yearly =====
+**About Charta Health**
+-----------------------
+
+  
+
+In an industry where the focus should rightly be on delivering quality care to patients, healthcare providers remain burdened by the complexities of non\-clinical operations. Charta is changing that.
+
+  
+
+We're building the operating system for modern healthcare organizations. Our AI platform streamlines critical workflows across revenue cycle, clinical operations, and administrative functions, helping providers and payers operate more efficiently and deliver better patient care. Backed by Bain Capital Ventures, Charta is on a mission to make every healthcare dollar accountable and every chart accurate, reimagining healthcare infrastructure from the ground up.
+
+**About the Opportunity**
+-------------------------
+
+  
+
+Charta Health is seeking a highly motivated and experienced **Founding Security Reliability Engineer** to design, implement, and maintain the **secure, scalable, and resilient infrastructure** that underpins our generative AI healthcare solutions. This pivotal role requires a hands\-on engineer who can strategically build out our platform's security architecture by applying SRE principles: ensuring robust security through automation, meticulous monitoring of security events, proactive threat mitigation, and efficient incident response. You'll be crucial in engineering security into every layer from day one within a highly regulated healthcare environment.
+
+  
+
+**What You'll Do**
+------------------
+
+* **Engineer Secure \& Resilient Infrastructure:** Design, develop, and implement highly scalable, resilient, and **inherently secure cloud infrastructure and application architectures** to support our AI platform and data pipelines, prioritizing **security\-by\-design** and resilience against attacks.
+* **Security Automation \& DevSecOps:** Lead efforts to **automate security controls, infrastructure provisioning, deployment, and operational tasks** using tools like Terraform, Ansible, and CI/CD pipelines. Embed automated security gates (SAST, DAST, IaC scanning, secrets detection) and security best practices into every stage of the software development lifecycle.
+* **Cloud Security Engineering:** Implement and manage security best practices for our cloud environments (primarily AWS), including network security, identity and access management (IAM), data encryption at rest and in transit, secrets management, and secure configuration baselines.
+* **Application Security:** Partner with development teams to conduct **threat modeling, perform security code reviews, and implement secure coding practices.** Integrate application security testing tools into CI/CD pipelines and drive vulnerability remediation.
+* **Security Reliability Metrics \& Incident Response:** Define, implement, and monitor **key security\-focused metrics (e.g., Mean Time To Detect (MTTD) security incidents, Mean Time To Respond (MTTR) security incidents, vulnerability remediation SLAs)**. Design and lead robust incident response plans and procedures for security incidents and breaches, ensuring swift and effective containment, eradication, recovery, and thorough post\-incident analysis (blameless post\-mortems) focused on improving system security and resilience.
+* **Security System Engineering \& Operations:** Oversee the implementation, monitoring, and continuous improvement of critical security systems and technologies, including **Security Information and Event Management (SIEM), Cloud Security Posture Mana
+
+===== JD#9 | Software Engineer, Senior @ Charta Health | remote=False | $150000.0-210000.0 yearly =====
+**About Charta Health**
+-----------------------
+
+  
+
+In an industry where the focus should rightly be on delivering quality care to patients, healthcare providers remain burdened by the complexities of non\-clinical operations. Charta is changing that.
+
+  
+
+We're building the operating system for modern healthcare organizations. Our AI platform streamlines critical workflows across revenue cycle, clinical operations, and administrative functions, helping providers and payers operate more efficiently and deliver better patient care. Backed by Bain Capital Ventures, Charta is on a mission to make every healthcare dollar accountable and every chart accurate, reimagining healthcare infrastructure from the ground up.
+
+**About the Opportunity**
+-------------------------
+
+  
+
+At Charta, we prioritize results compared to methods used to achieve those results. As a Senior Software Engineer, you're responsible for the software solutions you develop. The role demands making informed decisions about project priorities, keeping in mind the product's future and its roadmap. You'll leverage technology to resolve problems, design customer\-centric products and features, and maintain systems that can be scaled extensively.
+
+  
+
+**Joining our multidisciplinary team, your tasks would include:**
+-----------------------------------------------------------------
+
+* Determining team objectives and priorities,
+* Being involved from the outset in product ideation and development,
+* Taking initiatives for product discovery and refinement sessions,
+* Being responsible for problem analysis, crafting solutions and architectures,
+* Delivering top\-quality code and thorough documentation, and ensuring smooth deployment.
+
+  
+
+**You'd be a great fit, if you have:**
+--------------------------------------
+
+* Bachelor’s and/or Master’s degree in Computer Science or related field
+* At least 4 years of professional experience in software development shipping production code.
+* Fluent in one or more backend languages such as Python, Node.js, Java or C/C\+\+. Next.js and/or React experience is a plus.
+* Experience building, testing and deploying microservices.
+* Interest or experience developing or leveraging modern generative AI technologies, including both proprietary and open\-source large language models is a plus.
+* Distributed systems development experience. Performance optimization is a plus.
+* Experience with AWS, PostgreSQL, Docker and ECS/Kubernetes is a plus.
+* Strong communication skills to be used across engineering, product and other functional teams.
+
+**What we offer:**
+------------------
+
+* Competitive salary and comprehensive benefits package, including health, dental, and vision.
+* Equity \& growth opportunities in a fast\-growing, innovative tech startup.
+* Ongoing professional development and access to cutting\-edge AI and healthcare tools.
+* Lively, in\-person work culture at our SF Headquarters or NYC office
+* $150,000 \- $210,000 USD depending on experience \+ Equity \+ Benefits
+* Annual performance based bonus up to 30%
+
+**Our Commitment to Diversity**
+-------------------------------
+
+  
+
+We are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.
+
+===== JD#10 | Senior / Staff Forward Deployed AI Engineer @ Charta Health | remote=False | $150000.0-250000.0 yearly =====
+**About Charta Health**
+-----------------------
+
+  
+
+In an industry where the focus should rightly be on delivering quality care to patients, healthcare providers remain burdened by the complexities of non\-clinical operations. Charta is changing that.
+
+  
+
+We're building the operating system for modern healthcare organizations. Our AI platform streamlines critical workflows across revenue cycle, clinical operations, and administrative functions, helping providers and payers operate more efficiently and deliver better patient care. Backed by Bain Capital Ventures, Charta is on a mission to make every healthcare dollar accountable and every chart accurate, reimagining healthcare infrastructure from the ground up.
+
+**About the Opportunity**
+-------------------------
+
+  
+
+As a Senior Forward Deployed AI Engineer at Charta Health, you will be at the forefront of deploying and customizing AI\-powered solutions for our clients. You will work directly with healthcare providers to understand their unique challenges and translate them into practical, data\-driven solutions using AI and machine learning. This role requires a blend of technical expertise, problem\-solving skills, and a strong customer\-centric mindset. You will thrive in a dynamic environment, rapidly deploying and iterating on solutions to deliver immediate value.
+
+  
+
+**What you'll do:**
+-------------------
+
+* Collaborate closely with healthcare clients to understand their workflows and identify opportunities to leverage AI and machine learning.
+* Customize and deploy Charta Health's AI\-driven platforms to address specific client needs.
+* Rapidly prototype and iterate on solutions, adapting to client feedback and evolving requirements.
+* Break down complex projects into actionable steps and deliver results in ambiguous environments.
+* Explore and integrate a wide range of AI/ML technologies, adapting to the diverse needs of our clients.
+* Provide technical expertise and support to clients, ensuring successful deployment and adoption of our solutions.
+* Work closely with our internal engineering team to provide feedback and contribute to product development.
+* Stay up\-to\-date with the latest advancements in AI/ML and their applications in healthcare.
+* Mentor and guide fellow engineers, sharing expertise in AI/ML, healthcare applications, and best practices to foster team growth and knowledge sharing.
+* Contribute strategic ideas and technical insights to shape the product roadmap, leveraging client feedback and expertise in AI/ML advancements to drive innovation
+
+  
+
+**You'd be a great fit if you have:**
+-------------------------------------
+
+* A minimum of 4 years of professional experience in software engineering, data engineering, machine learning engineering, or a similar technical role.
+* Proficiency and practical coding skills, with a focus on delivering tangible results.
+* Experience with, or a demonstrated deep interest in, Large Language Models (LLMs) and prompt engineering.
+* Adaptability and the ability to quickly learn and master new technologies and concepts.
+* A priority on delivering business value over solving purely theoretical challenges.
+* A desire to explore a wide range of technologies and problems, rather than specializing in one area.
+* The ability to thrive in ambiguous environments and rapidly produce results.
+* The ability to excel at breaking down complex projects into actionable steps.
+* Resilience and resourcefulness, allowing you to overcome obst
+
+===== JD#11 | Head of Business Operations @ Artie | remote=False | $200000.0-300000.0 yearly =====
+**About Artie**
+===============
+
+
+Artie is a real\-time streaming platform that moves production data across systems in real time, with zero maintenance. We make high\-volume data replication simple, reliable, and scalable for engineering teams.
+
+
+Our platform powers mission\-critical use cases including fraud and risk monitoring, inventory visibility, customer\-facing analytics, and AI workloads. Artie is built for engineers who care about performance, reliability, and operational simplicity — and we’re growing fast.‍
+
+
+We’re trusted by teams like ClickUp, Substack, and Alloy, and backed by top\-tier investors including Y Combinator, General Catalyst, Pathlight Ventures, and the founders of Dropbox and Mode.
+
+**About the Role**
+==================
+
+
+We're hiring a Head of Operations to build the operational foundation that lets Artie scale.
+
+
+This is not an inheritor role. You'll build the ops function from scratch.
+
+
+You'll work directly with the founders of Artie. You'll own decisions that don't need to come back to us. You'll surface the ones that do — with options, rationale, and a recommendation already attached. You'll build systems that keep running when you're not in the room.
+
+
+We're looking for leaders who are excited to own operations as a whole, while still being hands on.
+
+**What You'll Do**
+==================
+
+**Own operations as a whole**
+
+* Act as connective tissue across teams, ensuring strategy execution iteration happens quickly and collaboratively — with a bias toward velocity and excellence
+* Define and drive high\-impact strategic initiatives across GTM operations that directly influence how we scale
+* Identify what needs fixing— come in, get a view of the team and current state, and proactively propose adjustments
+
+**Build systems that outlive you**
+
+* Design processes that scale with the company and don't require you to be in the room to keep running
+* Build in monitoring and checks so you know when something breaks before anyone else does
+* Hand off ownership cleanly — the sign of success is that nothing falls apart when you're not looking
+
+**Own the GTM motion**
+
+* Understand the revenue motion deeply enough that sales and marketing never have to explain the basics to you
+* Support and improve the revenue operation — pipeline hygiene, forecasting, CRM discipline, outbound infrastructure
+* Work alongside AEs and founders to identify where deals slow down and build systems to speed them up
+
+**What We're Looking For**
+==========================
+
+* 5–7\+ years running ops, ideally at a Series A–C company — you've been there at the messy stage and stayed long enough to see it scale
+* You've built an ops function from scratch and you can walk us through exactly what you owned, what you decided without asking, and what you built that still runs today
+* Meaningful GTM ops experience — you understand the revenue motion, not just internal or people ops
+* Systems\-level thinker. You build leverage, not dependency. Every system you build has a clear owner and a way to know when it's broken
+* Direct communicator. You've pushed back on a founder or executive, navigated it constructively and driven a better outcome
+* Self\-aware. You know your strengths, your blind spots, and what you'd hire around.
+
+### **COMPENSATION \& BENEFITS**
+
+* $200k \- $300k base salary
+* Competitive equity package
+* Healthcare, 401(k), unlimited PTO
+* Lunch \& dinner provided daily
+* Fully in\-person, San Francisco
+* Visa sponsorship available
+
+
+Com
+
+===== JD#12 | Technical Facilities Electrical Engineer @ Etched | remote=False | $-  =====
+**About Etched**
+
+
+Etched is building the world’s first AI inference system purpose\-built for transformers \- delivering over 10x higher performance and dramatically lower cost and latency than a B200\. With Etched ASICs, you can build products that would be impossible with GPUs, like real\-time video generation models and extremely deep \& parallel chain\-of\-thought reasoning agents. Backed by hundreds of millions from top\-tier investors and staffed by leading engineers, Etched is redefining the infrastructure layer for the fastest growing industry in history.
+
+**Job Summary**
+
+
+The facilities electrical engineer will own the design, planning, delivery and operations of technical infrastructure for Etched facilities. This position will be responsible for bridging the gap from internal stakeholder teams developing products to facilitate high performance operational infrastructure in place to facilitate test and development from chip to data center. The right candidate brings deep design, commissioning, project management and operational experience from a mission\-critical environment — data center, biotech/pharma, or high\-tech fab/manufacturing — and is comfortable owning systems end\-to\-end.
+
+**Key Responsibilities**
+
+* Conduct site assessments against internal standards and requirements for lab and rack test environments.
+* Develop internal schematic designs as well as review vendor infrastructure designs with risk analysis and performance characterization
+* Perform design and equipment submittal reviews for new builds and retrofit projects
+* Troubleshoot and Root Cause Analysis to determine system and equipment issues. Develop project designs and manage vendor through remediation
+* Support operational issues with training, ops and procedure reviews, and event support to resolution
+* Own the design and project implementation for new facilities and retrofit projects
+* Interface with internal and external stakeholders to ensure designs facilitate performance and availability for product development teams
+* Work on multiple project in multiple geographic regions
+* Conduct ongoing system performance reviews and trend analysis to identify risks before they become failures
+* Develop, maintain, and execute SOPs and MOPs for all critical systems
+* Supervise and coordinate third\-party contractors performing servicing and preventive maintenance
+* Author and manage work orders as needed; maintain spare parts and consumables inventory
+* Support issue and risk remediation — both hands\-on repair and scoped project coordination
+
+**You may be a good fit if you have (Must\-have qualifications)**
+
+* Bachelors degree in Electrical Engineering
+* 5\+ years of industrial or commercial engineering experience in mission critical facilities
+* Experience researching new designs, technologies and construction methods
+* Demonstrated experience with the design, construction, operation or maintenance of mission critical facilities (data center or high tech lab preferred)
+* Knowledge of Local and Regional Building Codes
+
+**Strong candidates may also have experience with (Nice\-to\-have qualifications)**
+
+* Professional Engineer License
+* Masters Degree in Electrical Engineering
+* Commissioning Certification (Cx or BCxP equivalent)
+* Project Management Certification (PMI)
+* Experience with building controls / BAS / EPMS platforms; Tridium/Niagara a strong plus
+* Vendor or project management experience in a facilities design and operations context
+* Reliabilit
+
+===== JD#13 | Accelerator Software Engineer @ Etched | remote=False | $-  =====
+**About Etched**
+
+
+Etched is building the world’s first AI inference system purpose\-built for transformers \- delivering over 10x higher performance and dramatically lower cost and latency than a B200\. With Etched ASICs, you can build products that would be impossible with GPUs, like real\-time video generation models and extremely deep \& parallel chain\-of\-thought reasoning agents. Backed by hundreds of millions from top\-tier investors and staffed by leading engineers, Etched is redefining the infrastructure layer for the fastest growing industry in history.
+
+**Job Summary**
+
+
+Sohu is the first transformer\-specific ASIC, and this role owns the accelerator software that makes it usable. You'll work across the layers that bring the chip to life and connect it to the host: the firmware that powers it on, the on\-die software that initializes and manages it, and the kernel\-level interface that exposes it to the rest of the inference stack. The work spans three tightly\-coupled domains; ASIC firmware, microcontroller firmware, and host\-side kernel and drivers. We hire engineers who are deep in one area and curious about the others.
+
+
+This role spans across three work areas. You would specialize in one and contribute across the others as the team grows:
+
+* **ASIC Software**— Collaboration on ASIC architecture, on\-device inference instruction execution, CPU initialization, bootloaders, IO drivers, thermal and power management, DMA data transfer, on\-chip application software, and validation. The code that runs on the die itself on its various embedded CPUs.
+* **Platform Software** — microcontroller architecture and software for power sequencing, telemetry, and firmware update, and the foundational work that takes the chip from powered off to responsive. Involves close collaboration with the hardware team in the schematic and bring\-up phases.
+* **Host\-side Kernel and Drivers** — the host software that presents Sohu as a device the rest of the stack can program against. Linux kernel drivers, PCIe\-visible memory management, high\-throughput low\-latency ring buffer command queues, and SRIOV VF device management.
+
+**You may be a good fit if you have**
+
+* Bachelor's degree or equivalent practical experience.
+* Strong software development fundamentals, including data structures and algorithms.
+* Experience shipping and testing software on products that have gone to production.
+* Depth in firmware design, implementation, and debugging.
+* Familiarity with embedded architectures and the IO technologies that live at the silicon\-to\-host boundary — ARM, PCIe, DMA, HBM, DRAM, Ethernet, UART — and with systems concepts like scalability, fault tolerance, and consistency.
+
+**Strong candidates may also have experience with (Nice\-to\-have qualifications)**
+
+* Master's degree in Computer Science or equivalent technical experience.
+* Hardware bring\-up on a new chip or board, for the first time ever.
+* Solving ambiguous, under\-specified problems where the requirements emerge alongside the solution.
+* Experience using low\-level computer architecture details, like caching or AXI fabrics, to enable software to make decisions at the nanosecond\-level.
+* Strong communication, particularly when collaborating directly with engineers and across discipline boundaries.
+
+**Benefits**
+
+* Medical, dental, and vision packages with generous premium coverage
+
+
+	+ $500 per month credit for waiving medical benefits
+* Housing subsidy of $2k per month for those liv
+
+===== JD#14 | Technical Facilities Project Manager @ Etched | remote=False | $-  =====
+**About Etched**
+
+
+Etched is building the world’s first AI inference system purpose\-built for transformers \- delivering over 10x higher performance and dramatically lower cost and latency than a B200\. With Etched ASICs, you can build products that would be impossible with GPUs, like real\-time video generation models and extremely deep \& parallel chain\-of\-thought reasoning agents. Backed by hundreds of millions from top\-tier investors and staffed by leading engineers, Etched is redefining the infrastructure layer for the fastest growing industry in history.
+
+**Job Summary**
+
+
+The technical facilities project manager will own the design, planning, delivery and operations of technical infrastructure for Etched facilities. This position will be responsible for the execution and project management of infrastructure projects to facilitate test and development from chip to data center. The right candidate brings deep project management experience with a track record of success in high velocity projects for critical facilities.
+
+
+The facilities project manager will supervise and drive end to end project delivery. This will include project requirements development, BOD/SOW creation, vendor engagement and procurement, design, commissioning, and operational hand over for etched technical facilities projects.
+
+**Key Responsibilities**
+
+* Project management and oversight of construction activities for new builds and retrofit projects
+* Ownership of project scope, timeline and budget
+* Continuous drive on project cost reduction and shorter project timelines
+* Providing end to end construction management for a wide array of infrastructure projects for facilitation of high performing lab and rack facility support
+* Constructability reviews for electrical, mechanical, and building designs associated with the construction of new lab and rack support spaces and the optimization of existing spaces
+* Drive the creation of project scope and equipment requirements, assisting with the proposals and capital requests and planning
+* Total project quality including assisting with commissioning and technical operations hand over
+* Develop and issue the RFI/RFQ process for vendor engagement
+* Ability to manage concurrent projects with competing prioritization
+* Travel to multiple sites and facilities for constructability and operational audits or new and existing operational facilities
+* Own the management of design and project implementation for new facilities and retrofit projects
+* Interface with internal and external stakeholders to ensure designs facilitate performance and availability for product development teams
+* Work on multiple project in multiple geographic regions
+* Support the development of SOPs and MOPs for all critical systems
+* Author and manage work orders as needed; maintain spare parts and consumables inventory
+
+**You may be a good fit if you have (Must\-have qualifications)**
+
+* 5\+ years of experience in design and construction management
+* Bachelors degree in Construction Management or related field
+* Direct Experience with Critical Facility Projects
+* Experience in reading/interpreting construction drawings from all disciplines
+* Experience with new and retrofit projects
+* Experience in internal and external stakeholder management
+* Experience researching new designs, technologies and construction methods
+* Demonstrated experience with the design, construction, operation or maintenance of mission critical facilities (data center or h
+
+===== JD#15 | Software Engineer (All Levels) @ Blossom Health | remote=False | $150000.0-220000.0 yearly =====
+Blossom Health exists to **solve the mental health epidemic** in America by partnering with psychiatrists to expand access toaffordable, timely, clinically\-effective mental healthcare. Our **AI\-native care platform** is loved by hundreds of clinicians and thousands of patients.
+
+
+We’re a **Series A** company with **$20M\+ raised** from Headline, Village Global, and the founders of General Catalyst, Flatiron Health, Sword Health, Grow Therapy, Fay, Elemy, Zip, Blank Street, Assured, Bridge, Birches Health, and Enzo Health.
+
+**Why you should work here:**
+=============================
+
+* **Hyper\-growth environment:** Get firsthand exposure to how a startup scales from 0 1 n, with visibility across product, engineering, and operations
+* **High trust and autonomy:** You’ll own meaningful projects from day one and shape both technical decisions and product direction. We trust engineers to figure out the best path forward \- without micromanagement.
+* **Talent\-dense team:** Work with a top\-percentile team built on mutual respect and admiration, with shared goals, motivations, and vision for the future.
+* **Real impact:** Your code will directly improve access to mental health care for thousands of patients and clinicians
+
+**What we're looking for:**
+===========================
+
+* **Highly motivated, ambitious, and capable** \- looking to tackle a large, meaningful problem area
+* **Ownership mindset** \- thinking for the long\-term and placing the business and our customers first
+* **High velocity and high excellence** \- have a real sense of urgency to move quickly and take pride in the quality of your work
+* **An explorer** \- comfortable with ambiguity and autonomy, seeking to answer questions previously unasked, to leap into the unknown
+* **An optimist** \- you believe in a tomorrow better than today
+* **A builder** \- you take joy in bringing new creation to the world, in leveraging technology to make useful things
+* **Humble** \- you use your gifts in the service of others and understand that success is an output, not an input
+
+**What you'll do:**
+===================
+
+* Design and build scalable, reliable systems powering core product workflows
+* Ship high\-quality code that balances speed and technical rigor
+* Proactively identifying and resolving system reliability risks, owning uptime, observability, and performance as first\-class engineering concerns
+* **Leverage cutting\-edge AI to create intuitive and novel clinician and patient experiences**
+* Conduct thoughtful code reviews and provide technical mentorship, raising the bar for engineering excellence across the team and beyond
+
+**You'll thrive here if you:**
+==============================
+
+* Have a bachelor's degree or equivalent experience in Computer Science or related field
+* Have **2\+ years** **of professional working experience** outperforming in high\-quality environments
+* Excel at building production systems end\-to\-end with minimal oversight
+* Are fluent in **TypeScript** **and/or** **Python** **(experience with LLM\-powered apps preferred)**
+* Are comfortable with traversing the software stack and picking up the latest technologies to drive technical outcomes
+* Love autonomy, ambiguity, and ownership
+* Are **authorized to work in the U.S.** and excited to be **in\-person in NYC** 5 days a week
+
+**Benefits:**
+=============
+
+* Competitive salary, equity, growth opportunities
+* Best\-in\-class health, dental, and vision insurance
+* A focus on outcomes, not hours, wit
+
+===== JD#16 | Applied AI Software Engineer (All Levels) @ Blossom Health | remote=False | $150000.0-220000.0 yearly =====
+Blossom Health exists to **solve the mental health epidemic** in America by partnering with psychiatrists to expand access toaffordable, timely, clinically\-effective mental healthcare. Our **AI\-native care platform** is loved by hundreds of clinicians and thousands of patients.
+
+
+We’re a **Series A** company with **$20M\+ raised** from Headline, Village Global, and the founders of General Catalyst, Flatiron Health, Sword Health, Grow Therapy, Fay, Elemy, Zip, Blank Street, Assured, Bridge, Birches Health, and Enzo Health.
+
+**Why you should work here:**
+=============================
+
+* **Hyper\-growth environment:** Get firsthand exposure to how a startup scales from 0 1 n, with visibility across product, engineering, and operations
+* **High trust and autonomy:** You’ll own meaningful projects from day one and shape both technical decisions and product direction. We trust engineers to figure out the best path forward \- without micromanagement.
+* **Talent\-dense team:** Work with a top\-percentile team built on mutual respect and admiration, with shared goals, motivations, and vision for the future.
+* **Real impact:** Your code will directly improve access to mental health care for thousands of patients and clinicians
+
+**What we're looking for:**
+===========================
+
+* **Highly motivated, ambitious, and capable** \- looking to tackle a large, meaningful problem area
+* **Ownership mindset** \- thinking for the long\-term and placing the business and our customers first
+* **High velocity and high excellence** \- have a real sense of urgency to move quickly and take pride in the quality of your work
+* **An explorer** \- comfortable with ambiguity and autonomy, seeking to answer questions previously unasked, to leap into the unknown
+* **An optimist** \- you believe in a tomorrow better than today
+* **A builder** \- you take joy in bringing new creation to the world, in leveraging technology to make useful things
+* **Humble** \- you use your gifts in the service of others and understand that success is an output, not an input
+
+**What you'll do:**
+===================
+
+* Design and build scalable, reliable systems powering core product workflows
+* Ship high\-quality code that balances speed and technical rigor
+* Proactively identifying and resolving system reliability risks, owning uptime, observability, and performance as first\-class engineering concerns
+* **Leverage cutting\-edge AI to create intuitive and novel clinician and patient experiences**
+* Conduct thoughtful code reviews and provide technical mentorship, raising the bar for engineering excellence across the team and beyond
+
+**You'll thrive here if you:**
+==============================
+
+* Have a bachelor's degree or equivalent experience in Computer Science or related field
+* Have **2\+ years** **of professional working experience** outperforming in high\-quality environments
+* Excel at building production systems end\-to\-end with minimal oversight
+* Are fluent in **TypeScript** **and/or** **Python** **(experience with LLM\-powered apps preferred)**
+* Are comfortable with traversing the software stack and picking up the latest technologies to drive technical outcomes
+* Love autonomy, ambiguity, and ownership
+* Are **authorized to work in the U.S.** and excited to be **in\-person in NYC** 5 days a week
+
+**Benefits:**
+=============
+
+* Competitive salary, equity, growth opportunities
+* Best\-in\-class health, dental, and vision insurance
+* A focus on outcomes, not hours, wit
+
+===== JD#17 | Sourcer @ SERVAL | remote=False | $125000.0-200000.0 yearly =====
+**Who We Are**
+==============
+
+
+Serval is an AI\-native automation platform transforming how enterprises operate. We build intelligent agents that understand real\-world workflows and execute them end\-to\-end — replacing manual processes and rigid legacy systems with adaptive, learning software. Founded in early 2024, Serval is already trusted by companies like Fox, Notion, Perplexity, Vercel, and Brex to automate high\-volume, high\-friction operational work across their organizations.  
+
+  
+
+At the core of Serval is an agentic AI platform that turns natural language into production\-grade workflows. Our agents don’t just respond to requests — they reason, take action across systems, and continuously improve with usage. What began with operational use cases has quickly evolved into a horizontal AI automation layer used across IT, HR, Finance, Security, Legal, and Engineering.  
+
+  
+
+Our mission is to eliminate repetitive, manual work across the enterprise and give teams leverage through intelligent automation. Long term, we’re building the universal AI operations layer — a system of agents that sits across business functions and runs the workflows that keep modern companies moving.  
+
+  
+
+We’re backed by leading investors including Sequoia Capital, Redpoint Ventures, Meritech, First Round, General Catalyst, Elad Gil, and others, and founded by product and engineering leaders from Verkada.
+
+**Role Overview**
+=================
+
+
+As a Sourcer at Serval, you'll build and own our talent pipeline strategy from the ground up, spanning both technical and non\-technical functions. You'll design and execute creative, high\-impact sourcing initiatives that help us scale quickly while maintaining a high talent bar. This role is perfect for someone who thrives on the hunt—combining market expertise, strategic thinking, and creativity to proactively identify and engage top talent before roles are even open.
+
+
+You'll be a crucial partner across the organization, collaborating closely with hiring managers in engineering, go\-to\-market, operations, and beyond to deeply understand talent needs and build diverse, high\-quality pipelines. We're looking for a builder who's energized by research, relationship\-building, and pioneering new ways to find exceptional people.
+
+**What You’ll Do**
+==================
+
+* **Build \& Execute Sourcing Strategies:** Develop creative, multi\-channel sourcing strategies across both technical and non\-technical functions, continuously iterating based on data and market signals.
+
+**Understand Hiring Needs:** Partner with hiring managers across teams to develop accurate candidate profiles, map relevant talent markets, and prioritize pipeline efforts.
+
+**Engage Top Talent:** Proactively identify, research, and reach out to passive candidates through LinkedIn, communities, events, referrals, and unconventional channels.
+
+**Collaborate Cross\-Functionally:** Work closely with recruiters and hiring managers to ensure pipeline quality, share market insights, and align sourcing efforts with broader talent strategy.
+
+**Build \& Maintain Sourcing Infrastructure:** Select and integrate tools like Juicebox, LinkedIn Recruiter, and Wrangle to enable a scalable, data\-driven sourcing process.
+
+**Champion Data\-Driven Sourcing:** Track and report key pipeline metrics—outreach rates, response rates, conversion rates—to identify what's working and continuously improve.
+
+**Stay Ahead of Talent Trends:** Keep a pulse on emerging sourcing t
+
+===== JD#18 | Microsoft Dynamics 365 Engineer @ ASPCA | remote=True | $114000.0-119000.0 yearly =====
+**Summary:**
+
+**Overview**
+
+
+In this position, you will never be bored! The ASPCA supports a broad portfolio of technologies to support a highly mobile and diverse staff. Maintaining a presence in multiple geographic locations, the team provides support (hands\-on and remote) to over a dozen facilities and field operations, and over a thousand individual staff members. Your work will be integral to the organization as you work cross\-functionally to ensure ASPCA staff, partners and communities have the systems needed to work effectively and efficiently to improve animal welfare.
+
+
+The Microsoft Dynamics 365 Engineer will report to the Senior Director, Product Development. This role is responsible for the technical support, continuous improvement, and administration of the ASPCA's Microsoft Dynamics 365 CRM and Contact Center platform. The Microsoft Dynamics 365 Engineer will work closely with external partners and internal stakeholders to create custom product solutions aligned with ASPCA goals.
+
+  
+
+This is a hands\-on role that blends system engineering, development, and administration. The ideal candidate will have a strong technical foundation in Dynamics 365 and the Power Platform, with the ability to collaborate across business and IT teams to deliver impactful solutions. As a Microsoft Dynamics 365 Engineer, you will bring a high level of expertise in the Dynamics 365 platform and will focus on maximizing system efficiencies and better capitalizing on the features and benefits of Dynamics 365\-based systems relative to the needs of various user groups.
+
+  
+
+The Microsoft Dynamics 365 Engineer will apply proven communication skills, problem\-solving skills, and knowledge of best practices to create and support simple, scalable, compliant, and more automated ASPCA mission\-critical information and systems. The ideal candidate will have excellent interpersonal skills, be a team player, and have a desire to support the ASPCA in achieving our mission of ending cruelty to animals.
+
+**Please note, a cover letter is required for your application, please submit one. Applications for this role will be accepted until 5pm ET on Tuesday 5/26/26\.**
+
+ **Who We Are**
+
+
+The Information Technology (IT) department supports and improves a broad portfolio of technologies to support our staff. IT ensures that all ASPCA staff, partners, and communities have the systems needed to work effectively and efficiently to improve animal welfare. The sub\-teams within IT include Product, Data and Reporting Solutions, Operations and Information Security, Technical Support, Enterprise Architecture, and Business Operations.
+
+ **What****You’ll****Do**
+
+* **The Microsoft Dynamics 365 Engineer**reports directly to the **Senior Director, Product Development**and has **n****o** direct reports.
+ **Where and When****You’ll****Work**
+
+* This position, while mostly remote, requires travel to our Midwest Office in **Champaign, IL** on a regular basis.
+* Ability and willingness to travel up to **5****%** annually, as needed.
+ **What****You’ll****Get**
+
+ **Compensation**
+
+  
+
+The target hiring range is based on where the employee works, which for remote roles is the employee’s primary location of residence, and its respective cost of labor. You can view which zone applies to you based on your location (aspca.app.box.com/v/aspcazonetable). For questions regarding locations not on the list, please send an email to Careers@aspca.org for more information.
+
+
+Starting pay for the
+
+===== JD#19 | AI Engineer @  | remote=True | $160000.0-220000.0 yearly =====
+**AI Engineer**
+===============
+
+
+San Francisco, CA
+
+  
+
+Metriport is an open\-source data intelligence platform that helps healthcare organizations access and exchange patient data in real\-time. We integrate with all major US healthcare IT systems and tap into comprehensive medical data for 300\+ million individuals.
+
+
+We've found product\-market fit with multi\-million ARR, 100\+ customers (including Amazon One Medical, Color, and Strive Health), backing from top VCs, and years of runway. We're ready to scale. We're a tight\-knit, high\-performing team of mostly former founders (including two YC alumni). We're engineering\-heavy, operate with minimal bureaucracy and high autonomy, and hire based on competence, not prestige. We push hard—founders work six days a week from our SF office—but give everyone freedom to craft their schedule. We measure output and we're committed to sustainable intensity.
+
+**About the role**
+------------------
+
+
+This is the first AI Engineer role at Metriport, and one of the highest\-leverage hires we'll make this year. We're looking for an engineer who treats AI agents as leverage — someone who will literally change how we ship products and how we operate.
+
+
+We are building a multi billion dollar company, and you would be instrumental in that. This is a huge opportunity for the right person, someone with owner mentality/high ownership, laser focused, and high energy and determination.
+
+
+If we hire well, every person at Metriport effectively gets a teammate that never sleeps, we leverage new opportunities, and we discover new ways to deliver value.
+
+**What you'll do**
+------------------
+
+* Build the autonomous SDLC pipeline that takes tickets through to PRs — Linear as the state machine, Claude Code (or whatever's best at the time) as the execution engine, sandboxed compute, code review, CI feedback loops, the whole loop.
+* Collaborate with the rest of the engineering team to integrate AI to our products in ways we haven’t even conceived yet.
+* Build internal agents and copilots that take work off the team's plate: monitoring the platform and preparing fixes, triaging customer issues, drafting responses, generating compliance evidence for compliance audits, summarizing PR activity, on\-call assistance — anything where a human is currently doing rote pattern\-matching.
+* Design the eval, observability, and guardrail layer for everything you ship. AI systems that touch production code, customer data, or money need to be measurable, debuggable, and safe to roll back.
+* Work directly with founders and team leads to figure out which workflows are highest\-leverage to work on next, and ruthlessly prioritize. You won't get a backlog handed to you — you'll go find the work.
+* Keep the platform you build serving a growing company.
+
+**About you**
+-------------
+
+* You're entrepreneurial\-minded, with an olympian\-level work ethic. You measure your output by what you actually unblock, not what you produce.
+* You've shipped real, production\-grade systems with LLM agents at the core — not demos, not prototypes. You know what fails in production, and you've got opinions about evals, prompt versioning, tool use, retries, and cost control.
+* You're a strong full\-stack engineer first, AI engineer second. You can stand up a service, write the IaC, instrument it, and own it end\-to\-end. TypeScript / Node.js, Python, AWS, and SQL aren't going to scare you.
+* You think in workflows and systems. You can sit in on a customer sup
+
+===== JD#20 | Senior Software Backend Engineer, Platform Computing @  | remote=False | $168000.0-210000.0 yearly =====
+JOB SUMMARY
+
+
+We are seeking a Senior Software Backend Engineer, Platform Computing to integrate and operate the compute layer that powers data processing and model inference across Iambic’s drug discovery platform.
+
+
+You will work within the Software Platform team, partnering with ML engineers and scientists to ensure production workloads are reliable, performant, and scalable. Your focus will be on integrating and operating compute infrastructure and orchestration systems that enable scientific workflows across the platform. This position will be based at our San Diego Headquarters.
+
+
+KEY RESPONSIBILITIES
+
+* Integrate and maintain the compute layer supporting data processing and model inference workflows in production
+* Ensure reliable and performant execution of workloads through monitoring, troubleshooting, and failure resolution
+* Operate and extend workflow orchestration systems (e.g., Prefect, Coiled, Modal or similar frameworks)
+* Support deployment and execution of ML model outputs in production environments
+* Enable scientific workflows by integrating external data sources and supporting analysis and inference workloads within and outside of Insight (e.g., large\-scale assay refits)
+* Collaborate with ML engineers and cross\-functional teams to translate model capabilities into production\-ready systems
+* Integrate new compute capabilities into the platform as they are developed, ensuring scalability and flexibility
+* Establish and maintain best practices for reliability, observability, and operational support
+
+
+QUALIFICATIONS
+
+* 10\+ years of relevant experience with a Bachelor’s degree; or 8 years and a Master’s degree; or equivalent experience
+* Strong software engineering skills with proficiency in Python
+* Experience integrating and operating distributed or cloud\-based systems in production
+* Familiarity with workflow orchestration frameworks (e.g., Prefect, Modal, Coiled, Airflow or similar)
+* Experience supporting data processing or compute\-intensive workloads, including troubleshooting and performance optimization
+* Familiarity with containerization and deployment patterns (e.g., Docker, Kubernetes)
+* Solid understanding of cloud infrastructure (AWS preferred), including compute, networking, and storage
+* Ability to collaborate effectively with ML engineers to operationalize model outputs (e.g., working with PyTorch, Hugging Face, or similar frameworks at the integration level)
+* Experience working with data\-intensive or scientific workflows is a plus
+* Demonstrates strong engineering rigor, including testing, version control, code quality, and observability practices
+
+
+ABOUT IAMBIC THERAPEUTICS
+
+
+Iambic is a clinical\-stage life\-science and technology company developing novel medicines using its AI\-driven discovery and development platform. Based in San Diego and founded in 2020, Iambic brings together pioneering AI experts and experienced drug hunters. The Iambic platform has demonstrated delivery of new drug candidates to human clinical trials with unprecedented speed and across multiple target classes and mechanisms of action. Iambic is advancing a pipeline of potential best\-in\-class and first\-in\-class clinical assets, both internally and in partnership, to address urgent unmet patient need. Learn more about the Iambic team, platform, pipeline, and partnerships at iambic.ai.
+
+
+MISSION \& CORE VALUES
+
+
+Our mission is to deliver better medicines through innovations in AI\-based discovery technologies. The cu
+
+===== JD#21 | AI Native Engineer - Reinvention Center @ Logic, Inc. | remote=False | $63800.0-235100.0 yearly =====
+Forward Deployed Engineer Team Lead/Consultant \| Mid\-Level \| Full time
+Job No. R00331159 \| Multiple Locations
+  
+**We are:**
+
+
+The Advanced Technology Centers (ATCs) is the engine for reinvention in our clients’ transformation journey. Powered by more than 255,000\* people across 24 countries, ATCs will provide our clients with seamless access to industry insights and innovative technology solutions.
+
+**Stronger together!**
+
+
+The Advanced Technology Centers (ATCs) make tremendous impact in solving our clients’ business problems leveraging Innovation, Intelligence, Industry insights, new IT and new technology skills. Now, with the global environment changing at a faster pace, our clients are facing unprecedented challenges, and they need us more than ever before. As a Network, ATCs are positioned to unlock greater opportunities and exponential value for our clients.
+
+**The value for our clients and our people**
+
+
+For our clients, the Network provides the strength of our geographic diversity, greater resilience, and seamless access to the deepest industry knowledge, the latest in Gen AI solutions, and tech expertise from around the world.
+
+
+For our people, it brings an opportunity to shape truly boundaryless career paths in a highly collaborative team of experts where they can learn from each other and solve the world’s most complex client challenges
+
+**You are:**
+
+
+An AI Native Engineer with experience building cloud\-native solutions, and deep expertise in designing and deploying agentic systems, especially for enterprise environments. You are a critical thinker that thrives in ambiguity, delivering concrete results by designing, building, and running custom AI agents that augment workflows and scale across modern infrastructure. You’ll help shape the playbook for how enterprises adopt and scale AI\-native engineering globally.
+
+**The Work:**
+
+
+You’ll embed directly with clients — acting as both technologist and trusted advisor. You’ll partner with stakeholders to define use cases, rapidly prototype, and deploy agentic workflows that are robust, secure, and operational in complex enterprise domains. Often, these will be completely net new platforms and systems that need to be stitched together in our clients' environments alongside our Ecosystem partners.
+
+**Responsibilities:**
+
+* Design and engineer enterprise\-ready AI agents encompassing retrieval, orchestration, policy\-based routing, tool invocation, evaluation harnesses, and lifecycle observability.
+* AI Platform Integration: Develop abstraction layers across AI providers (Anthropic, Google, OpenAI, etc. ) to enable seamless integration and enablement.
+* Cloud\-Native Engineering: Leverage containerization (Kubernetes, Docker), microservices, serverless, event\-driven architectures, CI/CD, and observability to deliver scalable AI\-native systems.
+* Domain\-Specific Workflows: Tailor and deploy agentic applications across verticals — e.g., finance, healthcare, retail — addressing domain\-specific processes via intelligent automation.
+* Client Engagement: Conduct design workshops, POCs, and code\-with sessions to shape data\-driven agent workflows with stakeholders, fostering trust and adoption.
+* Measure \& Improve: Define and use key metrics, test harnesses, and evaluation plans to measure agent accuracy, latency, safety, and cost effectiveness.
+* Knowledge Sharing: Craft reusable patterns, documentation, and best practices to influence internal assets and client roadmaps
+
+**T
+
+===== JD#22 | Data Scientist @ Capgemini | remote=False | $94248.0-215050.0 yearly =====
+Choosing Capgemini means choosing a company where you will be empowered to shape your career in the way you’d like, where you’ll be supported and inspired by a collaborative community of colleagues around the world, and where you’ll be able to reimagine what’s possible. Join us and help the world’s leading organizations unlock the value of technology and build a more sustainable, more inclusive world.
+
+
+**About The Job You're Considering**
+------------------------------------
+
+
+Successful execution of Digital Lean requires helping lead a **fundamental shift in how technology services are delivered**. This role sits at the forefront of that change—driving a move toward an **AI‑driven, product‑first mindset** that uses data to anticipate issues, empower end users, and resolve problems before they escalate. As a full‑stack data scientist, you will turn complex operational signals into insight—and translate that insight into lightweight products, prototypes, and tools that reshape service delivery at scale.
+
+
+Positioned at the intersection of data science, GenAI, and product thinking, you will work directly with product and delivery teams to surface non‑obvious opportunities, establish a clear point of view, and help convert ideas into durable, intelligent solutions that continuously improve how work gets done.
+
+
+This is not a pure research role and not a traditional software engineering role. We are looking for a **builder‑minded data scientist** who uses modern AI tools to create, edit, and evolve code; rapidly prototype workflows and products; and partner closely with engineers, subject‑matter experts, and operators to move from insight to sustained impact.
+
+
+**Your Role**
+-------------
+
+
+As a full‑stack, product‑embedded data scientist, you will:
+
+
+* **Transform raw operational data into insight\-ready datasets**, working across structured and unstructured sources (process data, logs, documents, tickets, free text).
+* **Interrogate process and operational data to surface inefficiencies**, patterns of waste, bottlenecks, rework, and systemic failure modes that are not obvious at first glance.
+* **Find the nuggets that scale**—novel, repeatable insights that go beyond one\-off analysis and can be generalized across teams, accounts, or platforms.
+* **Conduct deep\-dive analyses** using statistical methods, machine learning, and modern GenAI techniques to uncover root causes, anomalies, and opportunity spaces.
+* **Leverage GenAI as a force multiplier** to explore data, generate hypotheses, create and edit code, accelerate prototyping, and rapidly iterate on analytical approaches.
+* **Embed with product and delivery teams** to help turn insights into prototype tools, workflows, dashboards, or decision aids that can evolve into durable products.
+* **Translate analytical insight into a clear narrative**—connecting data to business impact, operational outcomes, and a compelling vision for scale.
+* **Influence without authority** by helping others see what you see: clearly communicating findings, framing the problem, and aligning stakeholders around action.
+* **Participate in continuous improvement activities** (e.g., goal deployment, Kaizen\-style initiatives) to identify where data and tooling can accelerate learning and results.
+* **Quantify impact** by tying insights to measurable outcomes such as efficiency gains, cost reduction, cycle time improvement, or quality uplift.
+* **Document patterns, methods, and learnings** to enable reuse and e
+
+===== JD#23 | HPC/AI Performance Specialist @ Lawrence Berkeley National Laboratory | remote=False | $139440.0-267996.0 yearly =====
+The National Energy Research Scientific Computing Center (NERSC) at Berkeley Lab seeks enthusiastic engineers to join the NERSC Science Acceleration Program (NESAP). You will collaborate with scientific teams to enable the solution of deep, meaningful problems across all program areas funded by the Department of Energy Office of Science under DOE’s Project Genesis mission.  
+
+NERSC provides world\-class supercomputing, high performance, scalable data systems and services to 10,000 users across a wide range of scientific disciplines. NERSC’s science impact is acknowledged by over 2000 publications per year.  
+
+The Challenge: Enabling advanced science at scale on supercomputers. In 2027, NERSC will deploy its next generation HPC system “Doudna” \- a system optimized for science workflows involving modelling and simulation, AI and experimental data analysis. The system includes next\-generation NVIDIA Vera\-Rubin superchips, a high\-speed interconnect, and an all\-flash VAST file system. NESAP is about employing cutting\-edge computational science techniques and advanced performance analysis tools to develop highly scalable, capable and performance complex workflows to meet exciting challenges in Simulation, Data Analysis, and Machine Learning on Doudna and future NERSC supercomputing systems.  
+
+We’re here for the same mission, to bring science solutions to the world. Join our team and YOU will play a supporting role in our goal to address global challenges! Have a high level of impact and work for an organization associated with 17 Nobel Prizes! *Why join Berkeley Lab?*
+We invest in our employees by offering a total rewards package you can count on:* Exceptional health and retirement benefits, including pension or 401K\-style plans
+* Opportunities to grow in your career \- check out our Tuition Assistance Program
+* A culture where you’ll belong \- we are invested in our teams!
+* In addition to accruing vacation and sick time, we also have a Winter Holiday Shutdown every year.
+* Parental bonding leave (for both mothers and fathers)
+* Pet insurance
+
+  
+
+At CSE3 level, you will:* Collaborate with NERSC staff and code teams to port and optimize software for the Doudna system and future platforms.
+* Develop and refine advanced workflows, algorithms, and models with domain experts for HPC applications.
+* Research and leverage NERSC’s integrated HPC/AI/data ecosystem.
+* Support widely used scientific workflows on NERSC systems.
+* Provide performance engineering expertise, training, and user support.
+* Stay current with AI/HPC advancements through community engagement.
+* Help evaluate and shape future supercomputing technologies.
+* Partner with scientists and industry to drive impactful research.
+* Lead or coordinate work on complex projects, applying sound judgment and advanced analysis.
+
+  
+
+In addition to the above, the CSE4 level will:* Mentor early\-career staff in computing techniques and projects.
+* Track emerging HPC/AI trends and translate them into opportunities for NERSC users.
+* Develop strategies to balance performance and productivity for the science community.
+* Resolve complex, ambiguous issues using advanced analysis and independent judgment.
+
+  
+
+We are looking for at CSE3 level:* Typically requires a Bachelor’s degree and a minimum of 8 years of related experience; or 6 years of experience and a Master’s degree; or and equivalent combination of education and equivalent experience.
+* Wide\-ranging experience in the areas of dat
+
+===== JD#24 | Senior Scientific Data Engineer (Joint Genome Institute) @ Lawrence Berkeley National Laboratory | remote=True | $139440.0-235308.0 yearly =====
+Berkeley Lab’s (LBNL) Joint Genome Institute (JGI) has an opening for a Senior Scientific Data Engineer to join the Advanced Analysis Team!  
+
+JGI has a long history of generating world\-class genomic data to address pressing national energy and environmental security challenges. Building on this expertise, JGI is now helping to define the data foundation for an emerging era of AI\-enabled scientific discovery in support of the Genesis Mission. The Advanced Analysis team at JGI builds the core data infrastructure, advanced bioinformatics workflows, and ML/AI data pipelines needed to prepare genomic data for new AI\-enabled capabilities. We are looking for a Senior Scientific Data Engineer to help build out the systems and platforms that JGI will rely on to meet the scale, complexity, and urgency of data\-driven science.  
+
+This is an exciting and unique opportunity to apply your technical expertise in developing some of the core scientific data systems that support JGI operations, genomic data workflows, and AI capabilities. You will be asked to contribute to the design, implementation, and operations of those systems across data management, job orchestration, and platform integration projects. You will work with a highly interdisciplinary team on complex technical challenges and help drive to improve the reliability, scalability, interoperability, and maintainability of JGI’s core data systems.  
+
+This position has an anticipated start date of July 1, 2026\.  
+
+What You Will Do:
+
+* Develop and enhance JGI’s core scientific data and compute capabilities as part of a talented engineering team.
+* Design, build, implement, and deploy production automated systems, APIs, and workflows supporting genomic data movement, metadata management, job orchestration, data access, and large\-scale scientific computing.
+* Identify and resolve technical issues and integration gaps while driving continuous system improvements.
+* Strengthen the reliability, scalability, observability, interoperability, and maintainability of shared production data systems while supporting sustainable operations and delivery.
+* Support strong engineering best\-practices through technical reviews, knowledge sharing, and team process optimization.
+
+  
+
+What Is Required:
+
+* A Bachelor’s Degree (or equivalent knowledge/training) in Computer Science or a related field and a minimum of 8 years of related professional experience developing, integrating, deploying, and operating production software and data systems that support metadata management, workflow orchestration, data lifecycle operations, and broad user data access or an equivalent combination of education and professional experience.
+* Strong knowledge of software and data engineering fundamentals relevant to data\-intensive distributed systems, including system design, concurrency, performance, and testing.
+* Experience working with database and data storage technologies including relational databases, object storage, and systems for managing structured, semi\-structured, and large\-scale data.
+* Experience with data engineering and event\-driven technologies such as Airflow or Kafka.
+* Experience effectively using AI coding agents such as Claude Code, Codex, Cursor, including demonstrated judgment in reviewing and validating generated software for correctness, quality, security, maintainability, and suitability for production use.
+* Proficiency in Python and experience with one or more additional programming languages.
+
+===== JD#25 | Lead Scientific Data Engineer (Joint Genome Institute) @ Lawrence Berkeley National Laboratory | remote=True | $158808.0-267996.0 yearly =====
+Berkeley Lab’s (LBNL) Joint Genome Institute (JGI) has an opening for a Lead Scientific Data Engineer to join the Advanced Analysis Team!  
+
+JGI has a long history of generating world\-class genomic data to address pressing national energy and environmental security challenges. Building on this expertise, JGI is now helping to define the data foundation for an emerging era of AI\-enabled scientific discovery in support of the Genesis Mission. The Advanced Analysis team at JGI builds the core data infrastructure, advanced bioinformatics workflows, and ML/AI data pipelines needed to prepare genomic data for new AI\-enabled capabilities. We are looking for a Lead Scientific Data Engineer to help drive the evolution of these systems and shape the platforms JGI will rely on to meet the scale, complexity, and urgency of data\-driven science.  
+
+This is an exciting and unique opportunity to provide senior technical leadership for some of the core scientific data systems that support JGI operations, genomic data workflows, and AI capabilities. You will be asked to lead the implementation of strategic initiatives across data management, job orchestration, and platform integration. We will trust you to define practical technical roadmaps, guide architecture decisions, and help ensure long\-term platform value and scalability. As a senior technical leader at JGI, you will also contribute to cross\-team engineering strategy, team culture, and platform evolution across the organization.  
+
+This position has an anticipated start date of July 1, 2026\.  
+
+What You Will Do:
+
+* Provide senior technical leadership for JGI’s core scientific data and compute platforms by developing technical implementation roadmaps, data system architectures, and long\-term data system strategy.
+* Lead the design and implementation of production automated systems, APIs, and workflows supporting genomic data movement, metadata management, job orchestration, data access, and large\-scale scientific computing.
+* Improve the reliability, scalability, observability, interoperability, and maintainability of shared production data systems while supporting sustainable operations and delivery.
+* Work closely with product managers, scientists, and users to drive cross\-team technical alignment and integration decisions that address complex technical challenges and shared priorities.
+
+  
+
+What We Are Looking For:
+
+* A Bachelor’s Degree (or equivalent knowledge/training) in Computer Science or a related field and a minimum of 12 years of related professional experience with large\-scale scientific data and compute infrastructures or an equivalent combination of education and experience.
+* Demonstrated experience leading the design, development, integration, and operation of production software and data systems that support metadata management, workflow orchestration, data lifecycle operations, and broad user data access.
+* Advanced knowledge of data and software engineering fundamentals relevant to data\-intensive distributed systems, including system design, concurrency, performance, and testing.
+* Broad experience with databases and data storage technologies including relational databases, object storage, and systems for managing structured, semi\-structured, and large\-scale data.
+* Experience with data engineering and event\-driven technologies such as Airflow or Kafka.
+* Strong experience effectively using AI coding agents such as Claude Code, Codex, or Cursor, including demonstr
+
+===== JD#26 | Cloud Engineer @ Willdan | remote=False | $120000.0-125000.0 yearly =====
+We are seeking a highly skilled **Cloud Engineer** with deep expertise in **Amazon Web Services (AWS)** and working knowledge of **Microsoft Azure**. This role will be responsible for designing, implementing, securing, and optimizing scalable cloud infrastructure to support business\-critical applications and services.
+
+
+The ideal candidate brings strong hands\-on experience in cloud architecture, automation, and DevOps practices, along with the ability to mentor junior engineers and collaborate cross\-functionally.
+
+**Essential Duties and Responsibilities**
+
+* Design, deploy, and manage highly available, scalable, and secure cloud infrastructure in AWS and Azure.
+* Implement Infrastructure as Code (IaC) using tools such as Terraform, CloudFormation, or similar.
+* Optimize cloud environments for performance, cost efficiency, and reliability.
+* Lead cloud migration initiatives, including on\-prem to cloud and cloud\-to\-cloud transitions.
+* Build and support AI\-enabled solutions using AWS services, including Amazon Bedrock for generative AI and QuickSight for analytics and visualization.
+* Monitor systems and applications, ensuring uptime and performance SLAs are met.
+* Implement and maintain CI/CD pipelines to support development and release processes.
+* Enforce security best practices, including IAM, network security, and compliance standards.
+* Troubleshoot complex infrastructure and application issues across cloud environments.
+* Collaborate with development, security, and operations teams to deliver integrated solutions.
+* Provide technical leadership, documentation, and mentorship to team members.
+
+**Job Requirements / Qualifications:**
+
+* Required Qualifications
+	+ Bachelor’s degree in computer science, Information Technology, or related field (or equivalent experience).
+	+ 5\-8\+ years of experience in cloud engineering or infrastructure roles.
+	+ Strong hands\-on experience with AWS services (EC2, S3, RDS, VPC, IAM, Lambda, CloudWatch, etc.).
+	+ Required experience with AWS AI/ML services, specifically:
+		- Amazon Bedrock (LLMs, generative AI integrations, or prompt\-based applications).
+		- Amazon QuickSight (dashboards, data visualization, and business intelligence).
+	+ Experience with Infrastructure as Code (Terraform, CloudFormation, or ARM/Bicep).
+	+ Proficiency in scripting/programming (Python, PowerShell, Bash, or similar).
+	+ Experience with containerization technologies (Docker, Kubernetes/EKS, ECS).
+	+ Solid understanding of networking concepts (DNS, VPN, load balancing, firewalls).
+	+ Experience with monitoring, logging, and alerting tools.
+	+ Strong problem\-solving and communication skills.
+* Preferred Qualifications
+	+ Experience with Microsoft Azure (VMs, Azure AD, App Services, Networking, etc.).
+	+ AWS certifications (Solutions Architect, DevOps Engineer, or similar).
+	+ Experience with DevOps tools (Jenkins, GitHub Actions, Azure DevOps, etc.).
+	+ Familiarity with security frameworks and compliance standards (SOC 2, ISO, NIST, etc.).
+	+ Experience in hybrid cloud or multi\-cloud environments.
+	+ Knowledge of cost management and optimization strategies.
+
+**EEO Non\-Discrimination and ADA Reasonable Accommodation Statement**  
+
+Willdan is an equal opportunity employer. Applicants are considered for all positions without regard to race, religious creed, color, age marital status, sex, sexual orientation, gender identity, gender expression, citizenship status, national origin, ancestry, religion, military service
+
+===== JD#27 | Cloud Platform Specialist @ PAE Consulting Engineers Inc. | remote=False | $106000.0-147000.0 yearly =====
+**The Opportunity**
+
+
+We are seeking a Cloud Platform Specialist to design and build the foundational systems that enable secure, scalable application development across PAE. This role is critical in supporting emerging automation, AI initiatives, and citizen development efforts by creating standardized, production\-ready environments and enforcing governance controls that ensure all applications follow consistent security, compliance, and operational standards before reaching production. This includes everything from engineer\-built Python tools to AI\-enabled workloads.
+
+
+The Cloud Platform Specialist owns the intake, review, and environment promotion process for citizen\- and engineer\-developed applications. This role also maintains working\-level proficiency in Windows Server, Linux, and Azure IaaS administration to provide operational coverage and secondary support to the Core Services infrastructure team.
+
+**Who We Are**
+
+PAE is an engineering and design firm that turns complex challenges into reality. By leveraging the latest technologies, we solve problems in unique ways, and our designs enable buildings and communities to be more resilient and efficient. PAE is trusted by our clients in every aspect of a project's lifespan, from idea to occupancy. We set ambitious goals backed by analysis to significantly conserve water and energy while balancing costs and long\-term operational needs. As a B Corp, we measure success by the benefits our projects provide to our clients, our communities, and our planet. We embrace innovation, transparency, sustainability, and lifelong curiosity.
+
+**What You'll Do**
+
+**System/Process Management**
+
+* Design and implement secure, scalable application hosting environments in Azure, including environment segmentation (dev/test/UAT/prod) and isolation strategies
+* Establish identity, access, and secrets management patterns across all environments
+* Build and maintain CI/CD pipelines for application deployment using Azure DevOps Pipelines and GitHub Actions; standardize release and promotion workflows across environments regardless of pipeline tooling
+* Monitor Define and document approved deployment patterns for Power Platform solutions, custom\-developed applications including AI\-generated and low\-code apps, and AI/ML\-enabled workloads
+* Implement infrastructure as code using Bicep and Terraform for consistent, repeatable environment provisioning; maintain standards for both Microsoft\-native and open\-source IaC tooling depending on workload requirements
+* Define approved patterns for containerized workloads including Docker\-based packaging and deployment to Azure Container Apps or AKS; maintain working proficiency in Linux as the primary runtime for containerized and serverless applications
+* Define Establish standards for event\-driven and serverless compute patterns using Azure Functions and Logic Apps alongside open\-source frameworks and runtimes; define approved language runtimes, dependency management practices, and cold\-start mitigation approaches
+* Ensure logging, monitoring, alerting, and compliance requirements are met by design in all managed environments
+
+**Application Platform Governance \& Citizen Development Enablement**
+
+* Own the citizen development intake, review, and application promotion process; evaluate all citizen and staff\-developed applications for security, compliance, and operational supportability before advancement through dev/test/UAT/prod environments
+* Define a
+
+===== JD#28 | AI Solutions Architect @ KLS Martin Group | remote=True | $-  =====
+**Job Summary**
+
+
+The AI Solutions Architect is the senior technical leader for KLS Martin's enterprise AI program and the technical partner to IT leadership and the AI Program Manager. This role designs and builds the foundational AI platforms, services, and reference architectures that power AI adoption across the company, sets the technical standards that federated teams build to, and ensures every AI implementation meets enterprise requirements for security, scalability, reliability, and regulatory compliance.
+
+
+This is a hands\-on architect role: the person in this seat personally designs and ships the foundational systems and the highest leverage production use cases and grows technical leadership responsibilities as the AI engineering team expands.
+
+
+The AI Solutions Architect partners with stakeholders across IT, business units, Quality, Regulatory, Information Security, and the AI Program Manager to ensure AI solutions deliver on their objectives while meeting applicable regulatory, quality, and security standards.
+
+
+The AI Solutions Architect contributes to the continuous improvement of AI development practices, reference architectures, evaluation frameworks, and developer enablement, and develops the capability of the AI engineering team through coaching, mentoring, and targeted assignments as the team grows.
+
+**Essential Functions, Duties, and Responsibilities**
+
+* Personally design, build, and ship foundational AI systems, platforms, and integrations, including agent frameworks, evaluation infrastructure, and the first wave of production use cases.
+* Lead end to end implementation of the most strategic AI initiatives across the company.
+* Maintain hands on proficiency with the production stack: Python, FastAPI, React, Azure services, and modern AI tooling.
+* Define, document, and evolve KLS Martin's reference architectures for the most common AI patterns: retrieval augmented generation, autonomous agents, document processing, classification, and assistive copilots.
+* Build and curate the internal prompt and pattern library so federated teams reuse rather than rebuild.
+* Establish coding standards, security controls, evaluation requirements, and documentation expectations for AI development across the enterprise.
+* Contribute to the AI technology roadmap in partnership with IT leadership and the AI Program Manager, including model providers, platforms, frameworks, and supporting tooling.
+* Lead build versus buy decisions for AI capabilities, including technical evaluation of vendor solutions against internal builds
+* Provide the technical backbone for vendor selection, proof of concept work, and contract negotiation.
+* Design and operate the MLOps and LLMOps stack, including deployment pipelines, model and prompt versioning, evaluation harnesses, monitoring, and observability.
+* Build evaluation and testing frameworks, including eval datasets, regression testing, and red team testing for prompt injection, jailbreaks, and data exfiltration.
+* Implement cost and token observability for API spend management.
+* Lead architectural and technical response to AI specific incidents such as production hallucinations, data leakage, prompt injection, and model availability issues.
+* Design and implement identity, secrets, and access management patterns for AI systems, including agent identities, least privilege patterns, and integration with Microsoft Entra ID.
+* Ensure data classification, retention, and access controls are designed in
+
+===== JD#29 | S1000D Technical Author (Level 1) @ Lockheed Martin | remote=True | $-  =====
+**JOB ID:** 728118BR
+
+
+**Date posted:** May. 18, 2026
+
+
+  
+
+**Description:**
+
+**What You Will Be Doing:**
+
+  
+
+  
+
+In this Aircraft Maintenance Support Engineer Associate position you will be responsible for writing, validation, and maintenance of organizational\-level technical publications for on\-equipment maintenance of C\-130 B\-H, C\-130J or C\-5 aircraft.  
+
+Publications are developed in Organizational Maintenance Manual Set (OMMS) and S1000D formats and maintained in the LM Aeronautics  
+
+Virtually Integrated System for Technical Authoring (VISTA) and Technical Content Authoring and Management System (TCAMS) utilizing Standard Generalized Markup Language (SGML) and Extensible Mark\-up Language (XML).  
+
+  
+
+Responsibilities will focus on creation of operation and maintenance of complex aircraft electrical and avionics systems including automatic flight control, communications, aviation, identification, radar, surveillance, and  
+
+electronic warfare systems technical publications.  
+
+Must be able to effectively interact and communicate with customers, engineering, and other organizations to define aircraft maintenance requirements.  
+
+Successful candidate must possess a Mechanical, Aerospace or Electrical Engineering degree or have extensive knowledge of all aircraft avionics  
+
+systems, including military specification requirements and logistic support concepts and be able to read and interpret wiring and schematic diagrams.  
+
+Prior military or industry experience relating to aircraft avionics and knowledge of complex automated and integrated aircraft systems preferred.  
+
+  
+
+**What’s In It For You:**
+
+  
+
+From onsite to remote, we offer flexible work schedules to comprehensive benefits investing in your future and security.  
+
+Do you want to be part of a company culture that empowers employees to think big, lead with a growth mindset, and make the impossible a reality? We provide the resources and give you the flexibility to enable inspiration and focus \- if you have the passion and courage to dream big, work hard, and have fun doing what you love then we want to build a better tomorrow with you.  
+
+**Basic Qualifications:**
+
+  
+
+* Authoring of Technical Manuals or aircraft maintenance experience, C\-130 preferred
+
+  
+
+* Experience with military or commercial aircraft maintenance technical orders, manuals, or illustrated parts documentation.
+
+  
+
+* Supporting aircraft organizational maintenance activities.
+
+  
+
+* Must be a U.S. Citizen; this position is located at a facility that requires special access.
+
+**Desired Skills:**
+
+  
+
+Experience with the following: S1000D, XML, Contenta, Jira, Agile, Project Management, Excel, Budget Management or AI implementation.  
+
+  
+
+FAA Airframe and Powerplant (A\&P) Certificate
+  
+
+  
+
+Bachelor's degree in Aerospace Engineer, Electrical Engineering, or Mechanical Engineering desirable but not required  
+
+**Clearance Level:**
+
+None  
+
+**Other Important Information You Should Know**
+
+  
+
+**Expression of Interest:**
+
+By applying to this job, you are expressing interest in this position and could be considered for other career opportunities where similar skills and requirements have been identified as a match. Should this match be identified you may be contacted for this and future openings.  
+
+**Ability to Work Remotely:**
+
+Onsite Full\-time: The work associated with this position will be performed onsite at a designated Lockheed Martin facility.  
+
+**Work Schedules:**
+
+Lockheed Martin suppo
