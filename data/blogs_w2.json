@@ -1,5 +1,5 @@
 {
- "collected_at": "2026-06-10T02:43:23",
+ "collected_at": "2026-06-12T04:27:16",
  "source_status": {
   "Simon Willison": "ok:8",
   "Lilian Weng": "ok:0",
@@ -8,7 +8,7 @@
   "Chip Huyen": "ok:0",
   "Eugene Yan": "ok:1",
   "Jay Alammar": "ok:0",
-  "Berkeley BAIR": "ok:3",
+  "Berkeley BAIR": "ok:2",
   "The Gradient": "ok:0",
   "DeepLearning.AI Batch": "empty (bozo:1)",
   "OpenAI News": "ok:8",
@@ -19,59 +19,59 @@
  "items": [
   {
    "source": "Simon Willison",
+   "title": "Claude Fable is relentlessly proactive",
+   "date": "2026-06-11",
+   "summary": "After two days of experience with Claude Fable 5 I think the best way to describe it is relentlessly proactive . It knows a whole lot of tricks and it will deploy pretty much any of them to get to its goal. I'll illustrate this with an example. I was hacking on Datasette Agent today when I noticed a glitch: a horizontal scrollbar that shouldn't be there in the jump menu chat prompt. I snapped this screenshot: Then I started a fresh claude session in my datasette-agent checkout, dragged in the screenshot and told it: Look at dependencies to help figure out why there is a horizontal scrollbar he",
+   "link": "https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/#atom-everything"
+  },
+  {
+   "source": "Simon Willison",
+   "title": "datasette 1.0a33",
+   "date": "2026-06-11",
+   "summary": "Release: datasette 1.0a33 This alpha is a significant step on the road to a stable 1.0, finally extending the ?_extra= pattern I introduced in Datasette 1.0a3 to cover queries and rows in addition to tables. That pattern is also now documented ! I wrote a whole lot more about the new release on the Datasette project blog: Datasette 1.0a33 with JSON extras in the API . Because API explorer tools are almost free to build now I had Claude Fable 5 in Claude Code (for the plan ) and GPT-5.5 xhigh in Codex Desktop (for the implementation ) build me this custom extras API explorer to help demonstrate",
+   "link": "https://simonwillison.net/2026/Jun/11/datasette/#atom-everything"
+  },
+  {
+   "source": "Simon Willison",
+   "title": "asyncinject 0.7",
+   "date": "2026-06-11",
+   "summary": "Release: asyncinject 0.7 I built this utility library to support an asyncio dependency injection pattern a few years ago. I was using it with Datasette and Claude Fable 5 spotted some bugs in the dependency which it then fixed for me. It's a very proactive model! Tags: async , projects , python , claude-mythos",
+   "link": "https://simonwillison.net/2026/Jun/11/asyncinject/#atom-everything"
+  },
+  {
+   "source": "Simon Willison",
+   "title": "Anthropic Walks Back Policy That Could Have ‘Sabotaged’ AI Researchers Using Claude",
+   "date": "2026-06-11",
+   "summary": "Anthropic Walks Back Policy That Could Have ‘Sabotaged’ AI Researchers Using Claude Big scoop for Maxwell Zeff at Wired: “We’re changing Fable 5’s safeguards for frontier LLM development to make them visible.” Anthropic said in a statement to WIRED. “We made the wrong tradeoff and we apologize for not getting the balance right.” There's been a huge outcry about Anthropic's policy, tucked away in their system card , that Claude Fable/Mythos would identify \"requests targeting frontier LLM development\" and \"limit effectiveness\" without notifying the user. It's good news that they're dropping the ",
+   "link": "https://simonwillison.net/2026/Jun/11/anthropic-walks-back-policy/#atom-everything"
+  },
+  {
+   "source": "Simon Willison",
+   "title": "datasette-agent 0.2a0",
+   "date": "2026-06-10",
+   "summary": "Release: datasette-agent 0.2a0 Highlights from the release notes: Tools can now ask the user questions mid-execution. Tools that declare a context parameter receive a ToolContext object, and await context.ask_user(...) can ask a yes/no, multiple-choice ( options=[...] ) or free-text ( free_text=True ) question. While a question is unanswered the agent turn suspends: the question renders as a form in the chat UI and persists to the internal database, so suspended conversations survive a server restart. Once answered, the tool re-executes from the top with stored answers replayed, so call ask_us",
+   "link": "https://simonwillison.net/2026/Jun/10/datasette-agent/#atom-everything"
+  },
+  {
+   "source": "Simon Willison",
+   "title": "DiffusionGemma",
+   "date": "2026-06-10",
+   "summary": "DiffusionGemma Last May Google briefly released an experimental Gemini Diffusion model. I tried the preview at the time and recorded it running at 857 tokens/second. It was an exciting model, but Google made no further announcements about it. That research has returned in the best possible way: as a new open weight (Apache 2 licensed) Gemma model, google/diffusiongemma-26B-A4B-it . NVIDIA are currently hosting the model for free on their NIM cloud API. I used that API to generate this pelican , which took 4.4s (according to time uv run generate.py ) to return 2,409 tokens - so at least 500 tok",
+   "link": "https://simonwillison.net/2026/Jun/10/diffusiongemma/#atom-everything"
+  },
+  {
+   "source": "Simon Willison",
+   "title": "Quoting Jeremy Howard",
+   "date": "2026-06-10",
+   "summary": "Easy solution to slow down recursive AI self improvement: The lab with the top-ranked model must agree THEY must not use it for working on frontier AI But everyone else should have access to it. By definition, this means the frontier doesn't advance. It also has the critical benefit of avoiding a dangerous power imbalance. Anthropic has chosen the opposite of the safe path: they are allowing themselves, the current top lab, to use their top model for frontier AI research. They've said they'll sabotage others who try. This means the AI frontier advances, &amp; power imbalance increases. (To be ",
+   "link": "https://simonwillison.net/2026/Jun/10/jeremy-howard/#atom-everything"
+  },
+  {
+   "source": "Simon Willison",
    "title": "If Claude Fable stops helping you, you'll never know",
    "date": "2026-06-10",
    "summary": "If Claude Fable stops helping you, you&#x27;ll never know Jonathon Ready highlights one of the more eyebrow-raising details from the 319 page system card for Fable 5 and Mythos 5. Here's a longer excerpt, highlights mine: In light of the ability of recent models to accelerate their own development , we’ve implemented new interventions that limit Claude’s effectiveness for requests targeting frontier LLM development (for example, on building pretraining pipelines, distributed training infrastructure, or ML accelerator design ). Using Claude to develop competing models already violates our Terms",
    "link": "https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/#atom-everything"
-  },
-  {
-   "source": "Simon Willison",
-   "title": "Initial impressions of Claude Fable 5",
-   "date": "2026-06-09",
-   "summary": "I didn't have early access to today's Claude Fable 5 release, but I've spent the past ~5.5 hours putting it through its paces. My initial impressions are that this is something of a beast . It's slow, expensive and has been quite happily churning through everything I've thrown at it so far. As is frequently the case with current frontier models the challenge is finding tasks that it can't do. First, let's review the key characteristics. Anthropic claim that Claude Fable 5 offers the same performance as Claude Mythos 5, except with much more strict guardrails in place to prevent it being used f",
-   "link": "https://simonwillison.net/2026/Jun/9/claude-fable-5/#atom-everything"
-  },
-  {
-   "source": "Simon Willison",
-   "title": "llm 0.32a3",
-   "date": "2026-06-09",
-   "summary": "Release: llm 0.32a3 Almost entirely written by the new Claude Fable 5, see my write-up for more details . Tags: projects , ai , generative-ai , llms , llm , claude-mythos",
-   "link": "https://simonwillison.net/2026/Jun/9/llm/#atom-everything"
-  },
-  {
-   "source": "Simon Willison",
-   "title": "Setting a custom price for a model in AgentsView",
-   "date": "2026-06-09",
-   "summary": "TIL: Setting a custom price for a model in AgentsView I've been really enjoying AgentsView by Wes McKinney as a tool for exploring my token usage across different coding agents running on my laptop. Claude Fable 5 came out today and wasn't yet included in the pricing database AgentsView uses. I used Fable to reverse-engineer AgentsView and figured out this recipe for setting custom prices. Here's my Claude Fable 5 usage for today so far, plotted by AgentsView as a treemap across my different local projects: Tags: ai , generative-ai , llms , llm-pricing , claude-mythos",
-   "link": "https://simonwillison.net/2026/Jun/9/agentsview-custom-model-price/#atom-everything"
-  },
-  {
-   "source": "Simon Willison",
-   "title": "Quoting Andrej Karpathy",
-   "date": "2026-06-09",
-   "summary": "I feel a lot of things changing as working software increasingly comes out on a tap. The Jevon's paradox kicks in and I feel my own demand for software growing substantially. You can ask for anything - explainers, visualizers, dashboards, bespoke single-use apps (e.g. a full wandb that is hyper-specific just for your project), you can 10X your test suite, auto-optimize code, run giant research projects with custom HTML for the results, anything! \"Free your mind\" (Matrix ref). &mdash; Andrej Karpathy , on Claude Fable 5 Tags: andrej-karpathy , jevons-paradox , anthropic , generative-ai , ai , l",
-   "link": "https://simonwillison.net/2026/Jun/9/andrej-karpathy/#atom-everything"
-  },
-  {
-   "source": "Simon Willison",
-   "title": "Siri AI at WWDC 2026",
-   "date": "2026-06-08",
-   "summary": "Given how badly burned anyone who took Apple's 2024 WWDC Apple Intelligence announcements at face value was, I'm holding to a strict \"I'll believe it when I see it\" policy for everything they announced today . The new Siri AI features do at least look feasible with today's technology, especially since Apple are licensing a custom Gemini-derived model that they can run on their own Private Cloud Compute . It sounds like they'll be taking advantage of vision LLMs to extract information from the user's screen, which neatly sidesteps the need for every existing application to ship custom code in o",
-   "link": "https://simonwillison.net/2026/Jun/8/wwdc/#atom-everything"
-  },
-  {
-   "source": "Simon Willison",
-   "title": "datasette-agent-edit 0.1a0",
-   "date": "2026-06-07",
-   "summary": "Release: datasette-agent-edit 0.1a0 I'm planning several plugins for Datasette Agent which can make edits to existing pieces of text - things like collaborative Markdown editing, updating large SQL queries, and editing SVG files. Agentic editing of text is a little tricky to get right. My favorite published design for this is for the Claude text editor , which implements the following tools: view - view sections of a file, with line numbers added to every line. str_replace - find an exact old_str and replace it with new_str - fail if the original string is not unique insert - insert the specif",
-   "link": "https://simonwillison.net/2026/Jun/7/datasette-agent-edit/#atom-everything"
-  },
-  {
-   "source": "Simon Willison",
-   "title": "micropython-wasm 0.1a2",
-   "date": "2026-06-06",
-   "summary": "Release: micropython-wasm 0.1a2 I added a CLI to micropython-wasm ( issue #7 ), inspired by the first draft of the blog entry when I realized it would be a great way to illustrate the Try it yourself section. Tags: python , sandboxing , webassembly , micropython",
-   "link": "https://simonwillison.net/2026/Jun/6/micropython-wasm/#atom-everything"
   },
   {
    "source": "Sebastian Raschka",
@@ -110,10 +110,10 @@
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Can Voice Agents Handle Bilingual Customers? Benchmarking Frontier ASR on Code-Switched Speech",
-   "date": "2026-06-09",
+   "title": "Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP",
+   "date": "2026-06-11",
    "summary": "",
-   "link": "https://huggingface.co/blog/ServiceNow-AI/code-switching"
+   "link": "https://huggingface.co/blog/torch-mlp-fusion"
   },
   {
    "source": "HuggingFace Blog",
@@ -186,11 +186,53 @@
    "link": "http://bair.berkeley.edu/blog/2026/04/20/grasp/"
   },
   {
-   "source": "Berkeley BAIR",
-   "title": "Identifying Interactions at Scale for LLMs",
-   "date": "2026-03-13",
-   "summary": "--> Understanding the behavior of complex machine learning systems, particularly Large Language Models (LLMs), is a critical challenge in modern artificial intelligence. Interpretability research aims to make the decision-making process more transparent to model builders and impacted humans, a step toward safer and more trustworthy AI. To gain a comprehensive understanding, we can analyze these systems through different lenses: feature attribution , which isolates the specific input features driving a prediction ( Lundberg &amp; Lee, 2017 ; Ribeiro et al., 2022 ); data attribution , which link",
-   "link": "http://bair.berkeley.edu/blog/2026/03/13/spex/"
+   "source": "OpenAI News",
+   "title": "How an astrophysicist uses Codex to help simulate black holes",
+   "date": "2026-06-11",
+   "summary": "Discover how astrophysicist Chi-kwan Chan uses Codex to build black hole simulations, helping scientists study extreme physics and test Einstein’s theory of general relativity.",
+   "link": "https://openai.com/index/using-codex-to-simulate-black-holes"
+  },
+  {
+   "source": "OpenAI News",
+   "title": "BBVA puts AI at the core of banking with OpenAI",
+   "date": "2026-06-11",
+   "summary": "Learn how BBVA scaled ChatGPT Enterprise to 100,000 employees and partnered with OpenAI to accelerate AI-powered banking transformation worldwide.",
+   "link": "https://openai.com/index/bbva"
+  },
+  {
+   "source": "OpenAI News",
+   "title": "Supporting Europe’s work in ensuring a trustworthy AI ecosystem",
+   "date": "2026-06-11",
+   "summary": "OpenAI supports the EU Code of Practice on AI content transparency, advancing provenance standards and tools to help people understand AI-generated content.",
+   "link": "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem"
+  },
+  {
+   "source": "OpenAI News",
+   "title": "OpenAI to acquire Ona",
+   "date": "2026-06-11",
+   "summary": "OpenAI plans to acquire Ona to expand Codex with secure, persistent cloud environments, enabling long-running AI agents across enterprise workflows.",
+   "link": "https://openai.com/index/openai-to-acquire-ona"
+  },
+  {
+   "source": "OpenAI News",
+   "title": "Access OpenAI models and Codex through your Oracle cloud commitment",
+   "date": "2026-06-10",
+   "summary": "Access OpenAI models and Codex through Oracle Cloud, using existing commitments to build and deploy AI with enterprise security and governance.",
+   "link": "https://openai.com/index/openai-on-oracle-cloud"
+  },
+  {
+   "source": "OpenAI News",
+   "title": "PRC-linked influence operations are targeting AI debates in the US",
+   "date": "2026-06-10",
+   "summary": "A new report from OpenAI details PRC-linked influence operations using AI to target U.S. tech debates, data center narratives, tariffs, and false claims about ChatGPT.",
+   "link": "https://openai.com/index/prc-linked-influence-operations-ai-debates"
+  },
+  {
+   "source": "OpenAI News",
+   "title": "From data to decisions: how LSEG is scaling trusted AI",
+   "date": "2026-06-10",
+   "summary": "See how LSEG uses OpenAI to scale trusted AI across its global business, accelerating insights, shrinking release cycles, and empowering 4,000 employees.",
+   "link": "https://openai.com/index/lseg"
   },
   {
    "source": "OpenAI News",
@@ -200,53 +242,11 @@
    "link": "https://openai.com/index/nextdoor"
   },
   {
-   "source": "OpenAI News",
-   "title": "What Codex unlocks for Notion",
-   "date": "2026-06-09",
-   "summary": "How Notion uses Codex to one-shot specs, build AI Voice Input for the web, and multiply engineering power across small teams.",
-   "link": "https://openai.com/index/notion"
-  },
-  {
-   "source": "OpenAI News",
-   "title": "Industrial policy for the Intelligence Age",
-   "date": "2026-06-09",
-   "summary": "Explore our ambitious, people-first industrial policy ideas for the AI era—focused on expanding opportunity, sharing prosperity, and building resilient institutions as advanced intelligence evolves.",
-   "link": "https://openai.com/index/industrial-policy-for-the-intelligence-age"
-  },
-  {
-   "source": "OpenAI News",
-   "title": "Confidential submission of draft S-1 to the SEC",
-   "date": "2026-06-08",
-   "summary": "OpenAI confirms a confidential S-1 submission to the SEC and has not yet determined timing for further action.",
-   "link": "https://openai.com/index/openai-submits-confidential-s-1"
-  },
-  {
-   "source": "OpenAI News",
-   "title": "Built to benefit everyone: our plan",
-   "date": "2026-06-08",
-   "summary": "A vision for the future of AI, focusing on access, safety, and shared prosperity as OpenAI works to ensure AGI benefits everyone.",
-   "link": "https://openai.com/index/built-to-benefit-everyone-our-plan"
-  },
-  {
-   "source": "OpenAI News",
-   "title": "Introducing the OpenAI Economic Research Exchange",
-   "date": "2026-06-08",
-   "summary": "OpenAI launches the Economic Research Exchange to study AI’s impact on jobs, productivity, and the economy. Applications are now open for selected research projects.",
-   "link": "https://openai.com/index/economic-research-exchange"
-  },
-  {
-   "source": "OpenAI News",
-   "title": "How Endava is redesigning software delivery around AI agents",
-   "date": "2026-06-04",
-   "summary": "Learn how Endava is using AI agents, ChatGPT Enterprise, and Codex to accelerate software delivery, automate workflows, and build an AI-native culture across the enterprise.",
-   "link": "https://openai.com/index/endava-frontiers"
-  },
-  {
-   "source": "OpenAI News",
-   "title": "Dreaming: Better memory for a more helpful ChatGPT",
-   "date": "2026-06-04",
-   "summary": "ChatGPT introduces a new memory system to better remember preferences, keeping context fresh and relevant across conversations.",
-   "link": "https://openai.com/index/chatgpt-memory-dreaming"
+   "source": "Google Research",
+   "title": "New framework for auditing machine unlearning",
+   "date": "2026-06-10",
+   "summary": "Algorithms & Theory",
+   "link": "https://research.google/blog/new-framework-for-auditing-machine-unlearning/"
   },
   {
    "source": "Google Research",
@@ -296,13 +296,6 @@
    "date": "2026-05-01",
    "summary": "Data Mining & Modeling",
    "link": "https://research.google/blog/catalyzing-scientific-impact-through-global-partnerships-and-open-resources/"
-  },
-  {
-   "source": "Google Research",
-   "title": "Four ways Google Research scientists have been using Empirical Research Assistance",
-   "date": "2026-04-29",
-   "summary": "Data Mining & Modeling",
-   "link": "https://research.google/blog/four-ways-google-research-scientists-have-been-using-empirical-research-assistance/"
   }
  ]
 }
