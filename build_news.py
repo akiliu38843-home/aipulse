@@ -137,9 +137,9 @@ def _hn_sum(url):
 hn_hot_cards=[{
    "hl":(f'<a href="{esc(h.get("url","") or "#")}" target="_blank" onclick="event.stopPropagation()" '
          f'style="color:inherit;text-decoration:none;border-bottom:1px dotted var(--mut-2)">'
-         f'{esc(h.get("title",""))}</a>'),
+         f'{esc(t("", h.get("title","")))}</a>'),
    "mt":f'{h.get("points","?")} pts{(" · "+esc(_domain(h.get("url","")))) if _domain(h.get("url","")) else ""}',
-   "dg":esc(_hn_sum(h.get("url",""))),
+   "dg":esc(t("", _hn_sum(h.get("url","")))),
    "more":[[t("分数","Points"),str(h.get("points",""))],
            [t("链接","Link"),esc((h.get("url") or "")[:80]) or "—"],
            [t("摘要状态","Summary"),(HN_SUMS.get(h.get("url",""),{}) or {}).get("status","-")]]
