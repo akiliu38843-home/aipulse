@@ -1,199 +1,199 @@
 {
- "collected_at": "2026-06-12T04:27:27",
+ "collected_at": "2026-06-13T04:16:17",
  "hf": {
   "status": "ok:30 sort=trendingScore",
   "tag_freq": {
-   "text-generation": 9,
-   "image-text-to-text": 7,
+   "image-text-to-text": 9,
+   "text-generation": 6,
    "any-to-any": 5,
    "text-to-speech": 2,
    "text-to-image": 2,
+   "unknown": 2,
    "automatic-speech-recognition": 1,
-   "text-to-audio": 1,
    "image-to-video": 1,
-   "image-text-to-video": 1,
-   "unknown": 1
+   "text-to-audio": 1,
+   "image-text-to-video": 1
   },
   "trending": [
    {
-    "id": "nvidia/LocateAnything-3B",
-    "pipeline": "image-text-to-text",
-    "downloads": 131794,
-    "likes": 1878
-   },
-   {
     "id": "google/diffusiongemma-26B-A4B-it",
     "pipeline": "image-text-to-text",
+    "downloads": 20669,
+    "likes": 628
+   },
+   {
+    "id": "nvidia/LocateAnything-3B",
+    "pipeline": "image-text-to-text",
+    "downloads": 149206,
+    "likes": 1928
+   },
+   {
+    "id": "moonshotai/Kimi-K2.7-Code",
+    "pipeline": "image-text-to-text",
     "downloads": 0,
-    "likes": 512
+    "likes": 363
    },
    {
     "id": "google/gemma-4-12B-it",
     "pipeline": "any-to-any",
-    "downloads": 675936,
-    "likes": 943
-   },
-   {
-    "id": "bosonai/higgs-audio-v3-tts-4b",
-    "pipeline": "text-to-speech",
-    "downloads": 19948,
-    "likes": 364
+    "downloads": 911544,
+    "likes": 970
    },
    {
     "id": "CohereLabs/North-Mini-Code-1.0",
     "pipeline": "text-generation",
-    "downloads": 1859,
-    "likes": 309
+    "downloads": 4054,
+    "likes": 335
    },
    {
-    "id": "ideogram-ai/ideogram-4-fp8",
-    "pipeline": "text-to-image",
-    "downloads": 7170,
-    "likes": 487
-   },
-   {
-    "id": "nvidia/nemotron-3.5-asr-streaming-0.6b",
-    "pipeline": "automatic-speech-recognition",
-    "downloads": 4965,
-    "likes": 372
-   },
-   {
-    "id": "unsloth/gemma-4-12b-it-GGUF",
+    "id": "MiniMaxAI/MiniMax-M3",
     "pipeline": "image-text-to-text",
-    "downloads": 711706,
-    "likes": 563
+    "downloads": 442,
+    "likes": 287
+   },
+   {
+    "id": "bosonai/higgs-audio-v3-tts-4b",
+    "pipeline": "text-to-speech",
+    "downloads": 29347,
+    "likes": 391
    },
    {
     "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
     "pipeline": "image-text-to-text",
-    "downloads": 3057541,
-    "likes": 1683
+    "downloads": 2393894,
+    "likes": 1730
    },
    {
     "id": "OBLITERATUS/Gemma-4-12B-OBLITERATED",
     "pipeline": "text-generation",
-    "downloads": 14838,
-    "likes": 236
+    "downloads": 43578,
+    "likes": 256
    },
    {
-    "id": "google/gemma-4-12B",
-    "pipeline": "any-to-any",
-    "downloads": 140221,
-    "likes": 518
-   },
-   {
-    "id": "unsloth/gemma-4-12B-it-qat-GGUF",
-    "pipeline": "any-to-any",
-    "downloads": 148252,
-    "likes": 202
+    "id": "ideogram-ai/ideogram-4-fp8",
+    "pipeline": "text-to-image",
+    "downloads": 4987,
+    "likes": 504
    },
    {
     "id": "unsloth/diffusiongemma-26B-A4B-it-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 0,
-    "likes": 184
+    "downloads": 17666,
+    "likes": 215
+   },
+   {
+    "id": "nvidia/nemotron-3.5-asr-streaming-0.6b",
+    "pipeline": "automatic-speech-recognition",
+    "downloads": 3551,
+    "likes": 394
    },
    {
     "id": "nex-agi/Nex-N2-Pro",
     "pipeline": "text-generation",
-    "downloads": 1185,
-    "likes": 207
+    "downloads": 2551,
+    "likes": 226
+   },
+   {
+    "id": "unsloth/gemma-4-12b-it-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 836531,
+    "likes": 570
+   },
+   {
+    "id": "google/gemma-4-12B",
+    "pipeline": "any-to-any",
+    "downloads": 198271,
+    "likes": 526
    },
    {
     "id": "nex-agi/Nex-N2-mini",
     "pipeline": "text-generation",
-    "downloads": 1222,
-    "likes": 165
+    "downloads": 2839,
+    "likes": 181
    },
    {
-    "id": "ideogram-ai/ideogram-4-nf4",
-    "pipeline": "text-to-image",
-    "downloads": 6124,
-    "likes": 318
-   },
-   {
-    "id": "unsloth/gemma-4-26B-A4B-it-qat-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 129110,
-    "likes": 143
-   },
-   {
-    "id": "sapientinc/HRM-Text-1B",
-    "pipeline": "text-generation",
-    "downloads": 134752,
-    "likes": 750
-   },
-   {
-    "id": "google/magenta-realtime-2",
-    "pipeline": "text-to-audio",
-    "downloads": 19806,
-    "likes": 178
-   },
-   {
-    "id": "google/gemma-4-12B-it-qat-q4_0-gguf",
+    "id": "unsloth/gemma-4-12B-it-qat-GGUF",
     "pipeline": "any-to-any",
-    "downloads": 96749,
-    "likes": 130
+    "downloads": 208889,
+    "likes": 207
    },
    {
     "id": "zai-org/SCAIL-2",
     "pipeline": "image-to-video",
     "downloads": 0,
-    "likes": 119
+    "likes": 140
    },
    {
-    "id": "stepfun-ai/Step-3.7-Flash",
+    "id": "ideogram-ai/ideogram-4-nf4",
+    "pipeline": "text-to-image",
+    "downloads": 2910,
+    "likes": 328
+   },
+   {
+    "id": "Jackrong/Qwopus3.6-27B-Coder-MTP-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 50187,
-    "likes": 368
-   },
-   {
-    "id": "MisoLabs/MisoTTS",
-    "pipeline": "text-to-speech",
     "downloads": 0,
-    "likes": 194
+    "likes": 117
    },
    {
-    "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
-    "pipeline": "text-generation",
-    "downloads": 59066,
-    "likes": 198
-   },
-   {
-    "id": "deepseek-ai/DeepSeek-V4-Pro",
-    "pipeline": "text-generation",
-    "downloads": 4061006,
-    "likes": 4783
+    "id": "unsloth/gemma-4-26B-A4B-it-qat-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 221174,
+    "likes": 148
    },
    {
     "id": "huihui-ai/Huihui-gemma-4-12B-it-abliterated",
     "pipeline": "any-to-any",
-    "downloads": 6400,
-    "likes": 144
+    "downloads": 8013,
+    "likes": 148
    },
    {
-    "id": "ByteDance/Bernini-R",
-    "pipeline": "image-text-to-video",
-    "downloads": 305,
-    "likes": 222
+    "id": "google/magenta-realtime-2",
+    "pipeline": "text-to-audio",
+    "downloads": 6491,
+    "likes": 185
+   },
+   {
+    "id": "google/gemma-4-12B-it-qat-q4_0-gguf",
+    "pipeline": "any-to-any",
+    "downloads": 175635,
+    "likes": 134
+   },
+   {
+    "id": "XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash",
+    "pipeline": "text-generation",
+    "downloads": 2607,
+    "likes": 97
+   },
+   {
+    "id": "deepseek-ai/DeepSeek-V4-Pro",
+    "pipeline": "text-generation",
+    "downloads": 3384418,
+    "likes": 4796
+   },
+   {
+    "id": "RazzzHF/Realism_Engine_Ideogram_4",
+    "pipeline": "unknown",
+    "downloads": 0,
+    "likes": 85
    },
    {
     "id": "Comfy-Org/Ideogram-4",
     "pipeline": "unknown",
     "downloads": 0,
-    "likes": 136
+    "likes": 142
    },
    {
-    "id": "XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash",
-    "pipeline": "text-generation",
-    "downloads": 660,
-    "likes": 88
+    "id": "MisoLabs/MisoTTS",
+    "pipeline": "text-to-speech",
+    "downloads": 0,
+    "likes": 195
    },
    {
-    "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
-    "pipeline": "text-generation",
-    "downloads": 91117,
-    "likes": 169
+    "id": "ByteDance/Bernini-R",
+    "pipeline": "image-text-to-video",
+    "downloads": 373,
+    "likes": 230
    }
   ]
  },
@@ -240,7 +240,7 @@
    },
    {
     "title": "Show HN: HelixDB – A graph database built on object storage",
-    "points": 147,
+    "points": 153,
     "url": "https://github.com/HelixDB/helix-db/tree/main"
    },
    {
