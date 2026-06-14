@@ -273,7 +273,8 @@ html=open(TPL,encoding="utf-8").read()
 
 # Tabs + lang slots（直面就业 on）
 tab_slot=(f'<a class="on" href="{OUT.split("/")[-1]}">{t("直面就业","Compass")}</a>\n'
-          f'      <a href="{("news.html" if ZH else "news-en.html")}">{t("看新闻","News")}</a>')
+          f'      <a href="{("news.html" if ZH else "news-en.html")}">{t("定制新闻","Custom News")}</a>\n'
+          f'      <a href="{("news-feeds.html" if ZH else "news-feeds-en.html")}">{t("常规新闻","Latest Feeds")}</a>')
 lang_slot=('<div class="lang">'
            f'<a class="{("on" if ZH else "")}" href="index.html">中</a>'
            f'<a class="{("on" if not ZH else "")}" href="index-en.html">EN</a>'
@@ -297,7 +298,7 @@ hero=(
  '<div class="hero-grid">'
  '<div class="hero-main">'
  f'<div class="hk">{t("就业 / Your Compass","Career / Your Compass")}</div>'
- f'<p class="lede">{t("想进 AI 行业？这页用真实北美招聘数据告诉你现在该学什么、避哪些坑——和右侧「看新闻」用的是同一份 signals.db。","Want into AI? This page uses real NA hiring data to show what to learn and what to avoid — same signals.db as the News view.")}</p>'
+ f'<p class="lede">{t("想进 AI 行业？这页用真实北美招聘数据告诉你现在该学什么、避哪些坑——和「定制新闻」用的是同一份 signals.db。","Want into AI? This page uses real NA hiring data to show what to learn and what to avoid — same signals.db as the News view.")}</p>'
  f'<div class="byline"><span class="rule"></span><b>{t("By NorthStar 编辑部","By NorthStar Editors")}</b> · 2026-05-19</div>'
  '<ol class="tldr">'
  +t(

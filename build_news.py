@@ -2,7 +2,7 @@
 用法: python3 build_news.py [zh|en]     默认 zh
 输出: site/news.html (zh) 或 site/news-en.html (en)"""
 import json, os, re, sys, sqlite3, collections
-from translate import translate_to_zh
+from translate import translate_to_zh, classify_article
 
 LANG = (sys.argv[1] if len(sys.argv)>1 else "zh").lower()
 ZH = LANG == "zh"
@@ -12,6 +12,7 @@ def t(zh, en):
     else:
         return en if en else en
 OUT = "site/news.html" if ZH else "site/news-en.html"
+OUT_FEEDS = "site/news-feeds.html" if ZH else "site/news-feeds-en.html"
 
 def L(fp, d=None):
     try: return json.load(open(fp))
@@ -21,6 +22,7 @@ jw=L("data/jobs_w1.json",{}); blg=L("data/blogs_w2.json",{}); oss=L("data/foresi
 ossv2=L("data/foresight_oss_v2.json",[]); w3=L("data/w3_sources.json",{}); edg=L("data/edgar_w2.json",{})
 sd=L("data/site_data.json",{}); ex=L("data/w4_extra.json",{}); h1b=L("data/h1b_ai.json",{})
 digest=L("data/daily_digest_latest.json",{})
+nl_data=L("data/newsletters.json",{"sources":[]})
 TPL="site/_news_design_template.html"
 
 def clean(s,n=180):
@@ -152,46 +154,89 @@ arx_cards=[{"subj":{"label":"arXiv","color":"#2A6FDB"},"hl":esc(t("", a["t"])),
     "mt":esc(f'{a["date"]} · {a["au"]}'),"dg":esc(t("", a["sum"])),
     "more":[[t("日期","Date"),esc(a["date"])],[t("作者","Authors"),esc(a["au"])]]} for a in arx]
 
-# 开源项目 & 模型
-DIR_ZH={"langchain-ai/langgraph":"Agent 编排","run-llama/llama_index":"RAG","modelcontextprotocol/servers":"MCP",
- "confident-ai/deepeval":"Eval 评测","vllm-project/vllm":"Serving 推理","OpenBMB/MiniCPM-V":"多模态","QwenLM/Qwen2.5-VL":"多模态"}
-DIR_EN={"langchain-ai/langgraph":"Agents/Orchestration","run-llama/llama_index":"RAG","modelcontextprotocol/servers":"MCP",
- "confident-ai/deepeval":"Evals","vllm-project/vllm":"Serving/Inference","OpenBMB/MiniCPM-V":"Multimodal","QwenLM/Qwen2.5-VL":"Multimodal"}
-DIR=DIR_ZH if ZH else DIR_EN
-GLOSS_ZH={"langchain-ai/langgraph":"有状态的多智能体/工作流编排框架，做可控 Agent 的事实标准之一",
- "run-llama/llama_index":"把私有数据接进 LLM 的 RAG 数据框架",
- "modelcontextprotocol/servers":"MCP 协议官方服务器集，让 LLM 标准化接外部工具/数据",
- "confident-ai/deepeval":"LLM/Agent 的单元测试式评测框架，回答“我的 AI 到底准不准”",
- "vllm-project/vllm":"高吞吐 LLM 推理/部署引擎，自托管上线模型的主力",
- "OpenBMB/MiniCPM-V":"端侧可跑的多模态(视觉语言)模型，手机级硬件就能用",
- "QwenLM/Qwen2.5-VL":"阿里 Qwen 系列视觉语言模型"}
-GLOSS_EN={"langchain-ai/langgraph":"Stateful multi-agent/workflow orchestration framework; a de facto standard for controllable Agents.",
- "run-llama/llama_index":"RAG data framework that wires private data into LLMs.",
- "modelcontextprotocol/servers":"Official MCP servers; lets LLMs standardly access external tools/data.",
- "confident-ai/deepeval":"Unit-test-style Eval framework for LLMs/Agents — 'is my AI actually correct?'",
- "vllm-project/vllm":"High-throughput LLM inference engine — the workhorse for self-hosting.",
- "OpenBMB/MiniCPM-V":"On-device multimodal (vision-language) model; runs on phone-grade hardware.",
- "QwenLM/Qwen2.5-VL":"Alibaba Qwen vision-language model series."}
-GLOSS=GLOSS_ZH if ZH else GLOSS_EN
+# 开源项目 & 模型 — 动态读 GitHub Trending（来自 fetch_newsletters.py 抓的当日数据）
+import re as _re2
+
+def _gh_cat(repo, desc):
+    """Auto-label repo by name + description"""
+    s = (repo + " " + desc).lower()
+    if any(x in s for x in ["agent","agentic","multi-agent","mcp","langchain","langgraph","crewai","autogen"]): return t("AI Agent","AI Agent")
+    if any(x in s for x in ["rag","retrieval","vector","embedding","llama_index","llamaindex"]): return t("RAG","RAG")
+    if any(x in s for x in ["inference","serving","deploy","vllm","lmcache","kv cache","throughput"]): return t("推理/部署","Inference")
+    if any(x in s for x in ["train","fine-tun","finetun","lora","rlhf","sft","pretraining","from scratch"]): return t("训练","Training")
+    if any(x in s for x in ["diffusion","stable diffusion","image gen","text-to-image","comfyui","webui"]): return t("图像生成","Image Gen")
+    if any(x in s for x in ["vision","multimodal","multi-modal","vlm","video","image-text"]): return t("多模态","Multimodal")
+    if any(x in s for x in ["eval","benchmark","test","measure","hallucin"]): return t("Eval 评测","Evals")
+    if any(x in s for x in ["security","safe","vulnerability","scan","scanner","red team"]): return t("安全","Security")
+    if any(x in s for x in ["voice","speech","audio","tts","whisper","asr"]): return t("语音","Speech")
+    if any(x in s for x in ["code","coding","copilot","program","interpreter","devtools"]): return t("编程工具","Coding")
+    if any(x in s for x in ["knowledge","wiki","note","obsidian","document","search"]): return t("知识管理","Knowledge")
+    return t("AI 工具","AI Tool")
+
 PAL=["#5B3FB8","#1F6F4A","#CC3B1B","#2A6FDB","#9A6B1F","#0F1419"]
-proj=[]
-for r in (oss+ossv2):
-    fn=r.get("full_name")
-    if not fn or "error" in r or fn not in DIR or any(p["repo"]==fn for p in proj): continue
-    c4=r.get("commits_4w") or 0
-    proj.append({"repo":fn,"dir":DIR[fn],"stars":r.get("stars") or 0,"c4w":c4,
-      "heat":t("🔥猛","🔥hot") if c4>=200 else(t("🟢活跃","🟢active") if c4>=30 else(t("🔴停滞","🔴stalled") if c4==0 else t("🟡温和","🟡warm")))})
-proj.sort(key=lambda x:-x["c4w"])
+
+# 从 newsletters.json 提取 GitHub Trending 数据
+_nl_data = L("data/newsletters.json", {})
+_gh_trending = []
+for _src in _nl_data.get("sources", []):
+    if "GitHub" in _src.get("name", "") and "Trending" in _src.get("name", ""):
+        for _it in _src.get("items", []):
+            _title = _it.get("title", "")
+            _summary_en = _it.get("summary", "")
+            _summary = (_it.get("summary_zh") or _summary_en) if ZH else _summary_en
+            _link = _it.get("link", "")
+            # 解析今日星数：'🔥 owner/repo · ⭐N today'
+            _mstars = _re2.search(r'⭐([\d,]+)', _title)
+            _stars_today = int(_mstars.group(1).replace(",","")) if _mstars else 0
+            # 解析仓库名
+            _mrepo = _re2.search(r'[\U0001F300-\U0001FFFF☀-➿]\s*([\w.-]+/[\w.-]+)', _title)
+            if not _mrepo: _mrepo = _re2.search(r'([\w.-]+/[\w.-]+)', _title)
+            _repo = _mrepo.group(1) if _mrepo else ""
+            if not _repo: continue
+            _gh_trending.append({
+                "repo": _repo, "stars_today": _stars_today,
+                "desc": _summary, "link": _link,
+                "cat": _gh_cat(_repo, _summary_en),  # 分类用英文 summary 更准
+            })
+
+# 按今日涨星排序
+_gh_trending.sort(key=lambda x: -x["stars_today"])
+
 proj_cards=[]
-for i,p in enumerate(proj):
-    proj_cards.append({"mono":{"letter":p["repo"].split("/")[-1][0].upper(),"color":PAL[i%len(PAL)]},
-      "hl":esc(p["repo"]),"mt":esc(p["dir"]),"dg":esc(GLOSS.get(p["repo"],"")),
-      "custom_ft":(f'<div class="starline"><span class="s-big">★{p["stars"]:,}</span>'
-        f'<span class="s-delta">{t("近4周","Past 4 wk")} +{p["c4w"]} commit</span>'
-        f'<span class="s-heat">{p["heat"]}</span></div>'),
-      "more":[[t("分类","Category"),esc(p["dir"])],
-              [t("近4周提交","Commits / 4 wk"),f'+{p["c4w"]} commit'],
-              [t("热度","Heat"),p["heat"]]]})
+if _gh_trending:
+    # 用 GitHub Trending 动态数据填卡片
+    for i, p in enumerate(_gh_trending[:8]):
+        _stars_label = f'⭐{p["stars_today"]:,} {t("今日新增","stars today")}'
+        proj_cards.append({
+            "mono": {"letter": p["repo"].split("/")[-1][0].upper(), "color": PAL[i%len(PAL)]},
+            "hl": esc(p["repo"]), "link": p["link"],
+            "mt": esc(p["cat"]), "dg": esc(p["desc"]),
+            "custom_ft": (
+                f'<div class="starline">'
+                f'<span class="s-big">{_stars_label}</span>'
+                f'<span class="s-heat">🔥 {t("今日 GitHub 热榜","GitHub Trending Today")}</span>'
+                f'</div>'
+            ),
+            "more": [
+                [t("分类","Category"), esc(p["cat"])],
+                [t("今日涨星","Stars Today"), _stars_label],
+                [t("来源","Source"), "GitHub Trending"],
+            ]
+        })
+else:
+    # Fallback：静态名单（无 Trending 数据时兜底）
+    _FALLBACK = [
+        ("vllm-project/vllm", t("推理/部署","Inference"), t("高吞吐 LLM 推理引擎","High-throughput LLM inference engine")),
+        ("langchain-ai/langgraph", t("AI Agent","AI Agent"), t("有状态多智能体编排框架","Stateful multi-agent orchestration")),
+        ("confident-ai/deepeval", t("Eval 评测","Evals"), t("LLM/Agent 单元测试评测框架","Unit-test eval framework for LLMs")),
+    ]
+    for i, (repo, cat, desc) in enumerate(_FALLBACK):
+        proj_cards.append({
+            "mono": {"letter": repo.split("/")[-1][0].upper(), "color": PAL[i%len(PAL)]},
+            "hl": esc(repo), "mt": esc(cat), "dg": esc(desc),
+            "custom_ft": f'<div class="starline"><span class="s-heat">⚠️ {t("暂无今日数据","No trending data today")}</span></div>',
+            "more": [[t("分类","Category"), esc(cat)]],
+        })
 hf=[m for m in ((w3.get("hf") or {}).get("trending") or [])][:7]
 HFG_ZH={"image-text-to-text":"多模态","text-generation":"文本生成","text-to-speech":"语音","image-to-video":"图生视频",
  "any-to-any":"全模态","text-to-image":"文生图","image-to-3d":"图生3D","question-answering":"问答","text-to-video":"文生视频"}
@@ -313,8 +358,13 @@ rep_cards=[{"soft":True,"hl":esc(rt),"mt":esc(rm),"dg":esc(rd),
    "more":[[t("类型","Type"),esc(rm)],[t("覆盖","Covers"),esc(rd)]]} for rt,rm,rd in reports]
 
 # 各栏要点 digest（中英）
-fn0=top_proj0=lambda i:(proj[i] if i<len(proj) else {"repo":"-","dir":"","c4w":0})
-top_proj=[fn0(0)(),fn0(1)()] if False else (proj[:2] if proj else [{"repo":"-","dir":"","c4w":0}]*2)
+# top_proj：兼容旧字段（dir/c4w），从 _gh_trending 派生
+def _tp(i):
+    if i < len(_gh_trending):
+        r = _gh_trending[i]
+        return {"repo": r["repo"], "dir": r["cat"], "c4w": r["stars_today"]}
+    return {"repo": "-", "dir": "", "c4w": 0}
+top_proj = [_tp(0), _tp(1)]
 hf_tags=(w3.get("hf") or {}).get("tag_freq",{})
 hf_mm=hf_tags.get("image-text-to-text",0)+hf_tags.get("image-to-video",0)+hf_tags.get("text-to-video",0)+hf_tags.get("any-to-any",0)
 pypi_sorted=sorted(pypi,key=lambda x:-x["m"])
@@ -361,16 +411,14 @@ DIGESTS = {
   f"<b>{len(arx)}</b> arXiv papers. Three themes: <em>attention / long context</em> (DashAttention) / <em>agent memory</em> (ReasoningBank) / <em>reasoning scaling</em> (Adaptive Parallel).<br>Core questions: longer, more accurate, cheaper."),
 
  "b6": t(
-  f"以 commit 活跃度看动量：<br>"
-  f"<b>{top_proj[0]['repo'].split('/')[-1]}</b>（{top_proj[0]['dir']}）4 周 <em>{top_proj[0]['c4w']}</em> + "
-  f"<b>{top_proj[1]['repo'].split('/')[-1]}</b>（{top_proj[1]['dir']}）<em>{top_proj[1]['c4w']}</em> commit 居前。<br>"
-  f"<em>Serving</em> 与 <em>Eval</em> 是开源最猛两条线。<br>"
-  f"HF trending 30 中 <b>{hf_mm}</b> 个多模态品类——采纳第一热。",
-  f"Momentum by commit activity:<br>"
-  f"<b>{top_proj[0]['repo'].split('/')[-1]}</b> ({top_proj[0]['dir']}) <em>{top_proj[0]['c4w']}</em> + "
-  f"<b>{top_proj[1]['repo'].split('/')[-1]}</b> ({top_proj[1]['dir']}) <em>{top_proj[1]['c4w']}</em> commits in 4 wk, leading.<br>"
-  f"<em>Serving</em> and <em>Evals</em> are the two hottest open-source lines.<br>"
-  f"On HF trending: <b>{hf_mm}</b> of 30 are multimodal — adoption #1."),
+  f"今日 GitHub Trending AI 热榜：<br>"
+  f"<b>{top_proj[0]['repo'].split('/')[-1]}</b>（{top_proj[0]['dir']}）今日 +⭐<em>{top_proj[0]['c4w']:,}</em>、"
+  f"<b>{top_proj[1]['repo'].split('/')[-1]}</b>（{top_proj[1]['dir']}）+⭐<em>{top_proj[1]['c4w']:,}</em> 居前。<br>"
+  f"共 <b>{len(_gh_trending)}</b> 个 AI 仓上榜。HF trending 中 <b>{hf_mm}</b> 个多模态品类。",
+  f"GitHub Trending AI today:<br>"
+  f"<b>{top_proj[0]['repo'].split('/')[-1]}</b> ({top_proj[0]['dir']}) +⭐<em>{top_proj[0]['c4w']:,}</em>, "
+  f"<b>{top_proj[1]['repo'].split('/')[-1]}</b> ({top_proj[1]['dir']}) +⭐<em>{top_proj[1]['c4w']:,}</em> lead.<br>"
+  f"<b>{len(_gh_trending)}</b> AI repos trending. HF has <b>{hf_mm}</b> multimodal models."),
 
  "b7": t(
   f"<b>{esc(p1['pkg'])}</b> <em>{p1['m']/1e6:.0f}M/月</em>（多模型可切网关）一骑绝尘，远超 <b>{esc(p2['pkg'])}</b> <em>{p2['m']/1e6:.0f}M</em>。<br>"
@@ -404,13 +452,230 @@ DIGESTS = {
   "<b>Authoritative annual reports</b> are <em>direction calibration</em> for quarterly review, not real-time news.")),
 }
 
+# ── 简报文章按类型分类（打散全部信源，按内容重组）──
+# 类型定义：(中文名, band-id, 英文关键词列表, 中文描述, 英文描述)
+NL_CATS=[
+ ("产品 & 发布","nl-cat-product",
+  ["release","launch","announced","introduces","rolls out","unveils","ships","available","new model","update","gpt","claude","gemini","llama","mistral","grok","copilot","assistant"],
+  "新模型发布 · 产品上线 · 功能更新","New model releases · product launches · feature updates"),
+ ("研究 & 论文","nl-cat-research",
+  ["paper","research","study","arxiv","benchmark","training","algorithm","dataset","evaluation","we propose","experiment","architecture","pretraining","fine-tun","reasoning","scaling"],
+  "学术论文 · 基准测试 · 技术深挖","Academic papers · benchmarks · technical deep-dives"),
+ ("开源 & 工具","nl-cat-oss",
+  ["open source","open-source","github","huggingface","framework","library","sdk","weights","developer","tool","open weight","open model","langchain","llamaindex","vllm","ollama"],
+  "开源框架 · HuggingFace 新项目 · 开发者工具","Open-source frameworks · HuggingFace · dev tools"),
+ ("商业 & 产业","nl-cat-biz",
+  ["funding","investment","enterprise","revenue","deal","acquisition","startup","valuation","billion","million","raises","Series","venture","partnership","customer","contract"],
+  "融资动态 · 企业采购 · 产业格局","Funding · enterprise deals · industry landscape"),
+ ("政策 & 安全","nl-cat-safety",
+  ["regulation","safety","policy","ethics","copyright","government","law","risk","alignment","responsible","bias","harm","governance","privacy","trust","misinformation","copyright"],
+  "AI 安全 · 监管政策 · 伦理责任","AI safety · regulation · ethics & governance"),
+ ("观点 & 分析","nl-cat-opinion",
+  ["opinion","analysis","why","how to","review","perspective","lessons","thoughts","reflections","deep dive","explained","guide","commentary","insights","predictions","future of","what"],
+  "深度分析 · 观点评论 · 趋势解读","Analysis · opinions · trend interpretation"),
+]
+NL_CAT_OTHER=("其他资讯","nl-cat-other",[],"其他 AI 相关动态","Other AI news")
+
+def _nl_classify(title,summary):
+    # P1-2: 先用 DeepSeek AI 分类（ZH 模式且有 key 时）
+    if ZH:
+        ai_id = classify_article(title, summary)
+        if ai_id:
+            for cat_name, cat_id, *_ in NL_CATS:
+                if cat_id == ai_id: return (cat_name, cat_id)
+            if ai_id == NL_CAT_OTHER[1]: return (NL_CAT_OTHER[0], NL_CAT_OTHER[1])
+    # 降级：关键词匹配
+    text=(title+" "+summary).lower()
+    best,best_n=None,0
+    for cat_name,cat_id,kws,_,_ in NL_CATS:
+        score=sum(1 for kw in kws if kw in text)
+        if score>best_n: best_n=score; best=(cat_name,cat_id)
+    return best if best else (NL_CAT_OTHER[0],NL_CAT_OTHER[1])
+
+# 扁平化所有文章
+_nl_all=[]
+for _src in (nl_data.get("sources",[]) or []):
+    for _item in (_src.get("items") or []):
+        _nl_all.append({**_item,"_src_name":_src["name"],"_src_id":_src["id"]})
+
+# ── P0-1 去重聚类：全局把"同一条新闻被多家报道"并成一个簇 ──
+import re as _re
+_NL_STOP={"this","that","with","from","your","what","which","have","will","about","they",
+ "their","more","than","into","when","some","these","could","would","should","being","there",
+ "here","just","like","over","after","before","while","first","also","most","much","such",
+ "make","made","using","used","still","even","other","every","says","said","gets","new","now"}
+_NL_ENT=_re.compile(r'\b(OpenAI|Anthropic|Claude|GPT|Gemini|Google|DeepMind|Meta|Llama|Mistral|'
+ r'DeepSeek|Grok|ChatGPT|Sora|Nvidia|xAI|Apple|Microsoft|Qwen|Amazon|Cohere|Perplexity|'
+ r'Mythos|Fable|Codex|Copilot|HuggingFace)\b', _re.I)
+def _nl_kw(t):
+    return set(w for w in _re.findall(r'[a-zA-Z]{4,}', (t or "").lower()) if w not in _NL_STOP)
+def _nl_ent(t):
+    return set(e.lower() for e in _NL_ENT.findall(t or ""))
+
+# 预计算每篇的关键词/实体（仅用标题，避免摘要噪声）
+for _a in _nl_all:
+    _ttl=_a.get("title","")
+    _a["_kw"]=_nl_kw(_ttl)
+    _a["_ent"]=_nl_ent(_ttl+" "+_a.get("summary",""))
+    # 摘要型标题检测：逗号≥2 或 标题里实体≥3 = 多话题拼接，不能当合并桥（否则错连一堆不相关新闻）
+    _a["_digest"]=(_ttl.count(",")>=2 or _ttl.count("，")>=2 or len(_nl_ent(_ttl))>=3)
+
+# 并查集
+_parent=list(range(len(_nl_all)))
+def _find(x):
+    while _parent[x]!=x: _parent[x]=_parent[_parent[x]]; x=_parent[x]
+    return x
+def _union(a,b):
+    ra,rb=_find(a),_find(b)
+    if ra!=rb: _parent[ra]=rb
+
+# 两两判定（保守阈值：共享实词≥3，或 共享实体≥1 且 共享实词≥2）
+for _i in range(len(_nl_all)):
+    if _nl_all[_i]["_digest"]: continue          # 摘要型不当桥
+    for _j in range(_i+1,len(_nl_all)):
+        if _nl_all[_j]["_digest"]: continue
+        if _nl_all[_i]["_src_name"]==_nl_all[_j]["_src_name"]: continue
+        _ck=_nl_all[_i]["_kw"]&_nl_all[_j]["_kw"]
+        _ce=_nl_all[_i]["_ent"]&_nl_all[_j]["_ent"]
+        if len(_ck)>=3 or (len(_ce)>=1 and len(_ck)>=2):
+            _union(_i,_j)
+
+# 收簇
+_clusters={}
+for _i in range(len(_nl_all)):
+    _clusters.setdefault(_find(_i),[]).append(_nl_all[_i])
+
+# 选代表：① 新闻媒体源优先（标题最像新闻）② 最"中心"成员（与其他成员词重叠最多）
+#         ③ 避开营销/CTA 标题 ④ 非摘要型、逗号少、长度适中
+_DIGEST_SRC={"TLDR AI","Last Week in AI","Hacker News AI 热议"}
+_NEWS_SRC={"The Decoder","VentureBeat AI","TechCrunch AI","The Verge AI",
+           "MIT Technology Review AI","The Sequence","Interconnects","Synced AI"}
+_MKT_PAT=_re.compile(r'(?i)(access |through your|get started|available now|sign up|'
+                     r'commitment|pricing|buy now|introducing your|now available)')
+def _src_tier(name):
+    if name in _NEWS_SRC: return 2      # 新闻媒体，最适合当头条
+    if name in _DIGEST_SRC: return 0    # 摘要/聚合源，最差
+    return 1                            # 官博/个人博客，居中
+def _make_cluster(members):
+    # 中心度：每个成员标题词 与 其他成员标题词并集 的重叠数
+    def centroid(m):
+        others=set()
+        for o in members:
+            if o is not m: others|=o.get("_kw",set())
+        return len(m.get("_kw",set()) & others)
+    def rep_key(m):
+        tit=m.get("title","")
+        return (_src_tier(m["_src_name"]),                 # 新闻源优先
+                centroid(m),                               # 最中心（多数家的说法）
+                0 if _MKT_PAT.search(tit) else 1,          # 非营销标题优先
+                -tit.count(","),                           # 逗号少
+                -abs(len(tit)-65))                         # 长度适中
+    members=sorted(members,key=rep_key,reverse=True)
+    rep=members[0]
+    srcs=[]
+    for m in members:
+        if m["_src_name"] not in srcs: srcs.append(m["_src_name"])
+    return {"rep":rep,"members":members,"srcs":srcs,"size":len(srcs)}
+_nl_clusters=[_make_cluster(ms) for ms in _clusters.values()]
+
+# 分类（按代表标题+摘要）
+for _c in _nl_clusters:
+    _cname,_cid=_nl_classify(_c["rep"].get("title",""),_c["rep"].get("summary",""))
+    _c["cat_id"]=_cid; _c["cat_name"]=_cname
+
+# P0-2 今日头条：被最多家报道的 Top 簇（仅取多源簇）
+_nl_top=sorted([c for c in _nl_clusters if c["size"]>=2],key=lambda c:(-c["size"],c["rep"].get("date","")))[:3]
+
+# 把簇渲染成一张卡
+def _cluster_card(c,rank=None):
+    rep=c["rep"]; _link=rep.get("link","") or "#"
+    _title=t("", rep.get("title",""))
+    _sum=t("", clean(rep.get("summary",""),200)) if rep.get("summary","") else t("（未提供摘要）","(no summary)")
+    _badge=(f'<span style="display:inline-block;font:600 11px var(--mono);color:var(--acc);'
+            f'background:#FBEAE4;padding:1px 7px;border-radius:20px;margin-right:6px">'
+            f'🔗 {c["size"]} {t("家在报道","sources")}</span>') if c["size"]>=2 else ""
+    _hl=(f'{_badge}<a href="{esc(_link)}" target="_blank" onclick="event.stopPropagation()" '
+         f'style="color:inherit;text-decoration:none;border-bottom:1px dotted var(--mut-2)">'
+         f'{esc(_title)}</a>')
+    _mt=esc(f'{rep["_src_name"]} · {rep.get("date","")}')
+    if c["size"]>=2:
+        _mt+=esc(f' · +{c["size"]-1} '+t("家","more"))
+    # more: 列出每家的标题+链接
+    _more=[[t("分类","Category"),esc(t(c["cat_name"],c["cat_name"]))],
+           [t("报道家数","Coverage"),f'{c["size"]} '+t("家","sources")]]
+    for m in c["members"][:8]:
+        _ml=m.get("link","") or "#"
+        _more.append([esc(m["_src_name"]),
+            f'<a href="{esc(_ml)}" target="_blank" style="color:var(--acc)">{esc(t("",m.get("title",""))[:50])}</a>'])
+    return {"hl":_hl,"mt":_mt,"dg":esc(_sum),"more":_more}
+
+# 按分类分组（簇为单位）
+_nl_groups={cat_id:[] for _,cat_id,*_ in NL_CATS}
+_nl_groups[NL_CAT_OTHER[1]]=[]
+for _c in _nl_clusters:
+    _nl_groups[_c["cat_id"]].append(_c)
+# 每组内：多源簇优先（被报道越多越靠前），再按日期
+for _cid in _nl_groups:
+    _nl_groups[_cid].sort(key=lambda c:(-c["size"],c["rep"].get("date","")),reverse=False)
+    _nl_groups[_cid].sort(key=lambda c:(c["size"],c["rep"].get("date","")),reverse=True)
+
+# 构建 nl_bands（每个类型→一行）
+nl_bands=[]
+for cat_name,cat_id,_kws,desc_zh,desc_en in NL_CATS+[NL_CAT_OTHER]:
+    _cs=_nl_groups.get(cat_id,[])
+    if not _cs: continue
+    _src_set=set(s for c in _cs for s in c["srcs"])
+    _art_n=sum(len(c["members"]) for c in _cs)
+    _nl_cards=[_cluster_card(c) for c in _cs]
+    nl_bands.append({
+        "id":cat_id,
+        "n":f"{len(nl_bands)+1:02d}",
+        "k":t(cat_name,cat_name),
+        "pp":t(desc_zh,desc_en),
+        "cnt":t(f'{len(_cs)} 条 · {_art_n} 篇 · {len(_src_set)} 家',
+                f'{len(_cs)} stories · {_art_n} articles · {len(_src_set)} sources'),
+        "cards":_nl_cards,
+        "digest":"",
+    })
+
+# ── P1-1 今日热度榜：全部簇按「被报道家数 × 信源层级」排序 ──
+_hot_clusters=sorted(_nl_clusters,
+    key=lambda c:(c["size"]*10+_src_tier(c["rep"]["_src_name"]), c["rep"].get("date","")),
+    reverse=True)[:15]
+
+def _ranked_card(c, rank):
+    """在 _cluster_card 基础上加排名前缀"""
+    card=_cluster_card(c)
+    _rk=(f'<span style="display:inline-block;min-width:26px;font:700 12px var(--mono);'
+         f'color:var(--mut-2);margin-right:4px">#{rank}</span>')
+    card["hl"]=_rk+card["hl"]
+    return card
+
+_hot_cards=[_ranked_card(c,i+1) for i,c in enumerate(_hot_clusters)]
+_hot_multi=sum(1 for c in _hot_clusters if c["size"]>=2)
+_hot_band={
+    "id":"nl-hot",
+    "n":"🔥",
+    "k":t("今日热度榜","Hot Today"),
+    "pp":t("按「被多家媒体同时报道」排序 · 越靠前越重要",
+           "Ranked by cross-source coverage · more outlets = more important"),
+    "cnt":t(f'前 {len(_hot_clusters)} 条 · 其中 {_hot_multi} 条多源',
+            f'Top {len(_hot_clusters)} · {_hot_multi} multi-source'),
+    "cards":_hot_cards,
+    "digest":t(
+        f"这 {len(_hot_clusters)} 条是当前最值得关注的 AI 新闻，热度 = 「被几家媒体同时报道」。🔗 多源报道排在前面——同一件事被越多家写到，说明圈子里公认它重要。时间有限时从第 1 条读起。",
+        f"These {len(_hot_clusters)} stories are ranked by cross-source coverage. 🔗 Multi-source stories rank first — the more outlets cover a story, the more the AI community considers it important. Read top-to-bottom when time is short."),
+}
+# 热度榜置顶（其他分类 band 在后）
+nl_bands.insert(0, _hot_band)
+
 BANDS=[
  {"id":"b1","n":"01","k":t("岗位动态","Job Pulse"),"pp":t("北美 AI 在招什么、给多少钱","What NA AI is hiring · pay levels"),"cnt":t(f'{jobs_kept} AI-相关 / {jobs_total} 抓取',f'{jobs_kept} AI-relevant / {jobs_total} scraped'),"cards":jobs},
  {"id":"b2","n":"02","k":t("招聘市场风向","Hiring Signal"),"pp":t("薪资水位 + 真实技能需求","Salary level + real skill demand"),"cnt":"","cards":hire_cards},
  {"id":"b3","n":"03","k":t("AI 明星 & 社区","Voices & Community"),"pp":t("他们认为接下来什么重要","What they think matters next"),"cnt":t(f'{len(blg.get("items") or [])} 篇',f'{len(blg.get("items") or [])} pieces'),"cards":talk_cards},
  {"id":"b4","n":"04","k":t("Hacker News 热议","Hacker News Buzz"),"pp":t("社区现在吵什么 · 早期信号源","What the community is buzzing about · early signal"),"cnt":t(f'{len(hn_hot)} 条 · ≥80 pts',f'{len(hn_hot)} stories · ≥80 pts'),"cards":hn_hot_cards},
  {"id":"b5","n":"05","k":t("研究前沿","Research Frontier"),"pp":"arXiv cs.AI/LG/CL","cnt":t(f"{len(arx)} 篇",f"{len(arx)} papers"),"cards":arx_cards},
- {"id":"b6","n":"06","k":t("开源项目 & 模型","OSS & Models"),"pp":t("哪些框架/模型在火","Hot frameworks / models"),"cnt":"","cards":proj_cards},
+ {"id":"b6","n":"06","k":t("开源项目 & 模型","OSS & Models"),"pp":t("今日 GitHub 热榜","GitHub Trending Today"),"cnt":t(f'{len(_gh_trending)} 个',f'{len(_gh_trending)} repos') if _gh_trending else "","cards":proj_cards},
  {"id":"b7","n":"07","k":t("库采纳曲线","Library Adoption"),"pp":t("PyPI 月下载＝真实采纳（单期快照）","PyPI monthly DL = real adoption (snapshot)"),"cnt":"","cards":pypi_cards},
  {"id":"b8","n":"08","k":t("大公司状况","Big-Tech Bets"),"pp":t("大厂真金白银押什么","Where the big money goes"),"cnt":"SEC 10-K","cards":ent_cards},
  {"id":"b9","n":"09","k":t("H-1B 签证 & 权威年报","H-1B Visa & Annuals"),"pp":t("北美落地参照 · USCIS 真实数据","NA landing reference · real USCIS data"),"cnt":(t(f'{h1b.get("summary",{}).get("n_ai_employers_3y",0)} AI 雇主',f'{h1b.get("summary",{}).get("n_ai_employers_3y",0)} AI employers') if h1b else ""),"cards":[c for c in [visa_card,trend_card] if c]+rep_cards},
@@ -423,7 +688,8 @@ html=open(TPL,encoding="utf-8").read()
 
 # 顶栏 lang + tabs（双语切换 + 跨页 cross-link）
 tab_slot=(f'<a href="{("index.html" if ZH else "index-en.html")}">{t("直面就业","Compass")}</a>\n'
-          f'      <a class="on" href="{OUT.split("/")[-1]}">{t("看新闻","News")}</a>')
+          f'      <a class="on" href="{OUT.split("/")[-1]}">{t("定制新闻","Custom News")}</a>\n'
+          f'      <a href="{OUT_FEEDS.split("/")[-1]}">{t("常规新闻","Latest Feeds")}</a>')
 lang_slot=('<div class="lang">'
            f'<a class="{("on" if ZH else "")}" href="news.html">中</a>'
            f'<a class="{("on" if not ZH else "")}" href="news-en.html">EN</a>'
@@ -431,8 +697,8 @@ lang_slot=('<div class="lang">'
 html=html.replace("<!--LANG_SLOT-->", lang_slot).replace("<!--TAB_SLOT-->", tab_slot)
 
 # Title
-html=html.replace("<title>NorthStar — 北美 AI 简讯（设计样张）</title>",
-                  t("<title>NorthStar — 北美 AI 简讯</title>","<title>NorthStar — North America AI Brief</title>"))
+html=html.replace("<title>AIPulse — 北美 AI 简讯（设计样张）</title>",
+                  t("<title>AIPulse — 北美 AI 简讯</title>","<title>AIPulse — North America AI Brief</title>"))
 
 # bands JSON
 bands_js="const bands = "+json.dumps(BANDS,ensure_ascii=False)+";"
@@ -475,7 +741,7 @@ else:
 html=sub1(r'<ol class="tldr">.*?</ol>', tldr_html, html)
 html=html.replace('<div class="hk">本周判断 / TL;DR</div>', f'<div class="hk">{hk}</div>')
 html=sub1(r'<p class="lede">.*?</p>', f'<p class="lede">{lede}</p>', html)
-html=html.replace('<b>By NorthStar 编辑部</b>', f'<b>{t("By NorthStar 编辑部","By NorthStar Editors")}</b>')
+html=html.replace('<b>By AIPulse 编辑部</b>', f'<b>{t("By AIPulse 编辑部","By AIPulse Editors")}</b>')
 
 # KPI 行
 kpi=('<div class="kpi-row" aria-label="">'
@@ -515,8 +781,10 @@ html=html.replace('<div class="stat-label">本期样本</div>', f'<div class="st
 # TOC head
 html=html.replace('本期目录<em>/ Inside this issue</em>',
                   t('本期目录<em>/ Inside this issue</em>','Contents <em>/ Inside this issue</em>'))
+_total_cards=sum(len(b['cards']) for b in BANDS)
 html=html.replace('8 SECTIONS · ~22 CARDS · 5 MIN READ',
-                  t('8 栏目 · ~62 卡片 · 5 分钟','8 SECTIONS · ~62 CARDS · 5 MIN READ'))
+                  t(f'{len(BANDS)} 栏目 · ~{_total_cards} 卡片 · 5 分钟',
+                    f'{len(BANDS)} SECTIONS · ~{_total_cards} CARDS · 5 MIN READ'))
 
 # Sidenav labels（替换整段，按 BANDS 重生成）
 sn=('<nav class="sidenav" aria-label="Sections">'+
@@ -532,12 +800,12 @@ html=html.replace('<span class="lede-kick">本栏要点</span>',
 
 # Footer
 foot=t(
- '<div class="rule"><b>生产版</b> · 真实 signals.db 数据 · v2 editorial</div>'
- '8 栏均来自真实抓取（JobSpy / arXiv / RSS / GitHub / HuggingFace / Hacker News / SEC EDGAR） · '
+ f'<div class="rule"><b>定制新闻</b> · 真实 signals.db 数据 · v2 editorial</div>'
+ f'{len(BANDS)} 栏均来自真实抓取（JobSpy / arXiv / RSS / GitHub / HuggingFace / Hacker News / SEC EDGAR） · '
  'KPI 环比与 PyPI 12 月序列因仅单期快照诚实留空（2026-08 首次可比） · '
  '签证/年报为诚实占位 · 字体走 Google Fonts CDN，离线回退本地衬线 · 点卡片展开详情',
- '<div class="rule"><b>Production</b> · real signals.db data · v2 editorial</div>'
- 'All 8 sections sourced from real scrapes (JobSpy / arXiv / RSS / GitHub / HuggingFace / Hacker News / SEC EDGAR). '
+ f'<div class="rule"><b>Custom News</b> · real signals.db data · v2 editorial</div>'
+ f'All {len(BANDS)} sections sourced from real scrapes (JobSpy / arXiv / RSS / GitHub / HuggingFace / Hacker News / SEC EDGAR). '
  'KPI W-o-W and PyPI 12-mo series intentionally blank — snapshot only, first comparable Aug 2026. '
  'Visa & annuals are honest placeholders. Fonts via Google Fonts CDN with local-serif fallback. Click any card to expand.')
 html=sub1(r'<footer>.*?</footer>', f'<footer>{foot}</footer>', html)
@@ -545,3 +813,393 @@ html=sub1(r'<footer>.*?</footer>', f'<footer>{foot}</footer>', html)
 os.makedirs("site",exist_ok=True)
 open(OUT,"w",encoding="utf-8").write(html)
 print(f"{OUT} {os.path.getsize(OUT)} bytes · LANG={LANG} · bands {len(BANDS)} · cards {sum(len(b['cards']) for b in BANDS)}")
+
+# ══════════════════════════════════════════════════════
+# 常规新闻页（news-feeds.html）—— 12 家 AI 简报信源
+# ══════════════════════════════════════════════════════
+if nl_bands:
+    # 给简报页重新从 01 编号
+    for _fi, _fb in enumerate(nl_bands):
+        _fb["n"] = f"{_fi+1:02d}"
+    _fc = sum(len(b["cards"]) for b in nl_bands)
+    _src_total = len(nl_data.get("sources", []) or [])  # 实际信源家数（供 issueline 用）
+
+    # ── P2-3 信源健康：计算「上次抓取距现在多久」──
+    import datetime as _dt
+    _collected_at = nl_data.get("collected_at","")
+    try:
+        _cdt = _dt.datetime.fromisoformat(_collected_at)
+        _delta = _dt.datetime.now() - _cdt
+        _h = int(_delta.total_seconds()//3600)
+        _m = int((_delta.total_seconds()%3600)//60)
+        if _delta.days >= 1:
+            _feeds_ago = t(f"{_delta.days} 天前", f"{_delta.days}d ago")
+        elif _h >= 1:
+            _feeds_ago = t(f"{_h} 小时前", f"{_h}h ago")
+        else:
+            _feeds_ago = t(f"{_m} 分钟前", f"{_m}min ago")
+        _health_icon = "🟢" if _h < 12 else ("🟡" if _h < 24 else "🔴")
+    except:
+        _feeds_ago = t("时间未知","unknown"); _health_icon = "⚪"
+    # 失败/空信源统计
+    _err_srcs = [s["name"] for s in (nl_data.get("sources",[]) or [])
+                 if not s.get("items") or str(s.get("status","")).startswith("err")]
+    _health_tip = (t(f"⚠️ {len(_err_srcs)} 家无数据: {', '.join(_err_srcs[:3])}",
+                     f"⚠️ {len(_err_srcs)} sources empty: {', '.join(_err_srcs[:3])}")
+                   if _err_srcs else "")
+
+    html_f = open(TPL, encoding="utf-8").read()
+
+    # lang slot（指向 news-feeds.html / news-feeds-en.html）
+    lang_slot_f = ('<div class="lang">'
+                   f'<a class="{("on" if ZH else "")}" href="news-feeds.html">中</a>'
+                   f'<a class="{("on" if not ZH else "")}" href="news-feeds-en.html">EN</a>'
+                   '</div>')
+
+    # tab slot（常规新闻 active）
+    tab_slot_f = (f'<a href="{("index.html" if ZH else "index-en.html")}">{t("直面就业","Compass")}</a>\n'
+                  f'      <a href="{OUT.split("/")[-1]}">{t("定制新闻","Custom News")}</a>\n'
+                  f'      <a class="on" href="{OUT_FEEDS.split("/")[-1]}">{t("常规新闻","Latest Feeds")}</a>')
+    html_f = html_f.replace("<!--LANG_SLOT-->", lang_slot_f).replace("<!--TAB_SLOT-->", tab_slot_f)
+
+    # title
+    html_f = html_f.replace("<title>AIPulse — 北美 AI 简讯（设计样张）</title>",
+                            t("<title>AIPulse — 常规新闻</title>",
+                              "<title>AIPulse — Latest AI Feeds</title>"))
+
+    # bands JSON
+    bands_js_f = "const bands = " + json.dumps(nl_bands, ensure_ascii=False) + ";"
+    html_f = sub1(r"const bands = \[.*?\n\];", bands_js_f, html_f)
+
+    # issueline（P2-3：加健康徽章 + 更新时间）
+    _health_span = (f'<span style="font-size:13px">{_health_icon} '
+                    + t(f'更新于 {_feeds_ago}', f'updated {_feeds_ago}')
+                    + (f' · {_health_tip}' if _health_tip else '') + '</span>')
+    iss_f = ('<div class="issueline-inner">' +
+             t(f'<span class="iss-no">常规新闻</span><span class="dot">·</span>'
+               f'<span>{_src_total} 家 AI 专业媒体</span><span class="dot">·</span>'
+               f'<span>RSS 自动抓取</span><span class="dot">·</span>{_health_span}',
+               f'<span class="iss-no">Latest Feeds</span><span class="dot">·</span>'
+               f'<span>{_src_total} AI media sources</span><span class="dot">·</span>'
+               f'<span>RSS auto-fetch</span><span class="dot">·</span>{_health_span}') +
+             '</div>')
+    html_f = sub1(r'<div class="issueline-inner">.*?</div>', iss_f, html_f)
+
+    # hero tldr — P0-2 今日头条：被最多家报道的 Top 3 簇
+    if _nl_top:
+        tldr_html_f = ('<ol class="tldr">' +
+            "".join(
+              f'<li><a href="{esc(c["rep"].get("link","#"))}" target="_blank" onclick="event.stopPropagation()" '
+              f'style="color:inherit;text-decoration:none;border-bottom:1px dotted var(--mut-2)">'
+              f'{esc(t("",c["rep"].get("title","")))}</a> '
+              f'<em style="color:var(--acc);font-style:normal;font-weight:600">· {c["size"]} {t("家在报道","sources")}</em></li>'
+              for c in _nl_top) +
+            '</ol>')
+    else:
+        tldr_html_f = ('<ol class="tldr">' +
+            "".join(f'<li><b>{esc(b["k"])}</b> — {esc(b["pp"])}</li>' for b in nl_bands[:5]) +
+            '</ol>')
+    _multi_n=len([c for c in _nl_clusters if c["size"]>=2])
+    _nl_cat_n=len([b for b in nl_bands if b["id"]!="nl-hot"])  # 分类数（不含热度榜）
+    hk_f = t("今日头条 · 多家共同报道", "Today's Headlines · cross-source")
+    lede_f = t(f"已自动去重的 {len(_nl_clusters)} 条新闻，来自 {_src_total} 家 AI 专业信源，按 {_nl_cat_n} 类内容归类——其中 {_multi_n} 条被两家以上同时报道。⬆️ 热度榜在最前面，下方按分类浏览，点标题直跳原文。",
+               f"Auto-deduplicated {len(_nl_clusters)} stories from {_src_total} AI sources across {_nl_cat_n} categories — {_multi_n} covered by 2+ sources. ⬆️ Hot Today ranking first; browse by category below.")
+    html_f = sub1(r'<ol class="tldr">.*?</ol>', tldr_html_f, html_f)
+    html_f = html_f.replace('<div class="hk">本周判断 / TL;DR</div>', f'<div class="hk">{hk_f}</div>')
+    html_f = sub1(r'<p class="lede">.*?</p>', f'<p class="lede">{lede_f}</p>', html_f)
+    html_f = html_f.replace('<b>By AIPulse 编辑部</b>',
+                            f'<b>{t("By AIPulse · RSS 自动聚合","By AIPulse · RSS auto-aggregated")}</b>')
+
+    # KPI 行（简化：显示信源数 / 文章数）
+    kpi_f = ('<div class="kpi-row" aria-label="">'
+             '<div class="kpi-cell" style="grid-column:1/-1;border-right:none;padding-left:0">'
+             f'<div class="kpi-lbl">{t("本次抓取","This fetch")}</div>'
+             f'<div class="kpi-val"><span style="font-family:var(--serif);font-size:20px">'
+             f'{len(nl_bands)} {t("家信源","sources")} · {_fc} {t("篇","articles")}</span></div>'
+             f'<div class="kpi-sub">{t("RSS 实时抓取，近 14–30 天内容，每次运行自动更新","RSS live fetch · past 14–30 days · auto-refreshed each run")}</div>'
+             '</div></div>')
+    html_f = sub1(r'<div class="kpi-row".*?</div>\s*</div>\s*(?=<div class="evidence">)', kpi_f + "        ", html_f)
+
+    # evidence / ev-preds — 留空
+    html_f = sub1(r'<div class="ev-tags">.*?</div>', '<div class="ev-tags"></div>', html_f)
+    html_f = sub1(r'<ul class="ev-preds">.*?</ul>', '<ul class="ev-preds"></ul>', html_f)
+    html_f = html_f.replace('交叉印证 <em>cross-evidence ≥2 sources</em>', t('信源列表','Feed index'))
+    html_f = html_f.replace('可证伪预测 <em>due 2026-08</em>', t('近期更新','Recent updates'))
+
+    # hero-stat
+    sg_f = (f'<div class="stat-grid">'
+            f'<div><b>{len(nl_bands)}</b><span>{t("家信源","Sources")}</span></div>'
+            f'<div><b>{_fc}</b><span>{t("篇文章","Articles")}</span></div>'
+            f'<div><b>{t("日报","Daily")}</b><span>{t("更新频率","Cadence")}</span></div>'
+            f'<div><b>RSS</b><span>{t("直接抓取","Live fetch")}</span></div></div>')
+    html_f = sub1(r'<div class="stat-grid">.*?</div>\s*</div>\s*(?=</aside>)', sg_f + "      ", html_f)
+    html_f = html_f.replace('<div class="stat-label">本期样本</div>',
+                            f'<div class="stat-label">{t("信源快照","Feed snapshot")}</div>')
+
+    # TOC head + section count
+    html_f = html_f.replace('本期目录<em>/ Inside this issue</em>',
+                            t('信源目录<em>/ Feed index</em>', 'Feed index <em>/ Browse by source</em>'))
+    html_f = html_f.replace('8 SECTIONS · ~22 CARDS · 5 MIN READ',
+                            t(f'{len(nl_bands)} 家信源 · {_fc} 篇文章',
+                              f'{len(nl_bands)} SOURCES · {_fc} ARTICLES'))
+
+    # sidenav
+    sn_f = ('<nav class="sidenav" aria-label="Sections">' +
+            "".join(f'<a href="#{b["id"]}" data-anchor="{b["id"]}"><span class="pip"></span>'
+                    f'<span class="lbl">{b["n"]} {esc(b["k"])}</span></a>' for b in nl_bands) +
+            '</nav>')
+    html_f = sub1(r'<nav class="sidenav".*?</nav>', sn_f, html_f)
+
+    # section TL;DR label
+    html_f = html_f.replace('<span class="lede-kick">本栏要点</span>',
+                            f'<span class="lede-kick">{t("关于本刊","About")}</span>')
+
+    # footer
+    foot_f = t(
+        f'<div class="rule"><b>常规新闻</b> · RSS 自动聚合 · 每日更新</div>'
+        f'{_src_total} 家 AI 专业媒体信源 · 内容版权归各发布方所有 · 点标题跳原文 · 字体走 Google Fonts CDN',
+        f'<div class="rule"><b>Latest Feeds</b> · RSS auto-aggregated · updated daily</div>'
+        f'{_src_total} specialized AI media sources · content copyright belongs to respective publishers · click titles to read originals · fonts via Google Fonts CDN')
+    html_f = sub1(r'<footer>.*?</footer>', f'<footer>{foot_f}</footer>', html_f)
+
+    # ── P2-2 时间过滤条 + P2-2 JS（注入到 </style> 和 </body>）──
+    _date_css = """
+/* P2-2 时间过滤条 */
+#date-filter-bar{display:flex;align-items:center;gap:8px;padding:10px 20px;
+  background:var(--bg,#faf9f7);border-bottom:1.5px solid var(--line,#e8e4df);
+  position:sticky;top:52px;z-index:50;flex-wrap:wrap}
+#date-filter-bar .df-label{font:600 11px var(--mono,monospace);letter-spacing:.05em;
+  color:var(--mut-2,#aaa);text-transform:uppercase;margin-right:4px}
+#date-filter-bar button{font:600 12px var(--mono,monospace);letter-spacing:.03em;
+  padding:3px 14px;border:1.5px solid var(--line,#e8e4df);border-radius:20px;
+  background:transparent;color:var(--ink-2,#888);cursor:pointer;transition:all .15s}
+#date-filter-bar button.df-active,#date-filter-bar button:hover{
+  border-color:var(--acc,#CC3B1B);color:var(--acc,#CC3B1B);background:#FBEAE4}
+article.rc.df-hidden{display:none!important}
+"""
+    _filter_bar_html = (
+        f'<div id="date-filter-bar">'
+        f'<span class="df-label">{t("时间","Period")}</span>'
+        f'<button class="df-active" data-df="all">{t("全部","All")}</button>'
+        f'<button data-df="today">{t("今天","Today")}</button>'
+        f'<button data-df="week">{t("本周","This week")}</button>'
+        f'</div>'
+        f'<div id="bands">'
+    )
+    _date_js = r"""
+<script>
+(function(){
+  // P2-2 日期过滤
+  function getToday(){ return new Date().toISOString().slice(0,10); }
+  function getWeekAgo(){
+    var d=new Date(); d.setDate(d.getDate()-7); return d.toISOString().slice(0,10);
+  }
+  function tagCards(){
+    document.querySelectorAll('article.rc').forEach(function(el){
+      var mt=el.querySelector('.mt');
+      if(!mt) return;
+      var m=mt.textContent.match(/(\d{4}-\d{2}-\d{2})/);
+      if(m) el.dataset.dfDate=m[1];
+    });
+  }
+  function applyFilter(range){
+    var today=getToday(), weekAgo=getWeekAgo();
+    document.querySelectorAll('article.rc').forEach(function(el){
+      var d=el.dataset.dfDate||'';
+      var hide=(range==='today'&&d<today)||(range==='week'&&d<weekAgo);
+      el.classList.toggle('df-hidden', hide);
+    });
+    // 隐藏全空的 band section
+    document.querySelectorAll('section.band').forEach(function(sec){
+      var cards=sec.querySelectorAll('article.rc');
+      if(!cards.length) return;
+      var visible=[].some.call(cards,function(c){return !c.classList.contains('df-hidden')});
+      sec.style.display=visible?'':'none';
+    });
+  }
+  function initFilter(){
+    tagCards();
+    document.querySelectorAll('#date-filter-bar button').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        document.querySelectorAll('#date-filter-bar button').forEach(function(b){b.classList.remove('df-active')});
+        this.classList.add('df-active');
+        applyFilter(this.dataset.df);
+      });
+    });
+  }
+  // bands 由 JS 渲染，需等 DOMContentLoaded 后再延迟一帧
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',function(){setTimeout(initFilter,120)});
+  } else {
+    setTimeout(initFilter,120);
+  }
+})();
+</script>
+"""
+    html_f = html_f.replace('</style>', _date_css + '</style>', 1)
+    html_f = html_f.replace('<div id="bands"></div>', _filter_bar_html + '</div>', 1)
+    html_f = html_f.replace('</body>', _date_js + '</body>', 1)
+
+    # ── P3-1 主题订阅 + P3-2 已读/收藏 ──
+    _p3_read_lbl  = t("✓ 已读", "✓ Read")
+    _p3_bm_lbl    = t("★ 收藏", "★ Save")
+    _p3_all_lbl   = t("全选",   "All")
+    _p3_bm_view   = t("★ 收藏夹", "★ Saved")
+    _p3_topic_lbl = t("主题",   "Topics")
+
+    _topic_btns = "".join(
+        f'<button class="tf-btn tf-active" data-section="{b["id"]}">{esc(b["k"])}</button>'
+        for b in nl_bands if b["id"] != "nl-hot"
+    )
+    _p3_css = """
+/* P3-1 主题订阅 */
+#topic-filter-bar{display:flex;align-items:center;gap:6px;padding:8px 20px;
+  background:var(--bg,#faf9f7);border-bottom:1px solid var(--line,#e8e4df);flex-wrap:wrap}
+.tf-label{font:600 11px var(--mono,monospace);letter-spacing:.05em;color:var(--mut-2,#aaa);
+  text-transform:uppercase;margin-right:2px;white-space:nowrap}
+.tf-btn{font:500 11.5px var(--mono,monospace);padding:3px 11px;
+  border:1.5px solid var(--ink,#333);border-radius:20px;
+  background:transparent;color:var(--ink,#333);cursor:pointer;transition:all .15s}
+.tf-btn:not(.tf-active){opacity:0.3;border-color:var(--line,#ddd)}
+.tf-btn:hover{opacity:1!important;border-color:var(--acc,#CC3B1B)!important;
+  color:var(--acc,#CC3B1B)!important}
+.tf-all{font:600 11px var(--mono,monospace);padding:3px 10px;
+  border:1.5px dashed var(--line,#ddd);border-radius:20px;background:transparent;
+  color:var(--mut-2,#aaa);cursor:pointer}
+.tf-all:hover{border-color:var(--acc,#CC3B1B);color:var(--acc,#CC3B1B)}
+.tf-bm-view{font:600 11px var(--mono,monospace);padding:3px 11px;
+  border:1.5px solid var(--line,#ddd);border-radius:20px;background:transparent;
+  color:var(--mut-2,#aaa);cursor:pointer;margin-left:auto}
+.tf-bm-view:hover{border-color:#CC3B1B;color:#CC3B1B}
+.tf-bm-view.bm-on{border-color:#CC3B1B;color:#CC3B1B;background:#FBEAE4}
+section.band.tf-hidden{display:none!important}
+
+/* P3-2 已读/收藏 */
+article.rc{position:relative}
+.card-actions{position:absolute;bottom:8px;right:8px;display:none;gap:3px;z-index:2}
+article.rc:hover .card-actions{display:flex}
+.ca-btn{font:600 11px var(--mono,monospace);padding:2px 8px;
+  border:1px solid var(--line,#ddd);border-radius:11px;
+  background:var(--bg,#faf9f7);color:var(--mut-2,#aaa);cursor:pointer;
+  transition:all .15s;white-space:nowrap;line-height:1.5}
+.ca-btn:hover{border-color:var(--acc,#CC3B1B);color:var(--acc,#CC3B1B)}
+article.rc.is-read{opacity:0.45}
+article.rc.is-read .ca-read{color:var(--acc,#CC3B1B);border-color:var(--acc,#CC3B1B)}
+article.rc.is-bookmarked .ca-bm{color:#CC3B1B;border-color:#CC3B1B;background:#FBEAE4}
+article.rc.is-bookmarked::before{content:"★";position:absolute;top:7px;right:7px;
+  font-size:11px;color:#CC3B1B;z-index:3;pointer-events:none}
+article.rc.bm-hidden{display:none!important}
+"""
+    _p3_topic_bar = (
+        f'<div id="topic-filter-bar">'
+        f'<span class="tf-label">{_p3_topic_lbl}</span>'
+        + _topic_btns +
+        f'<button class="tf-all">{_p3_all_lbl}</button>'
+        f'<button class="tf-bm-view">{_p3_bm_view}</button>'
+        f'</div>\n'
+    )
+    _p3_js = f"""
+<script>
+(function(){{
+  // P3-1 主题订阅
+  var LS_TOPICS='aipulse-topics-hidden';
+  function applyTopics(){{
+    if(document.querySelector('.tf-bm-view.bm-on')) return;
+    document.querySelectorAll('.tf-btn').forEach(function(btn){{
+      var sec=document.getElementById(btn.dataset.section);
+      if(sec) sec.classList.toggle('tf-hidden',!btn.classList.contains('tf-active'));
+    }});
+  }}
+  function saveTopics(){{
+    var h=[];
+    document.querySelectorAll('.tf-btn:not(.tf-active)').forEach(function(b){{h.push(b.dataset.section)}});
+    localStorage.setItem(LS_TOPICS,JSON.stringify(h));
+  }}
+  function initTopicFilter(){{
+    var hidden=JSON.parse(localStorage.getItem(LS_TOPICS)||'[]');
+    document.querySelectorAll('.tf-btn').forEach(function(btn){{
+      if(hidden.indexOf(btn.dataset.section)>=0) btn.classList.remove('tf-active');
+      btn.addEventListener('click',function(){{
+        this.classList.toggle('tf-active');
+        applyTopics(); saveTopics();
+      }});
+    }});
+    var allBtn=document.querySelector('.tf-all');
+    if(allBtn) allBtn.addEventListener('click',function(){{
+      document.querySelectorAll('.tf-btn').forEach(function(b){{b.classList.add('tf-active')}});
+      applyTopics(); saveTopics();
+    }});
+    var bmBtn=document.querySelector('.tf-bm-view');
+    if(bmBtn) bmBtn.addEventListener('click',function(){{
+      this.classList.toggle('bm-on');
+      var on=this.classList.contains('bm-on');
+      document.querySelectorAll('article.rc').forEach(function(c){{
+        c.classList.toggle('bm-hidden', on&&!c.classList.contains('is-bookmarked'));
+      }});
+      document.querySelectorAll('section.band').forEach(function(sec){{
+        if(on){{
+          var vis=[].some.call(sec.querySelectorAll('article.rc'),
+            function(c){{return !c.classList.contains('bm-hidden')}});
+          sec.style.display=vis?'':'none';
+        }}else{{
+          sec.style.display=''; applyTopics();
+        }}
+      }});
+    }});
+    applyTopics();
+  }}
+
+  // P3-2 已读/收藏
+  var READ_LBL='{_p3_read_lbl}';
+  var BM_LBL='{_p3_bm_lbl}';
+  function getCardKey(el){{
+    var a=el.querySelector('.hl a[href]');
+    if(!a||!a.href||a.href==='#') return null;
+    return 'aipulse:'+a.href;
+  }}
+  function initCardActions(){{
+    document.querySelectorAll('article.rc').forEach(function(card){{
+      var key=getCardKey(card);
+      if(!key) return;
+      var state=JSON.parse(localStorage.getItem(key)||'{{}}');
+      if(state.read) card.classList.add('is-read');
+      if(state.bookmarked) card.classList.add('is-bookmarked');
+      var bar=document.createElement('div');
+      bar.className='card-actions';
+      bar.innerHTML='<button class="ca-btn ca-read">'+READ_LBL+'</button>'
+                   +'<button class="ca-btn ca-bm">'+BM_LBL+'</button>';
+      card.appendChild(bar);
+      bar.querySelector('.ca-read').addEventListener('click',function(e){{
+        e.stopPropagation();
+        state.read=!state.read;
+        card.classList.toggle('is-read',state.read);
+        localStorage.setItem(key,JSON.stringify(state));
+      }});
+      bar.querySelector('.ca-bm').addEventListener('click',function(e){{
+        e.stopPropagation();
+        state.bookmarked=!state.bookmarked;
+        card.classList.toggle('is-bookmarked',state.bookmarked);
+        var bmOn=document.querySelector('.tf-bm-view.bm-on');
+        if(bmOn&&!state.bookmarked) card.classList.add('bm-hidden');
+        else if(bmOn&&state.bookmarked) card.classList.remove('bm-hidden');
+        localStorage.setItem(key,JSON.stringify(state));
+      }});
+    }});
+  }}
+
+  if(document.readyState==='loading'){{
+    document.addEventListener('DOMContentLoaded',function(){{
+      setTimeout(function(){{initTopicFilter();initCardActions();}},160);
+    }});
+  }}else{{
+    setTimeout(function(){{initTopicFilter();initCardActions();}},160);
+  }}
+}})();
+</script>
+"""
+    html_f = html_f.replace('</style>', _p3_css + '</style>', 1)
+    html_f = html_f.replace('<div id="bands">', _p3_topic_bar + '<div id="bands">', 1)
+    html_f = html_f.replace('</body>', _p3_js + '</body>', 1)
+
+    open(OUT_FEEDS, "w", encoding="utf-8").write(html_f)
+    print(f"{OUT_FEEDS} {os.path.getsize(OUT_FEEDS)} bytes · LANG={LANG} · feeds {len(nl_bands)} · cards {_fc}")

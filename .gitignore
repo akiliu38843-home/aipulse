@@ -19,3 +19,8 @@ __pycache__/
 *.tmp
 site/.env.local
 .vercel
+
+# Generated daily (rebuilt by fetch_newsletters.py / GitHub Actions — don't track)
+data/newsletters.json
+data/ai_prices.json
+logs/

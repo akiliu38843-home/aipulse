@@ -1,6 +1,7 @@
 # Python ≥ 3.10
+requests
+feedparser
 python-jobspy
 edgartools
-feedparser
 huggingface_hub
 socksio

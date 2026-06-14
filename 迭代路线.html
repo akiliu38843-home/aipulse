@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIPulse — 迭代路线决策页</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,30..100&family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBFAF7; --paper:#FFFFFF; --ink:#161318; --ink-2:#2A262C; --body:#45464C;
+  --mut:#8B8C93; --mut-2:#B5B4AE; --line:#E8E7E2; --line-2:#D9D7D0; --soft:#F4F2EC;
+  --acc:#CC3B1B; --acc-ink:#8A2812; --gold:#9A6B1F; --pos:#1F6F4A; --blue:#2A6FDB;
+  --sans:"Geist","Helvetica Neue",-apple-system,system-ui,sans-serif;
+  --serif:"Fraunces","Iowan Old Style",Palatino,Georgia,serif;
+  --mono:"Geist Mono","JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{margin:0;background:var(--bg);color:var(--body);font:15px/1.65 var(--sans);font-feature-settings:"ss01","cv11";padding-bottom:120px}
+::selection{background:var(--acc);color:#fff}
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+header.top{border-bottom:1.5px solid var(--ink);background:var(--bg);padding:30px 0 22px;margin-bottom:36px}
+.eyebrow{font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-bottom:12px}
+h1.title{font-family:var(--serif);font-weight:600;font-size:46px;line-height:1.04;letter-spacing:-.025em;color:var(--ink);margin:0 0 14px;font-variation-settings:"SOFT" 30,"opsz" 144}
+.subtitle{font-size:16px;color:var(--body);max-width:760px;line-height:1.6}
+.subtitle b{color:var(--ink)}
+
+section{margin:42px 0}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--line-2)}
+.sec-num{font-family:var(--mono);font-size:13px;color:var(--acc);font-weight:600}
+.sec-title{font-family:var(--serif);font-size:25px;font-weight:600;color:var(--ink);letter-spacing:-.015em}
+.sec-sub{font-size:13px;color:var(--mut);margin-left:auto}
+
+/* 现状审视 */
+.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.card h3{font-family:var(--serif);font-size:17px;color:var(--ink);margin:0 0 8px;font-weight:600}
+.card p{margin:0;font-size:14px;color:var(--body)}
+.card .tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;padding:2px 9px;border-radius:20px;margin-bottom:9px}
+.tag.good{background:#E8F2EC;color:var(--pos)}
+.tag.warn{background:#FBEAE4;color:var(--acc-ink)}
+.tag.neutral{background:var(--soft);color:var(--mut)}
+
+.problems{background:#FFF;border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:6px 22px;margin-top:8px}
+.problems li{margin:14px 0;font-size:14.5px;color:var(--body)}
+.problems li b{color:var(--ink)}
+.evi{font-family:var(--mono);font-size:12px;color:var(--acc-ink);background:#FBEAE4;padding:1px 7px;border-radius:5px}
+
+/* 价值阶梯 */
+.ladder{display:flex;flex-direction:column;gap:0;margin:6px 0}
+.rung{display:flex;align-items:center;gap:16px;padding:13px 18px;border:1px solid var(--line);background:var(--paper);position:relative}
+.rung:first-child{border-radius:10px 10px 0 0}
+.rung:last-child{border-radius:0 0 10px 10px}
+.rung+.rung{border-top:none}
+.rung .lv{font-family:var(--mono);font-size:12px;font-weight:600;width:54px;flex-shrink:0;color:var(--mut)}
+.rung .nm{font-weight:600;color:var(--ink);width:130px;flex-shrink:0;font-size:14.5px}
+.rung .ds{font-size:13.5px;color:var(--body);flex:1}
+.rung .ex{font-size:12px;color:var(--mut);font-family:var(--mono);flex-shrink:0}
+.rung.here{background:linear-gradient(90deg,#FBEAE4,#FFF 60%);border-color:var(--acc)}
+.rung.here .lv{color:var(--acc)}
+.rung.target{background:linear-gradient(90deg,#E8F2EC,#FFF 60%);border-color:var(--pos)}
+.rung.target .lv{color:var(--pos)}
+.youhere{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.05em;padding:2px 8px;border-radius:20px;flex-shrink:0}
+.youhere.now{background:var(--acc);color:#fff}
+.youhere.aim{background:var(--pos);color:#fff}
+
+/* 统一身份 */
+.identity{background:var(--ink);color:#fff;border-radius:14px;padding:28px 32px;position:relative;overflow:hidden}
+.identity .q{font-family:var(--serif);font-size:23px;line-height:1.42;font-weight:500;letter-spacing:-.01em}
+.identity .q em{color:#FFB59E;font-style:normal;font-weight:600}
+.identity .moat{margin-top:16px;font-size:13px;color:#C9C7C2;display:flex;gap:22px;flex-wrap:wrap}
+.identity .moat span{display:flex;align-items:center;gap:7px}
+.identity .moat b{color:#fff}
+.dot-g{width:7px;height:7px;border-radius:50%;background:#5FD08A;flex-shrink:0}
+
+/* 路线图 */
+.phase{margin-bottom:14px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper)}
+.phase-head{display:flex;align-items:center;gap:14px;padding:16px 22px;cursor:default;border-bottom:1px solid var(--line)}
+.pchip{font-family:var(--mono);font-size:13px;font-weight:700;color:#fff;padding:4px 11px;border-radius:7px;flex-shrink:0}
+.p0 .pchip{background:var(--acc)} .p1 .pchip{background:var(--gold)}
+.p2 .pchip{background:var(--blue)} .p3 .pchip{background:#6B5B95} .p4 .pchip{background:var(--mut)}
+.phase-head .pt{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--ink)}
+.phase-head .pd{font-size:13px;color:var(--mut);margin-left:4px}
+.phase-head .pcount{margin-left:auto;font-size:12px;font-family:var(--mono);color:var(--mut)}
+
+.item{display:flex;gap:14px;padding:15px 22px;border-bottom:1px solid var(--line);transition:background .12s}
+.item:last-child{border-bottom:none}
+.item:hover{background:var(--soft)}
+.item label{display:flex;gap:14px;cursor:pointer;width:100%;align-items:flex-start}
+.item input[type=checkbox]{appearance:none;width:20px;height:20px;border:2px solid var(--line-2);border-radius:6px;flex-shrink:0;margin-top:2px;cursor:pointer;position:relative;transition:all .12s}
+.item input:checked{background:var(--ink);border-color:var(--ink)}
+.item input:checked::after{content:"✓";position:absolute;top:-2px;left:3px;color:#fff;font-size:14px;font-weight:700}
+.item.rec input{border-color:var(--acc)}
+.item.rec input:checked{background:var(--acc);border-color:var(--acc)}
+.item-body{flex:1}
+.item-title{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:3px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.recflag{font-size:10px;font-weight:700;letter-spacing:.04em;color:var(--acc);background:#FBEAE4;padding:1px 7px;border-radius:20px}
+.item-why{font-size:13.5px;color:var(--body);margin-bottom:6px}
+.item-meta{display:flex;gap:16px;font-size:12px;color:var(--mut);flex-wrap:wrap}
+.item-meta span{display:flex;align-items:center;gap:5px}
+.item-meta .k{color:var(--mut-2)}
+.item-meta .aim{color:var(--pos);font-weight:500}
+.effort{font-family:var(--mono);font-size:11px;padding:1px 7px;border-radius:5px;background:var(--soft);color:var(--ink-2)}
+.feel{font-size:11px}
+
+/* 底部操作栏 */
+.actionbar{position:fixed;bottom:0;left:0;right:0;background:rgba(251,250,247,.94);backdrop-filter:blur(10px);border-top:1.5px solid var(--ink);padding:14px 0;z-index:50}
+.actionbar .wrap{display:flex;align-items:center;gap:18px}
+.sel-stat{font-size:13.5px;color:var(--body)}
+.sel-stat b{font-family:var(--serif);font-size:19px;color:var(--ink);font-weight:600}
+.btn{font-family:var(--sans);font-size:13.5px;font-weight:600;padding:11px 20px;border-radius:9px;border:1.5px solid var(--ink);cursor:pointer;transition:all .12s;background:var(--paper);color:var(--ink)}
+.btn:hover{background:var(--soft)}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:#000}
+.btn.ghost{border-color:var(--line-2);color:var(--mut)}
+.btn:last-child{margin-left:auto}
+.toast{position:fixed;bottom:88px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--pos);color:#fff;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:600;opacity:0;transition:all .3s;pointer-events:none;z-index:60}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media(max-width:720px){
+  .review-grid{grid-template-columns:1fr}
+  h1.title{font-size:34px}
+  .rung{flex-wrap:wrap;gap:8px}.rung .nm{width:auto}.rung .ds{flex-basis:100%}
+  .identity .q{font-size:19px}
+  .item-meta{gap:10px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">AIPulse · 产品迭代路线 · 2026-06-14</div>
+    <h1 class="title">从「求职罗盘」到<br>「中文 AI 前沿信息站」</h1>
+    <p class="subtitle">产品的重心正在转移。这页先讲清<b>现在站在哪</b>、<b>对标谁</b>、<b>独特价值在哪</b>，再把未来的活拆成 P0–P4 五档。<b>勾选你想做的，底部一键导出给我，我就照着动手。</b></p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- 1. 现状审视 -->
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">现状审视</span><span class="sec-sub">三个页面 · 一个壳里两个产品</span></div>
+    <div class="review-grid">
+      <div class="card">
+        <span class="tag good">硬核 · 已成熟</span>
+        <h3>直面就业 + 定制新闻</h3>
+        <p>给<b>求职者</b>的罗盘。真实招聘/薪资/论文/财报数据，交叉验证后告诉你「想进 AI 该学什么」。有观点、有依据，是最早的家底。</p>
+      </div>
+      <div class="card">
+        <span class="tag warn">新方向 · 待打磨</span>
+        <h3>常规新闻</h3>
+        <p>给<b>信息饥渴者</b>的资讯流。20 个英文信源、108 篇、全中文翻译。这是你说的转型方向，但目前还停在「把 RSS 摊平列出来」的最初形态。</p>
+      </div>
+    </div>
+    <p style="font-size:13.5px;color:var(--mut);margin:4px 0 14px">三个诚实的问题（按对用户的刺痛程度排）：</p>
+    <ul class="problems">
+      <li><b>① 常规新闻还在价值最底层。</b>同一条大新闻在好几家重复——实测 <span class="evi">18 对跨源重复</span>，「Anthropic 切断 Fable 5 访问」这一条在 The Decoder / The Verge / TechCrunch 各出现一次。没去重、没排序、没提炼，用户读它跟自己订 20 家邮件省不了多少事。</li>
+      <li><b>② 一个壳里两个产品。</b>求职者和信息饥渴者是<b>两拨人、两种意图</b>。导航把它们平级摆着，但内在逻辑在互相拉扯——身份不统一。</li>
+      <li><b>③ 导航不一致。</b>首页还是旧的两个 tab（「看新闻」），没同步成「定制新闻 / 常规新闻」三页结构。<span class="evi">体感像 bug</span>。</li>
+    </ul>
+    <div class="card" style="margin-top:16px;border-left:3px solid var(--pos)">
+      <span class="tag good">隐藏资产</span>
+      <h3>爬上更高层的零件，你其实已经攒齐了</h3>
+      <p><b>daily_digest.py</b>（AI 提炼「今天最该看的 3 件事」）、<b>translate.py</b>（20 家英文源→中文）、<b>signals.db</b>（算「同一条被几家报道」）——这三样现在都没用在常规新闻页上。它们正是从「列表」升级到「判断」的关键。</p>
+    </div>
+  </section>
+
+  <!-- 2. 对齐目标 / 价值阶梯 -->
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">对齐目标：信息聚合的价值阶梯</span><span class="sec-sub">真实标杆 · 我们要往上爬</span></div>
+    <div class="ladder">
+      <div class="rung target"><span class="lv">L4</span><span class="nm">加观点</span><span class="ds">告诉你「该怎么看这件事」，有立场有判断</span><span class="ex">AI Snake Oil</span><span class="youhere aim">↑ 终极</span></div>
+      <div class="rung"><span class="lv">L3</span><span class="nm">排重要性</span><span class="ds">不按时间，按「今天哪条最重要」排序</span><span class="ex">Hacker News</span></div>
+      <div class="rung"><span class="lv">L2</span><span class="nm">提炼综合</span><span class="ds">「今天就 3 件事 + 为什么重要」一句话讲清</span><span class="ex">Smol AI News</span></div>
+      <div class="rung"><span class="lv">L1</span><span class="nm">去重聚类</span><span class="ds">同一条被 N 家报道→合成一张卡 +「N 家在报道」</span><span class="ex">Techmeme</span></div>
+      <div class="rung here"><span class="lv">L0</span><span class="nm">摊平列表</span><span class="ds">按来源/类型把 RSS 列出来（= 我们现在）</span><span class="ex">裸 RSS 阅读器</span><span class="youhere now">⚲ 我们在这</span></div>
+    </div>
+    <p style="font-size:13px;color:var(--mut);margin-top:12px">每往上一层，用户「省心程度」翻一倍。我们手里的零件足够直接跳到 L2，路线图就是这趟向上爬的台阶。</p>
+  </section>
+
+  <!-- 3. 统一身份 -->
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">统一身份：把两个产品拧成一股</span><span class="sec-sub">这就是护城河</span></div>
+    <div class="identity">
+      <div class="q">「<em>中文世界的 AI 前沿信息站</em>：把英文圈最好的 20+ 信源，每天<em>翻译 + 去重 + 排重要性</em>端到你面前；并且独一份地告诉你——<em>这些动态对你的技能和职业意味着什么</em>。」</div>
+      <div class="moat">
+        <span><span class="dot-g"></span><b>翻译</b>＝中文读者免啃英文，比机器之心快</span>
+        <span><span class="dot-g"></span><b>去重排序</b>＝省心，不是又一个 RSS 堆</span>
+        <span><span class="dot-g"></span><b>职业视角</b>＝没有任何竞品把「AI 动态」连到「你该学什么」</span>
+      </div>
+    </div>
+    <p style="font-size:13.5px;color:var(--body);margin-top:14px">注意第三点：原本的「求职罗盘」不是要被丢掉的旧包袱，而是<b>把新资讯流跟所有竞品区分开的那把独特钥匙</b>。两个产品因此拧成一股。</p>
+  </section>
+
+  <!-- 4. 路线图 -->
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><span class="sec-title">迭代路线 · P0–P4</span><span class="sec-sub">按「用户体感」排序，非实现难度</span></div>
+    <div id="roadmap"></div>
+  </section>
+
+</div>
+
+<!-- 底部操作栏 -->
+<div class="actionbar">
+  <div class="wrap">
+    <span class="sel-stat">已选 <b id="selCount">0</b> 项</span>
+    <button class="btn ghost" onclick="selectRec()">只选推荐项</button>
+    <button class="btn ghost" onclick="clearAll()">清空</button>
+    <button class="btn primary" onclick="copySelection()">📋 复制我的选择给 AI</button>
+  </div>
+</div>
+<div class="toast" id="toast">已复制到剪贴板 ✓</div>
+
+<script>
+const PHASES = [
+ {cls:"p0", chip:"P0", title:"让常规新闻从「一堆」变「一份简报」", desc:"立刻见效 · 体感跃升最大", items:[
+   {id:"p0-dedup", rec:true, title:"去重聚类", why:"同一条新闻被 N 家报道时，合成一张卡 +「N 家在报道」徽章。瞬间从「噪音堆」变「精选」。", aim:"爬到 L1", effort:"中", feel:"😍 体感+++"},
+   {id:"p0-today", rec:true, title:"今日头条置顶", why:"把 daily_digest 已经生成的「今天最该看的 3 件事」搬到常规新闻页顶部。把「一堆」重新框成「一份简报」。", aim:"爬到 L2", effort:"小", feel:"😍 体感+++"},
+   {id:"p0-nav", rec:true, title:"修导航一致性", why:"首页补上第三个 tab、「看新闻」改「定制新闻」。消除「像 bug」的摩擦感。", aim:"修复体验", effort:"很小", feel:"🙂 除刺"},
+ ]},
+ {cls:"p1", chip:"P1", title:"把「信息」变「判断」", desc:"深化核心价值", items:[
+   {id:"p1-rank", rec:true, title:"重要度排序 · 今日热度榜", why:"「被几家报道 + HN 多少赞」算出重要度，做一个不按时间、按重要性的榜。回答「我只有 5 分钟该看啥」。", aim:"爬到 L3", effort:"中", feel:"😀 体感++"},
+   {id:"p1-llmcat", rec:true, title:"AI 分类替代关键词", why:"现在「其他资讯」兜底箱塞了 15 篇，关键词分类太糙。翻译时顺带让 AI 归类，一次调用搞定，分类立刻准。", aim:"提质", effort:"小中", feel:"😀 体感++"},
+   {id:"p1-career", rec:false, title:"「这对你意味着什么」职业桥", why:"对重大动态加一句「技能/职业含义」。这是统一身份里那把独特钥匙，也是唯一竞品没有的东西。", aim:"建立差异化", effort:"中", feel:"🤩 独一份"},
+ ]},
+ {cls:"p2", chip:"P2", title:"让人养成每天来的习惯", desc:"留存", items:[
+   {id:"p2-cron", rec:false, title:"定时自动抓取", why:"每天早上自动刷新（配开关，只在工作日跑）。用户每天来都是新的，才有理由养成习惯。", aim:"保鲜", effort:"小", feel:"🙂 隐形价值"},
+   {id:"p2-time", rec:false, title:"时间视图：今天 / 本周 / 本月", why:"加时间切换。错过一天也能补上，把单次浏览变成可回溯的档案。", aim:"留存", effort:"中", feel:"😀 体感++"},
+   {id:"p2-health", rec:false, title:"信源健康徽章", why:"每行标「最近抓取于 X 小时前」。让用户信任内容是新鲜的、活的。", aim:"建立信任", effort:"小", feel:"🙂 信任"},
+ ]},
+ {cls:"p3", chip:"P3", title:"把抛弃的「个性化」用对的方式做回来", desc:"个性化 2.0", items:[
+   {id:"p3-follow", rec:false, title:"按主题订阅（非点赞）", why:"让用户勾「我只关心研究 / 开源 / 商业」。当初点赞按钮死在 iframe 限制上——按主题在生成时过滤，绕开那个坑。", aim:"个性化", effort:"中", feel:"😀 体感++"},
+   {id:"p3-read", rec:false, title:"已读 / 收藏（轻量）", why:"标已读、存稍后看。让重复访问的人不重复劳动。", aim:"留存", effort:"小", feel:"🙂 顺手"},
+ ]},
+ {cls:"p4", chip:"P4", title:"扩规模 · 建护城河", desc:"长期", items:[
+   {id:"p4-src", rec:false, title:"加非英文源 + 社区源", why:"机器之心（需爬）、Reddit r/LocalLLaMA、X 列表、Discord 摘要（学 Smol AI）。信源越广越难被替代。", aim:"扩覆盖", effort:"大", feel:"😀 体感++"},
+   {id:"p4-output", rec:false, title:"反向输出：我们的 RSS / 邮件 digest", why:"把「翻译+去重」后的流做成一个别人能订阅的 RSS/邮件。从「聚合者」升级成「信源」——别人引用你。", aim:"从聚合变信源", effort:"中", feel:"🤩 杠杆"},
+   {id:"p4-push", rec:false, title:"邮件 / 推送 digest", why:"每天早上把 3 件事推到邮箱/手机。在用户已有的习惯里出现，而不是等他来。", aim:"触达", effort:"大", feel:"😀 体感++"},
+ ]},
+];
+
+const root = document.getElementById("roadmap");
+PHASES.forEach(ph=>{
+  const div = document.createElement("div");
+  div.className = "phase "+ph.cls;
+  let html = `<div class="phase-head"><span class="pchip">${ph.chip}</span><span class="pt">${ph.title}</span><span class="pd">· ${ph.desc}</span><span class="pcount">${ph.items.length} 项</span></div>`;
+  ph.items.forEach(it=>{
+    html += `<div class="item ${it.rec?'rec':''}">
+      <label>
+        <input type="checkbox" data-id="${it.id}" data-phase="${ph.chip}" data-title="${it.title}" ${it.rec?'checked':''} onchange="updateCount()">
+        <div class="item-body">
+          <div class="item-title">${it.title} ${it.rec?'<span class="recflag">推荐先做</span>':''}</div>
+          <div class="item-why">${it.why}</div>
+          <div class="item-meta">
+            <span class="aim">🎯 ${it.aim}</span>
+            <span><span class="k">工作量</span><span class="effort">${it.effort}</span></span>
+            <span class="feel">${it.feel}</span>
+          </div>
+        </div>
+      </label>
+    </div>`;
+  });
+  div.innerHTML = html;
+  root.appendChild(div);
+});
+
+const STORAGE_KEY = "aipulse_roadmap_v1";
+function getChecks(){return [...document.querySelectorAll('input[type=checkbox]')];}
+function saveState(){
+  const state={};
+  getChecks().forEach(c=>state[c.dataset.id]=c.checked);
+  try{localStorage.setItem(STORAGE_KEY, JSON.stringify(state));}catch(e){}
+}
+function loadState(){
+  try{
+    const s=JSON.parse(localStorage.getItem(STORAGE_KEY)||"null");
+    if(s) getChecks().forEach(c=>{if(c.dataset.id in s)c.checked=s[c.dataset.id];});
+  }catch(e){}
+}
+function updateCount(){
+  const n=getChecks().filter(c=>c.checked).length;
+  document.getElementById("selCount").textContent=n;
+  saveState();
+}
+function selectRec(){
+  getChecks().forEach(c=>c.checked=c.closest('.item').classList.contains('rec'));
+  updateCount();
+}
+function clearAll(){getChecks().forEach(c=>c.checked=false);updateCount();}
+
+function copySelection(){
+  const picked=getChecks().filter(c=>c.checked);
+  if(!picked.length){showToast("还没勾选任何项",true);return;}
+  const byPhase={};
+  picked.forEach(c=>{
+    const p=c.dataset.phase;
+    (byPhase[p]=byPhase[p]||[]).push(c.dataset.title);
+  });
+  let md="# AIPulse 迭代路线 · 我选的优先级\n\n我审阅了迭代路线决策页，决定按下面这些来做：\n\n";
+  Object.keys(byPhase).sort().forEach(p=>{
+    md+=`## ${p}\n`;
+    byPhase[p].forEach(t=>md+=`- [ ] ${t}\n`);
+    md+="\n";
+  });
+  md+=`---\n共 ${picked.length} 项。请从最靠前的 P0 开始动手，每做完一项先让我确认效果再继续。`;
+  navigator.clipboard.writeText(md).then(()=>showToast("已复制到剪贴板 ✓ — 粘贴回对话即可"),()=>{
+    // 兜底：选中文本
+    const ta=document.createElement("textarea");ta.value=md;document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove();
+    showToast("已复制到剪贴板 ✓");
+  });
+}
+let toastTimer;
+function showToast(msg,warn){
+  const t=document.getElementById("toast");
+  t.textContent=msg;t.style.background=warn?"var(--acc)":"var(--pos)";
+  t.classList.add("show");clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>t.classList.remove("show"),2600);
+}
+loadState();updateCount();
+</script>
+</body>
+</html>
