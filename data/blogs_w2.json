@@ -1,5 +1,5 @@
 {
- "collected_at": "2026-06-13T04:15:57",
+ "collected_at": "2026-06-14T04:43:26",
  "source_status": {
   "Simon Willison": "ok:8",
   "Lilian Weng": "ok:0",
@@ -17,6 +17,27 @@
   "Sebastian Ruder": "ok:0"
  },
  "items": [
+  {
+   "source": "Simon Willison",
+   "title": "Publishing WASM wheels to PyPI for use with Pyodide",
+   "date": "2026-06-13",
+   "summary": "The Pyodide 314.0 release announcement (via Hacker News ) includes news I've been looking forward to for a long time: You can now publish Python packages built for Pyodide (or any Python runtime compatible with the PyEmscripten platform defined in PEP 783 ) directly to PyPI and install them at runtime. Previously, the Pyodide maintainers had to maintain, build, and host over 300 packages ourselves. This created a significant burden on our maintainers and became a major bottleneck for the community, as every new package required manual review. Moving forward, package maintainers can simply buil",
+   "link": "https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/#atom-everything"
+  },
+  {
+   "source": "Simon Willison",
+   "title": "luau-wasm 0.1a0",
+   "date": "2026-06-13",
+   "summary": "Release: luau-wasm 0.1a0 See Publishing WASM wheels to PyPI for use with Pyodide for details. Tags: lua , webassembly , pyodide",
+   "link": "https://simonwillison.net/2026/Jun/13/luau-wasm/#atom-everything"
+  },
+  {
+   "source": "Simon Willison",
+   "title": "Mapping SQLite result columns back to their source `table.column`",
+   "date": "2026-06-13",
+   "summary": "Research: Mapping SQLite result columns back to their source `table.column` It would be neat if arbitrary SQL queries in Datasette could be rendered with additional information based on which columns from which tables were included in the results. To build that, we would need to be able to look at a SQL query like select users.name, orders.total from users join orders on orders.user_id = users.id and programmatically identify the table.column for each result - navigating not just joins but also more complex syntax like CTEs. I decided to set Claude Code (Opus 4.8, since Fable is currently bann",
+   "link": "https://simonwillison.net/2026/Jun/13/sqlite-column-provenance/#atom-everything"
+  },
   {
    "source": "Simon Willison",
    "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5",
@@ -51,27 +72,6 @@
    "date": "2026-06-11",
    "summary": "Release: datasette 1.0a33 This alpha is a significant step on the road to a stable 1.0, finally extending the ?_extra= pattern I introduced in Datasette 1.0a3 to cover queries and rows in addition to tables. That pattern is also now documented ! I wrote a whole lot more about the new release on the Datasette project blog: Datasette 1.0a33 with JSON extras in the API . Because API explorer tools are almost free to build now I had Claude Fable 5 in Claude Code (for the plan ) and GPT-5.5 xhigh in Codex Desktop (for the implementation ) build me this custom extras API explorer to help demonstrate",
    "link": "https://simonwillison.net/2026/Jun/11/datasette/#atom-everything"
-  },
-  {
-   "source": "Simon Willison",
-   "title": "asyncinject 0.7",
-   "date": "2026-06-11",
-   "summary": "Release: asyncinject 0.7 I built this utility library to support an asyncio dependency injection pattern a few years ago. I was using it with Datasette and Claude Fable 5 spotted some bugs in the dependency which it then fixed for me. It's a very proactive model! Tags: async , projects , python , claude-mythos",
-   "link": "https://simonwillison.net/2026/Jun/11/asyncinject/#atom-everything"
-  },
-  {
-   "source": "Simon Willison",
-   "title": "Anthropic Walks Back Policy That Could Have ‘Sabotaged’ AI Researchers Using Claude",
-   "date": "2026-06-11",
-   "summary": "Anthropic Walks Back Policy That Could Have ‘Sabotaged’ AI Researchers Using Claude Big scoop for Maxwell Zeff at Wired: “We’re changing Fable 5’s safeguards for frontier LLM development to make them visible.” Anthropic said in a statement to WIRED. “We made the wrong tradeoff and we apologize for not getting the balance right.” There's been a huge outcry about Anthropic's policy, tucked away in their system card , that Claude Fable/Mythos would identify \"requests targeting frontier LLM development\" and \"limit effectiveness\" without notifying the user. It's good news that they're dropping the ",
-   "link": "https://simonwillison.net/2026/Jun/11/anthropic-walks-back-policy/#atom-everything"
-  },
-  {
-   "source": "Simon Willison",
-   "title": "datasette-agent 0.2a0",
-   "date": "2026-06-10",
-   "summary": "Release: datasette-agent 0.2a0 Highlights from the release notes: Tools can now ask the user questions mid-execution. Tools that declare a context parameter receive a ToolContext object, and await context.ask_user(...) can ask a yes/no, multiple-choice ( options=[...] ) or free-text ( free_text=True ) question. While a question is unanswered the agent turn suspends: the question renders as a form in the chat UI and persists to the internal database, so suspended conversations survive a server restart. Once answered, the tool re-executes from the top with stored answers replayed, so call ask_us",
-   "link": "https://simonwillison.net/2026/Jun/10/datasette-agent/#atom-everything"
   },
   {
    "source": "Sebastian Raschka",
