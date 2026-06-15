@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AIPulse — 北美 AI 简讯（设计样张）</title>
+<title>AIPulse — Latest AI Feeds</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,30..100&family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet">
@@ -779,6 +779,57 @@ footer .rule b{font-family:var(--serif);font-style:italic;font-weight:400;color:
   .rc.expanded{flex-basis:82vw}
   footer{padding:20px 18px 50px}
 }
+
+/* P2-2 时间过滤条 */
+#date-filter-bar{display:flex;align-items:center;gap:8px;padding:10px 20px;
+  background:var(--bg,#faf9f7);border-bottom:1.5px solid var(--line,#e8e4df);
+  position:sticky;top:52px;z-index:50;flex-wrap:wrap}
+#date-filter-bar .df-label{font:600 11px var(--mono,monospace);letter-spacing:.05em;
+  color:var(--mut-2,#aaa);text-transform:uppercase;margin-right:4px}
+#date-filter-bar button{font:600 12px var(--mono,monospace);letter-spacing:.03em;
+  padding:3px 14px;border:1.5px solid var(--line,#e8e4df);border-radius:20px;
+  background:transparent;color:var(--ink-2,#888);cursor:pointer;transition:all .15s}
+#date-filter-bar button.df-active,#date-filter-bar button:hover{
+  border-color:var(--acc,#CC3B1B);color:var(--acc,#CC3B1B);background:#FBEAE4}
+article.rc.df-hidden{display:none!important}
+
+/* P3-1 主题订阅 */
+#topic-filter-bar{display:flex;align-items:center;gap:6px;padding:8px 20px;
+  background:var(--bg,#faf9f7);border-bottom:1px solid var(--line,#e8e4df);flex-wrap:wrap}
+.tf-label{font:600 11px var(--mono,monospace);letter-spacing:.05em;color:var(--mut-2,#aaa);
+  text-transform:uppercase;margin-right:2px;white-space:nowrap}
+.tf-btn{font:500 11.5px var(--mono,monospace);padding:3px 11px;
+  border:1.5px solid var(--ink,#333);border-radius:20px;
+  background:transparent;color:var(--ink,#333);cursor:pointer;transition:all .15s}
+.tf-btn:not(.tf-active){opacity:0.3;border-color:var(--line,#ddd)}
+.tf-btn:hover{opacity:1!important;border-color:var(--acc,#CC3B1B)!important;
+  color:var(--acc,#CC3B1B)!important}
+.tf-all{font:600 11px var(--mono,monospace);padding:3px 10px;
+  border:1.5px dashed var(--line,#ddd);border-radius:20px;background:transparent;
+  color:var(--mut-2,#aaa);cursor:pointer}
+.tf-all:hover{border-color:var(--acc,#CC3B1B);color:var(--acc,#CC3B1B)}
+.tf-bm-view{font:600 11px var(--mono,monospace);padding:3px 11px;
+  border:1.5px solid var(--line,#ddd);border-radius:20px;background:transparent;
+  color:var(--mut-2,#aaa);cursor:pointer;margin-left:auto}
+.tf-bm-view:hover{border-color:#CC3B1B;color:#CC3B1B}
+.tf-bm-view.bm-on{border-color:#CC3B1B;color:#CC3B1B;background:#FBEAE4}
+section.band.tf-hidden{display:none!important}
+
+/* P3-2 已读/收藏 */
+article.rc{position:relative}
+.card-actions{position:absolute;bottom:8px;right:8px;display:none;gap:3px;z-index:2}
+article.rc:hover .card-actions{display:flex}
+.ca-btn{font:600 11px var(--mono,monospace);padding:2px 8px;
+  border:1px solid var(--line,#ddd);border-radius:11px;
+  background:var(--bg,#faf9f7);color:var(--mut-2,#aaa);cursor:pointer;
+  transition:all .15s;white-space:nowrap;line-height:1.5}
+.ca-btn:hover{border-color:var(--acc,#CC3B1B);color:var(--acc,#CC3B1B)}
+article.rc.is-read{opacity:0.45}
+article.rc.is-read .ca-read{color:var(--acc,#CC3B1B);border-color:var(--acc,#CC3B1B)}
+article.rc.is-bookmarked .ca-bm{color:#CC3B1B;border-color:#CC3B1B;background:#FBEAE4}
+article.rc.is-bookmarked::before{content:"★";position:absolute;top:7px;right:7px;
+  font-size:11px;color:#CC3B1B;z-index:3;pointer-events:none}
+article.rc.bm-hidden{display:none!important}
 </style>
 </head>
 <body>
@@ -789,37 +840,61 @@ footer .rule b{font-family:var(--serif);font-style:italic;font-weight:400;color:
   <div class="topbar-inner">
     <h1 class="brand">AI<span class="star">★</span>Pulse</h1>
     <div style="display:flex;align-items:flex-end">
-      <div class="lang"><a class="" href="index.html">中</a><a class="on" href="index-en.html">EN</a></div>
-      <nav class="tabs"><a class="on" href="index-en.html">Compass</a>
+      <div class="lang"><a class="" href="news-feeds.html">中</a><a class="on" href="news-feeds-en.html">EN</a></div>
+      <nav class="tabs"><a href="index-en.html">Compass</a>
       <a href="news-en.html">Custom News</a>
-      <a href="news-feeds-en.html">Latest Feeds</a></nav>
+      <a class="on" href="news-feeds-en.html">Latest Feeds</a></nav>
     </div>
   </div>
 </header>
 
 <div class="issueline">
-  <div class="issueline-inner"><span class="iss-no">Career Compass</span><span class="dot">·</span><span>Data as of 2026-05-19</span><span class="dot">·</span><span>Personal gap analysis + real salaries + foresight</span><span class="dot">·</span><span>36 AI roles / $117k median</span></div>
+  <div class="issueline-inner"><span class="iss-no">Latest Feeds</span><span class="dot">·</span><span>0 AI media sources</span><span class="dot">·</span><span>RSS auto-fetch</span><span class="dot">·</span><span style="font-size:13px">⚪ updated unknown</span></div>
 </div>
 
 <main class="wrap">
 
-  <section class="hero" data-screen-label="Hero"><div class="hero-grid"><div class="hero-main"><div class="hk">Career / Your Compass</div><p class="lede">Want into AI? This page uses real NA hiring data to show what to learn and what to avoid — same signals.db as the News view.</p><div class="byline"><span class="rule"></span><b>By NorthStar Editors</b> · 2026-05-19</div><ol class="tldr"><li>Pick a <em>persona</em> — see your <em>baseline gap</em> + <em>foresight gap</em> live</li><li>Median NA AI salary <em>$117k</em>, across <em>36</em> real roles</li><li>Foresight signals sorted by <em>≥2-source cross-confirmation</em>; single-source never decides; if wrong, we own it Aug 2026</li></ol><div class="kpi-row" aria-label=""><div class="kpi-cell" style="grid-column:1/-1;border-right:none;padding-left:0"><div class="kpi-lbl">Week-over-week</div><div class="kpi-val down"><span style="font-family:var(--serif);font-size:20px">First issue · no baseline</span></div><div class="kpi-sub">Snapshot only · first comparable in Aug 2026 (same as F-3 checks)</div></div></div><div class="evidence"><div><div class="ev-label">Foresight <em>cross-evidence ≥2 sources</em></div><div class="ev-tags"><span>AI Agents / Orchestration<sub>3</sub></span><span>RAG<sub>3</sub></span><span>Multimodal<sub>3</sub></span><span>AI Safety / Responsible AI<sub>2</sub></span><span>Evals<sub>2</sub></span></div></div><div><div class="ev-label">Falsifiable predictions <em>due Aug 2026</em></div><ul class="ev-preds"><li>Does AI-coding-agent freq rise in jobs?</li><li>Does Serving move from "not-yet-in-jobs" to "present"?</li><li>Does multimodal share on HF hold?</li></ul></div></div></div><aside class="hero-stat"><div class="stat-label">This issue sample</div><div class="stat-grid"><div><b>36</b><span>AI roles (filtered)</span></div><div><b>3</b><span>sample personas</span></div><div><b>5</b><span>≥2-src signals</span></div><div><b>$117k</b><span>median salary</span></div></div></aside></div></section>
+  <section class="hero" data-screen-label="Hero">
+    <div class="hero-grid">
+      <div class="hero-main">
+        <div class="hk">Today's Headlines · cross-source</div>
+        <p class="lede">Auto-deduplicated 0 stories from 0 AI sources across 0 categories — 0 covered by 2+ sources. ⬆️ Hot Today ranking first; browse by category below.</p>
+        <div class="byline"><span class="rule"></span><b>By AIPulse · RSS auto-aggregated</b> · 2026-05-19</div>
+        <ol class="tldr"><li><b>Hot Today</b> — Ranked by cross-source coverage · more outlets = more important</li></ol>
+
+        <div class="kpi-row" aria-label=""><div class="kpi-cell" style="grid-column:1/-1;border-right:none;padding-left:0"><div class="kpi-lbl">This fetch</div><div class="kpi-val"><span style="font-family:var(--serif);font-size:20px">1 sources · 0 articles</span></div><div class="kpi-sub">RSS live fetch · past 14–30 days · auto-refreshed each run</div></div></div>        <div class="evidence">
+          <div>
+            <div class="ev-label">Feed index</div>
+            <div class="ev-tags"></div>
+          </div>
+          <div>
+            <div class="ev-label">Recent updates</div>
+            <ul class="ev-preds"></ul>
+          </div>
+        </div>
+      </div>
+      <aside class="hero-stat">
+        <div class="stat-label">Feed snapshot</div>
+        <div class="stat-grid"><div><b>1</b><span>Sources</span></div><div><b>0</b><span>Articles</span></div><div><b>Daily</b><span>Cadence</span></div><div><b>RSS</b><span>Live fetch</span></div></div>      </aside>
+    </div>
+  </section>
 
   <section class="toc" data-screen-label="Inside this issue">
     <header class="toc-head">
-      <div class="toc-title">Contents <em>/ Inside this issue</em></div>
-      <div class="toc-sub">5 SECTIONS · ~19 CARDS · 5 MIN READ</div>
+      <div class="toc-title">Feed index <em>/ Browse by source</em></div>
+      <div class="toc-sub">1 SOURCES · 0 ARTICLES</div>
     </header>
     <ol class="toc-list" id="toc-list"></ol>
   </section>
 
-  <div id="bands"></div>
+  <div id="date-filter-bar"><span class="df-label">Period</span><button class="df-active" data-df="all">All</button><button data-df="today">Today</button><button data-df="week">This week</button></div><div id="topic-filter-bar"><span class="tf-label">Topics</span><button class="tf-all">All</button><button class="tf-bm-view">★ Saved</button></div>
+<div id="bands"></div>
 
 </main>
 
-<nav class="sidenav" aria-label="Sections"><a href="#b1" data-anchor="b1"><span class="pip"></span><span class="lbl">01 Your Gap</span></a><a href="#b2" data-anchor="b2"><span class="pip"></span><span class="lbl">02 NA AI Now</span></a><a href="#b3" data-anchor="b3"><span class="pip"></span><span class="lbl">03 What to Learn Next</span></a><a href="#b4" data-anchor="b4"><span class="pip"></span><span class="lbl">04 Falsifiable Predictions</span></a><a href="#b5" data-anchor="b5"><span class="pip"></span><span class="lbl">05 Visa &amp; Validation</span></a></nav>
+<nav class="sidenav" aria-label="Sections"><a href="#nl-hot" data-anchor="nl-hot"><span class="pip"></span><span class="lbl">01 Hot Today</span></a></nav>
 
-<footer><div class="rule"><b>Career Compass · Tool</b> · same signals.db · v2 editorial</div>3 sample personas (no real résumé — readers must self-match). Visa view is an honest placeholder (DOL salary 403 blocked). Real-user validation (W4 gate) requires you to run 5 humans × 3 questions — AI cannot. Fonts via Google Fonts CDN with local-serif fallback.</footer>
+<footer><div class="rule"><b>Latest Feeds</b> · RSS auto-aggregated · updated daily</div>0 specialized AI media sources · content copyright belongs to respective publishers · click titles to read originals · fonts via Google Fonts CDN</footer>
 
 <script>
 /* ─────────────────────────────────────────────
@@ -852,7 +927,7 @@ function sparkSvg(data, opts){
     + '</svg>';
 }
 
-const bands = [{"id": "b1", "n": "01", "k": "Your Gap", "pp": "Paste your skills, LLM computes your gap", "cnt": "Personalized · real LLM", "cards": [{"soft": true, "custom": "<div class=\"hl\">Personal Learning Path</div><div class=\"mt\"><span class=\"pip\"></span>LLM × real NA JD data → your gap + learn order</div><form id=\"p-form\" onclick=\"event.stopPropagation()\" onsubmit=\"return false\" style=\"display:flex;flex-direction:column;gap:8px;margin-top:6px\"><label style=\"font-size:11px;color:var(--mut);letter-spacing:.04em;text-transform:uppercase;margin-top:4px\">Your current skills / background<textarea id=\"p-skills\" rows=\"2\" placeholder=\"e.g.: Python, AWS, Docker, FastAPI; 5 yrs backend exp.\" style=\"padding:9px 11px;font-size:13.5px;background:var(--paper);border:1px solid var(--line-2);border-radius:6px;color:var(--ink);font-family:var(--sans);width:100%;box-sizing:border-box;margin-top:6px\"></textarea></label><label style=\"font-size:11px;color:var(--mut);letter-spacing:.04em;text-transform:uppercase\">Target role<select id=\"p-target\" style=\"padding:9px 11px;font-size:13.5px;background:var(--paper);border:1px solid var(--line-2);border-radius:6px;color:var(--ink);font-family:var(--sans);width:100%;box-sizing:border-box;margin-top:6px\"><option>AI Engineer</option><option>ML Engineer</option><option>Machine Learning Engineer</option><option>Data Scientist</option><option>Applied Scientist</option><option>Research Scientist</option><option>Data Engineer</option><option>Forward Deployed AI Engineer</option><option>AI/ML Engineer</option><option>Applied AI Engineer</option><option>AI Native Engineer</option><option>Prompt Engineer</option><option>AI Solutions Architect</option><option>AI Product Manager</option><option>MLOps Engineer</option></select></label><label style=\"font-size:11px;color:var(--mut);letter-spacing:.04em;text-transform:uppercase\">Years of experience<input id=\"p-years\" type=\"number\" min=\"0\" max=\"40\" placeholder=\"0\" style=\"padding:9px 11px;font-size:13.5px;background:var(--paper);border:1px solid var(--line-2);border-radius:6px;color:var(--ink);font-family:var(--sans);width:100%;box-sizing:border-box;margin-top:6px\"></label><details style=\"margin-top:2px\"><summary style=\"font-size:11px;color:var(--mut);cursor:pointer;letter-spacing:.04em;text-transform:uppercase\">(optional) paste résumé text</summary><textarea id=\"p-resume\" rows=\"3\" placeholder=\"up to 4000 chars\" style=\"padding:9px 11px;font-size:13.5px;background:var(--paper);border:1px solid var(--line-2);border-radius:6px;color:var(--ink);font-family:var(--sans);width:100%;box-sizing:border-box;margin-top:6px;margin-top:6px\"></textarea></details><button id=\"p-submit\" type=\"button\" style=\"margin-top:8px;padding:10px 16px;background:var(--acc);color:#fff;border:none;border-radius:6px;font-weight:600;font-size:13.5px;cursor:pointer;font-family:var(--sans);letter-spacing:.02em\">Generate my path →</button></form><div id=\"p-out\" style=\"margin-top:14px;font-size:13.5px;color:var(--body);line-height:1.55;display:none\"></div>", "more": [["Data", "real NA JDs + cross-confirmed foresight"], ["Model", "gpt-5.4-mini (uyilink)"], ["Latency", "~5-15s"]]}, {"soft": true, "custom": "<div class=\"hl\">Backend engineer pivoting in</div><div class=\"mt\"><span class=\"pip\"></span>Has Python/AWS/Docker, no AI app experience</div><div class=\"dg\" style=\"-webkit-line-clamp:unset;display:block\"><b>Baseline gap:</b> LLM / GenAI Apps<br><b>Foresight gap:</b> AI Agents / Orchestration/RAG/Multimodal/AI Safety / Responsible AI/Evals</div><div class=\"ft\">Has: Python、AWS/Azure Cloud、Docker/Kubernetes、SQL</div>", "more": [["Step 1", "Baseline: LLM / GenAI Apps"], ["Step 2", "Foresight: AI Agents / Orchestration"], ["Step 3", "Foresight: RAG"], ["Step 4", "Foresight: Multimodal"], ["Step 5", "Foresight: AI Safety / Responsible AI"]]}, {"soft": true, "custom": "<div class=\"hl\">New-grad CS</div><div class=\"mt\"><span class=\"pip\"></span>Took Python/algos, no eng or AI experience</div><div class=\"dg\" style=\"-webkit-line-clamp:unset;display:block\"><b>Baseline gap:</b> SQL/Docker/Kubernetes/AWS/Azure Cloud/LLM / GenAI Apps<br><b>Foresight gap:</b> AI Agents / Orchestration/RAG/Multimodal/AI Safety / Responsible AI/Evals</div><div class=\"ft\">Has: Python</div>", "more": [["Step 1", "Baseline: SQL"], ["Step 2", "Baseline: Docker/Kubernetes"], ["Step 3", "Baseline: AWS/Azure Cloud"], ["Step 4", "Foresight: AI Agents / Orchestration"], ["Step 5", "Foresight: RAG"]]}, {"soft": true, "custom": "<div class=\"hl\">Non-tech PM pivoting to AI PM</div><div class=\"mt\"><span class=\"pip\"></span>Knows product, doesn't code</div><div class=\"dg\" style=\"-webkit-line-clamp:unset;display:block\"><b>Baseline gap:</b> Python/SQL/Docker/Kubernetes/AWS/Azure Cloud/LLM / GenAI Apps<br><b>Foresight gap:</b> AI Agents / Orchestration/RAG/Multimodal/AI Safety / Responsible AI/Evals</div><div class=\"ft\">Has: —</div>", "more": [["Step 1", "Baseline: Python"], ["Step 2", "Baseline: SQL"], ["Step 3", "Baseline: Docker/Kubernetes"], ["Step 4", "Foresight: AI Agents / Orchestration"], ["Step 5", "Foresight: RAG"]]}], "digest": "Paste your <em>current skills</em> + <em>target role</em> + <em>years</em> → LLM (gpt-5.4-mini) computes against real NA JD data:<br><b>fit score</b> (0-100), <b>baseline gap</b>, <b>foresight gap</b> (=AI Agents / Orchestration, RAG, Multimodal, AI Safety / Responsible AI ≥2-source signals),<br><b>learn order</b> (with free resources), <b>concrete 3-week actions</b>, <b>reality check</b>.<br>~5-15s. The 3 sample personas below are <em>static examples</em> so you know what to expect."}, {"id": "b2", "n": "02", "k": "NA AI Now", "pp": "Where the market is — what to chase", "cnt": "36 AI roles", "cards": [{"soft": true, "stat": true, "custom": "<div class=\"hl\">Median Salary</div><div class=\"mt\"><span class=\"pip\"></span>NA AI roles</div><div class=\"stat-big\">$117,500</div><div class=\"stat-sub\">From 2 self-reported JDs</div><div class=\"axis-bar\"><i style=\"left:14%;width:62%\"></i><b style=\"left:50%\"></b></div><div class=\"axis\"><span>$115k</span><span>median</span><span>$120k</span></div>", "more": [["Median", "$117,500"], ["Sample", "n=2"], ["Observed range", "$115k–$120k"]]}, {"soft": true, "custom": "<div class=\"hl\">Top JD Skills</div><div class=\"mt\"><span class=\"pip\"></span>Align résumé to these</div><div class=\"weighted\" style=\"margin-top:14px\"><span style=\"font-size:34px\">Python</span><span style=\"font-size:31px\">AWS/Azure Cloud</span><span style=\"font-size:28px\">LLM / GenAI Apps</span><span style=\"font-size:25px\">Docker/Kubernetes</span><span style=\"font-size:22px\" class=dim>TypeScript/Node</span><span style=\"font-size:19px\" class=dim>SQL</span></div>", "more": [["Source", "W1 LLM extraction (29 JDs)"], ["Tier", "Ordered by demand intensity"]]}, {"soft": true, "custom": "<div class=\"hl\">Remote Share</div><div class=\"mt\"><span class=\"pip\"></span>36 AI-relevant roles</div><div class=\"stat-big\">2%</div><div class=\"stat-sub\">1 marked Remote</div>", "more": [["Remote count", "1 / 36"], ["Share", "2%"]]}, {"soft": true, "custom": "<div class=\"hl\">Top Hirers</div><div class=\"mt\"><span class=\"pip\"></span>Top 3 this issue</div><div class=\"dg\" style=\"-webkit-line-clamp:unset;display:block;font-size:14.5px;line-height:1.7;margin-top:6px\">· Netflix<br>· CE Showroom Inc.<br>· ExxonMobil</div>", "more": [["#1", "Netflix"], ["#2", "CE Showroom Inc."], ["#3", "ExxonMobil"]]}], "digest": "<b>36</b> AI-relevant roles (noise filtered).<br>Median salary <em>$117k</em>; observed <b>$115–120k</b>.<br>Remote share <b>2%</b>.<br>Top hirers: Netflix, CE Showroom Inc., ExxonMobil."}, {"id": "b3", "n": "03", "k": "What to Learn Next", "pp": "Foresight signals cross-confirmed ≥2 sources", "cnt": "5 signals", "cards": [{"kind": "co", "accent": "#CC3B1B", "hl": "AI Agents / Orchestration", "mt": "3-source confirmed", "dg": "Hard bar already · 4-source confirmed · LangGraph / CrewAI; ship multi-step tool-using agents", "more": [["Sources", "3 / 4"], ["Nature", "Hard bar already · 4-source confirmed"], ["How to start", "LangGraph / CrewAI; ship multi-step tool-using agents"]]}, {"kind": "co", "accent": "#1F6F4A", "hl": "RAG", "mt": "3-source confirmed", "dg": "Mainstreamed · LlamaIndex / vector retrieval; wire private data into LLMs", "more": [["Sources", "3 / 4"], ["Nature", "Mainstreamed"], ["How to start", "LlamaIndex / vector retrieval; wire private data into LLMs"]]}, {"kind": "co", "accent": "#2A6FDB", "hl": "Multimodal", "mt": "3-source confirmed", "dg": "HF trending #1 · Vision-language models (VLM); MiniCPM-V / Qwen-VL", "more": [["Sources", "3 / 4"], ["Nature", "HF trending #1"], ["How to start", "Vision-language models (VLM); MiniCPM-V / Qwen-VL"]]}, {"kind": "co", "accent": "#5B3FB8", "hl": "AI Safety / Responsible AI", "mt": "2-source confirmed", "dg": "Enterprise bets rising · Prompt injection defense / evals / red teaming", "more": [["Sources", "2 / 4"], ["Nature", "Enterprise bets rising"], ["How to start", "Prompt injection defense / evals / red teaming"]]}, {"kind": "co", "accent": "#9A6B1F", "hl": "Evals", "mt": "2-source confirmed", "dg": "New hard bar, 3-source · deepeval / RAGAS; 'is my AI correct?' as engineering", "more": [["Sources", "2 / 4"], ["Nature", "New hard bar, 3-source"], ["How to start", "deepeval / RAGAS; 'is my AI correct?' as engineering"]]}], "digest": "<b>5</b> ≥2-source confirmed foresight signals (no single-source hype).<br>Each card explains <em>what it is</em> + <em>how to start</em>.<br>Sorted by source count: 4 (all) → 3 (strong) → 2 (dual)."}, {"id": "b4", "n": "04", "k": "Falsifiable Predictions", "pp": "Logged · Aug 2026 retro", "cnt": "F-3 Issue 1", "cards": [{"soft": true, "custom": "<div class=\"hl\">F-3 Prediction (Issue 1, falsifiable trace logged)</div><div class=\"mt\"><span class=\"pip\"></span>Aug 2026 retro check</div><div class=\"dg\" style=\"-webkit-line-clamp:unset;display:block\">The NA AI hiring bar is moving from 'calling an LLM API' to 'orchestrating Agents + doing Evals + using AI coding agents at work'; multimodal adoption leads; Serving is the 6–12 month leading-indicator role.</div><div class=\"ft\">See research/11-F3-prediction.md</div>", "more": [["Issued", "2026-05-19"], ["Retro", "2026-08"], ["Discipline", "Admit wrong; no patching"]]}, {"subj": {"label": "Check", "color": "#CC3B1B"}, "hl": "Does AI-coding-agent freq rise in jobs?", "mt": "Aug 2026 comparable", "dg": "Rerun same scrape in 3 mo → yes/no", "more": [["Check date", "Aug 2026"], ["If reverse", "Log FAIL, no cover-up"]]}, {"subj": {"label": "Check", "color": "#CC3B1B"}, "hl": "Does Serving move from \"not-yet-in-jobs\" to \"present\"?", "mt": "Aug 2026 comparable", "dg": "Rerun same scrape in 3 mo → yes/no", "more": [["Check date", "Aug 2026"], ["If reverse", "Log FAIL, no cover-up"]]}, {"subj": {"label": "Check", "color": "#CC3B1B"}, "hl": "Does multimodal share on HF hold?", "mt": "Aug 2026 comparable", "dg": "Rerun same scrape in 3 mo → yes/no", "more": [["Check date", "Aug 2026"], ["If reverse", "Log FAIL, no cover-up"]]}], "digest": "What separates this from an AI newsletter:<br><b>Traceable, reviewable, admits when wrong</b>.<br>F-3 Issue 1 prediction + 3 Aug-2026 checks already written to falsifiable trace."}, {"id": "b5", "n": "05", "k": "Visa & Validation", "pp": "NA landing + decision gate", "cnt": "", "cards": [{"soft": true, "custom": "<div class=\"hl\">NA Visa / H-1B</div><div class=\"mt\"><span class=\"pip\"></span>data pending</div><div class=\"editors-note\"><span class=\"tk\">TK</span><span class=\"body\">fetch_h1b.py not run</span></div>", "more": [["Status", "data not generated"]]}, {"soft": true, "custom": "<div class=\"hl\">Real-user validation (W4 gate, requires you to run)</div><div class=\"mt\"><span class=\"pip\"></span>5 humans × 3 questions</div><div class=\"dg\" style=\"-webkit-line-clamp:unset;display:block\">Protocol at research/13-validation-protocol.md. AI cannot run this for you — it is the first life-or-death gate for whether this product warrants further investment.</div><div class=\"ft\">Ask ①weekly revisit ②foresight trustable ③willingness-to-pay</div>", "more": [["Protocol", "research/13-validation-protocol.md"], ["People", "5 × 1 persona each"], ["Decision", "Q1+Q2 both pass → ship P2 coaching layer"]]}], "digest": "<b>Visa</b> placeholder (DOL salary 403 blocked) — deferred.<br><b>Real-user validation</b> is the W4 gate — AI cannot run this; bring the protocol to 5 humans × 3 questions."}];
+const bands = [{"id": "nl-hot", "n": "01", "k": "Hot Today", "pp": "Ranked by cross-source coverage · more outlets = more important", "cnt": "Top 0 · 0 multi-source", "cards": [], "digest": "These 0 stories are ranked by cross-source coverage. 🔗 Multi-source stories rank first — the more outlets cover a story, the more the AI community considers it important. Read top-to-bottom when time is short."}];
 
 function moreDl(arr){
   if(!arr || !arr.length) return "";
@@ -896,7 +971,7 @@ function renderBand(b, total){
       <div class="k">${b.k}</div>
       ${b.cnt?`<div class="cnt">${b.cnt}</div>`:""}
       <div class="pp">${b.pp}</div>
-      ${b.digest ? `<div class="band-lede"><span class="lede-kick">Section TL;DR</span>${b.digest}</div>` : ""}
+      ${b.digest ? `<div class="band-lede"><span class="lede-kick">About</span>${b.digest}</div>` : ""}
     </header>
     <div class="rail-wrap">
       <div class="rail">${b.cards.map(renderCard).join("")}</div>
@@ -1127,42 +1202,152 @@ document.querySelectorAll("#toc-list a[data-anchor]").forEach(a=>{
   </svg>
 </template>
 
+
 <script>
-document.addEventListener('click', async (ev) => {
-  if (ev.target.id !== 'p-submit') return;
-  ev.preventDefault(); ev.stopPropagation();
-  const btn = ev.target;
-  const skills = (document.getElementById('p-skills').value||'').trim();
-  const target_role = document.getElementById('p-target').value;
-  const years = parseInt(document.getElementById('p-years').value)||0;
-  const resume = (document.getElementById('p-resume').value||'').trim();
-  const out = document.getElementById('p-out');
-  if (!skills && !resume) { out.style.display='block'; out.innerHTML='<span class="warn">Please fill in skills or paste a resume</span>'; return; }
-  const old = btn.textContent; btn.disabled = true; btn.textContent = 'Generating… (~5-15s)';
-  out.style.display='block'; out.innerHTML='<span style="color:var(--mut)">Generating… (~5-15s)</span>';
-  try {
-    const r = await fetch('/api/personalize', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({skills, target_role, years, resume})});
-    const data = await r.json();
-    if (!r.ok || !data.result) throw new Error((data&&data.error)||('HTTP '+r.status));
-    renderResult(data.result, data.meta);
-  } catch (e) {
-    out.innerHTML = '<span class="warn">Error: '+e.message+'</span>';
-  } finally { btn.disabled = false; btn.textContent = old; }
-});
-function renderResult(r, meta) {
-  const out = document.getElementById('p-out');
-  const tags = (a) => (a||[]).map(x=>`<span class="tg" style="margin-right:3px">${x}</span>`).join('')||'none';
-  out.innerHTML = `
-    <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:10px"><span style="font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)">Fit score</span><span style="font-family:var(--serif);font-size:28px;font-weight:600;color:var(--ink)">${r.fit_score}</span><span style="font-size:12px;color:var(--mut)">/100</span></div>
-    <div style="margin:8px 0"><b>Baseline gap:</b> ${tags(r.baseline_gap)}</div>
-    <div style="margin:8px 0"><b>Foresight gap:</b> ${tags(r.foresight_gap)}</div>
-    <div style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)"><div style="font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:8px">Suggested learn order</div>
-    <ol style="margin:0;padding-left:18px">${(r.learn_order||[]).map(x=>`<li style="margin:6px 0"><b>${x.skill}</b> — ${x.why}<br><span style="font-size:12px;color:var(--mut)">Resource: ${x.resource_hint}</span></li>`).join('')}</ol></div>
-    <div style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)"><div style="font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:6px">Next 3 weeks · concrete actions</div>
-    <ol style="margin:0;padding-left:18px">${(r.next_3_actions||[]).map(x=>`<li style="margin:5px 0">${x}</li>`).join('')}</ol></div>
-    <div style="margin-top:12px;padding:10px 12px;background:rgba(154,107,31,.08);border-left:2px solid var(--gold);font-size:12.5px;color:var(--ink-2);line-height:1.55">⚠️ Reality check: ${r.reality_check}</div>
-    <div style="margin-top:10px;font-family:var(--mono);font-size:10px;color:var(--mut-2);letter-spacing:.04em">Model: ${meta.model} · ${meta.usage.total_tokens||'?'}t · data as of ${{meta.data_as_of}}</div>`;
-}
+(function(){
+  // P2-2 日期过滤
+  function getToday(){ return new Date().toISOString().slice(0,10); }
+  function getWeekAgo(){
+    var d=new Date(); d.setDate(d.getDate()-7); return d.toISOString().slice(0,10);
+  }
+  function tagCards(){
+    document.querySelectorAll('article.rc').forEach(function(el){
+      var mt=el.querySelector('.mt');
+      if(!mt) return;
+      var m=mt.textContent.match(/(\d{4}-\d{2}-\d{2})/);
+      if(m) el.dataset.dfDate=m[1];
+    });
+  }
+  function applyFilter(range){
+    var today=getToday(), weekAgo=getWeekAgo();
+    document.querySelectorAll('article.rc').forEach(function(el){
+      var d=el.dataset.dfDate||'';
+      var hide=(range==='today'&&d<today)||(range==='week'&&d<weekAgo);
+      el.classList.toggle('df-hidden', hide);
+    });
+    // 隐藏全空的 band section
+    document.querySelectorAll('section.band').forEach(function(sec){
+      var cards=sec.querySelectorAll('article.rc');
+      if(!cards.length) return;
+      var visible=[].some.call(cards,function(c){return !c.classList.contains('df-hidden')});
+      sec.style.display=visible?'':'none';
+    });
+  }
+  function initFilter(){
+    tagCards();
+    document.querySelectorAll('#date-filter-bar button').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        document.querySelectorAll('#date-filter-bar button').forEach(function(b){b.classList.remove('df-active')});
+        this.classList.add('df-active');
+        applyFilter(this.dataset.df);
+      });
+    });
+  }
+  // bands 由 JS 渲染，需等 DOMContentLoaded 后再延迟一帧
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',function(){setTimeout(initFilter,120)});
+  } else {
+    setTimeout(initFilter,120);
+  }
+})();
+</script>
+
+<script>
+(function(){
+  // P3-1 主题订阅
+  var LS_TOPICS='aipulse-topics-hidden';
+  function applyTopics(){
+    if(document.querySelector('.tf-bm-view.bm-on')) return;
+    document.querySelectorAll('.tf-btn').forEach(function(btn){
+      var sec=document.getElementById(btn.dataset.section);
+      if(sec) sec.classList.toggle('tf-hidden',!btn.classList.contains('tf-active'));
+    });
+  }
+  function saveTopics(){
+    var h=[];
+    document.querySelectorAll('.tf-btn:not(.tf-active)').forEach(function(b){h.push(b.dataset.section)});
+    localStorage.setItem(LS_TOPICS,JSON.stringify(h));
+  }
+  function initTopicFilter(){
+    var hidden=JSON.parse(localStorage.getItem(LS_TOPICS)||'[]');
+    document.querySelectorAll('.tf-btn').forEach(function(btn){
+      if(hidden.indexOf(btn.dataset.section)>=0) btn.classList.remove('tf-active');
+      btn.addEventListener('click',function(){
+        this.classList.toggle('tf-active');
+        applyTopics(); saveTopics();
+      });
+    });
+    var allBtn=document.querySelector('.tf-all');
+    if(allBtn) allBtn.addEventListener('click',function(){
+      document.querySelectorAll('.tf-btn').forEach(function(b){b.classList.add('tf-active')});
+      applyTopics(); saveTopics();
+    });
+    var bmBtn=document.querySelector('.tf-bm-view');
+    if(bmBtn) bmBtn.addEventListener('click',function(){
+      this.classList.toggle('bm-on');
+      var on=this.classList.contains('bm-on');
+      document.querySelectorAll('article.rc').forEach(function(c){
+        c.classList.toggle('bm-hidden', on&&!c.classList.contains('is-bookmarked'));
+      });
+      document.querySelectorAll('section.band').forEach(function(sec){
+        if(on){
+          var vis=[].some.call(sec.querySelectorAll('article.rc'),
+            function(c){return !c.classList.contains('bm-hidden')});
+          sec.style.display=vis?'':'none';
+        }else{
+          sec.style.display=''; applyTopics();
+        }
+      });
+    });
+    applyTopics();
+  }
+
+  // P3-2 已读/收藏
+  var READ_LBL='✓ Read';
+  var BM_LBL='★ Save';
+  function getCardKey(el){
+    var a=el.querySelector('.hl a[href]');
+    if(!a||!a.href||a.href==='#') return null;
+    return 'aipulse:'+a.href;
+  }
+  function initCardActions(){
+    document.querySelectorAll('article.rc').forEach(function(card){
+      var key=getCardKey(card);
+      if(!key) return;
+      var state=JSON.parse(localStorage.getItem(key)||'{}');
+      if(state.read) card.classList.add('is-read');
+      if(state.bookmarked) card.classList.add('is-bookmarked');
+      var bar=document.createElement('div');
+      bar.className='card-actions';
+      bar.innerHTML='<button class="ca-btn ca-read">'+READ_LBL+'</button>'
+                   +'<button class="ca-btn ca-bm">'+BM_LBL+'</button>';
+      card.appendChild(bar);
+      bar.querySelector('.ca-read').addEventListener('click',function(e){
+        e.stopPropagation();
+        state.read=!state.read;
+        card.classList.toggle('is-read',state.read);
+        localStorage.setItem(key,JSON.stringify(state));
+      });
+      bar.querySelector('.ca-bm').addEventListener('click',function(e){
+        e.stopPropagation();
+        state.bookmarked=!state.bookmarked;
+        card.classList.toggle('is-bookmarked',state.bookmarked);
+        var bmOn=document.querySelector('.tf-bm-view.bm-on');
+        if(bmOn&&!state.bookmarked) card.classList.add('bm-hidden');
+        else if(bmOn&&state.bookmarked) card.classList.remove('bm-hidden');
+        localStorage.setItem(key,JSON.stringify(state));
+      });
+    });
+  }
+
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',function(){
+      setTimeout(function(){initTopicFilter();initCardActions();},160);
+    });
+  }else{
+    setTimeout(function(){initTopicFilter();initCardActions();},160);
+  }
+})();
 </script>
 </body>
 </html>

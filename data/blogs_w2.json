@@ -1,5 +1,5 @@
 {
- "collected_at": "2026-06-14T04:43:26",
+ "collected_at": "2026-06-15T02:53:39",
  "source_status": {
   "Simon Willison": "ok:8",
   "Lilian Weng": "ok:0",
@@ -17,6 +17,20 @@
   "Sebastian Ruder": "ok:0"
  },
  "items": [
+  {
+   "source": "Simon Willison",
+   "title": "Quoting Julia Evans",
+   "date": "2026-06-15",
+   "summary": "[...] Instead, I picture a specific person and I just write for them. Often this person is \"me, but 3 years ago\" or a good friend. &mdash; Julia Evans , write for 1 person Tags: writing , julia-evans",
+   "link": "https://simonwillison.net/2026/Jun/15/julia-evans/#atom-everything"
+  },
+  {
+   "source": "Simon Willison",
+   "title": "Why AI hasn’t replaced software engineers, and won’t",
+   "date": "2026-06-14",
+   "summary": "Why AI hasn’t replaced software engineers, and won’t Arvind Narayanan and Sayash Kappor take on the question of AI job losses through the lens of a profession that is uniquely suited to AI disruption - software engineering. In this essay, we argue that there is enough evidence to reject the narrative that once AI capabilities reach a certain threshold, it will cause mass layoffs. Given that this is true even in a sector with very few regulatory barriers, most other professions are likely to be even more cushioned. The first good news is that the data still doesn't support the idea that AI is c",
+   "link": "https://simonwillison.net/2026/Jun/14/why-ai-hasnt-replaced-software-engineers/#atom-everything"
+  },
   {
    "source": "Simon Willison",
    "title": "Publishing WASM wheels to PyPI for use with Pyodide",
@@ -58,20 +72,6 @@
    "date": "2026-06-12",
    "summary": "Jenny owns a crematorium. John’s propane company gives her a $20 billion investment in return for 5 percent of her operation. Jenny throws $10 billion into the incinerator, then pays John $10 billion to buy propane to burn that money to ashes. John reports that his AI investments have generated $10 billion in revenue this quarter and that he owns 5 percent of a $100 billion business. A reporter from Forbes is assigned to profile John and Jenny, and over the course of his research, he becomes embroiled in a passionate but confusing three-way love affair with them, which eventually turns into a ",
    "link": "https://simonwillison.net/2026/Jun/12/andrew-singleton/#atom-everything"
-  },
-  {
-   "source": "Simon Willison",
-   "title": "Claude Fable is relentlessly proactive",
-   "date": "2026-06-11",
-   "summary": "After two days of experience with Claude Fable 5 I think the best way to describe it is relentlessly proactive . It knows a whole lot of tricks and it will deploy pretty much any of them to get to its goal. I'll illustrate this with an example. I was hacking on Datasette Agent today when I noticed a glitch: a horizontal scrollbar that shouldn't be there in the jump menu chat prompt. I snapped this screenshot: Then I started a fresh claude session in my datasette-agent checkout, dragged in the screenshot and told it: Look at dependencies to help figure out why there is a horizontal scrollbar he",
-   "link": "https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/#atom-everything"
-  },
-  {
-   "source": "Simon Willison",
-   "title": "datasette 1.0a33",
-   "date": "2026-06-11",
-   "summary": "Release: datasette 1.0a33 This alpha is a significant step on the road to a stable 1.0, finally extending the ?_extra= pattern I introduced in Datasette 1.0a3 to cover queries and rows in addition to tables. That pattern is also now documented ! I wrote a whole lot more about the new release on the Datasette project blog: Datasette 1.0a33 with JSON extras in the API . Because API explorer tools are almost free to build now I had Claude Fable 5 in Claude Code (for the plan ) and GPT-5.5 xhigh in Codex Desktop (for the implementation ) build me this custom extras API explorer to help demonstrate",
-   "link": "https://simonwillison.net/2026/Jun/11/datasette/#atom-everything"
   },
   {
    "source": "Sebastian Raschka",
@@ -187,6 +187,13 @@
   },
   {
    "source": "OpenAI News",
+   "title": "Introducing the OpenAI Partner Network",
+   "date": "2026-06-14",
+   "summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.",
+   "link": "https://openai.com/index/introducing-openai-partner-network"
+  },
+  {
+   "source": "OpenAI News",
    "title": "New OpenAI Academy courses for the next era of work",
    "date": "2026-06-12",
    "summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and apply agents in everyday work.",
@@ -215,13 +222,6 @@
   },
   {
    "source": "OpenAI News",
-   "title": "OpenAI to acquire Ona",
-   "date": "2026-06-11",
-   "summary": "OpenAI plans to acquire Ona to expand Codex with secure, persistent cloud environments, enabling long-running AI agents across enterprise workflows.",
-   "link": "https://openai.com/index/openai-to-acquire-ona"
-  },
-  {
-   "source": "OpenAI News",
    "title": "How an astrophysicist uses Codex to help simulate black holes",
    "date": "2026-06-11",
    "summary": "Discover how astrophysicist Chi-kwan Chan uses Codex to build black hole simulations, helping scientists study extreme physics and test Einstein’s theory of general relativity.",
@@ -229,17 +229,17 @@
   },
   {
    "source": "OpenAI News",
+   "title": "OpenAI to acquire Ona",
+   "date": "2026-06-11",
+   "summary": "OpenAI plans to acquire Ona to expand Codex with secure, persistent cloud environments, enabling long-running AI agents across enterprise workflows.",
+   "link": "https://openai.com/index/openai-to-acquire-ona"
+  },
+  {
+   "source": "OpenAI News",
    "title": "Access OpenAI models and Codex through your Oracle cloud commitment",
    "date": "2026-06-10",
    "summary": "Access OpenAI models and Codex through Oracle Cloud, using existing commitments to build and deploy AI with enterprise security and governance.",
    "link": "https://openai.com/index/openai-on-oracle-cloud"
-  },
-  {
-   "source": "OpenAI News",
-   "title": "PRC-linked influence operations are targeting AI debates in the US",
-   "date": "2026-06-10",
-   "summary": "A new report from OpenAI details PRC-linked influence operations using AI to target U.S. tech debates, data center narratives, tariffs, and false claims about ChatGPT.",
-   "link": "https://openai.com/index/prc-linked-influence-operations-ai-debates"
   },
   {
    "source": "Google Research",

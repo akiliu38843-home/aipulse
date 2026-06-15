@@ -1,161 +1,177 @@
 {
- "as_of": "2026-06-08",
- "model": "gpt-5.4-mini",
+ "as_of": "2026-06-15",
+ "model": "deepseek-chat",
  "enterprise": {
   "NVDA": {
    "name": "NVIDIA Corporation",
-   "ai_strategy_one_line_zh": "以CUDA和Blackwell为核心，提供端到端AI基础设施与平台，驱动云、模型与企业AI应用。",
-   "ai_strategy_one_line_en": "Builds end-to-end AI infrastructure and platform around CUDA and Blackwell for clouds, model makers, and enterprises.",
+   "ai_strategy_one_line_zh": "以数据中心的规模提供全栈加速计算平台，驱动AI基础设施变革。",
+   "ai_strategy_one_line_en": "Scale AI infrastructure with full-stack accelerated computing platform.",
    "canonical_theme": "Enterprise AI Platform",
    "concrete_bets": [
-    "CUDA software stack",
-    "Blackwell data-center-scale AI infrastructure",
-    "Holistic hardware-software-networking co-design"
+    "CUDA software platform and libraries",
+    "Blackwell architecture with holistic co-design",
+    "Data-center-scale infrastructure for AI model makers"
    ],
    "_usage": {
-    "prompt_tokens": 637,
-    "completion_tokens": 216,
-    "total_tokens": 853,
-    "completion_tokens_details": {
-     "reasoning_tokens": 78
-    }
+    "prompt_tokens": 653,
+    "completion_tokens": 107,
+    "total_tokens": 760,
+    "prompt_tokens_details": {
+     "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 653
    }
   },
   "MSFT": {
    "name": "Microsoft Corporation",
-   "ai_strategy_one_line_zh": "以云+Copilot+代理为核心，提供安全合规的企业级AI平台并规模化落地各行业。",
-   "ai_strategy_one_line_en": "Enterprise AI platform spanning cloud, Copilot, and agents with security and responsible deployment.",
+   "ai_strategy_one_line_zh": "通过全栈AI平台与Copilot代理赋能全球每个人和组织实现更多成就。",
+   "ai_strategy_one_line_en": "Empower every person and organization worldwide through full-stack AI platform and Copilot agents.",
    "canonical_theme": "Enterprise AI Platform",
    "concrete_bets": [
-    "Microsoft Cloud + intelligent cloud/edge",
     "Microsoft 365 Copilot and agents",
-    "AI-driven security, compliance, identity, and privacy"
+    "intelligent cloud and edge platform with AI capabilities",
+    "AI-driven security and compliance solutions"
    ],
    "_usage": {
-    "prompt_tokens": 590,
-    "completion_tokens": 188,
-    "total_tokens": 778,
-    "completion_tokens_details": {
-     "reasoning_tokens": 53
-    }
+    "prompt_tokens": 603,
+    "completion_tokens": 115,
+    "total_tokens": 718,
+    "prompt_tokens_details": {
+     "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 603
    }
   },
   "PLTR": {
    "name": "Palantir Technologies Inc.",
-   "ai_strategy_one_line_zh": "以AIP把大模型接入Foundry/Gotham和Ontology，推动企业与政府级决策自动化。",
-   "ai_strategy_one_line_en": "Embed LLMs into Foundry and Gotham via AIP to operationalize enterprise and government decision-making.",
+   "ai_strategy_one_line_zh": "通过AIP平台将AI深度集成至企业与政府运营决策中，实现实时数据驱动智能。",
+   "ai_strategy_one_line_en": "Deploy AIP to integrate AI into enterprise and government operations for real-time, data-driven decision-making.",
    "canonical_theme": "Enterprise AI Platform",
    "concrete_bets": [
     "AIP platform",
-    "Ontology-driven data operations",
-    "LLM integration across Gotham and Foundry"
+    "Ontology-driven data integration",
+    "LLM orchestration for operational decisions"
    ],
    "_usage": {
-    "prompt_tokens": 643,
-    "completion_tokens": 145,
-    "total_tokens": 788,
-    "completion_tokens_details": {
-     "reasoning_tokens": 19
-    }
+    "prompt_tokens": 659,
+    "completion_tokens": 118,
+    "total_tokens": 777,
+    "prompt_tokens_details": {
+     "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 659
    }
   },
   "META": {
    "name": "Meta Platforms, Inc.",
-   "ai_strategy_one_line_zh": "以Meta AI贯穿社交应用、网页与AI眼镜，结合基础模型和多模态硬件打造下一代交互体验。",
-   "ai_strategy_one_line_en": "Embed Meta AI across apps, web, and AI glasses, using foundation models to power social, discovery, and next-gen interfaces.",
+   "ai_strategy_one_line_zh": "AI赋能社交、发现与沉浸式体验，驱动应用与硬件创新。",
+   "ai_strategy_one_line_en": "Leveraging AI to enhance social connection, content discovery, and immersive experiences across apps and hardware.",
    "canonical_theme": "Multimodal",
    "concrete_bets": [
-    "Meta AI assistant across apps/web/glasses",
-    "AI-powered content ranking and discovery",
-    "AI glasses and long-term AR wearables"
+    "Meta AI assistant across apps and glasses",
+    "AI-powered ranking and discovery engine",
+    "Long-term AI research for next-gen computing"
    ],
    "_usage": {
-    "prompt_tokens": 683,
-    "completion_tokens": 236,
-    "total_tokens": 919,
-    "completion_tokens_details": {
-     "reasoning_tokens": 88
-    }
+    "prompt_tokens": 701,
+    "completion_tokens": 117,
+    "total_tokens": 818,
+    "prompt_tokens_details": {
+     "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 701
    }
   }
  },
  "blog": {
   "themes": [
    {
-    "name_zh": "代理与编排",
-    "name_en": "Agents Ops",
-    "canonical_signal": "AI Agents/编排",
-    "member_indices": [
-     1,
-     2,
-     3,
-     8,
-     12,
-     17,
-     19,
-     20,
-     22,
-     26,
-     30,
-     34
-    ],
-    "evidence_one_line_zh": "这一组都在讲用工具、记忆、MCP、沙箱和编排把模型变成可执行的代理。",
-    "evidence_one_line_en": "Tooling, memory, sandboxing, MCP, and workflow orchestration for agentic systems."
-   },
-   {
-    "name_zh": "架构与推理",
-    "name_en": "LLM Architecture",
-    "canonical_signal": "Serving 推理",
+    "name_zh": "LLM模型与架构",
+    "name_en": "LLM Models & Architecture",
+    "canonical_signal": "OTHER",
     "member_indices": [
      9,
      10,
      11,
      13,
-     18,
-     21,
+     14,
+     15,
      23,
      24,
-     25
+     35
     ],
-    "evidence_one_line_zh": "这些文章聚焦LLM结构、注意力变体、推理扩展、训练目标和长上下文效率。",
-    "evidence_one_line_en": "Model architecture, attention variants, efficient inference, planning, and alignment research."
+    "evidence_one_line_zh": "涵盖LLM架构演进、评测、训练技巧和世界模型规划。",
+    "evidence_one_line_en": "Covers LLM architecture, evaluation, training, and world model planning."
    },
    {
-    "name_zh": "安全与治理",
-    "name_en": "Safety Policy",
-    "canonical_signal": "AI安全/Responsible AI",
+    "name_zh": "AI应用与Agent",
+    "name_en": "AI Agents & Applications",
+    "canonical_signal": "AI Agents/编排",
     "member_indices": [
-     4,
-     5,
-     6,
+     1,
+     2,
      7,
-     15,
-     28,
-     31,
-     32,
-     38
+     12,
+     17,
+     19,
+     21,
+     22
     ],
-    "evidence_one_line_zh": "这一主题涵盖模型安全、隐私、公共政策、前沿AI治理和生物安全。",
-    "evidence_one_line_en": "Safety, privacy, governance, policy, and biosecurity around frontier AI."
+    "evidence_one_line_zh": "聚焦AI编程助手、Agent工作流以及AI赋能生产力的实践。",
+    "evidence_one_line_en": "Focuses on AI coding assistants, agent workflows, and productivity innovations."
    },
    {
-    "name_zh": "应用与科研",
-    "name_en": "AI Applications",
+    "name_zh": "企业AI与生态",
+    "name_en": "Enterprise AI & Ecosystem",
     "canonical_signal": "LLM/生成式AI应用",
     "member_indices": [
-     14,
      16,
+     18,
+     25,
+     26,
      27,
+     29,
+     30,
+     31,
+     32,
+     36
+    ],
+    "evidence_one_line_zh": "包括企业级AI部署、合作伙伴生态、代码环境及金融场景。",
+    "evidence_one_line_en": "Includes enterprise deployments, partner network, and financial AI use cases."
+   },
+   {
+    "name_zh": "负责任AI与安全",
+    "name_en": "Responsible AI & Safety",
+    "canonical_signal": "AI安全/Responsible AI",
+    "member_indices": [
+     6,
+     20,
+     28,
      33,
      35,
-     36,
      37,
-     39,
-     40,
-     41
+     38,
+     40
     ],
-    "evidence_one_line_zh": "这些内容展示AI在企业流程、客服、医疗、气候和科研合作中的落地与扩散。",
-    "evidence_one_line_en": "Enterprise deployment and scientific/public-impact applications across health, climate, and research."
+    "evidence_one_line_zh": "涵盖AI安全、内容审核、隐私、健康及气候领域的负责任的AI实践。",
+    "evidence_one_line_en": "Covers AI safety, content moderation, privacy, health, and climate responsible AI."
+   },
+   {
+    "name_zh": "开源与开发者工具",
+    "name_en": "Open Source & Developer Tools",
+    "canonical_signal": "OTHER",
+    "member_indices": [
+     3,
+     4,
+     5,
+     8
+    ],
+    "evidence_one_line_zh": "WASM发布、SQL映射、luau绑定等面向开发者的开源工具。",
+    "evidence_one_line_en": "Open source developer tools: WASM releases, SQL mapping, luau bindings."
    }
   ]
  },
@@ -189,6 +205,6 @@
    "与AI协作的工作方式": "与AI协作的工作方式"
   },
   "new_canonicals": [],
-  "notes": "将英文/中英混合的同义项归并到现有中文规范名；将可观测性与成本观测相关表述统一到“AI系统可观测性/成本”；将企业级AI平台和企业数据上的LLM应用归入“LLM/生成式AI应用”。"
+  "notes": "All raw themes mapped to existing canonical names, merging variants like 'Enterprise AI Platform' and '企业数据上的应用LLM' into 'LLM/生成式AI应用', and cost/observability variants into 'AI系统可观测性/成本'."
  }
 }
