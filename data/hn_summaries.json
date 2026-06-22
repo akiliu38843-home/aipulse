@@ -1,25 +1,4 @@
 {
- "collected_at": "2026-05-22T03:48:06",
- "by_url": {
-  "https://github.com/nex-crm/wuphf": {
-   "sum": "WUPHF is a collaborative office of AI employees who build and maintain their own knowledge base to never lose context for the tasks you give them. Supports Claude Code, Codex, OpenClaw and local LL...",
-   "status": "ok"
-  },
-  "https://github.com/statewright/statewright": {
-   "sum": "State machine guardrails for AI agents. Contribute to statewright/statewright development by creating an account on GitHub.",
-   "status": "ok"
-  },
-  "https://github.com/lahfir/agent-desktop": {
-   "sum": "Native desktop automation CLI for AI agents. Control any application through OS accessibility trees with structured JSON output and deterministic element refs. - lahfir/agent-desktop",
-   "status": "ok"
-  },
-  "https://mediator.ai/": {
-   "sum": "",
-   "status": "too-short"
-  },
-  "https://github.com/ab-613/opengravity": {
-   "sum": "A lightweight, vanilla JS, open source BYOK (Bring Your Own Key) clone of the Google Antigravity UI. It currently features a live xterm.js terminal with direct local file system sync and a sidebar ...",
-   "status": "ok"
-  }
- }
+ "collected_at": "2026-06-22T02:55:26",
+ "by_url": {}
 }

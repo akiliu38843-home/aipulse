@@ -1,143 +1,146 @@
 {
- "collected_at": "2026-06-15T02:53:48",
+ "collected_at": "2026-06-22T02:55:22",
  "arxiv": {
   "status": "ok:12",
   "papers": [
    {
-    "title": "Gaze Heads: How VLMs Look at What They Describe",
-    "date": "2026-06-12",
-    "authors": "Rohit Gandikota, David Bau",
-    "summary": "How a vision-language model internally solves the task of describing an image is far from obvious. We find that the model develops a specific mechanism for this: a small set of attention heads in its ",
-    "link": "https://arxiv.org/abs/2606.14703v1"
+    "title": "How Transparent is DiffusionGemma?",
+    "date": "2026-06-18",
+    "authors": "Joshua Engels, Callum McDougall, Bilal Chughtai",
+    "summary": "LLM reasoning transparency is a critical affordance for understanding model decisions, mitigating misuse and misalignment, and debugging surprising model behaviors. However, DiffusionGemma performs a ",
+    "link": "https://arxiv.org/abs/2606.20560v1"
    },
    {
-    "title": "ClinHallu: A Benchmark for Diagnosing Stage-Wise Hallucinations in Medical MLLM Reasoning",
-    "date": "2026-06-12",
-    "authors": "Sicheng Yang, Hangjie Yuan, Wenjun Zhang",
-    "summary": "Building trustworthy medical multimodal large language models (MLLMs) is critical for reliable clinical decision support. Existing medical hallucination benchmarks mainly focus on data collection, but",
-    "link": "https://arxiv.org/abs/2606.14697v1"
+    "title": "UNIEGO: Proxies as Mediators for Unified Egocentric Video Representation Learning",
+    "date": "2026-06-18",
+    "authors": "Wenhao Chi, Arkaprava Sinha, Dominick Reilly",
+    "summary": "Egocentric video understanding is inherently limited by the narrow perspective of wearable cameras: a single viewpoint, a single modality, a single model cannot capture the full richness of human acti",
+    "link": "https://arxiv.org/abs/2606.20559v1"
    },
    {
-    "title": "Persona-Pruner: Sculpting Lightweight Models for Role-Playing",
-    "date": "2026-06-12",
-    "authors": "Jinsu Kim, Jihoon Tack, Noah Lee",
-    "summary": "Language Models (LMs) have shown remarkable potential as role-playing chatbots, delivering consistent, stylized interactions when given a specification of a character or user persona. However, applyin",
-    "link": "https://arxiv.org/abs/2606.14695v1"
+    "title": "Optimal Deterministic Multicalibration and Omniprediction",
+    "date": "2026-06-18",
+    "authors": "Georgy Noarov, Aaron Roth",
+    "summary": "A model is multicalibrated on a collection of group weights $G$ if it is calibrated -- i.e. unbiased even conditional on its prediction -- not just overall, but also after reweighting contexts by each",
+    "link": "https://arxiv.org/abs/2606.20557v1"
    },
    {
-    "title": "AdaSR: Adaptive Streaming Reasoning with Hierarchical Relative Policy Optimization",
-    "date": "2026-06-12",
-    "authors": "Junlong Tong, Wenqi Xu, Yingqi Fan",
-    "summary": "Large reasoning models typically follow a read-then-think paradigm: they observe the complete input, reason over a static context, and then produce the answer. Yet many real-world scenarios are inhere",
-    "link": "https://arxiv.org/abs/2606.14694v1"
+    "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+    "date": "2026-06-18",
+    "authors": "Ruizhong Qiu, Yinglong Xia, Dongqi Fu",
+    "summary": "Generative recommendation is an emerging paradigm that has shown promise in industrial recommendation systems, aiming to predict users' next interactions from their historical behaviors. At the core o",
+    "link": "https://arxiv.org/abs/2606.20554v1"
    },
    {
-    "title": "Learning Coordinated Preference for Multi-Objective Multi-Agent Reinforcement Learning",
-    "date": "2026-06-12",
-    "authors": "Pengxin Wang, Lihao Guo, Yi Xie",
-    "summary": "Cooperative multi-objective multi-agent reinforcement learning (MOMARL) models team decision making under multiple, potentially conflicting objectives. In this setting, conflicts arise not only across",
-    "link": "https://arxiv.org/abs/2606.14693v1"
+    "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
+    "date": "2026-06-18",
+    "authors": "Przemyslaw Musialski",
+    "summary": "We place the attention token on the group: a token is an element $g_i$ of a matrix Lie group $G$ -- a bare transformation, with no feature payload and no external action $ρ(g)$ carrying it. To our kno",
+    "link": "https://arxiv.org/abs/2606.20547v1"
    },
    {
-    "title": "CORA: Analyzing and bridging thinking-answer gap in Multimodal RLVR via Consistency-Oriented Reasoning Alignment",
-    "date": "2026-06-12",
-    "authors": "Jiayue Cao, Zhicong Lu, Xuehan Sun",
-    "summary": "Reinforcement learning with verifiable rewards (RLVR) has successfully elicited the reasoning capabilities of large language models, motivating its extension to multimodal scenarios. Existing methods ",
-    "link": "https://arxiv.org/abs/2606.14691v1"
+    "title": "Predictability as a Fine-Grained Measure for Privacy",
+    "date": "2026-06-18",
+    "authors": "Linda Lu, Karthik Sridharan",
+    "summary": "Differential privacy (DP) ensures rigorous individual-level privacy guarantees against even the most knowledgeable attackers, but its worst-case nature can impose a costly privacy-accuracy tradeoff. W",
+    "link": "https://arxiv.org/abs/2606.20546v1"
    },
    {
-    "title": "A Complexity Measure for Active Learning in Multi-group Mean Estimation",
-    "date": "2026-06-12",
-    "authors": "Abdellah Aznag, Rachel Cummings, Adam N. Elmachtoub",
-    "summary": "We study a \\emph{max-risk} objective for active learning in a multi-group mean estimation $d$-armed bandits: a learner adaptively allocates a budget of $T$ samples across $d$ groups to minimize the wo",
-    "link": "https://arxiv.org/abs/2606.14690v1"
+    "title": "Toward Calibrated Mixture-of-Experts Under Distribution Shift",
+    "date": "2026-06-18",
+    "authors": "Gina Wong, Drew Prinster, Suchi Saria",
+    "summary": "Calibration aligns a model's predictive uncertainty with the frequencies of its empirical outcomes and is important for understanding and trusting reported probabilities. Recent work shows that enforc",
+    "link": "https://arxiv.org/abs/2606.20544v1"
    },
    {
-    "title": "Flood and Harvest: The Provable Necessity of Trivia for Generating Valuable Mathematics via the Lens of Language Generation in the Limit",
-    "date": "2026-06-12",
-    "authors": "Xiaoyu Li, Andi Han, Dai Shi",
-    "summary": "AI systems coupled to proof assistants now generate formal mathematics at scale, and the gap between what a checker can verify and what a mathematician would value has become the binding constraint. W",
-    "link": "https://arxiv.org/abs/2606.14688v1"
+    "title": "Multi-Task Bayesian In-Context Learning",
+    "date": "2026-06-18",
+    "authors": "Qingyang Zhu, Eric Karl Oermann, Kyunghyun Cho",
+    "summary": "Bayesian predictive inference provides a principled framework for uncertainty quantification, data efficiency, and robust generalization. However, exact inference is often intractable, and scalable ap",
+    "link": "https://arxiv.org/abs/2606.20538v1"
    },
    {
-    "title": "CottonLeafVision: An Explainable and Robust Deep Learning Framework for Cotton Leaf Disease Classification",
-    "date": "2026-06-12",
-    "authors": "Rafi Ahamed, Md. Abir Rahman, Tasnia Tarannum Roza",
-    "summary": "Globally, cotton is a highly economically beneficial crop, as the textile industry heavily depends on it. So, the precise identification and detection of cotton leaf disease is crucial for economic st",
-    "link": "https://arxiv.org/abs/2606.14686v1"
+    "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+    "date": "2026-06-18",
+    "authors": "Liang Su",
+    "summary": "Mainstream LLM serving systems reuse prefix work mainly through paged or radix key-value (KV) caches. This is highly effective for high-throughput, high-concurrency serving, but it manages only one po",
+    "link": "https://arxiv.org/abs/2606.20537v1"
    },
    {
-    "title": "HumP-KD: A Hybrid Uncertainty-Aware Multi-Stage Progressive Knowledge Distillation Framework for Efficient Fire Classification",
-    "date": "2026-06-12",
-    "authors": "Mohammed Arif Mainuddin, Najifa Tabassum, Omar Ibne Shahid",
-    "summary": "Real-time fire classification systems require models that are simultaneously accurate, computationally efficient, and deployable on resource-constrained hardware. This work proposes \\textbf{HumP-KD}, ",
-    "link": "https://arxiv.org/abs/2606.14684v1"
+    "title": "How Do Instructions Shape Speech? Cross-Attention Attribution for Style-Captioned Text-to-Speech",
+    "date": "2026-06-18",
+    "authors": "Nityanand Mathur, Hamees Sayed, Wasim Madha",
+    "summary": "Style-captioned text-to-speech systems use natural language to control voice characteristics, but how individual words influence acoustic output remains unclear. Understanding this is critical for dia",
+    "link": "https://arxiv.org/abs/2606.20532v1"
    },
    {
-    "title": "Optimal Hidden-Target Learning for Online Inventory Optimization on General Convex Sets",
-    "date": "2026-06-12",
-    "authors": "Anthony Pineci, Yunzong Xu",
-    "summary": "Online inventory optimization (OIO) is online convex optimization with physical memory: inventory carryover makes the feasible action set depend on the past. A natural principle, used in stochastic in",
-    "link": "https://arxiv.org/abs/2606.14679v1"
+    "title": "LedgerAgent: Structured State for Policy-Adherent Tool-Calling Agents",
+    "date": "2026-06-18",
+    "authors": "Md Nayem Uddin, Amir Saeidi, Eduardo Blanco",
+    "summary": "Policy-adherent tool-calling agents in customer-service domains must maintain task states across turns while calling tools and obeying domain policies. Task states consist of relevant facts, identifie",
+    "link": "https://arxiv.org/abs/2606.20529v1"
    },
    {
-    "title": "AgentSpec: Understanding Embodied Agent Scaffolds Through Controlled Composition",
-    "date": "2026-06-12",
-    "authors": "Jixuan Chen, Jianzhi Shen, Haoqiang Kang",
-    "summary": "LLM agents are increasingly built not as single model calls, but as scaffolded systems that combine reasoning, memory, reflection, action execution, and learning. While such scaffolds often improve pe",
-    "link": "https://arxiv.org/abs/2606.14674v1"
+    "title": "StylisticBias: A Few Human Visual Cues Drive Most Social Biases in MLLMs",
+    "date": "2026-06-18",
+    "authors": "Shaghayegh Kolli, Timo Cavelius, Nafiseh Nikeghbal",
+    "summary": "Multimodal large language models (MLLMs) are increasingly deployed in personally and societally consequential settings, yet the visual cues that shape how these models judge people remain poorly under",
+    "link": "https://arxiv.org/abs/2606.20527v1"
    }
   ]
  },
  "pypi": {
-  "status": "ok:7/10",
+  "status": "ok:10/10",
   "libs": [
    {
     "pkg": "litellm",
-    "last_month": 559721656,
-    "last_week": 124753270
-   },
-   {
-    "pkg": "langchain",
-    "last_month": 308839702,
-    "last_week": 65822063
+    "last_month": 574897520,
+    "last_week": 139573606
    },
    {
     "pkg": "huggingface-hub",
-    "last_month": 296407013,
-    "last_week": 77575148
-   },
-   {
-    "pkg": "transformers",
-    "last_month": 145076539,
-    "last_week": 32587413
-   },
-   {
-    "pkg": "anthropic",
-    "last_month": 132134929,
-    "last_week": 30741021
-   },
-   {
-    "pkg": "langgraph",
-    "last_month": 55886977,
-    "last_week": 12210294
-   },
-   {
-    "pkg": "crewai",
-    "last_month": 14044628,
-    "last_week": 2311415
+    "last_month": 331796503,
+    "last_week": 95919957
    },
    {
     "pkg": "openai",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+    "last_month": 327767455,
+    "last_week": 84826742
    },
    {
-    "pkg": "vllm",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+    "pkg": "langchain",
+    "last_month": 318250283,
+    "last_week": 78240560
+   },
+   {
+    "pkg": "transformers",
+    "last_month": 150245308,
+    "last_week": 37751675
+   },
+   {
+    "pkg": "anthropic",
+    "last_month": 137569014,
+    "last_week": 36153459
+   },
+   {
+    "pkg": "langgraph",
+    "last_month": 57347193,
+    "last_week": 15126795
+   },
+   {
+    "pkg": "crewai",
+    "last_month": 12712370,
+    "last_week": 2879556
    },
    {
     "pkg": "llama-index",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+    "last_month": 9106242,
+    "last_week": 1799630
+   },
+   {
+    "pkg": "vllm",
+    "last_month": 5462007,
+    "last_week": 1202751
    }
   ]
  }

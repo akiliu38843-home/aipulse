@@ -1,12 +1,12 @@
 {
- "collected_at": "2026-06-15T02:53:39",
+ "collected_at": "2026-06-22T02:55:12",
  "source_status": {
   "Simon Willison": "ok:8",
   "Lilian Weng": "ok:0",
-  "Sebastian Raschka": "ok:5",
+  "Sebastian Raschka": "ok:4",
   "HuggingFace Blog": "ok:8",
   "Chip Huyen": "ok:0",
-  "Eugene Yan": "ok:1",
+  "Eugene Yan": "ok:3",
   "Jay Alammar": "ok:0",
   "Berkeley BAIR": "ok:2",
   "The Gradient": "ok:0",
@@ -19,59 +19,59 @@
  "items": [
   {
    "source": "Simon Willison",
-   "title": "Quoting Julia Evans",
-   "date": "2026-06-15",
-   "summary": "[...] Instead, I picture a specific person and I just write for them. Often this person is \"me, but 3 years ago\" or a good friend. &mdash; Julia Evans , write for 1 person Tags: writing , julia-evans",
-   "link": "https://simonwillison.net/2026/Jun/15/julia-evans/#atom-everything"
+   "title": "sqlite-utils 4.0rc1 adds migrations and nested transactions",
+   "date": "2026-06-21",
+   "summary": "sqlite-utils is my combined Python library and CLI tool for working with SQLite databases. It provides an extensive set of higher-level operations on top of Python's default sqlite3 package , including support for complex table transformations , automatic table creation from JSON data and a whole lot more. I released sqlite-utils 4.0rc1 , the first release candidate for sqlite-utils v4. The major version bump indicates some (minor) backwards incompatible changes, so I'm interested in having people try this out before I commit to a stable release. New feature: migrations There are two significa",
+   "link": "https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/#atom-everything"
   },
   {
    "source": "Simon Willison",
-   "title": "Why AI hasn’t replaced software engineers, and won’t",
-   "date": "2026-06-14",
-   "summary": "Why AI hasn’t replaced software engineers, and won’t Arvind Narayanan and Sayash Kappor take on the question of AI job losses through the lens of a profession that is uniquely suited to AI disruption - software engineering. In this essay, we argue that there is enough evidence to reject the narrative that once AI capabilities reach a certain threshold, it will cause mass layoffs. Given that this is true even in a sector with very few regulatory barriers, most other professions are likely to be even more cushioned. The first good news is that the data still doesn't support the idea that AI is c",
-   "link": "https://simonwillison.net/2026/Jun/14/why-ai-hasnt-replaced-software-engineers/#atom-everything"
+   "title": "sqlite-utils 4.0rc1",
+   "date": "2026-06-21",
+   "summary": "Release: sqlite-utils 4.0rc1 See sqlite-utils 4.0rc1 adds migrations and nested transactions . Tags: sqlite-utils",
+   "link": "https://simonwillison.net/2026/Jun/21/sqlite-utils/#atom-everything"
   },
   {
    "source": "Simon Willison",
-   "title": "Publishing WASM wheels to PyPI for use with Pyodide",
-   "date": "2026-06-13",
-   "summary": "The Pyodide 314.0 release announcement (via Hacker News ) includes news I've been looking forward to for a long time: You can now publish Python packages built for Pyodide (or any Python runtime compatible with the PyEmscripten platform defined in PEP 783 ) directly to PyPI and install them at runtime. Previously, the Pyodide maintainers had to maintain, build, and host over 300 packages ourselves. This created a significant burden on our maintainers and became a major bottleneck for the community, as every new package required manual review. Moving forward, package maintainers can simply buil",
-   "link": "https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/#atom-everything"
+   "title": "Temporary Cloudflare Accounts for AI agents",
+   "date": "2026-06-21",
+   "summary": "Temporary Cloudflare Accounts for AI agents The announcement says this is \"for AI agents\" but (as is pretty common these days) the AI hook isn't really necessary, this is an interesting feature for everyone else as well. Short version: you can now create a Cloudflare Workers project and run this, without even creating a Cloudflare account: npx wrangler deploy --temporary Cloudflare will deploy the application to a new, ephemeral project which will stay live for 60 minutes. I had GPT-5.5 xhigh in Codex Desktop build this test application providing a tool for following HTTP redirects and returni",
+   "link": "https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything"
   },
   {
    "source": "Simon Willison",
-   "title": "luau-wasm 0.1a0",
-   "date": "2026-06-13",
-   "summary": "Release: luau-wasm 0.1a0 See Publishing WASM wheels to PyPI for use with Pyodide for details. Tags: lua , webassembly , pyodide",
-   "link": "https://simonwillison.net/2026/Jun/13/luau-wasm/#atom-everything"
+   "title": "Quoting Sean Lynch",
+   "date": "2026-06-19",
+   "summary": "The real valuable capability MCP offers over skills/CLI is isolating the auth flow outside of the agent’s context window, and potentially out of the harness completely. [...] Maybe the idealized form of MCP is just an auth gateway for the API and nothing else. That’d still be a win. &mdash; Sean Lynch , comment on Hacker News Tags: model-context-protocol , llms , ai , generative-ai , skills",
+   "link": "https://simonwillison.net/2026/Jun/19/sean-lynch/#atom-everything"
   },
   {
    "source": "Simon Willison",
-   "title": "Mapping SQLite result columns back to their source `table.column`",
-   "date": "2026-06-13",
-   "summary": "Research: Mapping SQLite result columns back to their source `table.column` It would be neat if arbitrary SQL queries in Datasette could be rendered with additional information based on which columns from which tables were included in the results. To build that, we would need to be able to look at a SQL query like select users.name, orders.total from users join orders on orders.user_id = users.id and programmatically identify the table.column for each result - navigating not just joins but also more complex syntax like CTEs. I decided to set Claude Code (Opus 4.8, since Fable is currently bann",
-   "link": "https://simonwillison.net/2026/Jun/13/sqlite-column-provenance/#atom-everything"
+   "title": "Datasette Apps: Host custom HTML applications inside Datasette",
+   "date": "2026-06-18",
+   "summary": "Today we launched a new plugin for Datasette, datasette-apps , with this launch announcement post on the Datasette project blog. That post has the what , but I'm going to expand on that a little bit here to provide the why . The TL;DR Datasette Apps are self-contained HTML+JavaScript applications that run in a tightly constrained &lt;iframe&gt; sandbox hosted on your Datasette application. They can use JavaScript to run read-only SQL queries against data in Datasette, and can run write queries too if you configure them with some stored queries . Here's a very simple example and a more complex ",
+   "link": "https://simonwillison.net/2026/Jun/18/datasette-apps/#atom-everything"
   },
   {
    "source": "Simon Willison",
-   "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5",
-   "date": "2026-06-13",
-   "summary": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 Well this is nuts : The US government, citing national security authorities, has issued an export control directive to suspend all access to Fable 5 and Mythos 5 by any foreign national, whether inside or outside the United States, including foreign national Anthropic employees. The net effect of this order is that we must abruptly disable Fable 5 and Mythos 5 for all our customers to ensure compliance. Access to all other Anthropic models will not be affected. We received the directive from the government today",
-   "link": "https://simonwillison.net/2026/Jun/13/us-government-directive-to-suspend-access/#atom-everything"
+   "title": "datasette-acl 0.6a0",
+   "date": "2026-06-18",
+   "summary": "Release: datasette-acl 0.6a0 This release expands datasette-acl from table-only permissions toward a general resource-sharing system. Alex Garcia did most of the work for this release - we're fleshing out the plugin that will allow multi-user Datasette instances finely grained control over who can access which resources within Datasette. Tags: datasette , alex-garcia",
+   "link": "https://simonwillison.net/2026/Jun/18/datasette-acl/#atom-everything"
   },
   {
    "source": "Simon Willison",
-   "title": "OpenAI WebRTC Audio Session, now with document context",
-   "date": "2026-06-12",
-   "summary": "OpenAI WebRTC Audio Session, now with document context I built the first version of this tool in December 2024 to try out the then-new OpenAI WebRTC API for interacting with their realtime audio models. Last month OpenAI introduced a brand new model to that API called GPT‑Realtime‑2 , which they promoted as \"our first voice model with GPT‑5‑class reasoning\" - with a Sep 30, 2024 knowledge cut-off. I've been waiting for that model to show up in the ChatGPT iPhone app but it still hasn't, so I revisited my old playground. You can now pick the better model, and you can also paste in a big chunk o",
-   "link": "https://simonwillison.net/2026/Jun/12/openai-webrtc/#atom-everything"
+   "title": "GLM-5.2 is probably the most powerful text-only open weights LLM",
+   "date": "2026-06-17",
+   "summary": "Chinese AI lab Z.ai released GLM-5.2 to their coding plan subscribers on June 13th, and then yesterday (June 16th) released the full open weights under an MIT license. Similar in size to their previous GLM-5 and GLM-5.1 releases, this is 753B parameter, 1.51TB monster - with 40 active parameters (Mixture of Experts). GLM-5.2 is a text input only model - Z.ai have a separate vision family most recently represented by GLM-5V-Turbo , but that one isn't open weights. GLM-5.2 has a 1 million token context window, up from GLM-5.1's 200,000. The buzz around this model is strong. Artificial Analysis, ",
+   "link": "https://simonwillison.net/2026/Jun/17/glm-52/#atom-everything"
   },
   {
    "source": "Simon Willison",
-   "title": "Quoting Andrew Singleton",
-   "date": "2026-06-12",
-   "summary": "Jenny owns a crematorium. John’s propane company gives her a $20 billion investment in return for 5 percent of her operation. Jenny throws $10 billion into the incinerator, then pays John $10 billion to buy propane to burn that money to ashes. John reports that his AI investments have generated $10 billion in revenue this quarter and that he owns 5 percent of a $100 billion business. A reporter from Forbes is assigned to profile John and Jenny, and over the course of his research, he becomes embroiled in a passionate but confusing three-way love affair with them, which eventually turns into a ",
-   "link": "https://simonwillison.net/2026/Jun/12/andrew-singleton/#atom-everything"
+   "title": "Quoting Charity Majors",
+   "date": "2026-06-17",
+   "summary": "What happened in 2025 was this: the economics of code production were turned upside down . Instead of being very hard, time-consuming, and expensive to generate code, it became effectively free and instant. Lines of code went from being treasured, reused, cared for and carefully curated, to being disposable and regenerable, practically overnight. &mdash; Charity Majors , AI demands more engineering discipline. Not less Tags: charity-majors , ai-assisted-programming , generative-ai , ai , llms",
+   "link": "https://simonwillison.net/2026/Jun/17/charity-majors/#atom-everything"
   },
   {
    "source": "Sebastian Raschka",
@@ -102,18 +102,53 @@
    "link": "https://magazine.sebastianraschka.com/p/components-of-a-coding-agent"
   },
   {
-   "source": "Sebastian Raschka",
-   "title": "A Visual Guide to Attention Variants in Modern LLMs",
-   "date": "2026-03-22",
-   "summary": "From MHA and GQA to MLA, sparse attention, and hybrid architectures",
-   "link": "https://magazine.sebastianraschka.com/p/visual-attention-variants"
+   "source": "HuggingFace Blog",
+   "title": "MosaicLeaks: Can your research agent keep a secret?",
+   "date": "2026-06-18",
+   "summary": "",
+   "link": "https://huggingface.co/blog/ServiceNow/mosaicleaks"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "olmo-eval: An evaluation workbench for the model development loop",
-   "date": "2026-06-12",
+   "title": "Beyond LoRA: Can you beat the most popular fine-tuning technique?",
+   "date": "2026-06-18",
    "summary": "",
-   "link": "https://huggingface.co/blog/allenai/olmo-eval"
+   "link": "https://huggingface.co/blog/peft-beyond-lora"
+  },
+  {
+   "source": "HuggingFace Blog",
+   "title": "Is it agentic enough? Benchmarking open models on your own tooling",
+   "date": "2026-06-18",
+   "summary": "",
+   "link": "https://huggingface.co/blog/is-it-agentic-enough"
+  },
+  {
+   "source": "HuggingFace Blog",
+   "title": "MolmoMotion: Language-guided 3D motion forecasting",
+   "date": "2026-06-17",
+   "summary": "",
+   "link": "https://huggingface.co/blog/allenai/molmomotion"
+  },
+  {
+   "source": "HuggingFace Blog",
+   "title": "From the Hugging Face Hub to robot hardware with Strands Agents and LeRobot",
+   "date": "2026-06-17",
+   "summary": "",
+   "link": "https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware"
+  },
+  {
+   "source": "HuggingFace Blog",
+   "title": "GLM-5.2: Built for Long-Horizon Tasks",
+   "date": "2026-06-17",
+   "summary": "",
+   "link": "https://huggingface.co/blog/zai-org/glm-52-blog"
+  },
+  {
+   "source": "HuggingFace Blog",
+   "title": "Agentic Resource Discovery: Let agents search",
+   "date": "2026-06-17",
+   "summary": "",
+   "link": "https://huggingface.co/blog/agentic-resource-discovery-launch"
   },
   {
    "source": "HuggingFace Blog",
@@ -123,46 +158,18 @@
    "link": "https://huggingface.co/blog/torch-mlp-fusion"
   },
   {
-   "source": "HuggingFace Blog",
-   "title": "Introducing North Mini Code: Cohere’s First Model For Developers",
-   "date": "2026-06-09",
-   "summary": "",
-   "link": "https://huggingface.co/blog/CohereLabs/introducing-north-mini-code"
+   "source": "Eugene Yan",
+   "title": "Patterns for Building Cybersecurity Evals",
+   "date": "2026-06-21",
+   "summary": "A sandboxed target, inputs that influence task difficulty, tools, and a grader.",
+   "link": "https://eugeneyan.com//writing/cybersecurity-evals/"
   },
   {
-   "source": "HuggingFace Blog",
-   "title": "How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces",
-   "date": "2026-06-09",
-   "summary": "",
-   "link": "https://huggingface.co/blog/mishig/spaces-agents-md"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "Migrating Your GitHub CI to Hugging Face Jobs",
-   "date": "2026-06-09",
-   "summary": "",
-   "link": "https://huggingface.co/blog/github-ci-hf-jobs"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "The Open Source Community is backing OpenEnv for Agentic RL",
-   "date": "2026-06-08",
-   "summary": "",
-   "link": "https://huggingface.co/blog/openenv-agentic-rl"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "Nemotron 3.5 Content Safety: Customizable Multimodal Safety for Global Enterprise AI",
-   "date": "2026-06-04",
-   "summary": "",
-   "link": "https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "Designing the hf CLI as an agent-optimized way to work with the Hub",
-   "date": "2026-06-04",
-   "summary": "",
-   "link": "https://huggingface.co/blog/hf-cli-for-agents"
+   "source": "Eugene Yan",
+   "title": "Using LLMs to Secure Source Code",
+   "date": "2026-05-27",
+   "summary": "Build a threat model, discover vulnerabilities, verify, triage, and patch.",
+   "link": "https://eugeneyan.com//writing/secure-source-code/"
   },
   {
    "source": "Eugene Yan",
@@ -187,59 +194,66 @@
   },
   {
    "source": "OpenAI News",
+   "title": "Samsung Electronics brings ChatGPT and Codex to employees",
+   "date": "2026-06-21",
+   "summary": "Samsung Electronics deploys ChatGPT Enterprise and Codex to employees worldwide, marking one of OpenAI’s largest enterprise AI rollouts.",
+   "link": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment"
+  },
+  {
+   "source": "OpenAI News",
+   "title": "New usage analytics and updated spend controls for enterprises",
+   "date": "2026-06-18",
+   "summary": "OpenAI introduces new spend controls and usage analytics for ChatGPT Enterprise, helping organizations manage costs and scale AI with confidence.",
+   "link": "https://openai.com/index/chatgpt-enterprise-spend-controls"
+  },
+  {
+   "source": "OpenAI News",
+   "title": "Improving health intelligence in ChatGPT",
+   "date": "2026-06-18",
+   "summary": "Learn how GPT-5.5 Instant improves ChatGPT’s health and wellness responses with stronger reasoning, better context, clearer communication, and physician-informed evaluations.",
+   "link": "https://openai.com/index/improving-health-intelligence-in-chatgpt"
+  },
+  {
+   "source": "OpenAI News",
+   "title": "Using AI to help physicians diagnose rare genetic diseases affecting children",
+   "date": "2026-06-18",
+   "summary": "Researchers used an OpenAI reasoning model to help diagnose rare diseases, identifying 18 new diagnoses in previously unsolved cases.",
+   "link": "https://openai.com/index/diagnose-rare-childhood-diseases"
+  },
+  {
+   "source": "OpenAI News",
+   "title": "A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry",
+   "date": "2026-06-17",
+   "summary": "OpenAI and Molecule.one show how a near-autonomous AI chemist using GPT-5.4 improved a key drug-making reaction, advancing medicinal chemistry research.",
+   "link": "https://openai.com/index/ai-chemist-improves-reaction"
+  },
+  {
+   "source": "OpenAI News",
+   "title": "Introducing LifeSciBench",
+   "date": "2026-06-17",
+   "summary": "Introducing LifeSciBench, an expert-authored, expert-reviewed benchmark for evaluating how AI systems handle real-world life science research tasks and decisions.",
+   "link": "https://openai.com/index/introducing-life-sci-bench"
+  },
+  {
+   "source": "OpenAI News",
+   "title": "Predicting model behavior before release by simulating deployment",
+   "date": "2026-06-16",
+   "summary": "OpenAI introduces Deployment Simulation, a method to predict AI model behavior before deployment using real conversation data to improve safety and evaluation accuracy.",
+   "link": "https://openai.com/index/deployment-simulation"
+  },
+  {
+   "source": "OpenAI News",
    "title": "Introducing the OpenAI Partner Network",
    "date": "2026-06-14",
    "summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.",
    "link": "https://openai.com/index/introducing-openai-partner-network"
   },
   {
-   "source": "OpenAI News",
-   "title": "New OpenAI Academy courses for the next era of work",
-   "date": "2026-06-12",
-   "summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and apply agents in everyday work.",
-   "link": "https://openai.com/index/academy-courses-applying-ai-at-work"
-  },
-  {
-   "source": "OpenAI News",
-   "title": "How Preply combines AI and human tutors to personalize learning",
-   "date": "2026-06-12",
-   "summary": "Preply uses OpenAI to launch AI-generated lesson summaries, providing personalised feedback and language learning exercises.",
-   "link": "https://openai.com/index/preply"
-  },
-  {
-   "source": "OpenAI News",
-   "title": "Supporting Europe’s work in ensuring a trustworthy AI ecosystem",
-   "date": "2026-06-11",
-   "summary": "OpenAI supports the EU Code of Practice on AI content transparency, advancing provenance standards and tools to help people understand AI-generated content.",
-   "link": "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem"
-  },
-  {
-   "source": "OpenAI News",
-   "title": "BBVA puts AI at the core of banking with OpenAI",
-   "date": "2026-06-11",
-   "summary": "Learn how BBVA scaled ChatGPT Enterprise to 100,000 employees and partnered with OpenAI to accelerate AI-powered banking transformation worldwide.",
-   "link": "https://openai.com/index/bbva"
-  },
-  {
-   "source": "OpenAI News",
-   "title": "How an astrophysicist uses Codex to help simulate black holes",
-   "date": "2026-06-11",
-   "summary": "Discover how astrophysicist Chi-kwan Chan uses Codex to build black hole simulations, helping scientists study extreme physics and test Einstein’s theory of general relativity.",
-   "link": "https://openai.com/index/using-codex-to-simulate-black-holes"
-  },
-  {
-   "source": "OpenAI News",
-   "title": "OpenAI to acquire Ona",
-   "date": "2026-06-11",
-   "summary": "OpenAI plans to acquire Ona to expand Codex with secure, persistent cloud environments, enabling long-running AI agents across enterprise workflows.",
-   "link": "https://openai.com/index/openai-to-acquire-ona"
-  },
-  {
-   "source": "OpenAI News",
-   "title": "Access OpenAI models and Codex through your Oracle cloud commitment",
-   "date": "2026-06-10",
-   "summary": "Access OpenAI models and Codex through Oracle Cloud, using existing commitments to build and deploy AI with enterprise security and governance.",
-   "link": "https://openai.com/index/openai-on-oracle-cloud"
+   "source": "Google Research",
+   "title": "From pixels to planning: Earth AI for nature restoration",
+   "date": "2026-06-16",
+   "summary": "Climate & Sustainability",
+   "link": "https://research.google/blog/from-pixels-to-planning-earth-ai-for-nature-restoration/"
   },
   {
    "source": "Google Research",
@@ -289,13 +303,6 @@
    "date": "2026-05-28",
    "summary": "General Science",
    "link": "https://research.google/blog/a-new-era-of-innovation-google-research-at-io-2026/"
-  },
-  {
-   "source": "Google Research",
-   "title": "Private analytics via zero-trust aggregation",
-   "date": "2026-05-27",
-   "summary": "Security, Privacy and Abuse Prevention",
-   "link": "https://research.google/blog/private-analytics-via-zero-trust-aggregation/"
   }
  ]
 }

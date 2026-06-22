@@ -1,12 +1,16 @@
 {
- "as_of": "2026-06-15",
+ "as_of": "2026-06-22",
  "foresight": [
+  {
+   "theme": "RAG",
+   "sources": 4
+  },
   {
    "theme": "AI Agents/编排",
    "sources": 3
   },
   {
-   "theme": "RAG",
+   "theme": "Eval 评测",
    "sources": 3
   },
   {
@@ -14,11 +18,7 @@
    "sources": 3
   },
   {
-   "theme": "AI安全/Responsible AI",
-   "sources": 2
-  },
-  {
-   "theme": "Eval 评测",
+   "theme": "AI系统可观测性/成本",
    "sources": 2
   }
  ],
@@ -52,22 +52,23 @@
   "source": "W1 (2026-05-19, 63 岗样本中 22 个有 yearly salary)"
  },
  "salary_this_week_snapshot": {
-  "median_k": 117,
-  "n": 2,
+  "median_k": 150,
+  "n": 9,
   "note": "本周样本量不稳，仅辅助参考；以 salary baseline 为准"
  },
  "top_employers": [
-  "Netflix",
-  "CE Showroom Inc.",
-  "ExxonMobil",
-  "Tutor Intelligence",
-  "LCG Inc."
+  "CVS Health",
+  "LTIMindtree",
+  "Qualcomm",
+  "CodeGeniusRecruit",
+  "AI Acquisition"
  ],
  "target_roles": [
   "AI Engineer",
+  "Data Engineer",
   "Data Scientist",
   "ML Engineer",
   "Machine Learning Engineer"
  ],
- "ai_jobs_total": 36
+ "ai_jobs_total": 41
 }
