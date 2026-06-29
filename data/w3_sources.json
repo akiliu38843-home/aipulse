@@ -1,197 +1,195 @@
 {
- "collected_at": "2026-06-22T02:55:21",
+ "collected_at": "2026-06-29T02:41:33",
  "hf": {
   "status": "ok:30 sort=trendingScore",
   "tag_freq": {
-   "text-generation": 13,
-   "image-text-to-text": 9,
-   "text-to-speech": 2,
-   "unknown": 2,
+   "text-generation": 20,
+   "image-text-to-text": 5,
+   "text-to-image": 2,
+   "unknown": 1,
    "automatic-speech-recognition": 1,
-   "any-to-any": 1,
-   "sentence-similarity": 1,
-   "text-to-image": 1
+   "image-to-video": 1
   },
   "trending": [
    {
+    "id": "baidu/Unlimited-OCR",
+    "pipeline": "image-text-to-text",
+    "downloads": 295064,
+    "likes": 1244
+   },
+   {
     "id": "zai-org/GLM-5.2",
     "pipeline": "text-generation",
-    "downloads": 27413,
-    "likes": 1834
+    "downloads": 118651,
+    "likes": 2823
    },
    {
-    "id": "yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 358677,
-    "likes": 2092
-   },
-   {
-    "id": "WeiboAI/VibeThinker-3B",
-    "pipeline": "text-generation",
-    "downloads": 20277,
-    "likes": 563
-   },
-   {
-    "id": "MiniMaxAI/MiniMax-M3",
+    "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 104076,
-    "likes": 1177
-   },
-   {
-    "id": "moonshotai/Kimi-K2.7-Code",
-    "pipeline": "image-text-to-text",
-    "downloads": 363308,
-    "likes": 945
+    "downloads": 831529,
+    "likes": 806
    },
    {
     "id": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
     "pipeline": "text-generation",
-    "downloads": 21730,
-    "likes": 288
+    "downloads": 225822,
+    "likes": 798
    },
    {
-    "id": "microsoft/FastContext-1.0-4B-SFT",
+    "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
     "pipeline": "text-generation",
-    "downloads": 2593,
-    "likes": 263
+    "downloads": 52492,
+    "likes": 526
+   },
+   {
+    "id": "deepreinforce-ai/Ornith-1.0-35B-GGUF",
+    "pipeline": "text-generation",
+    "downloads": 79630,
+    "likes": 415
+   },
+   {
+    "id": "Qwen/Qwen-AgentWorld-35B-A3B",
+    "pipeline": "text-generation",
+    "downloads": 23697,
+    "likes": 401
+   },
+   {
+    "id": "krea/Krea-2-Turbo",
+    "pipeline": "text-to-image",
+    "downloads": 27631,
+    "likes": 355
+   },
+   {
+    "id": "yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF",
+    "pipeline": "text-generation",
+    "downloads": 549926,
+    "likes": 2475
+   },
+   {
+    "id": "deepreinforce-ai/Ornith-1.0-9B-GGUF",
+    "pipeline": "text-generation",
+    "downloads": 36846,
+    "likes": 276
+   },
+   {
+    "id": "krea/Krea-2-Raw",
+    "pipeline": "text-to-image",
+    "downloads": 22622,
+    "likes": 232
+   },
+   {
+    "id": "deepreinforce-ai/Ornith-1.0-9B",
+    "pipeline": "text-generation",
+    "downloads": 5814,
+    "likes": 235
    },
    {
     "id": "unsloth/GLM-5.2-GGUF",
     "pipeline": "text-generation",
-    "downloads": 32260,
-    "likes": 227
+    "downloads": 146023,
+    "likes": 444
    },
    {
-    "id": "nvidia/LocateAnything-3B",
-    "pipeline": "image-text-to-text",
-    "downloads": 241845,
-    "likes": 2246
+    "id": "deepreinforce-ai/Ornith-1.0-35B",
+    "pipeline": "text-generation",
+    "downloads": 19635,
+    "likes": 208
    },
    {
-    "id": "google/diffusiongemma-26B-A4B-it",
-    "pipeline": "image-text-to-text",
-    "downloads": 762861,
-    "likes": 1035
+    "id": "deepseek-ai/DeepSeek-V4-Pro-DSpark",
+    "pipeline": "text-generation",
+    "downloads": 373,
+    "likes": 182
+   },
+   {
+    "id": "Comfy-Org/Krea-2",
+    "pipeline": "unknown",
+    "downloads": 10,
+    "likes": 178
+   },
+   {
+    "id": "WeiboAI/VibeThinker-3B",
+    "pipeline": "text-generation",
+    "downloads": 59337,
+    "likes": 743
    },
    {
     "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
     "pipeline": "image-text-to-text",
-    "downloads": 3966691,
-    "likes": 2081
+    "downloads": 3248724,
+    "likes": 2301
+   },
+   {
+    "id": "nvidia/LocateAnything-3B",
+    "pipeline": "image-text-to-text",
+    "downloads": 646451,
+    "likes": 2436
+   },
+   {
+    "id": "nvidia/GLM-5.2-NVFP4",
+    "pipeline": "text-generation",
+    "downloads": 45762,
+    "likes": 155
+   },
+   {
+    "id": "deepreinforce-ai/Ornith-1.0-397B",
+    "pipeline": "text-generation",
+    "downloads": 1116,
+    "likes": 147
+   },
+   {
+    "id": "LiquidAI/LFM2.5-230M",
+    "pipeline": "text-generation",
+    "downloads": 12384,
+    "likes": 140
+   },
+   {
+    "id": "Chunjiang-Intelligence/DeepSeek-v4-Fable",
+    "pipeline": "text-generation",
+    "downloads": 1409,
+    "likes": 124
    },
    {
     "id": "nvidia/nemotron-3.5-asr-streaming-0.6b",
     "pipeline": "automatic-speech-recognition",
-    "downloads": 27275,
-    "likes": 612
+    "downloads": 67419,
+    "likes": 734
    },
    {
-    "id": "owensong/Inflect-Nano-v1",
-    "pipeline": "text-to-speech",
+    "id": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+    "pipeline": "text-generation",
+    "downloads": 5235413,
+    "likes": 371
+   },
+   {
+    "id": "microsoft/FastContext-1.0-4B-SFT",
+    "pipeline": "text-generation",
+    "downloads": 6779,
+    "likes": 369
+   },
+   {
+    "id": "fal/LTX-2.3-3DREAL-LoRA",
+    "pipeline": "image-to-video",
     "downloads": 0,
-    "likes": 155
+    "likes": 96
    },
    {
-    "id": "lordx64/Qwable-v1",
-    "pipeline": "text-generation",
-    "downloads": 3351,
-    "likes": 145
-   },
-   {
-    "id": "zai-org/GLM-5.2-FP8",
-    "pipeline": "text-generation",
-    "downloads": 217361,
-    "likes": 123
-   },
-   {
-    "id": "Mia-AiLab/Qwable-3.6-27b",
-    "pipeline": "unknown",
-    "downloads": 22879,
-    "likes": 120
-   },
-   {
-    "id": "deepseek-ai/DeepSeek-V4-Pro",
-    "pipeline": "text-generation",
-    "downloads": 2611991,
-    "likes": 4999
-   },
-   {
-    "id": "datalab-to/lift",
+    "id": "HauhauCS/Gemma4-12B-QAT-Uncensored-HauhauCS-Balanced",
     "pipeline": "image-text-to-text",
-    "downloads": 516,
-    "likes": 110
+    "downloads": 40820,
+    "likes": 100
    },
    {
-    "id": "CohereLabs/North-Mini-Code-1.0",
+    "id": "unsloth/Qwen-AgentWorld-35B-A3B-GGUF",
     "pipeline": "text-generation",
-    "downloads": 19551,
-    "likes": 474
+    "downloads": 79503,
+    "likes": 96
    },
    {
-    "id": "bytkim/Qwen3.6-27B-MTP-pi-tune-GGUF",
+    "id": "deepseek-ai/DeepSeek-V4-Flash-DSpark",
     "pipeline": "text-generation",
-    "downloads": 36421,
-    "likes": 102
-   },
-   {
-    "id": "google/gemma-4-12B-it",
-    "pipeline": "any-to-any",
-    "downloads": 1815370,
-    "likes": 1129
-   },
-   {
-    "id": "LiquidAI/LFM2.5-Embedding-350M",
-    "pipeline": "sentence-similarity",
-    "downloads": 7726,
-    "likes": 93
-   },
-   {
-    "id": "Jackrong/Qwopus3.6-27B-Coder-MTP-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 190993,
-    "likes": 276
-   },
-   {
-    "id": "ostris/ideogram_4_turbotime_lora",
-    "pipeline": "text-to-image",
-    "downloads": 2452,
-    "likes": 91
-   },
-   {
-    "id": "poolside/Laguna-M.1",
-    "pipeline": "text-generation",
-    "downloads": 2580,
-    "likes": 84
-   },
-   {
-    "id": "Boogu/Boogu-Image-0.1-Edit",
-    "pipeline": "unknown",
-    "downloads": 374,
-    "likes": 82
-   },
-   {
-    "id": "nex-agi/Nex-N2-Pro",
-    "pipeline": "text-generation",
-    "downloads": 7872,
-    "likes": 342
-   },
-   {
-    "id": "unsloth/Kimi-K2.7-Code-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 42837,
-    "likes": 150
-   },
-   {
-    "id": "Qwen/Qwen3.6-35B-A3B",
-    "pipeline": "image-text-to-text",
-    "downloads": 5148673,
-    "likes": 2197
-   },
-   {
-    "id": "bosonai/higgs-audio-v3-tts-4b",
-    "pipeline": "text-to-speech",
-    "downloads": 76120,
-    "likes": 507
+    "downloads": 24,
+    "likes": 81
    }
   ]
  },
