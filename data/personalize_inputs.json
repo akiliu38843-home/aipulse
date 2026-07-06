@@ -1,9 +1,13 @@
 {
- "as_of": "2026-06-29",
+ "as_of": "2026-07-06",
  "foresight": [
   {
    "theme": "RAG",
    "sources": 4
+  },
+  {
+   "theme": "Eval 评测",
+   "sources": 3
   },
   {
    "theme": "多模态",
@@ -14,15 +18,7 @@
    "sources": 2
   },
   {
-   "theme": "AI安全/Responsible AI",
-   "sources": 2
-  },
-  {
-   "theme": "Eval 评测",
-   "sources": 2
-  },
-  {
-   "theme": "Serving 推理",
+   "theme": "AI编码agent当硬技能",
    "sources": 2
   }
  ],
@@ -56,22 +52,23 @@
   "source": "W1 (2026-05-19, 63 岗样本中 22 个有 yearly salary)"
  },
  "salary_this_week_snapshot": {
-  "median_k": 147,
-  "n": 5,
+  "median_k": 181,
+  "n": 8,
   "note": "本周样本量不稳，仅辅助参考；以 salary baseline 为准"
  },
  "top_employers": [
-  "Akina, Inc.",
-  "RiVi Consulting Group L.L.C",
-  "RBC",
-  "XPO",
-  "General Dynamics Information Technology"
+  "Innodata",
+  "Guidehouse Inc.",
+  "Rolls-Royce",
+  "Google",
+  "BCA global"
  ],
  "target_roles": [
   "AI Engineer",
   "Data Engineer",
+  "Data Scientist",
   "ML Engineer",
   "Machine Learning Engineer"
  ],
- "ai_jobs_total": 37
+ "ai_jobs_total": 43
 }

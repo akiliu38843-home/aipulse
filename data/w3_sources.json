@@ -1,195 +1,195 @@
 {
- "collected_at": "2026-06-29T02:41:33",
+ "collected_at": "2026-07-06T02:25:12",
  "hf": {
   "status": "ok:30 sort=trendingScore",
   "tag_freq": {
-   "text-generation": 20,
-   "image-text-to-text": 5,
-   "text-to-image": 2,
-   "unknown": 1,
-   "automatic-speech-recognition": 1,
-   "image-to-video": 1
+   "text-generation": 17,
+   "image-text-to-text": 7,
+   "unknown": 3,
+   "tabular-classification": 1,
+   "text-to-image": 1,
+   "token-classification": 1
   },
   "trending": [
    {
-    "id": "baidu/Unlimited-OCR",
+    "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 295064,
-    "likes": 1244
+    "downloads": 1533844,
+    "likes": 1558
    },
    {
     "id": "zai-org/GLM-5.2",
     "pipeline": "text-generation",
-    "downloads": 118651,
-    "likes": 2823
+    "downloads": 220379,
+    "likes": 3470
    },
    {
-    "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
+    "id": "baidu/Unlimited-OCR",
     "pipeline": "image-text-to-text",
-    "downloads": 831529,
-    "likes": 806
-   },
-   {
-    "id": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 225822,
-    "likes": 798
-   },
-   {
-    "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
-    "pipeline": "text-generation",
-    "downloads": 52492,
-    "likes": 526
+    "downloads": 1044217,
+    "likes": 1750
    },
    {
     "id": "deepreinforce-ai/Ornith-1.0-35B-GGUF",
     "pipeline": "text-generation",
-    "downloads": 79630,
-    "likes": 415
+    "downloads": 394164,
+    "likes": 731
    },
    {
-    "id": "Qwen/Qwen-AgentWorld-35B-A3B",
+    "id": "InternScience/Agents-A1",
     "pipeline": "text-generation",
-    "downloads": 23697,
-    "likes": 401
+    "downloads": 7010,
+    "likes": 290
    },
    {
-    "id": "krea/Krea-2-Turbo",
-    "pipeline": "text-to-image",
-    "downloads": 27631,
-    "likes": 355
-   },
-   {
-    "id": "yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF",
+    "id": "nvidia/Qwen3.6-27B-NVFP4",
     "pipeline": "text-generation",
-    "downloads": 549926,
-    "likes": 2475
+    "downloads": 297130,
+    "likes": 274
    },
    {
-    "id": "deepreinforce-ai/Ornith-1.0-9B-GGUF",
+    "id": "google/tabfm-1.0.0-pytorch",
+    "pipeline": "tabular-classification",
+    "downloads": 2670,
+    "likes": 226
+   },
+   {
+    "id": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
     "pipeline": "text-generation",
-    "downloads": 36846,
-    "likes": 276
-   },
-   {
-    "id": "krea/Krea-2-Raw",
-    "pipeline": "text-to-image",
-    "downloads": 22622,
-    "likes": 232
-   },
-   {
-    "id": "deepreinforce-ai/Ornith-1.0-9B",
-    "pipeline": "text-generation",
-    "downloads": 5814,
-    "likes": 235
-   },
-   {
-    "id": "unsloth/GLM-5.2-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 146023,
-    "likes": 444
-   },
-   {
-    "id": "deepreinforce-ai/Ornith-1.0-35B",
-    "pipeline": "text-generation",
-    "downloads": 19635,
-    "likes": 208
+    "downloads": 355871,
+    "likes": 1029
    },
    {
     "id": "deepseek-ai/DeepSeek-V4-Pro-DSpark",
     "pipeline": "text-generation",
-    "downloads": 373,
-    "likes": 182
+    "downloads": 12580,
+    "likes": 390
+   },
+   {
+    "id": "nvidia/LocateAnything-3B",
+    "pipeline": "image-text-to-text",
+    "downloads": 1247265,
+    "likes": 2618
+   },
+   {
+    "id": "AliesTaha/fable-traces",
+    "pipeline": "text-generation",
+    "downloads": 277,
+    "likes": 162
+   },
+   {
+    "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+    "pipeline": "image-text-to-text",
+    "downloads": 3018257,
+    "likes": 2487
+   },
+   {
+    "id": "huihui-ai/Huihui-GLM-5.2-abliterated-GGUF",
+    "pipeline": "text-generation",
+    "downloads": 5609,
+    "likes": 169
+   },
+   {
+    "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
+    "pipeline": "text-generation",
+    "downloads": 144933,
+    "likes": 688
+   },
+   {
+    "id": "deepreinforce-ai/Ornith-1.0-9B-GGUF",
+    "pipeline": "text-generation",
+    "downloads": 352002,
+    "likes": 434
+   },
+   {
+    "id": "krea/Krea-2-Turbo",
+    "pipeline": "text-to-image",
+    "downloads": 99049,
+    "likes": 515
+   },
+   {
+    "id": "deepreinforce-ai/Ornith-1.0-9B",
+    "pipeline": "text-generation",
+    "downloads": 76189,
+    "likes": 385
+   },
+   {
+    "id": "Qwen/Qwen-AgentWorld-35B-A3B",
+    "pipeline": "text-generation",
+    "downloads": 55113,
+    "likes": 549
+   },
+   {
+    "id": "Jackrong/Qwopus3.6-35B-A3B-Coder-MTP-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 84951,
+    "likes": 139
+   },
+   {
+    "id": "deepreinforce-ai/Ornith-1.0-35B",
+    "pipeline": "text-generation",
+    "downloads": 224641,
+    "likes": 342
+   },
+   {
+    "id": "nationaldesignstudio/rampart",
+    "pipeline": "token-classification",
+    "downloads": 2783,
+    "likes": 129
+   },
+   {
+    "id": "BugTraceAI/BugTraceAI-CORE-Ultra-27B-Q6",
+    "pipeline": "unknown",
+    "downloads": 12196,
+    "likes": 135
+   },
+   {
+    "id": "mistralai/Leanstral-1.5-119B-A6B",
+    "pipeline": "unknown",
+    "downloads": 26,
+    "likes": 117
+   },
+   {
+    "id": "yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF",
+    "pipeline": "text-generation",
+    "downloads": 651758,
+    "likes": 2610
+   },
+   {
+    "id": "DavidAU/Qwen3.5-9B-Claude-4.6-HighIQ-THINKING-HERETIC-UNCENSORED",
+    "pipeline": "image-text-to-text",
+    "downloads": 53962,
+    "likes": 153
+   },
+   {
+    "id": "nvidia/Nemotron-Labs-TwoTower-30B-A3B-Base-BF16",
+    "pipeline": "text-generation",
+    "downloads": 10696,
+    "likes": 123
+   },
+   {
+    "id": "unsloth/Qwen3.6-27B-MTP-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 2776389,
+    "likes": 964
    },
    {
     "id": "Comfy-Org/Krea-2",
     "pipeline": "unknown",
     "downloads": 10,
-    "likes": 178
-   },
-   {
-    "id": "WeiboAI/VibeThinker-3B",
-    "pipeline": "text-generation",
-    "downloads": 59337,
-    "likes": 743
-   },
-   {
-    "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
-    "pipeline": "image-text-to-text",
-    "downloads": 3248724,
-    "likes": 2301
-   },
-   {
-    "id": "nvidia/LocateAnything-3B",
-    "pipeline": "image-text-to-text",
-    "downloads": 646451,
-    "likes": 2436
+    "likes": 256
    },
    {
     "id": "nvidia/GLM-5.2-NVFP4",
     "pipeline": "text-generation",
-    "downloads": 45762,
-    "likes": 155
-   },
-   {
-    "id": "deepreinforce-ai/Ornith-1.0-397B",
-    "pipeline": "text-generation",
-    "downloads": 1116,
-    "likes": 147
-   },
-   {
-    "id": "LiquidAI/LFM2.5-230M",
-    "pipeline": "text-generation",
-    "downloads": 12384,
-    "likes": 140
-   },
-   {
-    "id": "Chunjiang-Intelligence/DeepSeek-v4-Fable",
-    "pipeline": "text-generation",
-    "downloads": 1409,
-    "likes": 124
-   },
-   {
-    "id": "nvidia/nemotron-3.5-asr-streaming-0.6b",
-    "pipeline": "automatic-speech-recognition",
-    "downloads": 67419,
-    "likes": 734
-   },
-   {
-    "id": "nvidia/Qwen3.6-35B-A3B-NVFP4",
-    "pipeline": "text-generation",
-    "downloads": 5235413,
-    "likes": 371
-   },
-   {
-    "id": "microsoft/FastContext-1.0-4B-SFT",
-    "pipeline": "text-generation",
-    "downloads": 6779,
-    "likes": 369
-   },
-   {
-    "id": "fal/LTX-2.3-3DREAL-LoRA",
-    "pipeline": "image-to-video",
-    "downloads": 0,
-    "likes": 96
-   },
-   {
-    "id": "HauhauCS/Gemma4-12B-QAT-Uncensored-HauhauCS-Balanced",
-    "pipeline": "image-text-to-text",
-    "downloads": 40820,
-    "likes": 100
-   },
-   {
-    "id": "unsloth/Qwen-AgentWorld-35B-A3B-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 79503,
-    "likes": 96
+    "downloads": 280087,
+    "likes": 240
    },
    {
     "id": "deepseek-ai/DeepSeek-V4-Flash-DSpark",
     "pipeline": "text-generation",
-    "downloads": 24,
-    "likes": 81
+    "downloads": 48696,
+    "likes": 161
    }
   ]
  },
