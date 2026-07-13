@@ -1,129 +1,133 @@
 {
- "collected_at": "2026-07-06T02:25:13",
+ "collected_at": "2026-07-13T01:57:46",
  "arxiv": {
   "status": "ok:12",
   "papers": [
    {
-    "title": "Distributed Attacks in Persistent-State AI Control",
-    "date": "2026-07-02",
-    "authors": "Josh Hills, Ida Caspary, Asa Cooper Stickland",
-    "summary": "As AI coding agents become more autonomous, they increasingly ship code iteratively, with the codebase persisting across sessions. This persistence creates a new attack surface: a misaligned or prompt",
-    "link": "https://arxiv.org/abs/2607.02514v1"
+    "title": "PHINN-EEG: Topological Time-Series Analysis of Dream-State EEG -- Dynamic Betti Curves for Dream Content Classification and Topology-Conditioned Neural Signal Synthesis",
+    "date": "2026-07-10",
+    "authors": "Ren Takahashi, Emre Yusuf, Jayabrata Bhaduri",
+    "summary": "Current electroencephalography (EEG)-based dream detection relies on power spectral density (PSD) and statistical moment features, achieving a state-of-the-art area under the receiver operating charac",
+    "link": "https://arxiv.org/abs/2607.09662v1"
    },
    {
-    "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-    "date": "2026-07-02",
-    "authors": "Matteo Boglioni, Thibault Rousset, Siva Reddy",
-    "summary": "LLMs memorize sensitive training data, including personally identifiable information (PII), creating a pressing need for reliable post hoc removal methods. Unlearning has emerged as a promising soluti",
-    "link": "https://arxiv.org/abs/2607.02513v1"
+    "title": "Scalable Visual Pretraining for Language Intelligence",
+    "date": "2026-07-10",
+    "authors": "Yiming Zhang, Zhonghan Zhao, Wenwei Zhang",
+    "summary": "The rapid progress of large foundation models has been driven predominantly by pretraining on large-scale text corpora. However, many forms of knowledge are conveyed through visual representations, wh",
+    "link": "https://arxiv.org/abs/2607.09657v1"
    },
    {
-    "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-    "date": "2026-07-02",
-    "authors": "Wentao Zhang, Liliana Hotsko, Woojeong Kim",
-    "summary": "Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly out",
-    "link": "https://arxiv.org/abs/2607.02512v1"
+    "title": "Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models",
+    "date": "2026-07-10",
+    "authors": "Shravan Murlidaran, Miguel P. Eckstein",
+    "summary": "Vision language models (VLMs) have made remarkable progress in visual reasoning during the last decade. Most evaluations have used simple scenes (MS-COCO) that do not showcase complex human interactio",
+    "link": "https://arxiv.org/abs/2607.09654v1"
    },
    {
-    "title": "Online Safety Monitoring for LLMs",
-    "date": "2026-07-02",
-    "authors": "Mona Schirmer, Metod Jazbec, Alexander Timans",
-    "summary": "Despite alignment training, LLMs remain prone to generating unsafe outputs at deployment time. Monitoring outputs online and raising an alarm when safety can no longer be assumed is therefore critical",
-    "link": "https://arxiv.org/abs/2607.02510v1"
+    "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
+    "date": "2026-07-10",
+    "authors": "Katherine Swinea, Kshitiz Aryal, Lopamudra Praharaj",
+    "summary": "Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testi",
+    "link": "https://arxiv.org/abs/2607.09653v1"
    },
    {
-    "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-    "date": "2026-07-02",
-    "authors": "Yanjun Zhao, Ruizhong Qiu, Tianxin Wei",
-    "summary": "Understanding and reasoning over long contexts has become a key requirement for deploying large language models (LLMs) in realistic applications. Although recent LLMs support increasingly long context",
-    "link": "https://arxiv.org/abs/2607.02509v1"
+    "title": "ConceptSMILE: Auditing the Trustworthiness of Concept-Based Explainable AI",
+    "date": "2026-07-10",
+    "authors": "Mohadeseh Mollapour, Koorosh Aslansefat, Zeinab Dehghani",
+    "summary": "Concept-based explainable artificial intelligence (AI) can make model reasoning more human-understandable, but concept-level outputs are not automatically trustworthy. We introduce ConceptSMILE, a mod",
+    "link": "https://arxiv.org/abs/2607.09649v1"
    },
    {
-    "title": "What LLM Agents Say When No One Is Watching: Social Structure and Latent Objective Emergence in Multi-Agent Debates",
-    "date": "2026-07-02",
-    "authors": "Arman Ghaffarizadeh, Danyal Mohaddes, Aliakbar Izadkhah",
-    "summary": "LLM agents will increasingly act in socially structured settings where role, audience, and relational context can shape what is advantageous or costly to say. We study whether such social structure, w",
-    "link": "https://arxiv.org/abs/2607.02507v1"
+    "title": "Deep Gaussian Processes on Directed Acyclic Graphs",
+    "date": "2026-07-10",
+    "authors": "Federico L. Perlino, Oliver Hamelijnck, Adam M. Johansen",
+    "summary": "Many real-world processes can be represented as compositions of functions along a directed acyclic graph (DAG). In causal modelling, these correspond to the underlying mechanisms; in engineering, to m",
+    "link": "https://arxiv.org/abs/2607.09645v1"
    },
    {
-    "title": "Reasoning LLM Improves Speaker Recognition in Long-form TV Dramas",
-    "date": "2026-07-02",
-    "authors": "Yuxuan Li, Lingxi Xie, Xinyue Huo",
-    "summary": "Long-form TV dramas present a formidable challenge for comprehensive video understanding, where deciphering complex storyline often relies on \\textbf{speaker recognition}, the task of accurately attri",
-    "link": "https://arxiv.org/abs/2607.02504v1"
+    "title": "Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
+    "date": "2026-07-10",
+    "authors": "Cláudio Lúcio do Val Lopes, Lucca Machado da Silva",
+    "summary": "Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance",
+    "link": "https://arxiv.org/abs/2607.09641v1"
    },
    {
-    "title": "DemoPSD: Disagreement-Modulated Policy Self-Distillation",
-    "date": "2026-07-02",
-    "authors": "Yunhe Li, Hao Shi, Wenhao Liu",
-    "summary": "On-policy self-distillation (OPSD) has emerged as a practical method for training large language models (LLMs) to reason, where a single model acts as both the teacher and the student with different l",
-    "link": "https://arxiv.org/abs/2607.02502v1"
+    "title": "Lean-QIT: Towards a Formal Infrastructure for Quantum Information Theory",
+    "date": "2026-07-10",
+    "authors": "Chengkai Zhu, Ziao Tang, Guocheng Zhen",
+    "summary": "Quantum information theory (QIT) characterizes the capabilities and fundamental limits of quantum information processing, underpinning quantum communication, computation, and error correction. Formali",
+    "link": "https://arxiv.org/abs/2607.09632v1"
    },
    {
-    "title": "Beyond Adam: SOAP and Muon for Faster, Label-Efficient Training of Machine Learning Interatomic Potentials",
-    "date": "2026-07-02",
-    "authors": "Gil Harari, Yoel Zimmermann, Ola Tangen Kulseng",
-    "summary": "Machine learning interatomic potentials (MLIPs) have become a hallmark of AI for scientific simulation. While efforts on new architectures and datasets have led to increasingly accurate and general mo",
-    "link": "https://arxiv.org/abs/2607.02499v1"
+    "title": "4DR360: State Reasoning for Joint 3D Detection and Occupancy Prediction in 4D Radar-Camera Full-Scene Perception",
+    "date": "2026-07-10",
+    "authors": "Xiaokai Bai, Lianqing Zheng, Runwei Guan",
+    "summary": "Reliable autonomous driving requires full-scene perception that couples foreground objects with dense semantic layout. Recently, 4D millimeter-wave radar has emerged as a robust and affordable sensor,",
+    "link": "https://arxiv.org/abs/2607.09629v1"
    },
    {
-    "title": "Controllable Sim Agents with Behavior Latents",
-    "date": "2026-07-02",
-    "authors": "Juanwu Lu, Junyu Zhu, Ziran Wang",
-    "summary": "Realistic traffic simulation requires agents that imitate logged behavior and can also be steered along interpretable axes. Such controllability enables engineers to isolate variables, reproduce speci",
-    "link": "https://arxiv.org/abs/2607.02496v1"
+    "title": "Task-Specific Multimodal Question Answering Agents via Confidence Calibration and Incremental Reasoning for QANTA 2026",
+    "date": "2026-07-10",
+    "authors": "Nirjhar Das, Md. Al-Mamun Provath",
+    "summary": "We present our submission to the QANTA 2026 shared challenge at the ICML 2026 Workshop on Efficient Multimodal Question Answering (EMM-QA). Quanta evaluates multimodal quizbowl systems that answer pyr",
+    "link": "https://arxiv.org/abs/2607.09623v1"
    },
    {
-    "title": "Towards Robustness against Typographic Attack with Training-free Concept Localization",
-    "date": "2026-07-02",
-    "authors": "Bohan Liu, Wenqian Ye, Guangzhi Xiong",
-    "summary": "Models trained via Contrastive Language-Image Pretraining (CLIP) serve as the foundational vision encoders for most modern Large Vision Language Models (LVLMs). Despite their widespread adoption, CLIP",
-    "link": "https://arxiv.org/abs/2607.02494v1"
+    "title": "LLM for EDA in Front-End Design: Challenges and Opportunities",
+    "date": "2026-07-10",
+    "authors": "Kangwei Xu, Bing Li, Ulf Schlichtmann",
+    "summary": "As chip complexity increases and time-to-market pressures grow, front-end design has become a critical bottleneck in chip development. Recently, Large Language Models (LLMs) have shown great potential",
+    "link": "https://arxiv.org/abs/2607.09616v1"
    },
    {
-    "title": "G-RRM: Guiding Symbolic Solvers with Recurrent Reasoning Models",
-    "date": "2026-07-02",
-    "authors": "Timo Bertram, Sidhant Bhavnani, Richard Freinschlag",
-    "summary": "In this work, we focus on SE-RRMs, a symbol-equivariant instantiation of RRMs that exhibits improved extrapolation to larger problem sizes. We propose a neuro-symbolic approach, ``Guiding with Recurre",
-    "link": "https://arxiv.org/abs/2607.02491v1"
+    "title": "Toward Real-Time Sentence-Level Sign Language Translation",
+    "date": "2026-07-10",
+    "authors": "Thanh-Hoang Nguyen Doan",
+    "summary": "Most sign language understanding systems operate at the level of isolated signs, limiting their usefulness in natural communication. We study sentence-level sign language translation (SLT) with the pr",
+    "link": "https://arxiv.org/abs/2607.09611v1"
    }
   ]
  },
  "pypi": {
-  "status": "ok:2/10",
+  "status": "ok:6/10",
   "libs": [
    {
     "pkg": "huggingface-hub",
-    "last_month": 400035922,
-    "last_week": 103232761
+    "last_month": 414196181,
+    "last_week": 89880200
+   },
+   {
+    "pkg": "openai",
+    "last_month": 361259643,
+    "last_week": 84934993
+   },
+   {
+    "pkg": "transformers",
+    "last_month": 166427090,
+    "last_week": 39604030
+   },
+   {
+    "pkg": "anthropic",
+    "last_month": 155732867,
+    "last_week": 37840927
    },
    {
     "pkg": "crewai",
-    "last_month": 11059654,
-    "last_week": 2302962
+    "last_month": 11260679,
+    "last_week": 2490593
+   },
+   {
+    "pkg": "llama-index",
+    "last_month": 7170003,
+    "last_week": 1630181
    },
    {
     "pkg": "langchain",
     "error": "HTTPError:HTTP Error 429: Too Many Requests"
    },
    {
-    "pkg": "openai",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
-   },
-   {
-    "pkg": "anthropic",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
-   },
-   {
-    "pkg": "transformers",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
-   },
-   {
     "pkg": "vllm",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
-   },
-   {
-    "pkg": "llama-index",
     "error": "HTTPError:HTTP Error 429: Too Many Requests"
    },
    {
