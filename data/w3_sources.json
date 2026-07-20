@@ -1,198 +1,197 @@
 {
- "collected_at": "2026-07-13T01:57:44",
+ "collected_at": "2026-07-20T03:19:38",
  "hf": {
   "status": "ok:30 sort=trendingScore",
   "tag_freq": {
+   "image-text-to-text": 10,
    "text-generation": 10,
-   "image-text-to-text": 9,
    "unknown": 5,
    "audio-text-to-text": 1,
-   "tabular-classification": 1,
-   "text-to-video": 1,
-   "automatic-speech-recognition": 1,
    "image-to-video": 1,
-   "text-to-speech": 1
+   "video-text-to-text": 1,
+   "text-to-video": 1,
+   "text-to-image": 1
   },
   "trending": [
    {
-    "id": "tencent/Hy3",
-    "pipeline": "text-generation",
-    "downloads": 8655,
-    "likes": 724
+    "id": "thinkingmachines/Inkling",
+    "pipeline": "image-text-to-text",
+    "downloads": 13462,
+    "likes": 1156
    },
    {
-    "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 1967677,
-    "likes": 2047
+    "id": "prism-ml/Ternary-Bonsai-27B-gguf",
+    "pipeline": "text-generation",
+    "downloads": 338945,
+    "likes": 795
+   },
+   {
+    "id": "prism-ml/Bonsai-27B-gguf",
+    "pipeline": "text-generation",
+    "downloads": 1262894,
+    "likes": 501
    },
    {
     "id": "zai-org/GLM-5.2",
     "pipeline": "text-generation",
-    "downloads": 441413,
-    "likes": 3857
+    "downloads": 536177,
+    "likes": 4172
    },
    {
-    "id": "bottlecapai/ThinkingCap-Qwen3.6-27B",
+    "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 4463,
-    "likes": 266
+    "downloads": 2118995,
+    "likes": 2349
    },
    {
-    "id": "InternScience/Agents-A1",
-    "pipeline": "text-generation",
-    "downloads": 29038,
-    "likes": 510
+    "id": "baidu/Unlimited-OCR",
+    "pipeline": "image-text-to-text",
+    "downloads": 2122848,
+    "likes": 2197
    },
    {
     "id": "conradlocke/krea2-identity-edit",
     "pipeline": "unknown",
     "downloads": 0,
-    "likes": 213
+    "likes": 427
+   },
+   {
+    "id": "ATH-MaaS/OvisOCR2",
+    "pipeline": "image-text-to-text",
+    "downloads": 14587,
+    "likes": 196
+   },
+   {
+    "id": "bottlecapai/ThinkingCap-Qwen3.6-27B",
+    "pipeline": "image-text-to-text",
+    "downloads": 10647,
+    "likes": 463
+   },
+   {
+    "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+    "pipeline": "image-text-to-text",
+    "downloads": 2084530,
+    "likes": 2902
+   },
+   {
+    "id": "OpenMOSS-Team/MOSS-Transcribe-Diarize",
+    "pipeline": "audio-text-to-text",
+    "downloads": 87533,
+    "likes": 280
+   },
+   {
+    "id": "AngelSlim/Hy3-GGUF",
+    "pipeline": "text-generation",
+    "downloads": 109749,
+    "likes": 139
+   },
+   {
+    "id": "GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking",
+    "pipeline": "text-generation",
+    "downloads": 5494,
+    "likes": 149
+   },
+   {
+    "id": "prism-ml/Bonsai-27B-mlx-1bit",
+    "pipeline": "text-generation",
+    "downloads": 21690,
+    "likes": 140
+   },
+   {
+    "id": "Wan-AI/Wan-Dancer-14B",
+    "pipeline": "image-to-video",
+    "downloads": 2408,
+    "likes": 128
+   },
+   {
+    "id": "GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-V2-Thinking-GGUF",
+    "pipeline": "text-generation",
+    "downloads": 28012,
+    "likes": 121
+   },
+   {
+    "id": "prism-ml/Ternary-Bonsai-27B-mlx-2bit",
+    "pipeline": "text-generation",
+    "downloads": 17869,
+    "likes": 121
+   },
+   {
+    "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 16719,
+    "likes": 108
+   },
+   {
+    "id": "unsloth/inkling-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 6771,
+    "likes": 105
+   },
+   {
+    "id": "empero-ai/Qwythos-9B-v2-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 105749,
+    "likes": 183
+   },
+   {
+    "id": "Cactus-Compute/needle",
+    "pipeline": "unknown",
+    "downloads": 955,
+    "likes": 279
+   },
+   {
+    "id": "tencent/Hy3",
+    "pipeline": "text-generation",
+    "downloads": 13698,
+    "likes": 836
+   },
+   {
+    "id": "jlnsrk/GLM-5.2-colibri-int4",
+    "pipeline": "unknown",
+    "downloads": 4035,
+    "likes": 142
    },
    {
     "id": "froggeric/Qwen-Fixed-Chat-Templates",
     "pipeline": "unknown",
     "downloads": 0,
-    "likes": 865
+    "likes": 948
    },
    {
-    "id": "baidu/Unlimited-OCR",
-    "pipeline": "image-text-to-text",
-    "downloads": 1430656,
-    "likes": 1943
-   },
-   {
-    "id": "GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 49268,
-    "likes": 202
-   },
-   {
-    "id": "unsloth/DeepSeek-V4-Flash-GGUF",
-    "pipeline": "unknown",
-    "downloads": 44614,
-    "likes": 152
-   },
-   {
-    "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
-    "pipeline": "image-text-to-text",
-    "downloads": 2596384,
-    "likes": 2677
-   },
-   {
-    "id": "nvidia/Nemotron-Labs-Audex-30B-A3B",
-    "pipeline": "text-generation",
-    "downloads": 901,
-    "likes": 131
-   },
-   {
-    "id": "OpenMOSS-Team/MOSS-Transcribe-Diarize",
-    "pipeline": "audio-text-to-text",
-    "downloads": 14491,
-    "likes": 130
-   },
-   {
-    "id": "google/tabfm-1.0.0-pytorch",
-    "pipeline": "tabular-classification",
-    "downloads": 20973,
-    "likes": 357
-   },
-   {
-    "id": "meituan-longcat/LongCat-2.0",
-    "pipeline": "text-generation",
-    "downloads": 1767,
-    "likes": 182
-   },
-   {
-    "id": "open-gigaai/Giga-World-1",
-    "pipeline": "unknown",
-    "downloads": 0,
-    "likes": 123
-   },
-   {
-    "id": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 445368,
-    "likes": 1159
-   },
-   {
-    "id": "nvidia/NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-NVFP4",
-    "pipeline": "text-generation",
-    "downloads": 34796,
-    "likes": 113
-   },
-   {
-    "id": "deepreinforce-ai/Ornith-1.0-35B-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 1347036,
-    "likes": 855
+    "id": "OpenMOSS-Team/MOSS-VL-Realtime",
+    "pipeline": "video-text-to-text",
+    "downloads": 544,
+    "likes": 82
    },
    {
     "id": "Alissonerdx/LTX-Best-Face-ID",
     "pipeline": "text-to-video",
     "downloads": 0,
-    "likes": 111
+    "likes": 195
    },
    {
-    "id": "SupraLabs/Supra-Router-51M",
+    "id": "google/gemma-4-31B-it",
+    "pipeline": "image-text-to-text",
+    "downloads": 12337374,
+    "likes": 3275
+   },
+   {
+    "id": "InternScience/Agents-A1",
     "pipeline": "text-generation",
-    "downloads": 1434,
-    "likes": 107
+    "downloads": 35833,
+    "likes": 584
    },
    {
-    "id": "migtissera/Tess-4-27B",
-    "pipeline": "image-text-to-text",
-    "downloads": 971,
-    "likes": 94
+    "id": "mgwr/M87",
+    "pipeline": "text-to-image",
+    "downloads": 4652,
+    "likes": 160
    },
    {
-    "id": "nvidia/LocateAnything-3B",
-    "pipeline": "image-text-to-text",
-    "downloads": 1501653,
-    "likes": 2717
-   },
-   {
-    "id": "robbyant/lingbot-video-moe-30b-a3b",
+    "id": "Cseti/LTX2.3-22B_IC-LoRA-CrossView-Prompt",
     "pipeline": "unknown",
-    "downloads": 461,
-    "likes": 91
-   },
-   {
-    "id": "CohereLabs/cohere-transcribe-arabic-07-2026",
-    "pipeline": "automatic-speech-recognition",
-    "downloads": 9860,
-    "likes": 95
-   },
-   {
-    "id": "robbyant/lingbot-world-v2-14b-causal-fast",
-    "pipeline": "image-to-video",
     "downloads": 0,
-    "likes": 85
-   },
-   {
-    "id": "unsloth/Qwen3.6-27B-MTP-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 2905019,
-    "likes": 1058
-   },
-   {
-    "id": "bottlecapai/ThinkingCap-Qwen3.6-27B-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 312299,
-    "likes": 83
-   },
-   {
-    "id": "nineninesix/gepard-1.0",
-    "pipeline": "text-to-speech",
-    "downloads": 2263,
-    "likes": 85
-   },
-   {
-    "id": "unsloth/Qwen3.6-27B-NVFP4",
-    "pipeline": "image-text-to-text",
-    "downloads": 1378663,
-    "likes": 179
+    "likes": 99
    }
   ]
  },
@@ -213,14 +212,24 @@
   },
   "hot_ai_stories": [
    {
+    "title": "Show HN: Juggler – an open-source GUI coding agent, by the creator of JUCE",
+    "points": 278,
+    "url": "https://github.com/juggler-ai/juggler"
+   },
+   {
     "title": "Launch HN: Adam (YC W25) – Open-Source AI CAD",
     "points": 215,
     "url": "https://github.com/Adam-CAD/CADAM"
    },
    {
     "title": "Show HN: Reverse-engineering web apps into agent tools",
-    "points": 92,
+    "points": 96,
     "url": null
+   },
+   {
+    "title": "Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
+    "points": 85,
+    "url": "https://agnost.ai"
    },
    {
     "title": "Show HN: OpenKnowledge – open source AI-first alternative to Obsidian/Notion",
@@ -228,18 +237,13 @@
     "url": "https://github.com/inkeep/open-knowledge"
    },
    {
-    "title": "Show HN: Fata – Spaced repetition to fight skill rot from AI coding",
-    "points": 124,
-    "url": "https://fata.dev"
-   },
-   {
     "title": "Ask HN: Another \"Hacker News\" with less AI and more human-focused hacking news?",
-    "points": 91,
+    "points": 92,
     "url": null
    },
    {
     "title": "Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop",
-    "points": 217,
+    "points": 219,
     "url": "https://github.com/rowboatlabs/rowboat"
    },
    {
@@ -248,14 +252,14 @@
     "url": "https://github.com/workweave/router"
    },
    {
-    "title": "Show HN: Microsoft releases Flint, a visualization language for AI agents",
-    "points": 347,
-    "url": "https://microsoft.github.io/flint-chart/#/"
+    "title": "LM Studio Bionic: the AI agent for open models",
+    "points": 329,
+    "url": "https://lmstudio.ai/blog/introducing-lm-studio-bionic"
    },
    {
-    "title": "Show HN: HelixDB – A graph database built on object storage",
-    "points": 159,
-    "url": "https://github.com/HelixDB/helix-db/tree/main"
+    "title": "Show HN: Microsoft releases Flint, a visualization language for AI agents",
+    "points": 349,
+    "url": "https://microsoft.github.io/flint-chart/#/"
    }
   ],
   "status": "ok"

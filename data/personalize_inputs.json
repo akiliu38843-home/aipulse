@@ -1,5 +1,5 @@
 {
- "as_of": "2026-07-13",
+ "as_of": "2026-07-20",
  "foresight": [
   {
    "theme": "RAG",
@@ -7,7 +7,11 @@
   },
   {
    "theme": "AI Agents/编排",
-   "sources": 2
+   "sources": 3
+  },
+  {
+   "theme": "多模态",
+   "sources": 3
   },
   {
    "theme": "AI安全/Responsible AI",
@@ -15,14 +19,6 @@
   },
   {
    "theme": "Eval 评测",
-   "sources": 2
-  },
-  {
-   "theme": "Serving 推理",
-   "sources": 2
-  },
-  {
-   "theme": "多模态",
    "sources": 2
   }
  ],
@@ -56,22 +52,23 @@
   "source": "W1 (2026-05-19, 63 岗样本中 22 个有 yearly salary)"
  },
  "salary_this_week_snapshot": {
-  "median_k": 162,
-  "n": 6,
+  "median_k": 215,
+  "n": 9,
   "note": "本周样本量不稳，仅辅助参考；以 salary baseline 为准"
  },
  "top_employers": [
-  "Check Point Software Technologies",
+  "CLERA",
+  "Amazon Web Services",
   "Google",
-  "Fractal Analytics",
-  "LTM Limited",
-  "AssetWatch"
+  "ServiceQUIK Inc.",
+  "FurtherAI"
  ],
  "target_roles": [
   "AI Engineer",
   "Data Engineer",
+  "Data Scientist",
   "ML Engineer",
   "Machine Learning Engineer"
  ],
- "ai_jobs_total": 40
+ "ai_jobs_total": 43
 }

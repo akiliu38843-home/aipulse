@@ -1,141 +1,143 @@
 {
- "collected_at": "2026-07-13T01:57:46",
+ "collected_at": "2026-07-20T03:19:40",
  "arxiv": {
   "status": "ok:12",
   "papers": [
    {
-    "title": "PHINN-EEG: Topological Time-Series Analysis of Dream-State EEG -- Dynamic Betti Curves for Dream Content Classification and Topology-Conditioned Neural Signal Synthesis",
-    "date": "2026-07-10",
-    "authors": "Ren Takahashi, Emre Yusuf, Jayabrata Bhaduri",
-    "summary": "Current electroencephalography (EEG)-based dream detection relies on power spectral density (PSD) and statistical moment features, achieving a state-of-the-art area under the receiver operating charac",
-    "link": "https://arxiv.org/abs/2607.09662v1"
+    "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+    "date": "2026-07-17",
+    "authors": "Yuchen Yang, Yifan Zhao, Anisha Dasgupta",
+    "summary": "Mixture-of-Experts (MoE) is a popular class of large language models (LLMs), offering high efficiency and accuracy. However, in KV-cache-intensive serving scenarios, MoEs often exhibit a tension betwe",
+    "link": "https://arxiv.org/abs/2607.16184v1"
    },
    {
-    "title": "Scalable Visual Pretraining for Language Intelligence",
-    "date": "2026-07-10",
-    "authors": "Yiming Zhang, Zhonghan Zhao, Wenwei Zhang",
-    "summary": "The rapid progress of large foundation models has been driven predominantly by pretraining on large-scale text corpora. However, many forms of knowledge are conveyed through visual representations, wh",
-    "link": "https://arxiv.org/abs/2607.09657v1"
+    "title": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing",
+    "date": "2026-07-17",
+    "authors": "Owen Lockwood, Jérémy Béjanin, Joost Bus",
+    "summary": "To address the escalating energy and latency demands of machine-learning workloads, we introduce a blueprint for an energy-efficient and fast thermodynamic computing stack that leverages stochastic an",
+    "link": "https://arxiv.org/abs/2607.16183v1"
    },
    {
-    "title": "Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models",
-    "date": "2026-07-10",
-    "authors": "Shravan Murlidaran, Miguel P. Eckstein",
-    "summary": "Vision language models (VLMs) have made remarkable progress in visual reasoning during the last decade. Most evaluations have used simple scenes (MS-COCO) that do not showcase complex human interactio",
-    "link": "https://arxiv.org/abs/2607.09654v1"
+    "title": "Cluster-Aware Matching via Laplacian Optimal Transport",
+    "date": "2026-07-17",
+    "authors": "Gabriel Samberg, YoonHaeng Hur, Yuehaw Khoo",
+    "summary": "In many applications of matching, the point clouds to be matched are not merely unstructured sets of points but rather samples from distributions with an intrinsic cluster structure. In such cases, as",
+    "link": "https://arxiv.org/abs/2607.16178v1"
    },
    {
-    "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
-    "date": "2026-07-10",
-    "authors": "Katherine Swinea, Kshitiz Aryal, Lopamudra Praharaj",
-    "summary": "Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testi",
-    "link": "https://arxiv.org/abs/2607.09653v1"
+    "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
+    "date": "2026-07-17",
+    "authors": "Matteo Tomasetto, Nicolò Botteghi, Gabriele Bruni",
+    "summary": "Reinforcement learning (RL) has recently emerged as a promising feedback control strategy for nonlinear and complex dynamical systems. However, RL algorithms are sample inefficient and require a large",
+    "link": "https://arxiv.org/abs/2607.16177v1"
    },
    {
-    "title": "ConceptSMILE: Auditing the Trustworthiness of Concept-Based Explainable AI",
-    "date": "2026-07-10",
-    "authors": "Mohadeseh Mollapour, Koorosh Aslansefat, Zeinab Dehghani",
-    "summary": "Concept-based explainable artificial intelligence (AI) can make model reasoning more human-understandable, but concept-level outputs are not automatically trustworthy. We introduce ConceptSMILE, a mod",
-    "link": "https://arxiv.org/abs/2607.09649v1"
+    "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
+    "date": "2026-07-17",
+    "authors": "Md Erfan, Ahmed Ryan, Md Kamal Hossain Chowdhury",
+    "summary": "Connected and Autonomous Vehicles (CAVs) rely on interconnected software and hardware components, including sensors, Electronic Control Units, in-vehicle infotainment systems, and telematics units, wh",
+    "link": "https://arxiv.org/abs/2607.16175v1"
    },
    {
-    "title": "Deep Gaussian Processes on Directed Acyclic Graphs",
-    "date": "2026-07-10",
-    "authors": "Federico L. Perlino, Oliver Hamelijnck, Adam M. Johansen",
-    "summary": "Many real-world processes can be represented as compositions of functions along a directed acyclic graph (DAG). In causal modelling, these correspond to the underlying mechanisms; in engineering, to m",
-    "link": "https://arxiv.org/abs/2607.09645v1"
+    "title": "When Does Muon Help Agentic Reinforcement Learning?",
+    "date": "2026-07-17",
+    "authors": "Kai Ruan, Jinghao Lin, Zihe Huang",
+    "summary": "Muon is competitive with AdamW in large-scale pre-training, but its value for reinforcement-learning (RL) post-training remains unclear. We study vanilla Muon in sparse-reward agentic RL through match",
+    "link": "https://arxiv.org/abs/2607.16169v1"
    },
    {
-    "title": "Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
-    "date": "2026-07-10",
-    "authors": "Cláudio Lúcio do Val Lopes, Lucca Machado da Silva",
-    "summary": "Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance",
-    "link": "https://arxiv.org/abs/2607.09641v1"
+    "title": "Behaviour-Conditioned Neural Processes for Adaptive Residential Short-Term Load Forecasting",
+    "date": "2026-07-17",
+    "authors": "Ramin Soleimani, Andrea Visentin, Dirk Pesch",
+    "summary": "Residential short-term load forecasting (STLF) is challenging because household demand is heterogeneous, temporally variable, and shaped by diverse behavioural routines. This work investigates whether",
+    "link": "https://arxiv.org/abs/2607.16168v1"
    },
    {
-    "title": "Lean-QIT: Towards a Formal Infrastructure for Quantum Information Theory",
-    "date": "2026-07-10",
-    "authors": "Chengkai Zhu, Ziao Tang, Guocheng Zhen",
-    "summary": "Quantum information theory (QIT) characterizes the capabilities and fundamental limits of quantum information processing, underpinning quantum communication, computation, and error correction. Formali",
-    "link": "https://arxiv.org/abs/2607.09632v1"
+    "title": "An Exam for Active Observers",
+    "date": "2026-07-17",
+    "authors": "Jiarui Zhang, Muzi Tao, Shangshang Wang",
+    "summary": "Human vision is a closed loop: gaze is continuously redirected by intermediate hypotheses rather than a single snapshot. Decades of psychophysics and cognitive science have argued that this active obs",
+    "link": "https://arxiv.org/abs/2607.16165v1"
    },
    {
-    "title": "4DR360: State Reasoning for Joint 3D Detection and Occupancy Prediction in 4D Radar-Camera Full-Scene Perception",
-    "date": "2026-07-10",
-    "authors": "Xiaokai Bai, Lianqing Zheng, Runwei Guan",
-    "summary": "Reliable autonomous driving requires full-scene perception that couples foreground objects with dense semantic layout. Recently, 4D millimeter-wave radar has emerged as a robust and affordable sensor,",
-    "link": "https://arxiv.org/abs/2607.09629v1"
+    "title": "PRISA: Proactive Infrastructure LiDAR Framework for Intersection Safety Assessment",
+    "date": "2026-07-17",
+    "authors": "Tam Bang, Hussam Abubakr, Emiliano de la Garza Villarreal",
+    "summary": "Urban intersections are among the most hazardous locations in road networks, posing significant risks to vehicles and vulnerable road users (VRUs) such as pedestrians and cyclists. The complexity of m",
+    "link": "https://arxiv.org/abs/2607.16156v1"
    },
    {
-    "title": "Task-Specific Multimodal Question Answering Agents via Confidence Calibration and Incremental Reasoning for QANTA 2026",
-    "date": "2026-07-10",
-    "authors": "Nirjhar Das, Md. Al-Mamun Provath",
-    "summary": "We present our submission to the QANTA 2026 shared challenge at the ICML 2026 Workshop on Efficient Multimodal Question Answering (EMM-QA). Quanta evaluates multimodal quizbowl systems that answer pyr",
-    "link": "https://arxiv.org/abs/2607.09623v1"
+    "title": "Learning Standard Model structure from LHC data with Riemannian flow matching",
+    "date": "2026-07-17",
+    "authors": "Midori Kato, Kevin A. Urquía-Calderón, Inar Timiryasov",
+    "summary": "In this work we demonstrate that a single transformer-based generative model can capture Standard Model structure spanning five decades of invariant mass, from the sub-GeV regime to the TeV continuum,",
+    "link": "https://arxiv.org/abs/2607.16144v1"
    },
    {
-    "title": "LLM for EDA in Front-End Design: Challenges and Opportunities",
-    "date": "2026-07-10",
-    "authors": "Kangwei Xu, Bing Li, Ulf Schlichtmann",
-    "summary": "As chip complexity increases and time-to-market pressures grow, front-end design has become a critical bottleneck in chip development. Recently, Large Language Models (LLMs) have shown great potential",
-    "link": "https://arxiv.org/abs/2607.09616v1"
+    "title": "Improving Improved Kernel PLS",
+    "date": "2026-07-17",
+    "authors": "Ole-Christian Galbo Engstrøm",
+    "summary": "Improved Kernel Partial Least Squares (IKPLS) algorithms 1 and 2 are among the fastest PLS calibration algorithms. This article focuses on two shared steps, the computation of the $\\mathbf{X}$ rotatio",
+    "link": "https://arxiv.org/abs/2607.16138v1"
    },
    {
-    "title": "Toward Real-Time Sentence-Level Sign Language Translation",
-    "date": "2026-07-10",
-    "authors": "Thanh-Hoang Nguyen Doan",
-    "summary": "Most sign language understanding systems operate at the level of isolated signs, limiting their usefulness in natural communication. We study sentence-level sign language translation (SLT) with the pr",
-    "link": "https://arxiv.org/abs/2607.09611v1"
+    "title": "When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
+    "date": "2026-07-17",
+    "authors": "Wendi Yu, Lianhao Zhou, Xiangjue Dong",
+    "summary": "LLM powered multi-agent systems (MAS) have emerged as a promising paradigm for complex tasks. However, their advantages over single-agent systems (SAS) remain unclear, with performance varying inconsi",
+    "link": "https://arxiv.org/abs/2607.16133v1"
    }
   ]
  },
  "pypi": {
-  "status": "ok:6/10",
+  "status": "ok:8/10",
   "libs": [
    {
+    "pkg": "litellm",
+    "last_month": 662610256,
+    "last_week": 169962320
+   },
+   {
     "pkg": "huggingface-hub",
-    "last_month": 414196181,
-    "last_week": 89880200
+    "last_month": 417475185,
+    "last_week": 98171450
    },
    {
     "pkg": "openai",
-    "last_month": 361259643,
-    "last_week": 84934993
-   },
-   {
-    "pkg": "transformers",
-    "last_month": 166427090,
-    "last_week": 39604030
-   },
-   {
-    "pkg": "anthropic",
-    "last_month": 155732867,
-    "last_week": 37840927
-   },
-   {
-    "pkg": "crewai",
-    "last_month": 11260679,
-    "last_week": 2490593
-   },
-   {
-    "pkg": "llama-index",
-    "last_month": 7170003,
-    "last_week": 1630181
+    "last_month": 363152890,
+    "last_week": 86406672
    },
    {
     "pkg": "langchain",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+    "last_month": 318195237,
+    "last_week": 73582326
    },
    {
-    "pkg": "vllm",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+    "pkg": "anthropic",
+    "last_month": 161576036,
+    "last_week": 41682749
    },
    {
     "pkg": "langgraph",
+    "last_month": 65649178,
+    "last_week": 17589522
+   },
+   {
+    "pkg": "crewai",
+    "last_month": 10875678,
+    "last_week": 2483042
+   },
+   {
+    "pkg": "vllm",
+    "last_month": 5474518,
+    "last_week": 1305101
+   },
+   {
+    "pkg": "transformers",
     "error": "HTTPError:HTTP Error 429: Too Many Requests"
    },
    {
-    "pkg": "litellm",
+    "pkg": "llama-index",
     "error": "HTTPError:HTTP Error 429: Too Many Requests"
    }
   ]
