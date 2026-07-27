@@ -1,197 +1,196 @@
 {
- "collected_at": "2026-07-20T03:19:38",
+ "collected_at": "2026-07-27T02:06:06",
  "hf": {
   "status": "ok:30 sort=trendingScore",
   "tag_freq": {
-   "image-text-to-text": 10,
-   "text-generation": 10,
-   "unknown": 5,
-   "audio-text-to-text": 1,
-   "image-to-video": 1,
-   "video-text-to-text": 1,
-   "text-to-video": 1,
-   "text-to-image": 1
+   "image-text-to-text": 11,
+   "text-generation": 11,
+   "unknown": 3,
+   "robotics": 2,
+   "text-to-image": 1,
+   "text-to-speech": 1,
+   "image-to-image": 1
   },
   "trending": [
    {
+    "id": "baidu/Unlimited-OCR",
+    "pipeline": "image-text-to-text",
+    "downloads": 2593460,
+    "likes": 3207
+   },
+   {
+    "id": "poolside/Laguna-S-2.1",
+    "pipeline": "text-generation",
+    "downloads": 56445,
+    "likes": 701
+   },
+   {
+    "id": "upstage/Solar-Open2-250B",
+    "pipeline": "text-generation",
+    "downloads": 3305,
+    "likes": 595
+   },
+   {
+    "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 552026,
+    "likes": 638
+   },
+   {
+    "id": "Nanbeige/Nanbeige4.2-3B",
+    "pipeline": "text-generation",
+    "downloads": 14049,
+    "likes": 447
+   },
+   {
     "id": "thinkingmachines/Inkling",
     "pipeline": "image-text-to-text",
-    "downloads": 13462,
-    "likes": 1156
+    "downloads": 34511,
+    "likes": 1579
    },
    {
-    "id": "prism-ml/Ternary-Bonsai-27B-gguf",
-    "pipeline": "text-generation",
-    "downloads": 338945,
-    "likes": 795
-   },
-   {
-    "id": "prism-ml/Bonsai-27B-gguf",
-    "pipeline": "text-generation",
-    "downloads": 1262894,
-    "likes": 501
+    "id": "microsoft/Mage-Flow",
+    "pipeline": "text-to-image",
+    "downloads": 1375,
+    "likes": 335
    },
    {
     "id": "zai-org/GLM-5.2",
     "pipeline": "text-generation",
-    "downloads": 536177,
-    "likes": 4172
+    "downloads": 827191,
+    "likes": 4477
    },
    {
-    "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 2118995,
-    "likes": 2349
+    "id": "prism-ml/Ternary-Bonsai-27B-gguf",
+    "pipeline": "text-generation",
+    "downloads": 631970,
+    "likes": 1050
    },
    {
-    "id": "baidu/Unlimited-OCR",
+    "id": "unsloth/Laguna-S-2.1-GGUF",
+    "pipeline": "text-generation",
+    "downloads": 102684,
+    "likes": 203
+   },
+   {
+    "id": "Kwaipilot/KAT-Coder-V2.5-Dev",
+    "pipeline": "text-generation",
+    "downloads": 3764,
+    "likes": 198
+   },
+   {
+    "id": "Motif-Technologies/Motif-3-Beta",
+    "pipeline": "text-generation",
+    "downloads": 2400,
+    "likes": 193
+   },
+   {
+    "id": "owensong/Inflect-Micro-v2",
+    "pipeline": "text-to-speech",
+    "downloads": 298,
+    "likes": 179
+   },
+   {
+    "id": "fdtn-ai/antares-1b",
+    "pipeline": "text-generation",
+    "downloads": 5978,
+    "likes": 187
+   },
+   {
+    "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
     "pipeline": "image-text-to-text",
-    "downloads": 2122848,
-    "likes": 2197
+    "downloads": 1927138,
+    "likes": 3112
+   },
+   {
+    "id": "openbmb/MiniCPM-RobotManip",
+    "pipeline": "robotics",
+    "downloads": 643,
+    "likes": 177
+   },
+   {
+    "id": "poolside/Laguna-S-2.1-NVFP4",
+    "pipeline": "text-generation",
+    "downloads": 138671,
+    "likes": 143
+   },
+   {
+    "id": "poolside/Laguna-S-2.1-GGUF",
+    "pipeline": "unknown",
+    "downloads": 82187,
+    "likes": 143
+   },
+   {
+    "id": "prism-ml/Bonsai-27B-gguf",
+    "pipeline": "text-generation",
+    "downloads": 2187304,
+    "likes": 651
+   },
+   {
+    "id": "nvidia/Cosmos3-Edge",
+    "pipeline": "unknown",
+    "downloads": 32700,
+    "likes": 125
    },
    {
     "id": "conradlocke/krea2-identity-edit",
     "pipeline": "unknown",
     "downloads": 0,
-    "likes": 427
+    "likes": 544
+   },
+   {
+    "id": "moonshotai/Kimi-K2.7-Code",
+    "pipeline": "image-text-to-text",
+    "downloads": 730129,
+    "likes": 1298
    },
    {
     "id": "ATH-MaaS/OvisOCR2",
     "pipeline": "image-text-to-text",
-    "downloads": 14587,
-    "likes": 196
+    "downloads": 35562,
+    "likes": 309
+   },
+   {
+    "id": "baseten/GLM-5.2-Vision-NVFP4",
+    "pipeline": "image-text-to-text",
+    "downloads": 2033,
+    "likes": 113
+   },
+   {
+    "id": "microsoft/Fara1.5-27B",
+    "pipeline": "image-text-to-text",
+    "downloads": 1225,
+    "likes": 110
+   },
+   {
+    "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 1410054,
+    "likes": 2480
+   },
+   {
+    "id": "openbmb/MiniCPM-RobotTrack",
+    "pipeline": "robotics",
+    "downloads": 398,
+    "likes": 130
+   },
+   {
+    "id": "LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V5-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 73642,
+    "likes": 172
    },
    {
     "id": "bottlecapai/ThinkingCap-Qwen3.6-27B",
     "pipeline": "image-text-to-text",
-    "downloads": 10647,
-    "likes": 463
+    "downloads": 27823,
+    "likes": 554
    },
    {
-    "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
-    "pipeline": "image-text-to-text",
-    "downloads": 2084530,
-    "likes": 2902
-   },
-   {
-    "id": "OpenMOSS-Team/MOSS-Transcribe-Diarize",
-    "pipeline": "audio-text-to-text",
-    "downloads": 87533,
-    "likes": 280
-   },
-   {
-    "id": "AngelSlim/Hy3-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 109749,
-    "likes": 139
-   },
-   {
-    "id": "GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking",
-    "pipeline": "text-generation",
-    "downloads": 5494,
-    "likes": 149
-   },
-   {
-    "id": "prism-ml/Bonsai-27B-mlx-1bit",
-    "pipeline": "text-generation",
-    "downloads": 21690,
-    "likes": 140
-   },
-   {
-    "id": "Wan-AI/Wan-Dancer-14B",
-    "pipeline": "image-to-video",
-    "downloads": 2408,
-    "likes": 128
-   },
-   {
-    "id": "GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-V2-Thinking-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 28012,
-    "likes": 121
-   },
-   {
-    "id": "prism-ml/Ternary-Bonsai-27B-mlx-2bit",
-    "pipeline": "text-generation",
-    "downloads": 17869,
-    "likes": 121
-   },
-   {
-    "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 16719,
-    "likes": 108
-   },
-   {
-    "id": "unsloth/inkling-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 6771,
-    "likes": 105
-   },
-   {
-    "id": "empero-ai/Qwythos-9B-v2-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 105749,
-    "likes": 183
-   },
-   {
-    "id": "Cactus-Compute/needle",
-    "pipeline": "unknown",
-    "downloads": 955,
-    "likes": 279
-   },
-   {
-    "id": "tencent/Hy3",
-    "pipeline": "text-generation",
-    "downloads": 13698,
-    "likes": 836
-   },
-   {
-    "id": "jlnsrk/GLM-5.2-colibri-int4",
-    "pipeline": "unknown",
-    "downloads": 4035,
-    "likes": 142
-   },
-   {
-    "id": "froggeric/Qwen-Fixed-Chat-Templates",
-    "pipeline": "unknown",
-    "downloads": 0,
-    "likes": 948
-   },
-   {
-    "id": "OpenMOSS-Team/MOSS-VL-Realtime",
-    "pipeline": "video-text-to-text",
-    "downloads": 544,
-    "likes": 82
-   },
-   {
-    "id": "Alissonerdx/LTX-Best-Face-ID",
-    "pipeline": "text-to-video",
-    "downloads": 0,
-    "likes": 195
-   },
-   {
-    "id": "google/gemma-4-31B-it",
-    "pipeline": "image-text-to-text",
-    "downloads": 12337374,
-    "likes": 3275
-   },
-   {
-    "id": "InternScience/Agents-A1",
-    "pipeline": "text-generation",
-    "downloads": 35833,
-    "likes": 584
-   },
-   {
-    "id": "mgwr/M87",
-    "pipeline": "text-to-image",
-    "downloads": 4652,
-    "likes": 160
-   },
-   {
-    "id": "Cseti/LTX2.3-22B_IC-LoRA-CrossView-Prompt",
-    "pipeline": "unknown",
-    "downloads": 0,
-    "likes": 99
+    "id": "microsoft/Mage-Flow-Edit-Turbo",
+    "pipeline": "image-to-image",
+    "downloads": 946,
+    "likes": 89
    }
   ]
  },
@@ -213,17 +212,17 @@
   "hot_ai_stories": [
    {
     "title": "Show HN: Juggler – an open-source GUI coding agent, by the creator of JUCE",
-    "points": 278,
+    "points": 280,
     "url": "https://github.com/juggler-ai/juggler"
-   },
-   {
-    "title": "Launch HN: Adam (YC W25) – Open-Source AI CAD",
-    "points": 215,
-    "url": "https://github.com/Adam-CAD/CADAM"
    },
    {
     "title": "Show HN: Reverse-engineering web apps into agent tools",
     "points": 96,
+    "url": null
+   },
+   {
+    "title": "Launch HN: Screenpipe (YC S26) – Record how you work and turn that into agents",
+    "points": 84,
     "url": null
    },
    {
@@ -235,6 +234,11 @@
     "title": "Show HN: OpenKnowledge – open source AI-first alternative to Obsidian/Notion",
     "points": 381,
     "url": "https://github.com/inkeep/open-knowledge"
+   },
+   {
+    "title": "Show HN: Palmier Pro – Open-source macOS video editor built for AI",
+    "points": 189,
+    "url": "https://github.com/palmier-io/palmier-pro"
    },
    {
     "title": "Ask HN: Another \"Hacker News\" with less AI and more human-focused hacking news?",
@@ -252,13 +256,8 @@
     "url": "https://github.com/workweave/router"
    },
    {
-    "title": "LM Studio Bionic: the AI agent for open models",
-    "points": 329,
-    "url": "https://lmstudio.ai/blog/introducing-lm-studio-bionic"
-   },
-   {
     "title": "Show HN: Microsoft releases Flint, a visualization language for AI agents",
-    "points": 349,
+    "points": 350,
     "url": "https://microsoft.github.io/flint-chart/#/"
    }
   ],

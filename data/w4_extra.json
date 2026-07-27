@@ -1,143 +1,139 @@
 {
- "collected_at": "2026-07-20T03:19:40",
+ "collected_at": "2026-07-27T02:06:08",
  "arxiv": {
   "status": "ok:12",
   "papers": [
    {
-    "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-    "date": "2026-07-17",
-    "authors": "Yuchen Yang, Yifan Zhao, Anisha Dasgupta",
-    "summary": "Mixture-of-Experts (MoE) is a popular class of large language models (LLMs), offering high efficiency and accuracy. However, in KV-cache-intensive serving scenarios, MoEs often exhibit a tension betwe",
-    "link": "https://arxiv.org/abs/2607.16184v1"
+    "title": "SM4RT: Learning Structured Motion Geometry for 4D Reconstruction",
+    "date": "2026-07-24",
+    "authors": "Shing Ho J. Lin, Wenzhao Zheng, Dong Zhuo",
+    "summary": "Geometry Foundation Models (GFMs) have substantially advanced monocular 3D reconstruction, yet extending this capability to 4D dynamic understanding remains a fundamental challenge. Most existing moti",
+    "link": "https://arxiv.org/abs/2607.22534v1"
    },
    {
-    "title": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing",
-    "date": "2026-07-17",
-    "authors": "Owen Lockwood, Jérémy Béjanin, Joost Bus",
-    "summary": "To address the escalating energy and latency demands of machine-learning workloads, we introduce a blueprint for an energy-efficient and fast thermodynamic computing stack that leverages stochastic an",
-    "link": "https://arxiv.org/abs/2607.16183v1"
+    "title": "Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills",
+    "date": "2026-07-24",
+    "authors": "Siyuan Huang, Pengyu Cheng, Haotian Liu",
+    "summary": "LLM training is shifting from manual design and annotation to interaction-driven self-evolution. However, existing self-evolutionary methods face a fundamental dilemma between task diversity and verif",
+    "link": "https://arxiv.org/abs/2607.22529v1"
    },
    {
-    "title": "Cluster-Aware Matching via Laplacian Optimal Transport",
-    "date": "2026-07-17",
-    "authors": "Gabriel Samberg, YoonHaeng Hur, Yuehaw Khoo",
-    "summary": "In many applications of matching, the point clouds to be matched are not merely unstructured sets of points but rather samples from distributions with an intrinsic cluster structure. In such cases, as",
-    "link": "https://arxiv.org/abs/2607.16178v1"
+    "title": "Explainable Reinforcement Learning for assisting Air Traffic Controllers",
+    "date": "2026-07-24",
+    "authors": "Anduel Mehmeti, Gabriella Gigante, Salvatore Venticinque",
+    "summary": "To effectively integrate AI into high-stakes, critical environments such as healthcare, autonomous driving, and aviation--and to advance toward higher levels of automation and seamless human-AI collab",
+    "link": "https://arxiv.org/abs/2607.22525v1"
    },
    {
-    "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-    "date": "2026-07-17",
-    "authors": "Matteo Tomasetto, Nicolò Botteghi, Gabriele Bruni",
-    "summary": "Reinforcement learning (RL) has recently emerged as a promising feedback control strategy for nonlinear and complex dynamical systems. However, RL algorithms are sample inefficient and require a large",
-    "link": "https://arxiv.org/abs/2607.16177v1"
+    "title": "The Regression Tax: Decomposing Why Skills Help and Hurt LLM Agents",
+    "date": "2026-07-24",
+    "authors": "Darshan Tank, Baran Nama",
+    "summary": "Adding procedural skills to an LLM agent is typically evaluated by average improvement in task success. However, this metric hides an important cost: skills can also make agents worse. We measure both",
+    "link": "https://arxiv.org/abs/2607.22520v1"
    },
    {
-    "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-    "date": "2026-07-17",
-    "authors": "Md Erfan, Ahmed Ryan, Md Kamal Hossain Chowdhury",
-    "summary": "Connected and Autonomous Vehicles (CAVs) rely on interconnected software and hardware components, including sensors, Electronic Control Units, in-vehicle infotainment systems, and telematics units, wh",
-    "link": "https://arxiv.org/abs/2607.16175v1"
+    "title": "PinEqualizer: Full Funnel Content Exploration and Debiasing System at Pinterest",
+    "date": "2026-07-24",
+    "authors": "Olafur Gudmundsson, Bo Zhao, Huayi Liao",
+    "summary": "In this paper, we propose a new solution for addressing the content cold-start problem in industry-scale search and recommender systems. Compared to prior approaches, we have made the following new co",
+    "link": "https://arxiv.org/abs/2607.22518v1"
    },
    {
-    "title": "When Does Muon Help Agentic Reinforcement Learning?",
-    "date": "2026-07-17",
-    "authors": "Kai Ruan, Jinghao Lin, Zihe Huang",
-    "summary": "Muon is competitive with AdamW in large-scale pre-training, but its value for reinforcement-learning (RL) post-training remains unclear. We study vanilla Muon in sparse-reward agentic RL through match",
-    "link": "https://arxiv.org/abs/2607.16169v1"
+    "title": "Quantum Spectral Model: Data Reuploading with Input-Conditioned Frequency Support",
+    "date": "2026-07-24",
+    "authors": "Peiyong Wang, Udaya Parampalli, Casey R. Myers",
+    "summary": "A central design principle in modern machine learning and artificial intelligence is to align a model's inductive bias with the structure of its input data. For matrix-valued inputs, relevant matrix-l",
+    "link": "https://arxiv.org/abs/2607.22516v1"
    },
    {
-    "title": "Behaviour-Conditioned Neural Processes for Adaptive Residential Short-Term Load Forecasting",
-    "date": "2026-07-17",
-    "authors": "Ramin Soleimani, Andrea Visentin, Dirk Pesch",
-    "summary": "Residential short-term load forecasting (STLF) is challenging because household demand is heterogeneous, temporally variable, and shaped by diverse behavioural routines. This work investigates whether",
-    "link": "https://arxiv.org/abs/2607.16168v1"
+    "title": "Dysphagia Risk Stratification in Head and Neck Cancer via Two-Stage PRO-Clinical Stacking",
+    "date": "2026-07-24",
+    "authors": "Siyuan Zhao, Eric Ababio Anyimadu, Zachary G. Brumm",
+    "summary": "Dysphagia is a debilitating late effect of head and neck cancer (HNC) treatment, yet timely identification of at-risk patients remains challenging in survivorship care. Definitive assessment relies on",
+    "link": "https://arxiv.org/abs/2607.22514v1"
    },
    {
-    "title": "An Exam for Active Observers",
-    "date": "2026-07-17",
-    "authors": "Jiarui Zhang, Muzi Tao, Shangshang Wang",
-    "summary": "Human vision is a closed loop: gaze is continuously redirected by intermediate hypotheses rather than a single snapshot. Decades of psychophysics and cognitive science have argued that this active obs",
-    "link": "https://arxiv.org/abs/2607.16165v1"
+    "title": "Opaque Epistemic Mediation: How LLM Deployment Configurations Shape the Validation of Pseudo-Science",
+    "date": "2026-07-24",
+    "authors": "Davide Scarso, Hugo Noronha de Almeida, Joaquim Pina",
+    "summary": "Commercial large language models are increasingly used as knowledge references, yet their stance on contested scientific claims is neither stable nor transparent. We tested how four major LLM families",
+    "link": "https://arxiv.org/abs/2607.22513v1"
    },
    {
-    "title": "PRISA: Proactive Infrastructure LiDAR Framework for Intersection Safety Assessment",
-    "date": "2026-07-17",
-    "authors": "Tam Bang, Hussam Abubakr, Emiliano de la Garza Villarreal",
-    "summary": "Urban intersections are among the most hazardous locations in road networks, posing significant risks to vehicles and vulnerable road users (VRUs) such as pedestrians and cyclists. The complexity of m",
-    "link": "https://arxiv.org/abs/2607.16156v1"
+    "title": "CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference",
+    "date": "2026-07-24",
+    "authors": "Jiyuan Tan, Vasilis Syrgkanis",
+    "summary": "Automating theoretical research is constrained not only by the generation of candidate results, but also by their reliable evaluation. A common approach is to close the research loop with a large lang",
+    "link": "https://arxiv.org/abs/2607.22511v1"
    },
    {
-    "title": "Learning Standard Model structure from LHC data with Riemannian flow matching",
-    "date": "2026-07-17",
-    "authors": "Midori Kato, Kevin A. Urquía-Calderón, Inar Timiryasov",
-    "summary": "In this work we demonstrate that a single transformer-based generative model can capture Standard Model structure spanning five decades of invariant mass, from the sub-GeV regime to the TeV continuum,",
-    "link": "https://arxiv.org/abs/2607.16144v1"
+    "title": "Interpretable EEG biomarkers with bag-of-waves: Spatial and temporal waveform dictionaries for low-data regimes",
+    "date": "2026-07-24",
+    "authors": "Athanasios Papastathopoulos-Katsaros, Steven T. Lee, Lin Yao",
+    "summary": "Electroencephalography (EEG) is widely used to diagnose neurological conditions, but its analysis usually relies on either predefined spectral features or deep neural networks. Predefined features car",
+    "link": "https://arxiv.org/abs/2607.22508v1"
    },
    {
-    "title": "Improving Improved Kernel PLS",
-    "date": "2026-07-17",
-    "authors": "Ole-Christian Galbo Engstrøm",
-    "summary": "Improved Kernel Partial Least Squares (IKPLS) algorithms 1 and 2 are among the fastest PLS calibration algorithms. This article focuses on two shared steps, the computation of the $\\mathbf{X}$ rotatio",
-    "link": "https://arxiv.org/abs/2607.16138v1"
+    "title": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting",
+    "date": "2026-07-24",
+    "authors": "Aliaksei Kaliutau",
+    "summary": "Volatility forecasting is dominated by persistence and measurement noise, leaving limited residual structure for nonlinear models to exploit. We introduce Susceptible Architectures (SUSA), a reservoir",
+    "link": "https://arxiv.org/abs/2607.22491v1"
    },
    {
-    "title": "When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
-    "date": "2026-07-17",
-    "authors": "Wendi Yu, Lianhao Zhou, Xiangjue Dong",
-    "summary": "LLM powered multi-agent systems (MAS) have emerged as a promising paradigm for complex tasks. However, their advantages over single-agent systems (SAS) remain unclear, with performance varying inconsi",
-    "link": "https://arxiv.org/abs/2607.16133v1"
+    "title": "\\k{appa}-LoRA: Condition Numbers Reveal Which LoRA Matrices Worth Updating",
+    "date": "2026-07-24",
+    "authors": "Jianghui Wang, Silong Yong, Francesco Orabona",
+    "summary": "Low-Rank Adaptation (LoRA) has become a widely adopted technique for efficient neural network fine-tuning, decomposing model updates into low-rank matrices. However, LoRA remains computationally costl",
+    "link": "https://arxiv.org/abs/2607.22489v1"
    }
   ]
  },
  "pypi": {
-  "status": "ok:8/10",
+  "status": "ok:4/10",
   "libs": [
    {
     "pkg": "litellm",
-    "last_month": 662610256,
-    "last_week": 169962320
+    "last_month": 638867146,
+    "last_week": 141700522
    },
    {
     "pkg": "huggingface-hub",
-    "last_month": 417475185,
-    "last_week": 98171450
-   },
-   {
-    "pkg": "openai",
-    "last_month": 363152890,
-    "last_week": 86406672
-   },
-   {
-    "pkg": "langchain",
-    "last_month": 318195237,
-    "last_week": 73582326
+    "last_month": 413228071,
+    "last_week": 97726810
    },
    {
     "pkg": "anthropic",
-    "last_month": 161576036,
-    "last_week": 41682749
+    "last_month": 166212227,
+    "last_week": 42151584
    },
    {
-    "pkg": "langgraph",
-    "last_month": 65649178,
-    "last_week": 17589522
+    "pkg": "llama-index",
+    "last_month": 6941894,
+    "last_week": 1736743
    },
    {
-    "pkg": "crewai",
-    "last_month": 10875678,
-    "last_week": 2483042
+    "pkg": "langchain",
+    "error": "HTTPError:HTTP Error 429: Too Many Requests"
    },
    {
-    "pkg": "vllm",
-    "last_month": 5474518,
-    "last_week": 1305101
+    "pkg": "openai",
+    "error": "HTTPError:HTTP Error 429: Too Many Requests"
    },
    {
     "pkg": "transformers",
     "error": "HTTPError:HTTP Error 429: Too Many Requests"
    },
    {
-    "pkg": "llama-index",
+    "pkg": "vllm",
+    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+   },
+   {
+    "pkg": "langgraph",
+    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+   },
+   {
+    "pkg": "crewai",
     "error": "HTTPError:HTTP Error 429: Too Many Requests"
    }
   ]

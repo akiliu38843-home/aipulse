@@ -1,5 +1,5 @@
 {
- "as_of": "2026-07-20",
+ "as_of": "2026-07-27",
  "foresight": [
   {
    "theme": "RAG",
@@ -52,23 +52,22 @@
   "source": "W1 (2026-05-19, 63 岗样本中 22 个有 yearly salary)"
  },
  "salary_this_week_snapshot": {
-  "median_k": 215,
-  "n": 9,
+  "median_k": 213,
+  "n": 6,
   "note": "本周样本量不稳，仅辅助参考；以 salary baseline 为准"
  },
  "top_employers": [
-  "CLERA",
-  "Amazon Web Services",
-  "Google",
-  "ServiceQUIK Inc.",
-  "FurtherAI"
+  "Apple",
+  "dHired.com",
+  "Texas Sports Academy Main",
+  "The Aerospace Corporation",
+  "Slingshot Aerospace"
  ],
  "target_roles": [
   "AI Engineer",
-  "Data Engineer",
   "Data Scientist",
   "ML Engineer",
   "Machine Learning Engineer"
  ],
- "ai_jobs_total": 43
+ "ai_jobs_total": 42
 }
