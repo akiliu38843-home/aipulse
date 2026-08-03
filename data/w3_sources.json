@@ -1,196 +1,196 @@
 {
- "collected_at": "2026-07-27T02:06:06",
+ "collected_at": "2026-08-03T01:59:53",
  "hf": {
   "status": "ok:30 sort=trendingScore",
   "tag_freq": {
-   "image-text-to-text": 11,
-   "text-generation": 11,
-   "unknown": 3,
-   "robotics": 2,
+   "image-text-to-text": 12,
+   "text-generation": 12,
+   "text-to-speech": 2,
+   "unknown": 1,
    "text-to-image": 1,
-   "text-to-speech": 1,
-   "image-to-image": 1
+   "automatic-speech-recognition": 1,
+   "fill-mask": 1
   },
   "trending": [
    {
-    "id": "baidu/Unlimited-OCR",
+    "id": "moonshotai/Kimi-K3",
     "pipeline": "image-text-to-text",
-    "downloads": 2593460,
-    "likes": 3207
+    "downloads": 837202,
+    "likes": 9641
    },
    {
-    "id": "poolside/Laguna-S-2.1",
+    "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
     "pipeline": "text-generation",
-    "downloads": 56445,
-    "likes": 701
-   },
-   {
-    "id": "upstage/Solar-Open2-250B",
-    "pipeline": "text-generation",
-    "downloads": 3305,
-    "likes": 595
+    "downloads": 156173,
+    "likes": 1737
    },
    {
     "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 552026,
-    "likes": 638
+    "downloads": 1372285,
+    "likes": 1341
    },
    {
-    "id": "Nanbeige/Nanbeige4.2-3B",
-    "pipeline": "text-generation",
-    "downloads": 14049,
-    "likes": 447
-   },
-   {
-    "id": "thinkingmachines/Inkling",
+    "id": "baidu/Unlimited-OCR",
     "pipeline": "image-text-to-text",
-    "downloads": 34511,
-    "likes": 1579
+    "downloads": 2536284,
+    "likes": 3779
    },
    {
-    "id": "microsoft/Mage-Flow",
-    "pipeline": "text-to-image",
-    "downloads": 1375,
-    "likes": 335
+    "id": "unsloth/DeepSeek-V4-Flash-0731-GGUF",
+    "pipeline": "unknown",
+    "downloads": 48707,
+    "likes": 341
+   },
+   {
+    "id": "unsloth/Kimi-K3-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 88481,
+    "likes": 250
    },
    {
     "id": "zai-org/GLM-5.2",
     "pipeline": "text-generation",
-    "downloads": 827191,
-    "likes": 4477
+    "downloads": 2050533,
+    "likes": 4755
    },
    {
-    "id": "prism-ml/Ternary-Bonsai-27B-gguf",
-    "pipeline": "text-generation",
-    "downloads": 631970,
-    "likes": 1050
-   },
-   {
-    "id": "unsloth/Laguna-S-2.1-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 102684,
-    "likes": 203
+    "id": "thinkingmachines/Inkling-Small",
+    "pipeline": "image-text-to-text",
+    "downloads": 6839,
+    "likes": 227
    },
    {
     "id": "Kwaipilot/KAT-Coder-V2.5-Dev",
     "pipeline": "text-generation",
-    "downloads": 3764,
-    "likes": 198
-   },
-   {
-    "id": "Motif-Technologies/Motif-3-Beta",
-    "pipeline": "text-generation",
-    "downloads": 2400,
-    "likes": 193
+    "downloads": 13164,
+    "likes": 402
    },
    {
     "id": "owensong/Inflect-Micro-v2",
     "pipeline": "text-to-speech",
-    "downloads": 298,
+    "downloads": 1825,
+    "likes": 371
+   },
+   {
+    "id": "unsloth/Kimi-K3",
+    "pipeline": "image-text-to-text",
+    "downloads": 1277,
+    "likes": 225
+   },
+   {
+    "id": "microsoft/Mage-VL",
+    "pipeline": "image-text-to-text",
+    "downloads": 272148,
+    "likes": 188
+   },
+   {
+    "id": "Audio8/Audio8-TTS-Preview-0.6b",
+    "pipeline": "text-to-speech",
+    "downloads": 4314,
     "likes": 179
    },
    {
-    "id": "fdtn-ai/antares-1b",
+    "id": "Nanbeige/Nanbeige4.2-3B",
     "pipeline": "text-generation",
-    "downloads": 5978,
-    "likes": 187
+    "downloads": 33042,
+    "likes": 627
    },
    {
-    "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
-    "pipeline": "image-text-to-text",
-    "downloads": 1927138,
-    "likes": 3112
-   },
-   {
-    "id": "openbmb/MiniCPM-RobotManip",
-    "pipeline": "robotics",
-    "downloads": 643,
-    "likes": 177
-   },
-   {
-    "id": "poolside/Laguna-S-2.1-NVFP4",
+    "id": "poolside/Laguna-S-2.1",
     "pipeline": "text-generation",
-    "downloads": 138671,
-    "likes": 143
+    "downloads": 80102,
+    "likes": 878
    },
    {
-    "id": "poolside/Laguna-S-2.1-GGUF",
-    "pipeline": "unknown",
-    "downloads": 82187,
-    "likes": 143
-   },
-   {
-    "id": "prism-ml/Bonsai-27B-gguf",
+    "id": "XYZAILab/XYZ-Aquila-mini",
     "pipeline": "text-generation",
-    "downloads": 2187304,
-    "likes": 651
-   },
-   {
-    "id": "nvidia/Cosmos3-Edge",
-    "pipeline": "unknown",
-    "downloads": 32700,
-    "likes": 125
-   },
-   {
-    "id": "conradlocke/krea2-identity-edit",
-    "pipeline": "unknown",
-    "downloads": 0,
-    "likes": 544
-   },
-   {
-    "id": "moonshotai/Kimi-K2.7-Code",
-    "pipeline": "image-text-to-text",
-    "downloads": 730129,
-    "likes": 1298
-   },
-   {
-    "id": "ATH-MaaS/OvisOCR2",
-    "pipeline": "image-text-to-text",
-    "downloads": 35562,
-    "likes": 309
-   },
-   {
-    "id": "baseten/GLM-5.2-Vision-NVFP4",
-    "pipeline": "image-text-to-text",
-    "downloads": 2033,
-    "likes": 113
+    "downloads": 903,
+    "likes": 366
    },
    {
     "id": "microsoft/Fara1.5-27B",
     "pipeline": "image-text-to-text",
-    "downloads": 1225,
-    "likes": 110
+    "downloads": 2938,
+    "likes": 250
    },
    {
-    "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
+    "id": "lodestones/Kroma",
+    "pipeline": "text-to-image",
+    "downloads": 0,
+    "likes": 126
+   },
+   {
+    "id": "deepseek-ai/DeepSeek-V4-Flash",
+    "pipeline": "text-generation",
+    "downloads": 2785810,
+    "likes": 1958
+   },
+   {
+    "id": "LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V6-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 1410054,
-    "likes": 2480
+    "downloads": 259237,
+    "likes": 300
    },
    {
-    "id": "openbmb/MiniCPM-RobotTrack",
-    "pipeline": "robotics",
-    "downloads": 398,
-    "likes": 130
+    "id": "XYZAILab/XYZ-Aquila-pro",
+    "pipeline": "text-generation",
+    "downloads": 1094,
+    "likes": 335
    },
    {
-    "id": "LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V5-GGUF",
+    "id": "EschaLabs/Qwen3.6-35B-A3B-Escha-W2",
+    "pipeline": "text-generation",
+    "downloads": 2550,
+    "likes": 119
+   },
+   {
+    "id": "nota-ai/Solar-Open2-250B-Nota-NVFP4",
+    "pipeline": "text-generation",
+    "downloads": 68199,
+    "likes": 154
+   },
+   {
+    "id": "upstage/Solar-Open2-250B",
+    "pipeline": "text-generation",
+    "downloads": 14863,
+    "likes": 719
+   },
+   {
+    "id": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 73642,
-    "likes": 172
+    "downloads": 292511,
+    "likes": 209
    },
    {
-    "id": "bottlecapai/ThinkingCap-Qwen3.6-27B",
+    "id": "empero-ai/Qwythos-27B-v1",
     "pipeline": "image-text-to-text",
-    "downloads": 27823,
-    "likes": 554
+    "downloads": 1279,
+    "likes": 96
    },
    {
-    "id": "microsoft/Mage-Flow-Edit-Turbo",
-    "pipeline": "image-to-image",
-    "downloads": 946,
+    "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+    "pipeline": "image-text-to-text",
+    "downloads": 1892654,
+    "likes": 3243
+   },
+   {
+    "id": "microsoft/VibeVoice-ASR-BitNet",
+    "pipeline": "automatic-speech-recognition",
+    "downloads": 8468,
+    "likes": 150
+   },
+   {
+    "id": "LiquidAI/LFM2.5-Encoder-350M",
+    "pipeline": "fill-mask",
+    "downloads": 6957,
     "likes": 89
+   },
+   {
+    "id": "amd/Instella-MoE-16B-A3B-Think",
+    "pipeline": "text-generation",
+    "downloads": 1957,
+    "likes": 121
    }
   ]
  },
@@ -222,7 +222,7 @@
    },
    {
     "title": "Launch HN: Screenpipe (YC S26) – Record how you work and turn that into agents",
-    "points": 84,
+    "points": 88,
     "url": null
    },
    {
@@ -231,14 +231,14 @@
     "url": "https://agnost.ai"
    },
    {
-    "title": "Show HN: OpenKnowledge – open source AI-first alternative to Obsidian/Notion",
-    "points": 381,
-    "url": "https://github.com/inkeep/open-knowledge"
+    "title": "Show HN: Palmier Pro – Open-source macOS video editor built for AI",
+    "points": 191,
+    "url": "https://github.com/palmier-io/palmier-pro"
    },
    {
-    "title": "Show HN: Palmier Pro – Open-source macOS video editor built for AI",
-    "points": 189,
-    "url": "https://github.com/palmier-io/palmier-pro"
+    "title": "Show HN: Formally verified 3D CSG: Trust 93 lines spec, not 1000 lines AI code",
+    "points": 115,
+    "url": "https://github.com/schildep/verified-3d-mesh-intersection"
    },
    {
     "title": "Ask HN: Another \"Hacker News\" with less AI and more human-focused hacking news?",
@@ -251,14 +251,19 @@
     "url": "https://github.com/rowboatlabs/rowboat"
    },
    {
-    "title": "Show HN: Smart model routing directly in Claude, Codex and Cursor",
-    "points": 216,
-    "url": "https://github.com/workweave/router"
+    "title": "LM Studio Bionic: the AI agent for open models",
+    "points": 331,
+    "url": "https://lmstudio.ai/blog/introducing-lm-studio-bionic"
    },
    {
     "title": "Show HN: Microsoft releases Flint, a visualization language for AI agents",
     "points": 350,
     "url": "https://microsoft.github.io/flint-chart/#/"
+   },
+   {
+    "title": "Show HN: What should the GUI for AI agents look like?",
+    "points": 134,
+    "url": "https://marbleos.com/demo"
    }
   ],
   "status": "ok"

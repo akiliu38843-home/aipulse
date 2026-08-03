@@ -1,139 +1,58 @@
 {
- "collected_at": "2026-07-27T02:06:08",
+ "collected_at": "2026-08-03T01:59:54",
  "arxiv": {
-  "status": "ok:12",
-  "papers": [
-   {
-    "title": "SM4RT: Learning Structured Motion Geometry for 4D Reconstruction",
-    "date": "2026-07-24",
-    "authors": "Shing Ho J. Lin, Wenzhao Zheng, Dong Zhuo",
-    "summary": "Geometry Foundation Models (GFMs) have substantially advanced monocular 3D reconstruction, yet extending this capability to 4D dynamic understanding remains a fundamental challenge. Most existing moti",
-    "link": "https://arxiv.org/abs/2607.22534v1"
-   },
-   {
-    "title": "Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills",
-    "date": "2026-07-24",
-    "authors": "Siyuan Huang, Pengyu Cheng, Haotian Liu",
-    "summary": "LLM training is shifting from manual design and annotation to interaction-driven self-evolution. However, existing self-evolutionary methods face a fundamental dilemma between task diversity and verif",
-    "link": "https://arxiv.org/abs/2607.22529v1"
-   },
-   {
-    "title": "Explainable Reinforcement Learning for assisting Air Traffic Controllers",
-    "date": "2026-07-24",
-    "authors": "Anduel Mehmeti, Gabriella Gigante, Salvatore Venticinque",
-    "summary": "To effectively integrate AI into high-stakes, critical environments such as healthcare, autonomous driving, and aviation--and to advance toward higher levels of automation and seamless human-AI collab",
-    "link": "https://arxiv.org/abs/2607.22525v1"
-   },
-   {
-    "title": "The Regression Tax: Decomposing Why Skills Help and Hurt LLM Agents",
-    "date": "2026-07-24",
-    "authors": "Darshan Tank, Baran Nama",
-    "summary": "Adding procedural skills to an LLM agent is typically evaluated by average improvement in task success. However, this metric hides an important cost: skills can also make agents worse. We measure both",
-    "link": "https://arxiv.org/abs/2607.22520v1"
-   },
-   {
-    "title": "PinEqualizer: Full Funnel Content Exploration and Debiasing System at Pinterest",
-    "date": "2026-07-24",
-    "authors": "Olafur Gudmundsson, Bo Zhao, Huayi Liao",
-    "summary": "In this paper, we propose a new solution for addressing the content cold-start problem in industry-scale search and recommender systems. Compared to prior approaches, we have made the following new co",
-    "link": "https://arxiv.org/abs/2607.22518v1"
-   },
-   {
-    "title": "Quantum Spectral Model: Data Reuploading with Input-Conditioned Frequency Support",
-    "date": "2026-07-24",
-    "authors": "Peiyong Wang, Udaya Parampalli, Casey R. Myers",
-    "summary": "A central design principle in modern machine learning and artificial intelligence is to align a model's inductive bias with the structure of its input data. For matrix-valued inputs, relevant matrix-l",
-    "link": "https://arxiv.org/abs/2607.22516v1"
-   },
-   {
-    "title": "Dysphagia Risk Stratification in Head and Neck Cancer via Two-Stage PRO-Clinical Stacking",
-    "date": "2026-07-24",
-    "authors": "Siyuan Zhao, Eric Ababio Anyimadu, Zachary G. Brumm",
-    "summary": "Dysphagia is a debilitating late effect of head and neck cancer (HNC) treatment, yet timely identification of at-risk patients remains challenging in survivorship care. Definitive assessment relies on",
-    "link": "https://arxiv.org/abs/2607.22514v1"
-   },
-   {
-    "title": "Opaque Epistemic Mediation: How LLM Deployment Configurations Shape the Validation of Pseudo-Science",
-    "date": "2026-07-24",
-    "authors": "Davide Scarso, Hugo Noronha de Almeida, Joaquim Pina",
-    "summary": "Commercial large language models are increasingly used as knowledge references, yet their stance on contested scientific claims is neither stable nor transparent. We tested how four major LLM families",
-    "link": "https://arxiv.org/abs/2607.22513v1"
-   },
-   {
-    "title": "CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference",
-    "date": "2026-07-24",
-    "authors": "Jiyuan Tan, Vasilis Syrgkanis",
-    "summary": "Automating theoretical research is constrained not only by the generation of candidate results, but also by their reliable evaluation. A common approach is to close the research loop with a large lang",
-    "link": "https://arxiv.org/abs/2607.22511v1"
-   },
-   {
-    "title": "Interpretable EEG biomarkers with bag-of-waves: Spatial and temporal waveform dictionaries for low-data regimes",
-    "date": "2026-07-24",
-    "authors": "Athanasios Papastathopoulos-Katsaros, Steven T. Lee, Lin Yao",
-    "summary": "Electroencephalography (EEG) is widely used to diagnose neurological conditions, but its analysis usually relies on either predefined spectral features or deep neural networks. Predefined features car",
-    "link": "https://arxiv.org/abs/2607.22508v1"
-   },
-   {
-    "title": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting",
-    "date": "2026-07-24",
-    "authors": "Aliaksei Kaliutau",
-    "summary": "Volatility forecasting is dominated by persistence and measurement noise, leaving limited residual structure for nonlinear models to exploit. We introduce Susceptible Architectures (SUSA), a reservoir",
-    "link": "https://arxiv.org/abs/2607.22491v1"
-   },
-   {
-    "title": "\\k{appa}-LoRA: Condition Numbers Reveal Which LoRA Matrices Worth Updating",
-    "date": "2026-07-24",
-    "authors": "Jianghui Wang, Silong Yong, Francesco Orabona",
-    "summary": "Low-Rank Adaptation (LoRA) has become a widely adopted technique for efficient neural network fine-tuning, decomposing model updates into low-rank matrices. However, LoRA remains computationally costl",
-    "link": "https://arxiv.org/abs/2607.22489v1"
-   }
-  ]
+  "status": "ok:0",
+  "papers": []
  },
  "pypi": {
-  "status": "ok:4/10",
+  "status": "ok:8/10",
   "libs": [
    {
     "pkg": "litellm",
-    "last_month": 638867146,
-    "last_week": 141700522
+    "last_month": 664202611,
+    "last_week": 158345913
    },
    {
     "pkg": "huggingface-hub",
-    "last_month": 413228071,
-    "last_week": 97726810
-   },
-   {
-    "pkg": "anthropic",
-    "last_month": 166212227,
-    "last_week": 42151584
-   },
-   {
-    "pkg": "llama-index",
-    "last_month": 6941894,
-    "last_week": 1736743
-   },
-   {
-    "pkg": "langchain",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+    "last_month": 421792495,
+    "last_week": 116486853
    },
    {
     "pkg": "openai",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+    "last_month": 382670195,
+    "last_week": 105292610
+   },
+   {
+    "pkg": "langchain",
+    "last_month": 299315310,
+    "last_week": 64502198
    },
    {
     "pkg": "transformers",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+    "last_month": 176618423,
+    "last_week": 45436679
+   },
+   {
+    "pkg": "anthropic",
+    "last_month": 175691426,
+    "last_week": 46478946
+   },
+   {
+    "pkg": "langgraph",
+    "last_month": 68592580,
+    "last_week": 16409098
+   },
+   {
+    "pkg": "crewai",
+    "last_month": 12807952,
+    "last_week": 4500329
    },
    {
     "pkg": "vllm",
     "error": "HTTPError:HTTP Error 429: Too Many Requests"
    },
    {
-    "pkg": "langgraph",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
-   },
-   {
-    "pkg": "crewai",
+    "pkg": "llama-index",
     "error": "HTTPError:HTTP Error 429: Too Many Requests"
    }
   ]
