@@ -1,5 +1,5 @@
 {
- "collected_at": "2026-08-03T01:59:46",
+ "collected_at": "2026-08-10T01:04:56",
  "source_status": {
   "Simon Willison": "ok:8",
   "Lilian Weng": "ok:2",
@@ -8,7 +8,7 @@
   "Chip Huyen": "ok:0",
   "Eugene Yan": "ok:2",
   "Jay Alammar": "ok:0",
-  "Berkeley BAIR": "ok:5",
+  "Berkeley BAIR": "ok:4",
   "The Gradient": "ok:0",
   "DeepLearning.AI Batch": "empty (bozo:1)",
   "OpenAI News": "ok:8",
@@ -19,59 +19,59 @@
  "items": [
   {
    "source": "Simon Willison",
-   "title": "condense-json 1.0",
-   "date": "2026-08-02",
-   "summary": "Release: condense-json 1.0 I'm trying to get braver at releasing 1.0 versions. This little library is a year and a half old now - I've applied some sensible and non-disruptive fixes and shipped the big 1.0 for it. Here's an example of what it can do, lifted from the README: { \"foo\" : { \"bar\" : { \"string\" : \" This is a string with foxes in it \" , \"nested\" : { \"more\" : [ \" Here is a string \" , \" another with foxes in it too \" ] } } } } Combine that with a replacements object: { \"1\" : \" with foxes in it \" } And condense_json(input_json, replacements) produces the following: { \"foo\" : { \"bar\" : { ",
-   "link": "https://simonwillison.net/2026/Aug/2/condense-json/#atom-everything"
+   "title": "Quoting Claude Opus 5 system prompt",
+   "date": "2026-08-09",
+   "summary": "Claude Fable 5 and Claude Mythos 5 were first released on June 9, 2026. On June 12, 2026, Anthropic suspended access to both models to comply with U.S. Department of Commerce export controls; the Department lifted those controls on June 30, 2026, and Anthropic restored access on July 1, 2026 (Anthropic's statement: https://www.anthropic.com/news/fable-mythos-access ). These events are after Claude's training-data cutoff, so Claude knows about them only from this notice. If asked, Claude confirms them accurately and matter-of-factly — it doesn't deny the suspension happened — and otherwise trea",
+   "link": "https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/#atom-everything"
   },
   {
    "source": "Simon Willison",
-   "title": "Open letters about AI development",
-   "date": "2026-08-02",
-   "summary": "Open letters about AI development I wrote this summary of the past few weeks of open letters as a section of my sponsors-only newsletter but I've decided to share it here as well. Open Weights and American AI Leadership was shepherded by Microsoft, dated July 24th, and signed by 235 AI-adjacent companies including NVIDIA (see Jensen's first ever tweet ), Amazon, Y Combinator, The Linux Foundation, and (a later signer) OpenAI. It's clearly an argument designed to counter any instincts by the current US government to ban or limit open weight models over \"safety\" concerns - a reasonable considera",
-   "link": "https://simonwillison.net/2026/Aug/2/open-letters/#atom-everything"
+   "title": "GitHub Models is now retired",
+   "date": "2026-08-09",
+   "summary": "GitHub Models is now retired I missed this news until today, when the GitHub Actions run for my simonw/research repository failed with this error message: GitHub Models is temporarily unavailable as part of a scheduled retirement brownout. That message is already stale, because the retirement has been completed. GitHub Models was an odd-shaped duck. GitHub provided a model playground tool and a unified API across a bunch of different LLM providers, with the biggest benefit being that code running in GitHub Actions could use the GitHub API key already present in that environment to execute prom",
+   "link": "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything"
   },
   {
    "source": "Simon Willison",
-   "title": "July 2026 newsletter",
-   "date": "2026-08-02",
-   "summary": "The June edition of my sponsors-only monthly newsletter is out. If you are a sponsor (or if you start a sponsorship now) you can access it here . This month: Accidental cyberattacks by OpenAl and Anthropic models under test GPT-5.6 Sol, Terra, and Luna Claude Opus 5 Kimi K3 and DeepSeek-V4-Flash-0731 Open letters about Al development A fireside chat and a podcast Reigniting my interest in MCP Other model releases My projects What I'm using at the moment Here's a copy of the June newsletter as a preview of what you'll get. Pay $10/month to stay a month ahead of the free copy! Tags: newsletter",
-   "link": "https://simonwillison.net/2026/Aug/2/july-newsletter/#atom-everything"
+   "title": "SQLite compressed text-history prototypes",
+   "date": "2026-08-09",
+   "summary": "Research: SQLite compressed text-history prototypes I'm perennially interested in options for storing revision histories in relational databases. While out on a dog walk I had a new idea: how about taking the full text of every prior version in a big JSON array of strings and then applying zlib or zstd compression to the whole thing? Surely that would compress really well due to all of the repeated strings. The new GPT‑Live voice mode in the ChatGPT iPhone app has got really good, so I discussed the prototype with that. You still can't share URLs to voice conversations, but here's what I said ",
+   "link": "https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/#atom-everything"
   },
   {
    "source": "Simon Willison",
-   "title": "Quoting Greg Brockman",
-   "date": "2026-08-01",
-   "summary": "at openai, many people hook their chatgpt up to slack. people really don't like when a coworker's chatgpt contacts them asking for help with a task, even when they'd be perfectly happy doing that same work if asked by that coworker. reinforces how much people care about human relationships and helping each other, and want AI to give time back — or enhance time together — rather than become a layer separating people. &mdash; Greg Brockman , President and Co-Founder, OpenAI Tags: ai-ethics , ai-misuse , generative-ai , openai , ai , llms",
-   "link": "https://simonwillison.net/2026/Aug/1/greg-brockman/#atom-everything"
+   "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+   "date": "2026-08-08",
+   "summary": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans Anthropic are really confident in Claude Code's auto mode , to the point that they are making it the default setting for new sessions in most Claude Code plans starting on August 14th. This was one of the topics discussed in our Fireside Chat with Cat Wu and Thariq Shihipar at the AI Engineer World’s Fair last month. I asked them how they run Claude Code safely within Anthropic (given the threat of prompt injection) and they replied that \"Broadly within Anthropic, almost every single person uses auto mode\". Cat Wu then sa",
+   "link": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything"
   },
   {
    "source": "Simon Willison",
-   "title": "datasette-apps 0.2a0",
-   "date": "2026-08-01",
-   "summary": "Release: datasette-apps 0.2a0 Changes that improve Datasette Apps when created and edited using Datasette Agent : New app_debug() tool allowing agent to open an app (invisibly) and test it using JavaScript. #33 New app_list() tool for listing apps the user has permission to edit, so the agent can edit them. #36 The app_debug() tool is pretty neat: it works by displaying the app in a opacity: 0 iframe with pointer-events: none (so it can't be seen or interacted with) and then executing agent-provided JavaScript inside that sandboxed iframe. This means the agent can smoke test that the app is wo",
-   "link": "https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything"
+   "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
+   "date": "2026-08-08",
+   "summary": "My comment on Now we have a timeline of the OpenAI accidental attack against Hugging Face &mdash; Hacker News. I think one of the most interesting details here might be tucked away in that first bulletin point: May 7: OpenAI starts a new training run for an experimental, unreleased model. (Do they mean an evaluation run? They say training run in the video, and later mention a “reward signal to judge how well they’re doing”, so I guess this really was about training a model, not evaluating one that was already trained.) The more I think about this the more I suspect that the fact this happened ",
+   "link": "https://simonwillison.net/2026/Aug/8/now-we-have-a-timeline-of-the-openai-accidental-attack-against-h/#atom-everything"
   },
   {
    "source": "Simon Willison",
-   "title": "Ten advances in mathematics and theoretical computer science",
-   "date": "2026-08-01",
-   "summary": "Ten advances in mathematics and theoretical computer science A few days ago it was Anthropic discovering cryptographic weaknesses with Claude using Mythos Preview, spending $100,000 on tokens and with prompts that included \"again we are not looking for low hanging fruit, we want proper research to find genuinly hard findings.\" Now it's OpenAI's turn to flex. They set \"an internal version of Astra, our next major model\" on finding solutions to ten mathematical problems that \"have seen no progress on the main result for at least a decade\". They claim to have spent less than $2,000 at GPT-5.6 Sol",
-   "link": "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything"
+   "title": "Quoting John Gruber",
+   "date": "2026-08-08",
+   "summary": "Me, I try to get into the mindset of playing live music, not recording a studio album. Except when I’m writing a piece where I really want it to be an album. Those aren’t rare , per se, but they’re occasional . If I tried to make every post a hall-of-famer I’d never get anything out. I’m aiming for professionalism. I’m performing live in front of an audience — not just jamming in my garage or bedroom, fucking around. So I’m careful and concentrate. I want to hit every note, in time. But at my best I’m moving from song to song. &mdash; John Gruber , responding to my blogging tips Tags: john-gru",
+   "link": "https://simonwillison.net/2026/Aug/8/john-gruber/#atom-everything"
   },
   {
    "source": "Simon Willison",
-   "title": "deepseek-ai/DeepSeek-V4-Flash-0731",
-   "date": "2026-07-31",
-   "summary": "deepseek-ai/DeepSeek-V4-Flash-0731 The latest release in DeepSeek's V4 family, \"with substantially enhanced agentic capabilities\". It's 304 billion parameters - 167GB on Hugging Face - but it appears to punch well above its weight. Artificial Analysis rank it ahead of MiniMax M3 - a 428B model. It's $0.14/million input and $0.27/million output pricing means this may currently be the best value-per-intelligence model out there. It's looking very good on the Intelligence Index vs. Cost per Intelligence Index Task chart: I got a disappointing pelican from it using the default reasoning level via ",
-   "link": "https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything"
+   "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
+   "date": "2026-08-07",
+   "summary": "OpenAI gave a last-minute presentation at the Black Hat security on Wednesday about \"the Hugging Face Incident\" ( previously on this blog). The video was published yesterday. It's short and information dense and well worth watching, in particular because it provides full details of what happened and how things played out inside OpenAI. I've used the video to construct the timeline below. Here's the timeline. My favourite detail is at the end: OpenAI found out that they were responsible for the attack on Hugging Face when they reached out to ask to have their credentials revoked (after their in",
+   "link": "https://simonwillison.net/2026/Aug/7/openai-timeline/#atom-everything"
   },
   {
    "source": "Simon Willison",
-   "title": "Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)",
-   "date": "2026-07-31",
-   "summary": "Tuesday was Stateless MCP day - the rollout of MCP 2.0, or the 2026-07-28 Model Context Protocol specification to use the more formal but less memorable name. This is the most significant change to the MCP spec since it first launched, and has also served to reignite my personal interest in the protocol. For background: MCP is the Model Context Protocol, which describes a standard way to expose new tools to LLM-powered agent frameworks. It was introduced by Anthropic back in November 2024 , had a huge spike of interest through much of 2025, and then became somewhat eclipsed by Skills (another ",
-   "link": "https://simonwillison.net/2026/Jul/31/stateless-mcp/#atom-everything"
+   "title": "Moonlight & Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra)",
+   "date": "2026-08-07",
+   "summary": "Moonlight &amp; Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra) On Wednesday I wrote about One-shotting a Raccoon Heist game using Claude Fable 5 , where I had Claude Fable 5 build a full working game from a premise I generated with GPT-3 and DALL-E four years ago . I decided to pose the exact same prompt to Codex Desktop running GPT-5.6 Sol Ultra - the mode where Sol makes aggressive use of sub-agents - to see how it would do. It produced a much better game! Here's Moonlight &amp; Mayhem - GitHub repository here , including the textures and prompts it generated using gpt-image-2 . Your br",
+   "link": "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/#atom-everything"
   },
   {
    "source": "Lilian Weng",
@@ -117,24 +117,31 @@
   },
   {
    "source": "HuggingFace Blog",
+   "title": "TutorMoments: Do AI tutors know when to help and when to hold back?",
+   "date": "2026-08-07",
+   "summary": "",
+   "link": "https://huggingface.co/blog/allenai/tutormoments"
+  },
+  {
+   "source": "HuggingFace Blog",
+   "title": "Baseten on Hugging Face Inference Providers 🔥",
+   "date": "2026-08-06",
+   "summary": "",
+   "link": "https://huggingface.co/blog/baseten"
+  },
+  {
+   "source": "HuggingFace Blog",
+   "title": "Deploy local agents everywhere with LFM2.5-2.6B",
+   "date": "2026-08-04",
+   "summary": "",
+   "link": "https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b"
+  },
+  {
+   "source": "HuggingFace Blog",
    "title": "GPU Management: Why Idle GPUs Are the New Grounded Aircraft",
    "date": "2026-07-30",
    "summary": "",
    "link": "https://huggingface.co/blog/Dharma-AI/gpu-management"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "The OlmoEarth Platform: Geospatial inference at planetary scale",
-   "date": "2026-07-28",
-   "summary": "",
-   "link": "https://huggingface.co/blog/allenai/olmoearth-infrastructure"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "LFM2.5-Encoders for Fast Long-Context Inference on CPU",
-   "date": "2026-07-28",
-   "summary": "",
-   "link": "https://huggingface.co/blog/LiquidAI/lfm2-5-encoders"
   },
   {
    "source": "HuggingFace Blog",
@@ -163,13 +170,6 @@
    "date": "2026-07-21",
    "summary": "",
    "link": "https://huggingface.co/blog/grabette"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "Newer Models, Same Advantage",
-   "date": "2026-07-16",
-   "summary": "",
-   "link": "https://huggingface.co/blog/Dharma-AI/newer-models-same-advantages"
   },
   {
    "source": "Eugene Yan",
@@ -214,67 +214,60 @@
    "link": "http://bair.berkeley.edu/blog/2026/07/01/grads-2026/"
   },
   {
-   "source": "Berkeley BAIR",
-   "title": "Adaptive Parallel Reasoning: The Next Paradigm in Efficient Inference Scaling",
-   "date": "2026-05-08",
-   "summary": "Overview of adaptive parallel reasoning. What if a reasoning model could decide for itself when to decompose and parallelize independent subtasks, how many concurrent threads to spawn, and how to coordinate them based on the problem at hand? We provide a detailed analysis of recent progress in the field of parallel reasoning, especially Adaptive Parallel Reasoning. Disclosure: this post is part landscape survey, part perspective on adaptive parallel reasoning. One of the authors (Tony Lian) co-led ThreadWeaver ( Lian et al., 2025 ), one of the methods discussed below. The authors aim to presen",
-   "link": "http://bair.berkeley.edu/blog/2026/05/08/adaptive-parallel-reasoning/"
+   "source": "OpenAI News",
+   "title": "Responding to the next frontier of critical cyber capabilities",
+   "date": "2026-08-07",
+   "summary": "OpenAI is sharing preliminary cybersecurity evaluations for Astra and the steps we’re taking to strengthen safeguards and security controls.",
+   "link": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities"
   },
   {
    "source": "OpenAI News",
-   "title": "Ten advances in mathematics and theoretical computer science",
-   "date": "2026-08-01",
-   "summary": "OpenAI shares new results on long-standing open problems in mathematics and theoretical computer science, including advances in geometry, cryptography, and complexity.",
-   "link": "https://openai.com/index/ten-advances-in-mathematics"
+   "title": "How HSP GRUPPE builds AI capabilities for tax advisory",
+   "date": "2026-08-07",
+   "summary": "Discover how HSP GRUPPE uses ChatGPT Enterprise to boost productivity, improve work quality, and create more capacity for tax advisory and client service.",
+   "link": "https://openai.com/index/hsp-gruppe"
   },
   {
    "source": "OpenAI News",
-   "title": "Advancing responsible AI across Europe",
-   "date": "2026-07-31",
-   "summary": "OpenAI shares how its safety, security, transparency, and provenance practices support responsible AI governance in Europe. The work will continue as the EU AI Act advances.",
-   "link": "https://openai.com/index/advancing-responsible-ai-across-europe"
+   "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
+   "date": "2026-08-06",
+   "summary": "ChatGPT introduces improved GPT-5.6 Sol with better accuracy and consistency, plus expanded access for free users and unlimited everyday chats with GPT-5.6 Luna.",
+   "link": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt"
   },
   {
    "source": "OpenAI News",
-   "title": "Building abundant intelligence",
-   "date": "2026-07-31",
-   "summary": "A full-stack approach to making advanced AI more capable, more affordable, and more widely useful.",
-   "link": "https://openai.com/index/building-abundant-intelligence"
+   "title": "Working with the American Psychological Association on youth mental health and AI",
+   "date": "2026-08-06",
+   "summary": "OpenAI and the American Psychological Association advance evidence-based guidance, resources, and safeguards for responsible AI use and youth mental health.",
+   "link": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai"
   },
   {
    "source": "OpenAI News",
-   "title": "Univé builds an AI-ready workforce",
-   "date": "2026-07-31",
-   "summary": "See how Univé built an AI-ready workforce with ChatGPT Enterprise by combining leadership, responsible governance, and employee-led innovation to transform work at scale.",
-   "link": "https://openai.com/index/unive"
+   "title": "From asking to doing: How the world is putting ChatGPT to work",
+   "date": "2026-08-06",
+   "summary": "New OpenAI Signals data shows how people use ChatGPT worldwide, with country-level insights on adoption, usage trends, and evolving behavior.",
+   "link": "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work"
   },
   {
    "source": "OpenAI News",
-   "title": "Disrupting a Criminal Scam Operation",
-   "date": "2026-07-31",
-   "summary": "OpenAI disrupted a Cambodia-based scam operation using ChatGPT to support investment, romance, gambling, and impersonation schemes.",
-   "link": "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation"
+   "title": "Third-party cyber evaluations involving OpenAI models",
+   "date": "2026-08-04",
+   "summary": "OpenAI explains recent third-party cybersecurity evaluation incidents and outlines new safeguards to strengthen AI model testing and evaluation.",
+   "link": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models"
   },
   {
    "source": "OpenAI News",
-   "title": "Advancing the price-performance frontier with GPT-5.6",
-   "date": "2026-07-30",
-   "summary": "Explore lower GPT‑5.6 pricing for Luna and Terra—and how OpenAI’s more efficient models help enterprises deploy AI workflows at scale.",
-   "link": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6"
+   "title": "New ways to learn and teach with ChatGPT Work and Codex",
+   "date": "2026-08-04",
+   "summary": "Explore new education plugins for ChatGPT Work and Codex that help K–12 teachers, college educators, and students learn, teach, research, and build.",
+   "link": "https://openai.com/index/learn-teach-chatgpt-work-codex"
   },
   {
    "source": "OpenAI News",
-   "title": "How avatarin built a 24/7 retail agent with GPT-Realtime",
-   "date": "2026-07-30",
-   "summary": "avatarin uses OpenAI’s GPT-Realtime to give Yamada Denki shoppers 24/7 multilingual support. In two weeks, 30,000 people used the agent and 92% of survey responses were positive.",
-   "link": "https://openai.com/index/avatarin"
-  },
-  {
-   "source": "OpenAI News",
-   "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
-   "date": "2026-07-29",
-   "summary": "How two API settings improved GPT-5.6 performance on ARC-AGI-3, boosting scores and efficiency by retaining reasoning and enabling compaction.",
-   "link": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores"
+   "title": "Apple is getting this wrong",
+   "date": "2026-08-03",
+   "summary": "OpenAI addresses Apple’s baseless lawsuit, corrects claims about its employees, and shares messages documenting what happened.",
+   "link": "https://openai.com/index/apple-is-getting-this-wrong"
   },
   {
    "source": "Google Research",
