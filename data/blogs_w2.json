@@ -1,5 +1,5 @@
 {
- "collected_at": "2026-08-10T01:04:56",
+ "collected_at": "2026-08-17T00:44:03",
  "source_status": {
   "Simon Willison": "ok:8",
   "Lilian Weng": "ok:2",
@@ -19,59 +19,59 @@
  "items": [
   {
    "source": "Simon Willison",
-   "title": "Quoting Claude Opus 5 system prompt",
-   "date": "2026-08-09",
-   "summary": "Claude Fable 5 and Claude Mythos 5 were first released on June 9, 2026. On June 12, 2026, Anthropic suspended access to both models to comply with U.S. Department of Commerce export controls; the Department lifted those controls on June 30, 2026, and Anthropic restored access on July 1, 2026 (Anthropic's statement: https://www.anthropic.com/news/fable-mythos-access ). These events are after Claude's training-data cutoff, so Claude knows about them only from this notice. If asked, Claude confirms them accurately and matter-of-factly — it doesn't deny the suspension happened — and otherwise trea",
-   "link": "https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/#atom-everything"
+   "title": "Markdown SVG upgrades",
+   "date": "2026-08-16",
+   "summary": "I started building my markdown-svg-renderer tool in May , but I've since added enough features to it that it's worth talking about here again. It's evolved into my ideal tool for sharing Markdown transcripts that include SVG documents. Given my proclivity for drawing pelicans riding bicycles this is a problem that I needed to solve! The tool is very simple. Navigate to markdown-svg-renderer in your browser and paste in some Markdown to see it rendered... or save that Markdown to a CORS-friendly URL or a GitHub Gist and paste in a URL to that document. The URL option will give you a bookmarkabl",
+   "link": "https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades/"
   },
   {
    "source": "Simon Willison",
-   "title": "GitHub Models is now retired",
-   "date": "2026-08-09",
-   "summary": "GitHub Models is now retired I missed this news until today, when the GitHub Actions run for my simonw/research repository failed with this error message: GitHub Models is temporarily unavailable as part of a scheduled retirement brownout. That message is already stale, because the retirement has been completed. GitHub Models was an odd-shaped duck. GitHub provided a model playground tool and a unified API across a bunch of different LLM providers, with the biggest benefit being that code running in GitHub Actions could use the GitHub API key already present in that environment to execute prom",
-   "link": "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything"
+   "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+   "date": "2026-08-16",
+   "summary": "Friday's big release was Qwen 3.8 27B , an Apache 2 licensed 27B parameter vision-capable LLM from Alibaba's Qwen research lab. I've been looking forward to this one: 27B is an excellent size for running a model on a reasonably specced laptop, and its predecessor Qwen 3.6 27B was impressive. Qwen's self-reported benchmarks for this model are eye-opening. They show a boost from both Qwen 3.6 27B and the closed-weight Qwen 3.7-Plus, which was one of Qwen's strongest models of any size as recently as May this year . It will be interesting to hear what independent benchmarks have to say about the ",
+   "link": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/"
   },
   {
    "source": "Simon Willison",
-   "title": "SQLite compressed text-history prototypes",
-   "date": "2026-08-09",
-   "summary": "Research: SQLite compressed text-history prototypes I'm perennially interested in options for storing revision histories in relational databases. While out on a dog walk I had a new idea: how about taking the full text of every prior version in a big JSON array of strings and then applying zlib or zstd compression to the whole thing? Surely that would compress really well due to all of the repeated strings. The new GPT‑Live voice mode in the ChatGPT iPhone app has got really good, so I discussed the prototype with that. You still can't share URLs to voice conversations, but here's what I said ",
-   "link": "https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/#atom-everything"
+   "title": "Quoting Dario Amodei",
+   "date": "2026-08-16",
+   "summary": "I do agree that the public has a negative view of AI (and that this is a big problem), but I don’t think it is primarily caused by me or any other AI leader warning about AI’s risks. I think it is fundamentally a crisis of trust. I think that ordinary people don’t trust companies, governments, or the tech industry and always suspect that we are cooking up some new way to screw them over. The causes of this go back decades and AI is just the latest iteration of it. I don’t think that a glitzy marketing campaign with a positive spin (which some have advocated that Anthropic do) is the way to win",
+   "link": "https://simonwillison.net/2026/Aug/16/dario-amodei/"
   },
   {
    "source": "Simon Willison",
-   "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
-   "date": "2026-08-08",
-   "summary": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans Anthropic are really confident in Claude Code's auto mode , to the point that they are making it the default setting for new sessions in most Claude Code plans starting on August 14th. This was one of the topics discussed in our Fireside Chat with Cat Wu and Thariq Shihipar at the AI Engineer World’s Fair last month. I asked them how they run Claude Code safely within Anthropic (given the threat of prompt injection) and they replied that \"Broadly within Anthropic, almost every single person uses auto mode\". Cat Wu then sa",
-   "link": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything"
+   "title": "CORS Chat",
+   "date": "2026-08-15",
+   "summary": "Tool: CORS Chat I built this today ( with GPT-5.6-Sol xhigh ) to help test Qwen 3.8 27B running in LM Studio on both my M5 MacBook Pro and an NVIDIA DGX Spark. It provides a web UI for exercising an OpenAI-Responses-compatible chat endpoint. I've tried it against LM Studio with the --cors option and OpenRouter, and both work fine. Conversations are persisted in the browser and can be exported as copy-pasted JSON. One fun detail is that it notices SVG images that are being generated and progressively renders them in the chat while the tokens are still streaming in. Tags: svg , ai , generative-a",
+   "link": "https://simonwillison.net/2026/Aug/15/cors-chat/"
   },
   {
    "source": "Simon Willison",
-   "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
-   "date": "2026-08-08",
-   "summary": "My comment on Now we have a timeline of the OpenAI accidental attack against Hugging Face &mdash; Hacker News. I think one of the most interesting details here might be tucked away in that first bulletin point: May 7: OpenAI starts a new training run for an experimental, unreleased model. (Do they mean an evaluation run? They say training run in the video, and later mention a “reward signal to judge how well they’re doing”, so I guess this really was about training a model, not evaluating one that was already trained.) The more I think about this the more I suspect that the fact this happened ",
-   "link": "https://simonwillison.net/2026/Aug/8/now-we-have-a-timeline-of-the-openai-accidental-attack-against-h/#atom-everything"
+   "title": "Northern Gannet",
+   "date": "2026-08-15",
+   "summary": "Northern Gannet, in Pillar Point Harbor, CA, US This is Morris. Morris is a local celebrity: the only known Northern Gannet ( Morus bassanus ) in the entire Pacific Ocean. They showed up in the Farallon Islands off the coast of San Francisco 14 years ago . They have since made Pillar Point harbor their home, where they are quite easy to spot: the only white bird with a yellow head, usually hanging out with the smaller black Brandt’s cormorants near the harbor sign visible from the end of the commercial pier. Tags: photography , wildlife , half-moon-bay",
+   "link": "https://simonwillison.net/2026/Aug/15/sighting-391300422/"
   },
   {
    "source": "Simon Willison",
-   "title": "Quoting John Gruber",
-   "date": "2026-08-08",
-   "summary": "Me, I try to get into the mindset of playing live music, not recording a studio album. Except when I’m writing a piece where I really want it to be an album. Those aren’t rare , per se, but they’re occasional . If I tried to make every post a hall-of-famer I’d never get anything out. I’m aiming for professionalism. I’m performing live in front of an audience — not just jamming in my garage or bedroom, fucking around. So I’m careful and concentrate. I want to hit every note, in time. But at my best I’m moving from song to song. &mdash; John Gruber , responding to my blogging tips Tags: john-gru",
-   "link": "https://simonwillison.net/2026/Aug/8/john-gruber/#atom-everything"
+   "title": "Don't classify. Hallucinate!",
+   "date": "2026-08-14",
+   "summary": "Don&#x27;t classify. Hallucinate! I still have quite a bit of older content on my blog that I never got round to tagging. My blog has 1,856 tags - likely too many to feed to an LLM in one go and say \"which of these tags match the following content\". Doug Turnbull has a neat solution. Tell the model to output tags without any details of the existing vocabulary, then use vector embeddings against the existing corpus to find the concrete tags that are closest to the ones the model imagined might fit! His example prompt suggests including an example of the shape of your tags to help the model make",
+   "link": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/"
   },
   {
    "source": "Simon Willison",
-   "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
-   "date": "2026-08-07",
-   "summary": "OpenAI gave a last-minute presentation at the Black Hat security on Wednesday about \"the Hugging Face Incident\" ( previously on this blog). The video was published yesterday. It's short and information dense and well worth watching, in particular because it provides full details of what happened and how things played out inside OpenAI. I've used the video to construct the timeline below. Here's the timeline. My favourite detail is at the end: OpenAI found out that they were responsible for the attack on Hugging Face when they reached out to ask to have their credentials revoked (after their in",
-   "link": "https://simonwillison.net/2026/Aug/7/openai-timeline/#atom-everything"
+   "title": "sqlite-utils 4.2.1",
+   "date": "2026-08-13",
+   "summary": "Release: sqlite-utils 4.2.1 Fixes a crashing bug in sqlite-utils 4.2 . I'd introduced code that looks like this: from typing_extensions import Self It turned out the typing-extensions package was not listed as a dependency for sqlite-utils - it was installed by one of the other dependencies in the dev dependency group , but when you uvx sqlite-utils directly you don't get those dependencies. As part of fixing this I figured out how to run a smoke test to ensure the CLI tool still works even without those dev dependencies, which can be run from the project checkout: uv run --isolated --no-defau",
+   "link": "https://simonwillison.net/2026/Aug/13/sqlite-utils-2/"
   },
   {
    "source": "Simon Willison",
-   "title": "Moonlight & Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra)",
-   "date": "2026-08-07",
-   "summary": "Moonlight &amp; Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra) On Wednesday I wrote about One-shotting a Raccoon Heist game using Claude Fable 5 , where I had Claude Fable 5 build a full working game from a premise I generated with GPT-3 and DALL-E four years ago . I decided to pose the exact same prompt to Codex Desktop running GPT-5.6 Sol Ultra - the mode where Sol makes aggressive use of sub-agents - to see how it would do. It produced a much better game! Here's Moonlight &amp; Mayhem - GitHub repository here , including the textures and prompts it generated using gpt-image-2 . Your br",
-   "link": "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/#atom-everything"
+   "title": "sqlite-utils 4.2",
+   "date": "2026-08-13",
+   "summary": "Release: sqlite-utils 4.2 Lots of improvements in this one relating to the table.transform() feature , which adds support for complex alter table operations by creating a fresh table, copying across the data and then dropping and replacing the old one. transform() now preserves a much larger array of edge-case schema definitions, including check constraints, unique constraints and even comments describing the columns. There are also new introspection properties for check constraints, and a whole lot of other smaller changes. Includes contributions from Bunlong Heng , ethanhawkes-gif , Rami Abd",
+   "link": "https://simonwillison.net/2026/Aug/13/sqlite-utils/"
   },
   {
    "source": "Lilian Weng",
@@ -86,6 +86,13 @@
    "date": "2026-06-24",
    "summary": "Scaling laws are one of the most critical empirical findings in deep learning. The observation is simple in form: the training loss $L$ decreases predictably as we scale up model size $N$, dataset size $D$, and compute $C$, following a power-law curve, which appears as a straight line on a log-log plot. We can view scaling laws as a framework for describing the relationship between compute, loss, model size and data; at its core, it is about how to allocate precious compute optimally between $N$ and $D$.",
    "link": "https://lilianweng.github.io/posts/2026-06-24-scaling-laws/"
+  },
+  {
+   "source": "Sebastian Raschka",
+   "title": "Building an AI Text Detector From Scratch",
+   "date": "2026-08-15",
+   "summary": "An End-to-End Project With Dataset Construction, Model Training, Local Deployment, and RLVR",
+   "link": "https://magazine.sebastianraschka.com/p/ai-detector-from-scratch"
   },
   {
    "source": "Sebastian Raschka",
@@ -109,67 +116,60 @@
    "link": "https://magazine.sebastianraschka.com/p/llm-research-papers-2026-part1"
   },
   {
-   "source": "Sebastian Raschka",
-   "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
-   "date": "2026-05-16",
-   "summary": "From Gemma 4 to DeepSeek V4, How New Open-Weight LLMs Are Reducing Long-Context Costs",
-   "link": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures"
+   "source": "HuggingFace Blog",
+   "title": "State of Open Models: Summer 2026 Observations",
+   "date": "2026-08-14",
+   "summary": "",
+   "link": "https://huggingface.co/blog/state-of-open-models-summer-2026"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "TutorMoments: Do AI tutors know when to help and when to hold back?",
-   "date": "2026-08-07",
+   "title": "Record, train, and deploy from one place with Strands Agents, LeRobot, and Hugging Face Storage Buckets",
+   "date": "2026-08-13",
    "summary": "",
-   "link": "https://huggingface.co/blog/allenai/tutormoments"
+   "link": "https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Baseten on Hugging Face Inference Providers 🔥",
-   "date": "2026-08-06",
+   "title": "What We Learned by Reproducing 2,200 papers from ICML",
+   "date": "2026-08-13",
    "summary": "",
-   "link": "https://huggingface.co/blog/baseten"
+   "link": "https://huggingface.co/blog/icml-2026-open-reproductions"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Deploy local agents everywhere with LFM2.5-2.6B",
-   "date": "2026-08-04",
+   "title": "Introducing OlmoEarth embeddings: Custom embedding exports from OlmoEarth Studio for downstream analysis",
+   "date": "2026-08-12",
    "summary": "",
-   "link": "https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b"
+   "link": "https://huggingface.co/blog/allenai/olmoearth-embeddings"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "GPU Management: Why Idle GPUs Are the New Grounded Aircraft",
-   "date": "2026-07-30",
+   "title": "LFM2.5-VL-3B for Better and Faster Vision Capabilities for the Edge",
+   "date": "2026-08-12",
    "summary": "",
-   "link": "https://huggingface.co/blog/Dharma-AI/gpu-management"
+   "link": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative Simulation to Surgical Robotics",
-   "date": "2026-07-27",
+   "title": "Thinking of ACE? We Can Do It with Fewer Tokens",
+   "date": "2026-08-11",
    "summary": "",
-   "link": "https://huggingface.co/blog/nvidia/cosmos-h-dreams"
+   "link": "https://huggingface.co/blog/ibm-research/altk-evolve-sldd"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident",
-   "date": "2026-07-27",
+   "title": "Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS",
+   "date": "2026-08-10",
    "summary": "",
-   "link": "https://huggingface.co/blog/agent-intrusion-technical-timeline"
+   "link": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
-   "date": "2026-07-23",
+   "title": "Making Knowledge Distillation Cheap Enough to Run at Scale",
+   "date": "2026-08-10",
    "summary": "",
-   "link": "https://huggingface.co/blog/nunchaku-diffusers"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "Grabette: an open system to record robot-manipulation data",
-   "date": "2026-07-21",
-   "summary": "",
-   "link": "https://huggingface.co/blog/grabette"
+   "link": "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation"
   },
   {
    "source": "Eugene Yan",
@@ -215,59 +215,73 @@
   },
   {
    "source": "OpenAI News",
-   "title": "Responding to the next frontier of critical cyber capabilities",
-   "date": "2026-08-07",
-   "summary": "OpenAI is sharing preliminary cybersecurity evaluations for Astra and the steps we’re taking to strengthen safeguards and security controls.",
-   "link": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities"
+   "title": "The builder’s guide to GPT‑5.6",
+   "date": "2026-08-13",
+   "summary": "Learn how startups use GPT-5.6 to build faster, more cost-efficient AI agents with smarter model selection and new Responses API capabilities.",
+   "link": "https://openai.com/index/builders-guide-to-gpt-5-6"
   },
   {
    "source": "OpenAI News",
-   "title": "How HSP GRUPPE builds AI capabilities for tax advisory",
-   "date": "2026-08-07",
-   "summary": "Discover how HSP GRUPPE uses ChatGPT Enterprise to boost productivity, improve work quality, and create more capacity for tax advisory and client service.",
-   "link": "https://openai.com/index/hsp-gruppe"
+   "title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
+   "date": "2026-08-13",
+   "summary": "Preview Ultrafast, a new OpenAI API service tier that runs GPT-5.6 Sol up to 14× faster. Powered by Cerebras, it delivers up to 750 output tokens per second.",
+   "link": "https://openai.com/index/previewing-ultrafast"
   },
   {
    "source": "OpenAI News",
-   "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
-   "date": "2026-08-06",
-   "summary": "ChatGPT introduces improved GPT-5.6 Sol with better accuracy and consistency, plus expanded access for free users and unlimited everyday chats with GPT-5.6 Luna.",
-   "link": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt"
+   "title": "OpenAI appoints Dali Rajic as Chief Revenue Officer",
+   "date": "2026-08-13",
+   "summary": "OpenAI appoints Dali Rajic as Chief Revenue Officer to lead its global revenue organization and help businesses realize the full value of AI.",
+   "link": "https://openai.com/index/dali-rajic-chief-revenue-officer"
   },
   {
    "source": "OpenAI News",
-   "title": "Working with the American Psychological Association on youth mental health and AI",
-   "date": "2026-08-06",
-   "summary": "OpenAI and the American Psychological Association advance evidence-based guidance, resources, and safeguards for responsible AI use and youth mental health.",
-   "link": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai"
+   "title": "From assistance to execution: How enterprises put AI to work",
+   "date": "2026-08-12",
+   "summary": "OpenAI research reveals how enterprises are adopting agentic AI, using ChatGPT and Codex, and how frontier firms are pulling ahead in AI adoption.",
+   "link": "https://openai.com/index/how-enterprises-put-ai-to-work"
   },
   {
    "source": "OpenAI News",
-   "title": "From asking to doing: How the world is putting ChatGPT to work",
-   "date": "2026-08-06",
-   "summary": "New OpenAI Signals data shows how people use ChatGPT worldwide, with country-level insights on adoption, usage trends, and evolving behavior.",
-   "link": "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work"
+   "title": "How RingCentral builds AI-native work from engineering to ops",
+   "date": "2026-08-12",
+   "summary": "See how RingCentral uses ChatGPT Work and Codex to accelerate AI product development and centralize operational intelligence across engineering and operations.",
+   "link": "https://openai.com/index/ringcentral"
   },
   {
    "source": "OpenAI News",
-   "title": "Third-party cyber evaluations involving OpenAI models",
-   "date": "2026-08-04",
-   "summary": "OpenAI explains recent third-party cybersecurity evaluation incidents and outlines new safeguards to strengthen AI model testing and evaluation.",
-   "link": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models"
+   "title": "Testing ads in ChatGPT",
+   "date": "2026-08-11",
+   "summary": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
+   "link": "https://openai.com/index/testing-ads-in-chatgpt"
   },
   {
    "source": "OpenAI News",
-   "title": "New ways to learn and teach with ChatGPT Work and Codex",
-   "date": "2026-08-04",
-   "summary": "Explore new education plugins for ChatGPT Work and Codex that help K–12 teachers, college educators, and students learn, teach, research, and build.",
-   "link": "https://openai.com/index/learn-teach-chatgpt-work-codex"
+   "title": "Daybreak models are now available on AWS",
+   "date": "2026-08-11",
+   "summary": "OpenAI and AWS are making Daybreak cybersecurity capabilities available through Amazon Bedrock to support enterprise security workflows.",
+   "link": "https://openai.com/index/daybreak-models-are-now-available-on-aws"
   },
   {
    "source": "OpenAI News",
-   "title": "Apple is getting this wrong",
-   "date": "2026-08-03",
-   "summary": "OpenAI addresses Apple’s baseless lawsuit, corrects claims about its employees, and shares messages documenting what happened.",
-   "link": "https://openai.com/index/apple-is-getting-this-wrong"
+   "title": "OpenAI’s letter to Governor Abbott on responsible AI infrastructure in Texas",
+   "date": "2026-08-10",
+   "summary": "OpenAI sent Governor Greg Abbott a letter outlining its commitment to responsible AI infrastructure in Texas. The letter supports reliable, transparent growth that benefits Texans.",
+   "link": "https://openai.com/index/responsible-ai-infrastructure-texas"
+  },
+  {
+   "source": "Google Research",
+   "title": "Empty shelves or lost keys? Recall is the bottleneck for parametric factuality",
+   "date": "2026-08-12",
+   "summary": "Generative AI",
+   "link": "https://research.google/blog/empty-shelves-or-lost-keys-recall-is-the-bottleneck-for-parametric-factuality/"
+  },
+  {
+   "source": "Google Research",
+   "title": "Advancing AMIE towards expert-level audio-visual clinical consultations",
+   "date": "2026-08-11",
+   "summary": "Health & Bioscience",
+   "link": "https://research.google/blog/advancing-amie-towards-expert-level-audio-visual-clinical-consultations/"
   },
   {
    "source": "Google Research",
@@ -310,20 +324,6 @@
    "date": "2026-07-07",
    "summary": "Algorithms & Theory",
    "link": "https://research.google/blog/the-power-of-collaboration-how-we-can-reduce-traffic-congestion/"
-  },
-  {
-   "source": "Google Research",
-   "title": "Expanding our Heat Resilience data to 50+ global cities",
-   "date": "2026-06-30",
-   "summary": "Climate & Sustainability",
-   "link": "https://research.google/blog/expanding-our-heat-resilience-data-to-50-global-cities/"
-  },
-  {
-   "source": "Google Research",
-   "title": "Introducing TabFM: A zero-shot foundation model for tabular data",
-   "date": "2026-06-30",
-   "summary": "Data Management",
-   "link": "https://research.google/blog/introducing-tabfm-a-zero-shot-foundation-model-for-tabular-data/"
   }
  ]
 }

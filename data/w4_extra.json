@@ -1,58 +1,144 @@
 {
- "collected_at": "2026-08-10T01:05:04",
+ "collected_at": "2026-08-17T00:44:10",
  "arxiv": {
-  "status": "ok:0",
-  "papers": []
+  "status": "ok:12",
+  "papers": [
+   {
+    "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
+    "date": "2026-08-13",
+    "authors": "Yaxin Luo, Haobin Jiang, Jialv Zou",
+    "summary": "Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal har",
+    "link": "https://arxiv.org/abs/2608.13560v1"
+   },
+   {
+    "title": "OmniScientist: An Omni-Modal Omni-Discipline AI Scientist",
+    "date": "2026-08-13",
+    "authors": "Bobo Li, Hao Fei, Tianjie Ju",
+    "summary": "Recent advances in foundation models have enabled AI scientists to automate increasingly complete research workflows, from hypothesis generation and code execution to manuscript preparation. Yet workf",
+    "link": "https://arxiv.org/abs/2608.13558v1"
+   },
+   {
+    "title": "HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark",
+    "date": "2026-08-13",
+    "authors": "Dairu Liu, Zekun Qi, Jiayu Zeng",
+    "summary": "Humanoid motion tracking is central to teleoperation and whole-body imitation, yet evaluation often disagrees with what people perceive in videos. Kinematic errors average per-frame pose differences b",
+    "link": "https://arxiv.org/abs/2608.13555v1"
+   },
+   {
+    "title": "Defensive Boosting for Online Probabilistic Forecasting",
+    "date": "2026-08-13",
+    "authors": "Georgy Noarov, Aaron Roth",
+    "summary": "We study online probabilistic forecasting of binary outcomes chosen by an adaptive adversary. Given an online learning algorithm for a weak hypothesis class $H$, we would like to efficiently obtain tw",
+    "link": "https://arxiv.org/abs/2608.13554v1"
+   },
+   {
+    "title": "Exponential Convex Calibration Dimension for the Multi-Label Jaccard Measure",
+    "date": "2026-08-13",
+    "authors": "Mingyuan Zhang",
+    "summary": "The per-instance Jaccard score, or intersection over union (IoU), is standard in multi-label classification and binary segmentation. With $s$ labels, its loss matrix has $2^s$ outcomes and reports. Un",
+    "link": "https://arxiv.org/abs/2608.13549v1"
+   },
+   {
+    "title": "QuoteBench: How Matched Scores Can Hide Command-Path Failures",
+    "date": "2026-08-13",
+    "authors": "Shangao Li, Yao Zhang, Volker Tresp",
+    "summary": "LLM coding agents issue Bash commands through interfaces that may serialize, wrap, and reparse model output. Matched execution scores alone cannot distinguish command-generation errors from failures i",
+    "link": "https://arxiv.org/abs/2608.13547v1"
+   },
+   {
+    "title": "LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure",
+    "date": "2026-08-13",
+    "authors": "Fanfei Li, Jana Zeller, Manuel Prada-Corral",
+    "summary": "Modern language models are trained on heterogeneous web-scale text corpora. Consequently, studying knowledge and skill acquisition is difficult, as prior exposure to related content is hard to charact",
+    "link": "https://arxiv.org/abs/2608.13545v1"
+   },
+   {
+    "title": "SAEVerbalizer: Generating Explanations for Sparse Autoencoder Features via Representation Verbalization",
+    "date": "2026-08-13",
+    "authors": "Weihan Meng, Hongzhu Guo, Yi Jing",
+    "summary": "Sparse autoencoders (SAEs) are proposed to extract numerous features from large language model (LLM) representations, yet explaining these features still relies primarily on external observation. This",
+    "link": "https://arxiv.org/abs/2608.13538v1"
+   },
+   {
+    "title": "DARTree: Speculative Diffusion Decoding with Autoregressive Draft Trees",
+    "date": "2026-08-13",
+    "authors": "Tianyi Li, Yaxin Luo, Xinyi Shang",
+    "summary": "Speculative decoding losslessly accelerates autoregressive language models by verifying multiple draft tokens in parallel. Diffusion-based drafters further reduce proposal latency by predicting an ent",
+    "link": "https://arxiv.org/abs/2608.13524v1"
+   },
+   {
+    "title": "Vero: Can AI Agents Build Formally Verified Software Repositories?",
+    "date": "2026-08-13",
+    "authors": "Zhe Ye, Hantao Lou, Yuechun Sun",
+    "summary": "AI agents are increasingly used for programming, but do not provide any guarantee on the correctness of generated code. Verified code generation, in which an agent produces both an implementation and ",
+    "link": "https://arxiv.org/abs/2608.13522v1"
+   },
+   {
+    "title": "Exponential quantum advantage for learning signals with a single qubit",
+    "date": "2026-08-13",
+    "authors": "Ishaan Kannan, Sridhar Prabhu, Saeed A. Khan",
+    "summary": "Quantum technology has the potential to transform scientific discovery, but quantum advantages often require processing capabilities well beyond the reach of experimental platforms. We show that coupl",
+    "link": "https://arxiv.org/abs/2608.13521v1"
+   },
+   {
+    "title": "The data geometry of masking diffusion: Certified-optimal schedules via unmasking growth complexity",
+    "date": "2026-08-13",
+    "authors": "Martin J. Wainwright",
+    "summary": "We study masking diffusion for discrete sampling and introduce a path-resolved measure of data geometry called the \\emph{unmasking growth complexity} ({\\textsf{UGC}\\xspace}). Its local increments dire",
+    "link": "https://arxiv.org/abs/2608.13520v1"
+   }
+  ]
  },
  "pypi": {
-  "status": "ok:8/10",
+  "status": "ok:9/10",
   "libs": [
    {
     "pkg": "litellm",
-    "last_month": 709954032,
-    "last_week": 191453364
+    "last_month": 734675374,
+    "last_week": 195707014
    },
    {
     "pkg": "huggingface-hub",
-    "last_month": 466997192,
-    "last_week": 133227837
+    "last_month": 496470197,
+    "last_week": 124317729
    },
    {
     "pkg": "openai",
-    "last_month": 412867129,
-    "last_week": 113772448
+    "last_month": 432335049,
+    "last_week": 106282628
    },
    {
     "pkg": "langchain",
-    "last_month": 289926492,
-    "last_week": 62004668
-   },
-   {
-    "pkg": "langgraph",
-    "last_month": 71299703,
-    "last_week": 16751325
-   },
-   {
-    "pkg": "crewai",
-    "last_month": 15532995,
-    "last_week": 5395821
-   },
-   {
-    "pkg": "llama-index",
-    "last_month": 7123143,
-    "last_week": 1684429
-   },
-   {
-    "pkg": "vllm",
-    "last_month": 5293683,
-    "last_week": 1101065
+    "last_month": 273749375,
+    "last_week": 59696565
    },
    {
     "pkg": "anthropic",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+    "last_month": 199678361,
+    "last_week": 51125866
    },
    {
     "pkg": "transformers",
+    "last_month": 191581668,
+    "last_week": 47001488
+   },
+   {
+    "pkg": "langgraph",
+    "last_month": 71095727,
+    "last_week": 17211373
+   },
+   {
+    "pkg": "crewai",
+    "last_month": 20672935,
+    "last_week": 7694612
+   },
+   {
+    "pkg": "vllm",
+    "last_month": 5020995,
+    "last_week": 1176993
+   },
+   {
+    "pkg": "llama-index",
     "error": "HTTPError:HTTP Error 429: Too Many Requests"
    }
   ]
