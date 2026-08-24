@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-17",
+ "as_of": "2026-08-24",
  "foresight": [
   {
    "theme": "RAG",
@@ -18,7 +18,15 @@
    "sources": 2
   },
   {
+   "theme": "AI编码agent当硬技能",
+   "sources": 2
+  },
+  {
    "theme": "Eval 评测",
+   "sources": 2
+  },
+  {
+   "theme": "Serving 推理",
    "sources": 2
   }
  ],
@@ -52,23 +60,22 @@
   "source": "W1 (2026-05-19, 63 岗样本中 22 个有 yearly salary)"
  },
  "salary_this_week_snapshot": {
-  "median_k": 108,
-  "n": 4,
+  "median_k": 242,
+  "n": 3,
   "note": "本周样本量不稳，仅辅助参考；以 salary baseline 为准"
  },
  "top_employers": [
-  "UST",
-  "JPMorganChase",
   "Booz Allen Hamilton",
   "Spotlight Partners",
-  "Cafe of bay INC"
+  "propio",
+  "Solstice",
+  "Taxbit"
  ],
  "target_roles": [
   "AI Engineer",
   "Data Engineer",
   "ML Engineer",
-  "MLOps Engineer",
   "Machine Learning Engineer"
  ],
- "ai_jobs_total": 44
+ "ai_jobs_total": 34
 }

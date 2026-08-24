@@ -1,197 +1,195 @@
 {
- "collected_at": "2026-08-17T00:44:09",
+ "collected_at": "2026-08-24T00:45:48",
  "hf": {
   "status": "ok:30 sort=trendingScore",
   "tag_freq": {
-   "image-text-to-text": 9,
-   "text-generation": 8,
-   "unknown": 5,
-   "image-text-to-video": 3,
-   "image-to-video": 2,
+   "text-generation": 12,
+   "image-text-to-text": 11,
+   "unknown": 4,
+   "image-to-video": 1,
    "text-to-audio": 1,
-   "text-to-image": 1,
-   "text-to-video": 1
+   "image-text-to-video": 1
   },
   "trending": [
    {
     "id": "Qwen/Qwen3.8-27B",
     "pipeline": "image-text-to-text",
-    "downloads": 267725,
-    "likes": 10278
-   },
-   {
-    "id": "meta-models/Muse-Glimmer-30B",
-    "pipeline": "image-text-to-text",
-    "downloads": 292973,
-    "likes": 1629
+    "downloads": 2358347,
+    "likes": 12313
    },
    {
     "id": "unsloth/Qwen3.8-27B-GGUF",
     "pipeline": "unknown",
-    "downloads": 1945635,
-    "likes": 1455
+    "downloads": 6674515,
+    "likes": 2738
    },
    {
-    "id": "Qwen/Qwen3.8-2.4T-A95B",
-    "pipeline": "text-generation",
-    "downloads": 7932,
-    "likes": 1010
-   },
-   {
-    "id": "Lightricks/LTX-2.5",
-    "pipeline": "image-to-video",
-    "downloads": 424099,
-    "likes": 1028
-   },
-   {
-    "id": "MiniMaxAI/MiniMax-Music3",
-    "pipeline": "text-to-audio",
-    "downloads": 8639,
-    "likes": 841
-   },
-   {
-    "id": "MiniMaxAI/MiniMax-H3",
-    "pipeline": "image-text-to-video",
-    "downloads": 2307541,
-    "likes": 4030
-   },
-   {
-    "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
-    "pipeline": "text-generation",
-    "downloads": 21873,
-    "likes": 536
-   },
-   {
-    "id": "Qwen/Qwen3.8-27B-FP8",
+    "id": "orcarouter/Qwen3.8-27B-Uncensored-MLX",
     "pipeline": "image-text-to-text",
-    "downloads": 352971,
-    "likes": 484
+    "downloads": 47098,
+    "likes": 954
    },
    {
-    "id": "unsloth/Muse-Glimmer-30B-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 718178,
-    "likes": 457
-   },
-   {
-    "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "id": "OBLITERATUS/Qwen3.8-27B-OBLITERATED",
     "pipeline": "text-generation",
-    "downloads": 1872232,
-    "likes": 3460
+    "downloads": 244834,
+    "likes": 632
    },
    {
     "id": "orcarouter/Qwen3.8-27B-Uncensored-FP8",
     "pipeline": "image-text-to-text",
-    "downloads": 4285,
-    "likes": 344
+    "downloads": 190062,
+    "likes": 1047
    },
    {
-    "id": "lightx2v/Minimax-h3-Turbo",
+    "id": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 676697,
+    "likes": 538
+   },
+   {
+    "id": "Lightricks/LTX-2.5",
     "pipeline": "image-to-video",
-    "downloads": 239206,
-    "likes": 557
-   },
-   {
-    "id": "moonshotai/Kimi-K3",
-    "pipeline": "image-text-to-text",
-    "downloads": 2136775,
-    "likes": 10768
-   },
-   {
-    "id": "meta-models/Muse-Glimmer-30B-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 357877,
-    "likes": 298
-   },
-   {
-    "id": "inclusionAI/Ling-3.0-tiny",
-    "pipeline": "unknown",
-    "downloads": 5727,
-    "likes": 285
-   },
-   {
-    "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
-    "pipeline": "text-generation",
-    "downloads": 196326,
-    "likes": 291
-   },
-   {
-    "id": "Comfy-Org/MiniMax-H3",
-    "pipeline": "unknown",
-    "downloads": 13406892,
-    "likes": 1386
-   },
-   {
-    "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 3020070,
-    "likes": 2095
-   },
-   {
-    "id": "fal/MiniMax-H3-Realism-People-LoRA",
-    "pipeline": "image-text-to-video",
-    "downloads": 16103,
-    "likes": 229
-   },
-   {
-    "id": "Gazingstars123/Anima-2.9B",
-    "pipeline": "text-to-image",
-    "downloads": 20860,
-    "likes": 223
+    "downloads": 738345,
+    "likes": 1641
    },
    {
     "id": "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
     "pipeline": "text-generation",
-    "downloads": 183988,
-    "likes": 211
+    "downloads": 1334820,
+    "likes": 648
    },
    {
-    "id": "Qwen/Qwen3.8-2.4T-A95B-FP8",
+    "id": "ornith-ai/Ornith-1.5-35B-A3B",
     "pipeline": "text-generation",
-    "downloads": 11311,
-    "likes": 209
+    "downloads": 23516,
+    "likes": 364
    },
    {
-    "id": "larryvrh/MiniMax-H3-Turbo-Lora",
-    "pipeline": "text-to-video",
-    "downloads": 0,
-    "likes": 776
+    "id": "MiniMaxAI/MiniMax-Music3",
+    "pipeline": "text-to-audio",
+    "downloads": 17421,
+    "likes": 1205
    },
    {
-    "id": "unsloth/Qwen3.8-27B-NVFP4",
+    "id": "MiniMaxAI/MiniMax-H3",
+    "pipeline": "image-text-to-video",
+    "downloads": 4039236,
+    "likes": 4378
+   },
+   {
+    "id": "orcarouter/Qwen3.8-27B-Uncensored-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 108666,
+    "likes": 375
+   },
+   {
+    "id": "froggeric/Qwen-Fixed-Chat-Templates",
     "pipeline": "unknown",
-    "downloads": 276269,
+    "downloads": 0,
+    "likes": 1420
+   },
+   {
+    "id": "ornith-ai/Ornith-1.5-35B-A3B-GGUF",
+    "pipeline": "text-generation",
+    "downloads": 369478,
+    "likes": 252
+   },
+   {
+    "id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 943360,
+    "likes": 297
+   },
+   {
+    "id": "superwhisper/s1-mini",
+    "pipeline": "text-generation",
+    "downloads": 2280,
+    "likes": 214
+   },
+   {
+    "id": "DavidAU/Qwen3.8-27B-Cold-Fusion-GAIN-V1.1-NM-DAU-NEO-MAX-MTP-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 193794,
+    "likes": 210
+   },
+   {
+    "id": "z-lab/Qwen3.8-27B-DFlash2",
+    "pipeline": "text-generation",
+    "downloads": 36234,
     "likes": 202
    },
    {
-    "id": "dots-studio/dots3-note-prev",
+    "id": "ornith-ai/Ornith-1.5-9B",
+    "pipeline": "text-generation",
+    "downloads": 31496,
+    "likes": 182
+   },
+   {
+    "id": "Qwen/Qwen3.8-27B-FP8",
     "pipeline": "image-text-to-text",
-    "downloads": 393,
-    "likes": 186
+    "downloads": 2653678,
+    "likes": 672
    },
    {
-    "id": "LiquidAI/LFM2.5-2.6B",
-    "pipeline": "text-generation",
-    "downloads": 141009,
-    "likes": 647
-   },
-   {
-    "id": "unsloth/MiniMax-H3-GGUF",
-    "pipeline": "image-text-to-video",
-    "downloads": 204344,
-    "likes": 175
-   },
-   {
-    "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
-    "pipeline": "text-generation",
-    "downloads": 66253,
-    "likes": 160
-   },
-   {
-    "id": "Comfy-Org/MiniMax-Music-3",
+    "id": "LBH-123-AI/Minimax_h3_latent_Upscaler",
     "pipeline": "unknown",
     "downloads": 0,
-    "likes": 151
+    "likes": 166
+   },
+   {
+    "id": "empero-ai/Qwen3.8-27B-Ridge-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 131435,
+    "likes": 249
+   },
+   {
+    "id": "ornith-ai/Ornith-1.5-9B-GGUF",
+    "pipeline": "text-generation",
+    "downloads": 359078,
+    "likes": 176
+   },
+   {
+    "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "pipeline": "text-generation",
+    "downloads": 3089709,
+    "likes": 3652
+   },
+   {
+    "id": "incoai/Qwen3.8-27B-DFlash2",
+    "pipeline": "text-generation",
+    "downloads": 69783,
+    "likes": 162
+   },
+   {
+    "id": "peculiar-ragdoll/Qwen-Sharp-Chat-Templates",
+    "pipeline": "unknown",
+    "downloads": 0,
+    "likes": 200
+   },
+   {
+    "id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated",
+    "pipeline": "image-text-to-text",
+    "downloads": 24844,
+    "likes": 258
+   },
+   {
+    "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
+    "pipeline": "text-generation",
+    "downloads": 57928,
+    "likes": 734
+   },
+   {
+    "id": "moonshotai/Kimi-K3",
+    "pipeline": "image-text-to-text",
+    "downloads": 2727920,
+    "likes": 10950
+   },
+   {
+    "id": "0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF",
+    "pipeline": "text-generation",
+    "downloads": 579334,
+    "likes": 245
    }
   ]
  },
@@ -217,9 +215,9 @@
     "url": null
    },
    {
-    "title": "Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
-    "points": 85,
-    "url": "https://agnost.ai"
+    "title": "Launch HN: OneCLI (YC S26) – OSS sandboxed agent harness for teams",
+    "points": 87,
+    "url": "https://github.com/onecli/onecli"
    },
    {
     "title": "Show HN: Palmier Pro – Open-source macOS video editor built for AI",
@@ -227,19 +225,29 @@
     "url": "https://github.com/palmier-io/palmier-pro"
    },
    {
+    "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
+    "points": 118,
+    "url": "https://speko.ai/"
+   },
+   {
     "title": "Show HN: Formally verified 3D CSG: Trust 93 lines spec, not 1000 lines AI code",
     "points": 115,
     "url": "https://github.com/schildep/verified-3d-mesh-intersection"
    },
    {
-    "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
-    "points": 161,
-    "url": "https://discoveredmaterials.com/research/"
+    "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
+    "points": 85,
+    "url": "https://ozbrain.com"
    },
    {
     "title": "Show HN: What should the GUI for AI agents look like?",
     "points": 139,
     "url": "https://marbleos.com/demo"
+   },
+   {
+    "title": "Show HN: Huzzah – a novel approach to coding with AI",
+    "points": 379,
+    "url": "https://www.danielvaughn.dev/posts/huzzah/"
    }
   ],
   "status": "ok"
