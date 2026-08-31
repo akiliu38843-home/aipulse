@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-24",
+ "as_of": "2026-08-31",
  "foresight": [
   {
    "theme": "RAG",
@@ -7,11 +7,7 @@
   },
   {
    "theme": "AI Agents/编排",
-   "sources": 3
-  },
-  {
-   "theme": "多模态",
-   "sources": 3
+   "sources": 2
   },
   {
    "theme": "AI安全/Responsible AI",
@@ -26,7 +22,7 @@
    "sources": 2
   },
   {
-   "theme": "Serving 推理",
+   "theme": "多模态",
    "sources": 2
   }
  ],
@@ -60,20 +56,19 @@
   "source": "W1 (2026-05-19, 63 岗样本中 22 个有 yearly salary)"
  },
  "salary_this_week_snapshot": {
-  "median_k": 242,
-  "n": 3,
+  "median_k": 0,
+  "n": 0,
   "note": "本周样本量不稳，仅辅助参考；以 salary baseline 为准"
  },
  "top_employers": [
-  "Booz Allen Hamilton",
-  "Spotlight Partners",
-  "propio",
-  "Solstice",
+  "DESE Research, Inc.",
+  "Clera",
+  "DEPLOY",
+  "VELOX",
   "Taxbit"
  ],
  "target_roles": [
   "AI Engineer",
-  "Data Engineer",
   "ML Engineer",
   "Machine Learning Engineer"
  ],

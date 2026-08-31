@@ -1,195 +1,196 @@
 {
- "collected_at": "2026-08-24T00:45:48",
+ "collected_at": "2026-08-31T02:36:13",
  "hf": {
   "status": "ok:30 sort=trendingScore",
   "tag_freq": {
-   "text-generation": 12,
-   "image-text-to-text": 11,
-   "unknown": 4,
+   "image-text-to-text": 13,
+   "text-generation": 9,
+   "text-to-video": 3,
+   "unknown": 2,
    "image-to-video": 1,
-   "text-to-audio": 1,
-   "image-text-to-video": 1
+   "image-text-to-video": 1,
+   "text-to-speech": 1
   },
   "trending": [
    {
+    "id": "Qwen/Qwen3.8-Flash-Next",
+    "pipeline": "image-text-to-text",
+    "downloads": 121976,
+    "likes": 4394
+   },
+   {
+    "id": "zai-org/GLM-5.3-Flash",
+    "pipeline": "text-generation",
+    "downloads": 346516,
+    "likes": 1723
+   },
+   {
+    "id": "zai-org/GLM-5.3",
+    "pipeline": "text-generation",
+    "downloads": 50116,
+    "likes": 1350
+   },
+   {
     "id": "Qwen/Qwen3.8-27B",
     "pipeline": "image-text-to-text",
-    "downloads": 2358347,
-    "likes": 12313
+    "downloads": 4511348,
+    "likes": 13354
+   },
+   {
+    "id": "unsloth/Qwen3.8-Flash-Next-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 328195,
+    "likes": 604
    },
    {
     "id": "unsloth/Qwen3.8-27B-GGUF",
     "pipeline": "unknown",
-    "downloads": 6674515,
-    "likes": 2738
-   },
-   {
-    "id": "orcarouter/Qwen3.8-27B-Uncensored-MLX",
-    "pipeline": "image-text-to-text",
-    "downloads": 47098,
-    "likes": 954
-   },
-   {
-    "id": "OBLITERATUS/Qwen3.8-27B-OBLITERATED",
-    "pipeline": "text-generation",
-    "downloads": 244834,
-    "likes": 632
-   },
-   {
-    "id": "orcarouter/Qwen3.8-27B-Uncensored-FP8",
-    "pipeline": "image-text-to-text",
-    "downloads": 190062,
-    "likes": 1047
-   },
-   {
-    "id": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 676697,
-    "likes": 538
+    "downloads": 8839153,
+    "likes": 3246
    },
    {
     "id": "Lightricks/LTX-2.5",
     "pipeline": "image-to-video",
-    "downloads": 738345,
-    "likes": 1641
+    "downloads": 1137181,
+    "likes": 2270
    },
    {
-    "id": "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
+    "id": "tencent/Hy4-preview",
     "pipeline": "text-generation",
-    "downloads": 1334820,
-    "likes": 648
+    "downloads": 2123,
+    "likes": 320
    },
    {
-    "id": "ornith-ai/Ornith-1.5-35B-A3B",
+    "id": "unsloth/GLM-5.3-Flash-GGUF",
     "pipeline": "text-generation",
-    "downloads": 23516,
-    "likes": 364
+    "downloads": 45936,
+    "likes": 290
    },
    {
-    "id": "MiniMaxAI/MiniMax-Music3",
-    "pipeline": "text-to-audio",
-    "downloads": 17421,
-    "likes": 1205
+    "id": "OBLITERATUS/Qwen3.8-27B-OBLITERATED",
+    "pipeline": "text-generation",
+    "downloads": 725757,
+    "likes": 949
+   },
+   {
+    "id": "orcarouter/Qwen3.8-27B-Uncensored-MLX",
+    "pipeline": "image-text-to-text",
+    "downloads": 109121,
+    "likes": 1236
    },
    {
     "id": "MiniMaxAI/MiniMax-H3",
     "pipeline": "image-text-to-video",
-    "downloads": 4039236,
-    "likes": 4378
+    "downloads": 5263381,
+    "likes": 4661
+   },
+   {
+    "id": "BreezeBlue/Breeze-TTS-2",
+    "pipeline": "text-to-speech",
+    "downloads": 1838,
+    "likes": 214
+   },
+   {
+    "id": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 1158065,
+    "likes": 786
+   },
+   {
+    "id": "FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree",
+    "pipeline": "text-to-video",
+    "downloads": 0,
+    "likes": 195
+   },
+   {
+    "id": "orcarouter/Qwen3.8-27B-Uncensored-FP8",
+    "pipeline": "image-text-to-text",
+    "downloads": 301964,
+    "likes": 1288
+   },
+   {
+    "id": "alibaba-pai/MiniMax-H3-Fun-Controlnet-Union",
+    "pipeline": "text-to-video",
+    "downloads": 5538,
+    "likes": 163
+   },
+   {
+    "id": "Qwen/Qwen3.8-Flash-Next-FP8",
+    "pipeline": "image-text-to-text",
+    "downloads": 76935,
+    "likes": 161
+   },
+   {
+    "id": "thomsonreuters/Thomson-1.0-Small",
+    "pipeline": "image-text-to-text",
+    "downloads": 1009,
+    "likes": 159
+   },
+   {
+    "id": "pipecat-ai/phonellm-alpha-1",
+    "pipeline": "text-generation",
+    "downloads": 3982,
+    "likes": 150
+   },
+   {
+    "id": "alibaba-pai/MiniMax-H3-Acc-LoRAs",
+    "pipeline": "text-to-video",
+    "downloads": 23734,
+    "likes": 152
+   },
+   {
+    "id": "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
+    "pipeline": "text-generation",
+    "downloads": 1991437,
+    "likes": 852
    },
    {
     "id": "orcarouter/Qwen3.8-27B-Uncensored-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 108666,
-    "likes": 375
+    "downloads": 238397,
+    "likes": 582
    },
    {
-    "id": "froggeric/Qwen-Fixed-Chat-Templates",
-    "pipeline": "unknown",
-    "downloads": 0,
-    "likes": 1420
+    "id": "peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 87848,
+    "likes": 144
    },
    {
-    "id": "ornith-ai/Ornith-1.5-35B-A3B-GGUF",
+    "id": "ornith-ai/Ornith-1.5-35B-A3B",
     "pipeline": "text-generation",
-    "downloads": 369478,
-    "likes": 252
+    "downloads": 147038,
+    "likes": 507
    },
    {
     "id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 943360,
-    "likes": 297
-   },
-   {
-    "id": "superwhisper/s1-mini",
-    "pipeline": "text-generation",
-    "downloads": 2280,
-    "likes": 214
-   },
-   {
-    "id": "DavidAU/Qwen3.8-27B-Cold-Fusion-GAIN-V1.1-NM-DAU-NEO-MAX-MTP-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 193794,
-    "likes": 210
-   },
-   {
-    "id": "z-lab/Qwen3.8-27B-DFlash2",
-    "pipeline": "text-generation",
-    "downloads": 36234,
-    "likes": 202
-   },
-   {
-    "id": "ornith-ai/Ornith-1.5-9B",
-    "pipeline": "text-generation",
-    "downloads": 31496,
-    "likes": 182
-   },
-   {
-    "id": "Qwen/Qwen3.8-27B-FP8",
-    "pipeline": "image-text-to-text",
-    "downloads": 2653678,
-    "likes": 672
-   },
-   {
-    "id": "LBH-123-AI/Minimax_h3_latent_Upscaler",
-    "pipeline": "unknown",
-    "downloads": 0,
-    "likes": 166
-   },
-   {
-    "id": "empero-ai/Qwen3.8-27B-Ridge-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 131435,
-    "likes": 249
-   },
-   {
-    "id": "ornith-ai/Ornith-1.5-9B-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 359078,
-    "likes": 176
+    "downloads": 1622056,
+    "likes": 458
    },
    {
     "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
     "pipeline": "text-generation",
-    "downloads": 3089709,
-    "likes": 3652
-   },
-   {
-    "id": "incoai/Qwen3.8-27B-DFlash2",
-    "pipeline": "text-generation",
-    "downloads": 69783,
-    "likes": 162
-   },
-   {
-    "id": "peculiar-ragdoll/Qwen-Sharp-Chat-Templates",
-    "pipeline": "unknown",
-    "downloads": 0,
-    "likes": 200
-   },
-   {
-    "id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated",
-    "pipeline": "image-text-to-text",
-    "downloads": 24844,
-    "likes": 258
-   },
-   {
-    "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
-    "pipeline": "text-generation",
-    "downloads": 57928,
-    "likes": 734
+    "downloads": 4575518,
+    "likes": 3825
    },
    {
     "id": "moonshotai/Kimi-K3",
     "pipeline": "image-text-to-text",
-    "downloads": 2727920,
-    "likes": 10950
+    "downloads": 2794721,
+    "likes": 11100
    },
    {
-    "id": "0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 579334,
-    "likes": 245
+    "id": "orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 42864,
+    "likes": 123
+   },
+   {
+    "id": "Kijai/MiniMax-H3-experimental",
+    "pipeline": "unknown",
+    "downloads": 0,
+    "likes": 363
    }
   ]
  },
@@ -210,19 +211,9 @@
   },
   "hot_ai_stories": [
    {
-    "title": "Launch HN: Screenpipe (YC S26) – Record how you work and turn that into agents",
-    "points": 88,
-    "url": null
-   },
-   {
     "title": "Launch HN: OneCLI (YC S26) – OSS sandboxed agent harness for teams",
-    "points": 87,
+    "points": 88,
     "url": "https://github.com/onecli/onecli"
-   },
-   {
-    "title": "Show HN: Palmier Pro – Open-source macOS video editor built for AI",
-    "points": 191,
-    "url": "https://github.com/palmier-io/palmier-pro"
    },
    {
     "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
@@ -236,7 +227,7 @@
    },
    {
     "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
-    "points": 85,
+    "points": 92,
     "url": "https://ozbrain.com"
    },
    {
@@ -246,7 +237,7 @@
    },
    {
     "title": "Show HN: Huzzah – a novel approach to coding with AI",
-    "points": 379,
+    "points": 384,
     "url": "https://www.danielvaughn.dev/posts/huzzah/"
    }
   ],

@@ -1,4 +1,29 @@
 {
- "collected_at": "2026-07-06T02:25:15",
- "by_url": {}
+ "collected_at": "2026-08-31T02:36:34",
+ "by_url": {
+  "https://github.com/onecli/onecli": {
+   "sum": "Open-source sandboxed agent harness for teams. Giving every employee a secured personal agent. - onecli/onecli",
+   "status": "ok"
+  },
+  "https://speko.ai/": {
+   "sum": "Every speech model, benchmarked language by language, wired into one API.",
+   "status": "ok"
+  },
+  "https://github.com/schildep/verified-3d-mesh-intersection": {
+   "sum": "Formally verified 3D mesh intersection - trust 93 lines of spec, not 1000+ lines of AI-written code - schildep/verified-3d-mesh-intersection",
+   "status": "ok"
+  },
+  "https://ozbrain.com": {
+   "sum": "The same source of truth behind every AI agent you already use.",
+   "status": "ok"
+  },
+  "https://marbleos.com/demo": {
+   "sum": "A workspace with visible files, tools, tasks, and outputs — not buried in chat threads.",
+   "status": "ok"
+  },
+  "https://www.danielvaughn.dev/posts/huzzah/": {
+   "sum": "A new experimental way to code with AI",
+   "status": "ok"
+  }
+ }
 }
