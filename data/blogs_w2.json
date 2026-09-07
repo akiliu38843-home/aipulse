@@ -1,9 +1,9 @@
 {
- "collected_at": "2026-08-31T02:33:55",
+ "collected_at": "2026-09-07T02:03:46",
  "source_status": {
   "Simon Willison": "ok:8",
   "Lilian Weng": "ok:2",
-  "Sebastian Raschka": "ok:5",
+  "Sebastian Raschka": "ok:4",
   "HuggingFace Blog": "ok:8",
   "Chip Huyen": "ok:0",
   "Eugene Yan": "ok:1",
@@ -19,59 +19,59 @@
  "items": [
   {
    "source": "Simon Willison",
-   "title": "Understanding ChatGPT Work",
-   "date": "2026-08-30",
-   "summary": "OpenAI announced ChatGPT Work on July 9th, and have been furiously iterating on it ever since. It is an extraordinarily confusing and very powerful product. Here's what I've figured out about it so far. ChatGPT Work is actually two products The more interesting version of ChatGPT Work is the one that runs in the cloud. This can be accessed via chatgpt.com or through the ChatGPT mobile apps. Let's call it Work Cloud . If you install the ChatGPT desktop app - the app that used to be called Codex - you gain access to a thing called ChatGPT Work that can access files and run programs directly on y",
-   "link": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/"
+   "title": "Research acceleration: The view inside OpenAI",
+   "date": "2026-09-06",
+   "summary": "Research acceleration: The view inside OpenAI Apparently today is RSI day at OpenAI, for Recursive Self-Improvement - I think it's their new AGI. Both this piece and the new essay An Alien Mind (by Chief Scientist Jakub Pachocki) talk about it, and this one doesn't even bother to expand the acronym. Included are details on how OpenAI's own research team are using coding agents. Like pretty much everyone else 2026 has been the year that agentic engineering really took off at OpenAI, best illustrated by this chart: I'm intrigued at what caused that significant acceleration in AI spend per resear",
+   "link": "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/"
   },
   {
    "source": "Simon Willison",
-   "title": "Introducing Hy4 Preview",
-   "date": "2026-08-29",
-   "summary": "Introducing Hy4 Preview New open weight text input (no vision) LLM from Chinese company Tencent today: 770B total parameters, 49B active parameters, 1M token context window, 1.56TB on Hugging Face . This is a big size increase from their previous Hy3 in July, which was 295B, 21B active, 256,000 context, 598GB. I recently started using model chat templates to better understand their capabilities. Here's Hy4's chat_template.jinja on Hugging Face, which includes this section: {% - if not reasoning_effort is defined %} {% - set reasoning_effort = 'high' %} {% - elif reasoning_effort not in [ 'high",
-   "link": "https://simonwillison.net/2026/Aug/29/hy4/"
+   "title": "The purpose of DNS is to spread scams",
+   "date": "2026-09-06",
+   "summary": "The purpose of DNS is to spread scams Terence Eden shares some daunting statistics in support of his take that \"the Domain Name System's purpose seems to be a vector for criminals to run scams on people at a terrifyingly high rate\". On this Interisle report ( via Andrew Campling ), Terence says: It says 85 million new registrations of gTLDs were made in 2025. Of those 8.5 million were added to blocklists by May 2025. It reckons that a 10% abuse rate is the likely floor for these numbers and it's probably closer to 20%. One in five newly registered domains with a gTLD are scams. That's a bloody",
+   "link": "https://simonwillison.net/2026/Sep/6/the-purpose-of-dns-is-to-spread-scams/"
   },
   {
    "source": "Simon Willison",
-   "title": "Just a rumour of a bug is enough to find a security exploit these days",
-   "date": "2026-08-28",
-   "summary": "Just a rumour of a bug is enough to find a security exploit these days Anil Madhavapeddy is a professor of computer science at Cambridge and a core maintainer of the OCaml compiler. In this somewhat alarming post he reports that security issues in OCaml projects are seeing evidence of attempted exploits within minutes of patches being shared for discussion: This normally takes a few days and a release within a week or two is reasonable. Within about ten minutes (!) this website was fielding probes for percent-encoded traversal sequences, indicating that automated watchers are keeping an eye on",
-   "link": "https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/"
+   "title": "There's No Limit to How Bad Code Can Get",
+   "date": "2026-09-06",
+   "summary": "My comment on There&#x27;s No Limit to How Bad Code Can Get &mdash; Lobste.rs. [In reply to a comment about burning it down to start from scratch when technical debt becomes overwhelming] In my experience it's so rare for that to work. You announce the old thing is irrecoverably drowning in tech debt. You spin up a team to rewrite it from scratch. Work begins. Meanwhile the old thing remains a moving target: it's running the core business, so changes are still necessary. The developers working on it know that it's going to be made obsolete by the new thing soon, so they don't have any incentiv",
+   "link": "https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/"
   },
   {
    "source": "Simon Willison",
-   "title": "Breaking Claude Code Opus 5 Auto Mode",
-   "date": "2026-08-27",
-   "summary": "Breaking Claude Code Opus 5 Auto Mode Anthropic are putting a great deal of faith in Claude Code's auto mode for protecting their coding agent users against prompt injection attacks. They recently made that the default and have made bold claims about its effectiveness. Johann Rehberger is one of the most credible prompt injection researchers active today. He found an attack against auto mode which he claims works 80% of the time, by tricking Claude Code into downloading and uncompressing a zip archive, then executing code that imports base64 without noticing that this will import and execute a",
-   "link": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/"
+   "title": "Quoting Zach Kehs",
+   "date": "2026-09-06",
+   "summary": "If you continue to add floors and rooms to a building forever, it will collapse. Software faces no such constraint. The code can always get worse. There can always be a new layer of indirection or a reduction in performance. &mdash; Zach Kehs , There's No Limit to How Bad Code Can Get Tags: technical-debt",
+   "link": "https://simonwillison.net/2026/Sep/6/zach-kehs/"
   },
   {
    "source": "Simon Willison",
-   "title": "Qwen3.8-Flash-Next",
-   "date": "2026-08-26",
-   "summary": "Qwen3.8-Flash-Next Another open weights model from Qwen. This one is \"a multimodal MoE model that also serves as an early preview of the architecture used in Qwen4\". It's pretty big: 125B tokens, but only 6B active which means it gets a significant performance boost. I've been trying it out on a DGX Spark using these Unsloth quantized models . I'm still exploring the model - so far I've tried the 72.5GB UD-IQ1_S one (producing these pelicans ) and the 78.9GB UD-Q2_K_XL (producing these ). My favorite so far was this xhigh reasoning effort one from UD-Q2_K_XL: Via Hacker News Tags: ai , generat",
-   "link": "https://simonwillison.net/2026/Aug/26/qwen38-flash-next/"
+   "title": "Introducing GPT-6 Astra for developers",
+   "date": "2026-09-05",
+   "summary": "Introducing GPT-6 Astra for developers Blink and you'll miss it, but there's a familiar creature at 1m59s : Across the board, Astra has more attention to detail, better understanding of the user's prompt, and can build more sophisticated outputs. In particular, it excels at building 3D models. I've seen it make incredible renderings of gardens, shipyards, animals , cityscapes, even Dyson spheres. Astra really does believe in putting a red neckerchief on a pelican riding a bicycle. Via Hacker News comment Tags: ai , openai , generative-ai , llms , pelican-riding-a-bicycle , gpt-6-astra",
+   "link": "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/"
   },
   {
    "source": "Simon Willison",
-   "title": "Quoting Paul Dix",
-   "date": "2026-08-26",
-   "summary": "The fact that AI wrote 1M LOC and then refined it over the course of the next couple of months to produce a reliable piece of software that is currently running on millions of developer machines is absolutely mind blowing. And you can say, “well it’s not that impressive because they had an oracle to compare against, so it was simple to go from one language to another”, but I think that’s selling this entire thing short. If you can build a verification system and give proper direction, AI can produce a highly complex, highly sophisticated piece of software and it can continue to refine it until",
-   "link": "https://simonwillison.net/2026/Aug/26/paul-dix/"
+   "title": "Using Blender with coding agents on macOS",
+   "date": "2026-09-05",
+   "summary": "TIL: Using Blender with coding agents on macOS I've been having fun with Blender in ChatGPT Codex on my Mac recently. Getting it to work with coding agents is really easy: install the full Mac application from blender.org and run a prompt like this: Use the already install /Applications/Blender to render a scene of a pelican riding a bicycle In this case I followed that up with these two prompts: OK add a background and a lot of flair Then: OK make it a whole lot better And got this image, generated using Blender's Python API : This was covered by my existing Codex subscription, but according ",
+   "link": "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/"
   },
   {
    "source": "Simon Willison",
-   "title": "EVE Online: The Move to Python 3 Begins!",
-   "date": "2026-08-25",
-   "summary": "EVE Online: The Move to Python 3 Begins! EVE Online has been one of the most interesting case studies in Python at scale for over twenty years now. They've been running on Stackless Python since their launch in 2003, and their last major upgrade was 16 years ago, to Stackless Python 2.7 in 2010 . Their upgrade to Python 3 will start using the futurize script against 2.4 million lines of code, followed by careful manual review of the ~20,000 places where Python 2 and 3 behavior differ - for example 1 / 2 is 0 in Python 2 but is 0.5 in Python 3. There's nothing in this announcement about how the",
-   "link": "https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/"
+   "title": "The Pelican comparison grid for Astra is pretty interesting",
+   "date": "2026-09-04",
+   "summary": "I got access to GPT-6 Astra this afternoon, so naturally I used it to generate SVGs of pelicans riding bicycles - at low, medium, high, xhigh and max reasoning levels (Astra doesn't support reasoning=none). Then I rendered those pelicans in a comparison grid with GPT-5.6 Sol, Terra, and Luna, and beyond being fun the result was surprisingly useful. See the grid for full quality images. Here's the transcript that created the GPT-6 Nova pelicans. There are a few interesting things that stand out from this grid. The Astra pelicans are much better . The very best GPT-5.6-Sol pelican (I liked xhigh",
+   "link": "https://simonwillison.net/2026/Sep/4/astra-pelicans/"
   },
   {
    "source": "Simon Willison",
-   "title": "llm-anthropic 0.27",
-   "date": "2026-08-24",
-   "summary": "Release: llm-anthropic 0.27 This release of the Anthropic plugin for LLM mainly provides compatibility with the recently released anthropic v1.0.0 Python library, which switches from httpx to httpx2 . OpenAI made the same change in their v3.0.0 release two weeks ago. Anthropic provide this migration guide for upgrading to 1.0, so I prompted Fable 5 in Claude Code with: Upgrade to anthropic&gt;=1 - read https://raw.githubusercontent.com/anthropics/anthropic-sdk-python/refs/heads/main/MIGRATION.md and get the tests passing Here's the resulting PR . Tags: python , httpx , llm , anthropic , claude",
-   "link": "https://simonwillison.net/2026/Aug/24/llm-anthropic/"
+   "title": "OpenAI's rogue agents were caught communicating via public wikis",
+   "date": "2026-09-04",
+   "summary": "Here we go again... Discovery of a new OpenAI agent message board by Sydney Von Arx, Cormac Slade Byrd, Spencer Kitts, and Thomas Larsen describes the latest accidental cyberattack by models being trained by OpenAI. This time it was agents engaged in some sort of web research benchmark, so they had (supposedly) controlled access to the Web. The agents figured out they could update public Wikis and spent weeks exchanging thousands of messages with each other to collaborate on the benchmark. This story only broke a few hours ago. There are already hints that this affects many other wikis that ma",
+   "link": "https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/"
   },
   {
    "source": "Lilian Weng",
@@ -116,11 +116,53 @@
    "link": "https://magazine.sebastianraschka.com/p/using-local-coding-agents"
   },
   {
-   "source": "Sebastian Raschka",
-   "title": "LLM Research Papers: The 2026 List (January to May)",
-   "date": "2026-06-06",
-   "summary": "A curated roundup of notable LLM research papers that came out this year",
-   "link": "https://magazine.sebastianraschka.com/p/llm-research-papers-2026-part1"
+   "source": "HuggingFace Blog",
+   "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder",
+   "date": "2026-09-03",
+   "summary": "",
+   "link": "https://huggingface.co/blog/Hcompany/neomme"
+  },
+  {
+   "source": "HuggingFace Blog",
+   "title": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
+   "date": "2026-09-03",
+   "summary": "",
+   "link": "https://huggingface.co/blog/grpo-with-trl-ifstruct"
+  },
+  {
+   "source": "HuggingFace Blog",
+   "title": "Give Your Coding Agents a Memory You Own",
+   "date": "2026-09-03",
+   "summary": "",
+   "link": "https://huggingface.co/blog/funes"
+  },
+  {
+   "source": "HuggingFace Blog",
+   "title": "Training a coding model to paint watercolours with TRL and OpenEnv",
+   "date": "2026-09-03",
+   "summary": "",
+   "link": "https://huggingface.co/blog/train-to-paint-with-code"
+  },
+  {
+   "source": "HuggingFace Blog",
+   "title": "Real-Time Intelligence with IBM Time Series Models on Confluent",
+   "date": "2026-09-02",
+   "summary": "",
+   "link": "https://huggingface.co/blog/ibm-research/real-time-intelligence"
+  },
+  {
+   "source": "HuggingFace Blog",
+   "title": "BenchMIRT: What are LLM benchmarks actually measuring?",
+   "date": "2026-09-01",
+   "summary": "",
+   "link": "https://huggingface.co/blog/allenai/benchmirt"
+  },
+  {
+   "source": "HuggingFace Blog",
+   "title": "Introducing @huggingface/kernels: 200+ WebGPU Kernels for Local AI",
+   "date": "2026-09-01",
+   "summary": "",
+   "link": "https://huggingface.co/blog/webgpu-kernels"
   },
   {
    "source": "HuggingFace Blog",
@@ -128,55 +170,6 @@
    "date": "2026-08-28",
    "summary": "",
    "link": "https://huggingface.co/blog/open-asr-leaderboard-global-south"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
-   "date": "2026-08-26",
-   "summary": "",
-   "link": "https://huggingface.co/blog/train-multi-vector-encoder"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "Granite 4.2 LLMs: How They're Built",
-   "date": "2026-08-25",
-   "summary": "",
-   "link": "https://huggingface.co/blog/ibm-granite/granite-4-2"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
-   "date": "2026-08-25",
-   "summary": "",
-   "link": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "Wire It, Run It, Deploy It: AI Workflows in Gradio",
-   "date": "2026-08-25",
-   "summary": "",
-   "link": "https://huggingface.co/blog/gradio-workflow-guide"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "How Hugging Face Inference Endpoints, Jobs, and Buckets Power Search on Papers with Code",
-   "date": "2026-08-21",
-   "summary": "",
-   "link": "https://huggingface.co/blog/pwc-search"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "Measuring benchmark optimization in speech recognition",
-   "date": "2026-08-21",
-   "summary": "",
-   "link": "https://huggingface.co/blog/asr-benchmark-optimization"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark",
-   "date": "2026-08-20",
-   "summary": "",
-   "link": "https://huggingface.co/blog/LiquidAI/lfm25-dspark"
   },
   {
    "source": "Eugene Yan",
@@ -187,59 +180,87 @@
   },
   {
    "source": "OpenAI News",
-   "title": "Our decision on Cursor following its acquisition by SpaceX",
-   "date": "2026-08-28",
-   "summary": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
-   "link": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex"
+   "title": "An Alien Mind",
+   "date": "2026-09-06",
+   "summary": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
+   "link": "https://openai.com/index/an-alien-mind"
   },
   {
    "source": "OpenAI News",
-   "title": "Supporting Thailand’s next generation of AI startups",
-   "date": "2026-08-28",
-   "summary": "OpenAI and Thailand’s MHESI launch an eight-week accelerator helping 10 health, wellness, and education startups turn AI prototypes into trusted products.",
-   "link": "https://openai.com/index/supporting-next-generation-ai-startups-thailand"
+   "title": "Research acceleration: The view inside OpenAI",
+   "date": "2026-09-06",
+   "summary": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
+   "link": "https://openai.com/index/research-acceleration-view-inside-openai"
   },
   {
    "source": "OpenAI News",
-   "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
-   "date": "2026-08-27",
-   "summary": "A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world university assignment.",
-   "link": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training"
+   "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+   "date": "2026-09-03",
+   "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
+   "link": "https://openai.com/index/daybreak-for-frontline-defenders"
   },
   {
    "source": "OpenAI News",
-   "title": "Expanding OpenAI’s presence in Brazil",
-   "date": "2026-08-27",
-   "summary": "OpenAI is expanding its presence in Brazil, deepening engagement with developers, businesses, and communities to support AI adoption across the country.",
-   "link": "https://openai.com/index/expanding-our-presence-in-brazil"
+   "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+   "date": "2026-09-03",
+   "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
+   "link": "https://openai.com/index/legora-financial-statement-review-with-astra"
   },
   {
    "source": "OpenAI News",
-   "title": "Learning never stops: How AI makes learning continuous",
-   "date": "2026-08-26",
-   "summary": "OpenAI’s new report explores how students and educators use ChatGPT to make learning more continuous, with support that extends beyond the classroom.",
-   "link": "https://openai.com/index/learning-never-stops"
+   "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+   "date": "2026-09-03",
+   "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
+   "link": "https://openai.com/index/playco-game-prototyping-with-astra"
   },
   {
    "source": "OpenAI News",
-   "title": "Bringing ChatGPT for Teachers to more U.S. school districts",
-   "date": "2026-08-26",
-   "summary": "ChatGPT for Teachers is expanding to 55 U.S. school systems, bringing secure AI tools, training, and support to over 100,000 more educators and staff.",
-   "link": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts"
+   "title": "GPT-6 Astra: A new generation of intelligence",
+   "date": "2026-09-03",
+   "summary": "Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.",
+   "link": "https://openai.com/index/gpt-6-astra"
   },
   {
    "source": "OpenAI News",
-   "title": "The Hugging Face incident and the road ahead",
-   "date": "2026-08-26",
-   "summary": "OpenAI shares findings from the Hugging Face security incident and the steps we’re taking to strengthen AI model security, monitoring, and alignment.",
-   "link": "https://openai.com/index/hugging-face-incident-and-the-road-ahead"
+   "title": "Safety overview: GPT-6 Astra",
+   "date": "2026-09-03",
+   "summary": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.",
+   "link": "https://openai.com/index/safety-overview-gpt-6-astra"
   },
   {
    "source": "OpenAI News",
-   "title": "How loveholidays is making everyone a builder with Codex",
-   "date": "2026-08-26",
-   "summary": "Discover how loveholidays uses OpenAI Codex to make software development accessible across the business, helping teams turn ideas into products faster.",
-   "link": "https://openai.com/index/loveholidays"
+   "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
+   "date": "2026-09-02",
+   "summary": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos into an inventory website in 15 minutes.",
+   "link": "https://openai.com/index/atv-big-air-tour"
+  },
+  {
+   "source": "Google Research",
+   "title": "Transfer learning for genomic prediction in underrepresented populations",
+   "date": "2026-09-03",
+   "summary": "General Science",
+   "link": "https://research.google/blog/transfer-learning-for-genomic-prediction-in-underrepresented-populations/"
+  },
+  {
+   "source": "Google Research",
+   "title": "A connectomics milestone: Mapping the complete male fruit fly brain",
+   "date": "2026-09-03",
+   "summary": "General Science",
+   "link": "https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/"
+  },
+  {
+   "source": "Google Research",
+   "title": "Mapping global methane emissions from space with deep learning",
+   "date": "2026-09-01",
+   "summary": "Climate & Sustainability",
+   "link": "https://research.google/blog/mapping-global-methane-emissions-from-space-with-deep-learning/"
+  },
+  {
+   "source": "Google Research",
+   "title": "TimesFM-3: A zero-shot foundation model for multivariate forecasting",
+   "date": "2026-08-31",
+   "summary": "Data Management",
+   "link": "https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/"
   },
   {
    "source": "Google Research",
@@ -268,34 +289,6 @@
    "date": "2026-08-21",
    "summary": "Generative AI",
    "link": "https://research.google/blog/an-ai-tool-for-prioritizing-candidate-biomarkers-from-wearable-sensor-data/"
-  },
-  {
-   "source": "Google Research",
-   "title": "How mobility gives language models a deeper understanding of place",
-   "date": "2026-08-21",
-   "summary": "Algorithms & Theory",
-   "link": "https://research.google/blog/how-mobility-gives-language-models-a-deeper-understanding-of-place/"
-  },
-  {
-   "source": "Google Research",
-   "title": "Seeing beyond BMI: Estimating cardiometabolic risk with smartphone imagery",
-   "date": "2026-08-17",
-   "summary": "General Science",
-   "link": "https://research.google/blog/seeing-beyond-bmi-estimating-cardiometabolic-risk-with-smartphone-imagery/"
-  },
-  {
-   "source": "Google Research",
-   "title": "Empty shelves or lost keys? Recall is the bottleneck for parametric factuality",
-   "date": "2026-08-12",
-   "summary": "Generative AI",
-   "link": "https://research.google/blog/empty-shelves-or-lost-keys-recall-is-the-bottleneck-for-parametric-factuality/"
-  },
-  {
-   "source": "Google Research",
-   "title": "Advancing AMIE towards expert-level audio-visual clinical consultations",
-   "date": "2026-08-11",
-   "summary": "Health & Bioscience",
-   "link": "https://research.google/blog/advancing-amie-towards-expert-level-audio-visual-clinical-consultations/"
   }
  ]
 }

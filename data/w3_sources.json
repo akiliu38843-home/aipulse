@@ -1,196 +1,201 @@
 {
- "collected_at": "2026-08-31T02:36:13",
+ "collected_at": "2026-09-07T02:06:06",
  "hf": {
   "status": "ok:30 sort=trendingScore",
   "tag_freq": {
-   "image-text-to-text": 13,
-   "text-generation": 9,
-   "text-to-video": 3,
+   "image-text-to-text": 11,
+   "text-generation": 7,
    "unknown": 2,
+   "fill-mask": 2,
+   "time-series-forecasting": 1,
    "image-to-video": 1,
+   "text-to-speech": 1,
    "image-text-to-video": 1,
-   "text-to-speech": 1
+   "sentence-similarity": 1,
+   "text-to-video": 1,
+   "zero-shot-image-classification": 1,
+   "automatic-speech-recognition": 1
   },
   "trending": [
    {
-    "id": "Qwen/Qwen3.8-Flash-Next",
+    "id": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
     "pipeline": "image-text-to-text",
-    "downloads": 121976,
-    "likes": 4394
-   },
-   {
-    "id": "zai-org/GLM-5.3-Flash",
-    "pipeline": "text-generation",
-    "downloads": 346516,
-    "likes": 1723
-   },
-   {
-    "id": "zai-org/GLM-5.3",
-    "pipeline": "text-generation",
-    "downloads": 50116,
-    "likes": 1350
+    "downloads": 209191,
+    "likes": 748
    },
    {
     "id": "Qwen/Qwen3.8-27B",
     "pipeline": "image-text-to-text",
-    "downloads": 4511348,
-    "likes": 13354
+    "downloads": 6190807,
+    "likes": 14138
    },
    {
-    "id": "unsloth/Qwen3.8-Flash-Next-GGUF",
+    "id": "XHToken/Spark-X2.5-4B",
+    "pipeline": "text-generation",
+    "downloads": 5477,
+    "likes": 617
+   },
+   {
+    "id": "google/timesfm-3.0-pytorch",
+    "pipeline": "time-series-forecasting",
+    "downloads": 144455,
+    "likes": 508
+   },
+   {
+    "id": "Qwen/Qwen3.8-Flash-Next",
     "pipeline": "image-text-to-text",
-    "downloads": 328195,
-    "likes": 604
+    "downloads": 432966,
+    "likes": 4943
    },
    {
-    "id": "unsloth/Qwen3.8-27B-GGUF",
-    "pipeline": "unknown",
-    "downloads": 8839153,
-    "likes": 3246
+    "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 348389,
+    "likes": 469
    },
    {
     "id": "Lightricks/LTX-2.5",
     "pipeline": "image-to-video",
-    "downloads": 1137181,
-    "likes": 2270
+    "downloads": 1526928,
+    "likes": 2971
    },
    {
-    "id": "tencent/Hy4-preview",
-    "pipeline": "text-generation",
-    "downloads": 2123,
-    "likes": 320
-   },
-   {
-    "id": "unsloth/GLM-5.3-Flash-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 45936,
-    "likes": 290
-   },
-   {
-    "id": "OBLITERATUS/Qwen3.8-27B-OBLITERATED",
-    "pipeline": "text-generation",
-    "downloads": 725757,
-    "likes": 949
-   },
-   {
-    "id": "orcarouter/Qwen3.8-27B-Uncensored-MLX",
+    "id": "zai-org/GLM-5.3-Flash",
     "pipeline": "image-text-to-text",
-    "downloads": 109121,
-    "likes": 1236
+    "downloads": 761364,
+    "likes": 2099
    },
    {
-    "id": "MiniMaxAI/MiniMax-H3",
-    "pipeline": "image-text-to-video",
-    "downloads": 5263381,
-    "likes": 4661
+    "id": "zai-org/GLM-5.3",
+    "pipeline": "text-generation",
+    "downloads": 410074,
+    "likes": 1739
+   },
+   {
+    "id": "unsloth/Qwen3.8-27B-GGUF",
+    "pipeline": "unknown",
+    "downloads": 10311462,
+    "likes": 3590
    },
    {
     "id": "BreezeBlue/Breeze-TTS-2",
     "pipeline": "text-to-speech",
-    "downloads": 1838,
-    "likes": 214
+    "downloads": 6357,
+    "likes": 461
+   },
+   {
+    "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 211018,
+    "likes": 249
+   },
+   {
+    "id": "MiniMaxAI/MiniMax-H3",
+    "pipeline": "image-text-to-video",
+    "downloads": 4986349,
+    "likes": 4968
+   },
+   {
+    "id": "sentence-transformers/all-MiniLM-L6-v2",
+    "pipeline": "sentence-similarity",
+    "downloads": 253029336,
+    "likes": 5568
+   },
+   {
+    "id": "openai-community/gpt2",
+    "pipeline": "text-generation",
+    "downloads": 14612342,
+    "likes": 3707
+   },
+   {
+    "id": "OpenVDN/vdn-minimax-h3",
+    "pipeline": "text-to-video",
+    "downloads": 0,
+    "likes": 210
+   },
+   {
+    "id": "unsloth/Qwen3.8-Flash-Next-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 823733,
+    "likes": 811
+   },
+   {
+    "id": "IFM/K2-Horizon-MoVA-36B-A4B",
+    "pipeline": "text-generation",
+    "downloads": 1723,
+    "likes": 186
+   },
+   {
+    "id": "facebook/mms-300m",
+    "pipeline": "unknown",
+    "downloads": 12464,
+    "likes": 263
+   },
+   {
+    "id": "google-bert/bert-base-uncased",
+    "pipeline": "fill-mask",
+    "downloads": 52338347,
+    "likes": 2989
+   },
+   {
+    "id": "distilbert/distilbert-base-uncased",
+    "pipeline": "fill-mask",
+    "downloads": 7054316,
+    "likes": 1156
    },
    {
     "id": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 1158065,
-    "likes": 786
+    "downloads": 1568315,
+    "likes": 982
    },
    {
-    "id": "FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree",
-    "pipeline": "text-to-video",
-    "downloads": 0,
-    "likes": 195
+    "id": "openai/clip-vit-base-patch32",
+    "pipeline": "zero-shot-image-classification",
+    "downloads": 20579479,
+    "likes": 1211
    },
    {
-    "id": "orcarouter/Qwen3.8-27B-Uncensored-FP8",
-    "pipeline": "image-text-to-text",
-    "downloads": 301964,
-    "likes": 1288
-   },
-   {
-    "id": "alibaba-pai/MiniMax-H3-Fun-Controlnet-Union",
-    "pipeline": "text-to-video",
-    "downloads": 5538,
-    "likes": 163
-   },
-   {
-    "id": "Qwen/Qwen3.8-Flash-Next-FP8",
-    "pipeline": "image-text-to-text",
-    "downloads": 76935,
-    "likes": 161
-   },
-   {
-    "id": "thomsonreuters/Thomson-1.0-Small",
-    "pipeline": "image-text-to-text",
-    "downloads": 1009,
-    "likes": 159
-   },
-   {
-    "id": "pipecat-ai/phonellm-alpha-1",
+    "id": "dealignai/GLM-5.3-CYBERSECURITY-FP8",
     "pipeline": "text-generation",
-    "downloads": 3982,
-    "likes": 150
+    "downloads": 15648,
+    "likes": 167
    },
    {
-    "id": "alibaba-pai/MiniMax-H3-Acc-LoRAs",
-    "pipeline": "text-to-video",
-    "downloads": 23734,
-    "likes": 152
+    "id": "Jackrong/Qwopus3.8-27B-Flash-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 22128,
+    "likes": 130
    },
    {
-    "id": "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
+    "id": "OBLITERATUS/Qwen3.8-27B-OBLITERATED",
     "pipeline": "text-generation",
-    "downloads": 1991437,
-    "likes": 852
+    "downloads": 995160,
+    "likes": 1108
+   },
+   {
+    "id": "tencent/Hy4-preview",
+    "pipeline": "text-generation",
+    "downloads": 6441,
+    "likes": 445
    },
    {
     "id": "orcarouter/Qwen3.8-27B-Uncensored-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 238397,
-    "likes": 582
+    "downloads": 287720,
+    "likes": 752
    },
    {
-    "id": "peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF",
+    "id": "microsoft/VibeVoice-ASR-Streaming-7B",
+    "pipeline": "automatic-speech-recognition",
+    "downloads": 889,
+    "likes": 116
+   },
+   {
+    "id": "nvidia/Qwen3.8-Flash-Next-NVFP4",
     "pipeline": "image-text-to-text",
-    "downloads": 87848,
-    "likes": 144
-   },
-   {
-    "id": "ornith-ai/Ornith-1.5-35B-A3B",
-    "pipeline": "text-generation",
-    "downloads": 147038,
-    "likes": 507
-   },
-   {
-    "id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 1622056,
-    "likes": 458
-   },
-   {
-    "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
-    "pipeline": "text-generation",
-    "downloads": 4575518,
-    "likes": 3825
-   },
-   {
-    "id": "moonshotai/Kimi-K3",
-    "pipeline": "image-text-to-text",
-    "downloads": 2794721,
-    "likes": 11100
-   },
-   {
-    "id": "orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 42864,
-    "likes": 123
-   },
-   {
-    "id": "Kijai/MiniMax-H3-experimental",
-    "pipeline": "unknown",
-    "downloads": 0,
-    "likes": 363
+    "downloads": 13321,
+    "likes": 115
    }
   ]
  },
@@ -221,19 +226,9 @@
     "url": "https://speko.ai/"
    },
    {
-    "title": "Show HN: Formally verified 3D CSG: Trust 93 lines spec, not 1000 lines AI code",
-    "points": 115,
-    "url": "https://github.com/schildep/verified-3d-mesh-intersection"
-   },
-   {
     "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
-    "points": 92,
+    "points": 93,
     "url": "https://ozbrain.com"
-   },
-   {
-    "title": "Show HN: What should the GUI for AI agents look like?",
-    "points": 139,
-    "url": "https://marbleos.com/demo"
    },
    {
     "title": "Show HN: Huzzah – a novel approach to coding with AI",

@@ -1,51 +1,121 @@
 {
- "collected_at": "2026-08-31T02:36:15",
+ "collected_at": "2026-09-07T02:06:08",
  "arxiv": {
-  "status": "ok:0",
-  "papers": []
+  "status": "ok:12",
+  "papers": [
+   {
+    "title": "RoboSPA: Can VLA Models Go Beyond Simple Scenes and Short-Horizon Tasks?",
+    "date": "2026-09-04",
+    "authors": "Zhenxuan Fan, Bo Zhang, Yutong Lin",
+    "summary": "Vision-Language-Action (VLA) models have shown promising progress in language-conditioned robotic manipulation. However, existing datasets and benchmarks mainly evaluate task completion under predefin",
+    "link": "https://arxiv.org/abs/2609.05324v1"
+   },
+   {
+    "title": "Adaptive Gated Deepfake Detection for Low-Resolution and Resource-Constrained Environments",
+    "date": "2026-09-04",
+    "authors": "Vaishnavi Sen, Cody Laurie, Rashida Hasan",
+    "summary": "Deepfake detection models often rely on high-quality inputs, fixed inference paths, and computationally expensive architectures, limiting their use in low-resolution and resource-constrained settings.",
+    "link": "https://arxiv.org/abs/2609.05320v1"
+   },
+   {
+    "title": "Optimal Rates for Agentic Networked Information Aggregation",
+    "date": "2026-09-04",
+    "authors": "MohammadHossein Bateni, Zahra Hadizadeh, MohammadTaghi Hajiaghayi",
+    "summary": "Building on the pioneering paper of Kearns, Roth, and Ryu (SODA'26), we study information aggregation in a networked learning model. The model captures a central pattern in agentic AI: each agent sees",
+    "link": "https://arxiv.org/abs/2609.05318v1"
+   },
+   {
+    "title": "Large Language Models for HVAC Operations in Building Energy Systems: A Critical Review of Methods, Applications, and Deployment Readiness",
+    "date": "2026-09-04",
+    "authors": "Alexander Neubauer, Tianzhen Hong, Han Li",
+    "summary": "Building automation systems generate rich sensor data yet remain insight-poor because heterogeneous point naming, missing metadata, and fragmented documentation obstruct their operational use. This sy",
+    "link": "https://arxiv.org/abs/2609.05314v1"
+   },
+   {
+    "title": "How Does mHC Use Its Residual Streams? Selective Routing and Near-Identity Mixing",
+    "date": "2026-09-04",
+    "authors": "Pengxiang Zhao, Xing Li, Xianzhi Yu",
+    "summary": "Hyper-Connections and their manifold-constrained variant mHC widen a residual pathway from one stream to n, yet how trained models use this capacity remains unclear: how broadly blocks read and write,",
+    "link": "https://arxiv.org/abs/2609.05309v1"
+   },
+   {
+    "title": "Online Change-point Detection for Cooperative Multi-Agent Reinforcement Learning",
+    "date": "2026-09-04",
+    "authors": "Fatemeh Saberi Khomami, Julita Vassileva",
+    "summary": "Cooperative multi-agent reinforcement learning (MARL) systems rely on past experience for learning coordinated behaviour, but this experience may become unreliable if the environment or task objective",
+    "link": "https://arxiv.org/abs/2609.05298v1"
+   },
+   {
+    "title": "LexFlip: A Dissociation Diagnostic for Legal Meaning Preservation Metrics",
+    "date": "2026-09-04",
+    "authors": "Gaurab Baral",
+    "summary": "Does a simplified legal clause still say what the original said? The checks in current use cannot establish that it does: requiring an identical pair to score highest and an unrelated pair lowest move",
+    "link": "https://arxiv.org/abs/2609.05296v1"
+   },
+   {
+    "title": "RISE: Recursive Improvement via Self-Extrapolating Policy Distillation",
+    "date": "2026-09-04",
+    "authors": "Yang Li, Semih Yavuz, Shafiq Joty",
+    "summary": "On-policy distillation (OPD) provides dense, per-token supervision for language model post-training, but its effectiveness is bottlenecked by teacher quality: external teachers suffer from distributio",
+    "link": "https://arxiv.org/abs/2609.05295v1"
+   },
+   {
+    "title": "Learning from VAE Errors to support ECG-based Differential Diagnosis of Myocardial Scar",
+    "date": "2026-09-04",
+    "authors": "Shayan Sharifi, Riccardo Treu, Ilaria Gandin",
+    "summary": "Late Gadolinium Enhancement (LGE) on cardiac magnetic resonance is a key marker of myocardial scar, but its limited accessibility motivates routine ECG-based screening. We evaluated whether $β$-variat",
+    "link": "https://arxiv.org/abs/2609.05294v1"
+   },
+   {
+    "title": "Beyond Aggregate Scores: Behavioral Correctness Assumptions for Assessing Reference-Based Automatic Evaluation Methods",
+    "date": "2026-09-04",
+    "authors": "Maria Mahbub, Ashley Rice, Michael R. Munroe",
+    "summary": "Automated reference-based evaluation methods play a critical role in assessing natural language generation systems. Existing meta-evaluation primarily measures agreement with human judgments or benchm",
+    "link": "https://arxiv.org/abs/2609.05289v1"
+   },
+   {
+    "title": "GUT: Quantifying and Optimizing the Reasoning Uncertainty of LLMs via Graph Complexity",
+    "date": "2026-09-04",
+    "authors": "Shuang Liang, Xin-Yu Hu, Xiang-Jun Ou",
+    "summary": "Recent years have witnessed great advances in the reasoning ability of Large Language Models (LLMs). However, the reasoning processes of LLMs often exhibit uncertainty, where LLMs often produce a prol",
+    "link": "https://arxiv.org/abs/2609.05284v1"
+   },
+   {
+    "title": "Testing Interchangeability in LLM Agent Teams",
+    "date": "2026-09-04",
+    "authors": "Jianxin Gao, Tianyi Yu, Linna Deng",
+    "summary": "Production multi-agent systems replace agents constantly, on the assumption that an agent filling a role is interchangeable with any other agent that can do the job. We test that assumption. Eight tea",
+    "link": "https://arxiv.org/abs/2609.05279v1"
+   }
+  ]
  },
  "pypi": {
-  "status": "ok:8/10",
+  "status": "ok:1/10",
   "libs": [
    {
-    "pkg": "litellm",
-    "last_month": 641452443,
-    "last_week": 37111274
-   },
-   {
-    "pkg": "huggingface-hub",
-    "last_month": 463999230,
-    "last_week": 57535034
-   },
-   {
-    "pkg": "openai",
-    "last_month": 417881229,
-    "last_week": 65751226
+    "pkg": "langgraph",
+    "last_month": 58130375,
+    "last_week": 10130555
    },
    {
     "pkg": "langchain",
-    "last_month": 238987816,
-    "last_week": 44619898
+    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+   },
+   {
+    "pkg": "openai",
+    "error": "HTTPError:HTTP Error 429: Too Many Requests"
    },
    {
     "pkg": "anthropic",
-    "last_month": 192118153,
-    "last_week": 31973609
+    "error": "HTTPError:HTTP Error 429: Too Many Requests"
    },
    {
     "pkg": "transformers",
-    "last_month": 176616940,
-    "last_week": 23299126
-   },
-   {
-    "pkg": "langgraph",
-    "last_month": 64251921,
-    "last_week": 10490190
+    "error": "HTTPError:HTTP Error 429: Too Many Requests"
    },
    {
     "pkg": "vllm",
-    "last_month": 4295779,
-    "last_week": 569122
+    "error": "HTTPError:HTTP Error 429: Too Many Requests"
    },
    {
     "pkg": "llama-index",
@@ -53,6 +123,14 @@
    },
    {
     "pkg": "crewai",
+    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+   },
+   {
+    "pkg": "huggingface-hub",
+    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+   },
+   {
+    "pkg": "litellm",
     "error": "HTTPError:HTTP Error 429: Too Many Requests"
    }
   ]

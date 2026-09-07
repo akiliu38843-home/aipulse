@@ -1,9 +1,13 @@
 {
- "as_of": "2026-08-31",
+ "as_of": "2026-09-07",
  "foresight": [
   {
    "theme": "RAG",
    "sources": 4
+  },
+  {
+   "theme": "Eval 评测",
+   "sources": 3
   },
   {
    "theme": "AI Agents/编排",
@@ -15,10 +19,6 @@
   },
   {
    "theme": "AI编码agent当硬技能",
-   "sources": 2
-  },
-  {
-   "theme": "Eval 评测",
    "sources": 2
   },
   {
@@ -56,21 +56,23 @@
   "source": "W1 (2026-05-19, 63 岗样本中 22 个有 yearly salary)"
  },
  "salary_this_week_snapshot": {
-  "median_k": 0,
-  "n": 0,
+  "median_k": 185,
+  "n": 3,
   "note": "本周样本量不稳，仅辅助参考；以 salary baseline 为准"
  },
  "top_employers": [
-  "DESE Research, Inc.",
-  "Clera",
-  "DEPLOY",
-  "VELOX",
-  "Taxbit"
+  "Base-2 Solutions, LLC",
+  "Lenovo",
+  "Air",
+  "Phaxis",
+  "Cisco"
  ],
  "target_roles": [
   "AI Engineer",
+  "AI Solutions Architect",
+  "Data Engineer",
   "ML Engineer",
   "Machine Learning Engineer"
  ],
- "ai_jobs_total": 34
+ "ai_jobs_total": 42
 }
