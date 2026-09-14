@@ -1,9 +1,9 @@
 {
- "collected_at": "2026-09-07T02:03:46",
+ "collected_at": "2026-09-14T02:34:50",
  "source_status": {
   "Simon Willison": "ok:8",
   "Lilian Weng": "ok:2",
-  "Sebastian Raschka": "ok:4",
+  "Sebastian Raschka": "ok:5",
   "HuggingFace Blog": "ok:8",
   "Chip Huyen": "ok:0",
   "Eugene Yan": "ok:1",
@@ -19,59 +19,59 @@
  "items": [
   {
    "source": "Simon Willison",
-   "title": "Research acceleration: The view inside OpenAI",
-   "date": "2026-09-06",
-   "summary": "Research acceleration: The view inside OpenAI Apparently today is RSI day at OpenAI, for Recursive Self-Improvement - I think it's their new AGI. Both this piece and the new essay An Alien Mind (by Chief Scientist Jakub Pachocki) talk about it, and this one doesn't even bother to expand the acronym. Included are details on how OpenAI's own research team are using coding agents. Like pretty much everyone else 2026 has been the year that agentic engineering really took off at OpenAI, best illustrated by this chart: I'm intrigued at what caused that significant acceleration in AI spend per resear",
-   "link": "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/"
+   "title": "commit-rewriter 0.1",
+   "date": "2026-09-14",
+   "summary": "Release: commit-rewriter 0.1 I built this little web app the other day to help edit the commit messages for the Datasette security releases . The initial commits were full of coding agent cruft and references to issue IDs from our private repository, so they weren't fit for publication. If you want to edit the commit messages for a repository you can run it like this: uvx commit-rewriter path/to/repo Omit the path if you are already in the directory for that repo. When you submit your edits the tool creates a timestamped branch of your current repo state - to allow you to revert if you need to",
+   "link": "https://simonwillison.net/2026/Sep/14/commit-rewriter/"
   },
   {
    "source": "Simon Willison",
-   "title": "The purpose of DNS is to spread scams",
-   "date": "2026-09-06",
-   "summary": "The purpose of DNS is to spread scams Terence Eden shares some daunting statistics in support of his take that \"the Domain Name System's purpose seems to be a vector for criminals to run scams on people at a terrifyingly high rate\". On this Interisle report ( via Andrew Campling ), Terence says: It says 85 million new registrations of gTLDs were made in 2025. Of those 8.5 million were added to blocklists by May 2025. It reckons that a 10% abuse rate is the likely floor for these numbers and it's probably closer to 20%. One in five newly registered domains with a gTLD are scams. That's a bloody",
-   "link": "https://simonwillison.net/2026/Sep/6/the-purpose-of-dns-is-to-spread-scams/"
+   "title": "shot-scraper 1.12",
+   "date": "2026-09-13",
+   "summary": "Release: shot-scraper 1.12 I've added WebP support to my shot-scraper screenshot automation tool. You can now take a WebP screenshot of a web page like this: shot-scraper https://simonwillison.net -o screenshot.webp --quality 80 The --quality option sets the quality - without that option the WebP file will be lossless. In my experience WebP screenshots are almost always significantly smaller in file size than their JPEG or PNG equivalents. See the PR for some examples. I shipped this feature so I could use it to generate the screenshot for my new commit-rewriter tool . Tags: playwright , shot-",
+   "link": "https://simonwillison.net/2026/Sep/13/shot-scraper/"
   },
   {
    "source": "Simon Willison",
-   "title": "There's No Limit to How Bad Code Can Get",
-   "date": "2026-09-06",
-   "summary": "My comment on There&#x27;s No Limit to How Bad Code Can Get &mdash; Lobste.rs. [In reply to a comment about burning it down to start from scratch when technical debt becomes overwhelming] In my experience it's so rare for that to work. You announce the old thing is irrecoverably drowning in tech debt. You spin up a team to rewrite it from scratch. Work begins. Meanwhile the old thing remains a moving target: it's running the core business, so changes are still necessary. The developers working on it know that it's going to be made obsolete by the new thing soon, so they don't have any incentiv",
-   "link": "https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/"
+   "title": "Generating running routes with GPT-6 Astra and ChatGPT Work",
+   "date": "2026-09-12",
+   "summary": "Here's a neat thing I had ChatGPT Work with GPT-6 Astra (Max) do this morning: I live at &lt;my address&gt;. Figure out 5K and 10K running routes from me that loop from my house. Use OSM data. It worked for 27 minutes and produced exactly what I'd asked for, as both an embedded visualization and downloadable GPX file and GeoJSON files. Here's that 5K route: When I asked it how it had created the route, it replied: I used Nominatim to locate the address and Overpass to download local OpenStreetMap roads and trails , then calculated the loops locally. Frustratingly, the actual code it ran and ex",
+   "link": "https://simonwillison.net/2026/Sep/12/astra-running-routes/"
   },
   {
    "source": "Simon Willison",
-   "title": "Quoting Zach Kehs",
-   "date": "2026-09-06",
-   "summary": "If you continue to add floors and rooms to a building forever, it will collapse. Software faces no such constraint. The code can always get worse. There can always be a new layer of indirection or a reduction in performance. &mdash; Zach Kehs , There's No Limit to How Bad Code Can Get Tags: technical-debt",
-   "link": "https://simonwillison.net/2026/Sep/6/zach-kehs/"
+   "title": "California Brown Pelican",
+   "date": "2026-09-12",
+   "summary": "California Brown Pelican, in San Mateo County, CA, US The Pacifica Pier shut down at the start of June after a crack in the concrete walkway made access to the pier unsafe. It has since been entirely taken over by pelicans! Tags: wildlife",
+   "link": "https://simonwillison.net/2026/Sep/12/sighting-399708714/"
   },
   {
    "source": "Simon Willison",
-   "title": "Introducing GPT-6 Astra for developers",
-   "date": "2026-09-05",
-   "summary": "Introducing GPT-6 Astra for developers Blink and you'll miss it, but there's a familiar creature at 1m59s : Across the board, Astra has more attention to detail, better understanding of the user's prompt, and can build more sophisticated outputs. In particular, it excels at building 3D models. I've seen it make incredible renderings of gardens, shipyards, animals , cityscapes, even Dyson spheres. Astra really does believe in putting a red neckerchief on a pelican riding a bicycle. Via Hacker News comment Tags: ai , openai , generative-ai , llms , pelican-riding-a-bicycle , gpt-6-astra",
-   "link": "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/"
+   "title": "Quoting Paul Ford",
+   "date": "2026-09-12",
+   "summary": "For a while, I must admit, it looked as if software developer roles like mine were done for. How could we fight against tireless robots? But our industry is slowly realizing that making truly cutting-edge software still requires humans to think and work together, to maximize their skill sets and to practice their respective crafts. A.I. can write very good software, but it also makes it easy to do someone else’s job badly, which is part of why all those projects fail. Now that everyone can code, it’s become clearer why many shouldn’t. &mdash; Paul Ford , A.I. Was Supposed to Give Us New Killer",
+   "link": "https://simonwillison.net/2026/Sep/12/paul-ford/"
   },
   {
    "source": "Simon Willison",
-   "title": "Using Blender with coding agents on macOS",
-   "date": "2026-09-05",
-   "summary": "TIL: Using Blender with coding agents on macOS I've been having fun with Blender in ChatGPT Codex on my Mac recently. Getting it to work with coding agents is really easy: install the full Mac application from blender.org and run a prompt like this: Use the already install /Applications/Blender to render a scene of a pelican riding a bicycle In this case I followed that up with these two prompts: OK add a background and a lot of flair Then: OK make it a whole lot better And got this image, generated using Blender's Python API : This was covered by my existing Codex subscription, but according ",
-   "link": "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/"
+   "title": "OpenAI agents attacked RubyGems back in May",
+   "date": "2026-09-12",
+   "summary": "OpenAI agents carried out an undisclosed attack on RubyGems is a new bombshell report from Spencer Kitts, Thomas Larsen, and Sydney Von Arx - three of the four authors of the report on the agent attack on disused wikis ( previously ) last week. This time they're noting that it looks very likely that an OpenAI agent swarm was behind an attack against the RubyGems package repository first reported on May 12th by Maciej Mensfeld of the RubyGems security team : We're dealing with a major malicious attack on @rubygems right now. Signups are paused for the time being. Hundreds of packages involved -",
+   "link": "https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/"
   },
   {
    "source": "Simon Willison",
-   "title": "The Pelican comparison grid for Astra is pretty interesting",
-   "date": "2026-09-04",
-   "summary": "I got access to GPT-6 Astra this afternoon, so naturally I used it to generate SVGs of pelicans riding bicycles - at low, medium, high, xhigh and max reasoning levels (Astra doesn't support reasoning=none). Then I rendered those pelicans in a comparison grid with GPT-5.6 Sol, Terra, and Luna, and beyond being fun the result was surprisingly useful. See the grid for full quality images. Here's the transcript that created the GPT-6 Nova pelicans. There are a few interesting things that stand out from this grid. The Astra pelicans are much better . The very best GPT-5.6-Sol pelican (I liked xhigh",
-   "link": "https://simonwillison.net/2026/Sep/4/astra-pelicans/"
+   "title": "So you want to use OpenRouter?",
+   "date": "2026-09-11",
+   "summary": "So you want to use OpenRouter? One of OpenRouter's selling points is that it \"handles fallbacks automatically and picks the most cost-effective option for each request\", so you can call a single API endpoint for a model and get routed to the best available backend provider. Mohamed Moustafa points out a whole set of ways that this can cause you problems. Different providers run different serving software with different optimizations and settings, which means that the same OpenRouter endpoint can serve model requests that behave in different ways. Some providers even lack vision capability for ",
+   "link": "https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/"
   },
   {
    "source": "Simon Willison",
-   "title": "OpenAI's rogue agents were caught communicating via public wikis",
-   "date": "2026-09-04",
-   "summary": "Here we go again... Discovery of a new OpenAI agent message board by Sydney Von Arx, Cormac Slade Byrd, Spencer Kitts, and Thomas Larsen describes the latest accidental cyberattack by models being trained by OpenAI. This time it was agents engaged in some sort of web research benchmark, so they had (supposedly) controlled access to the Web. The agents figured out they could update public Wikis and spent weeks exchanging thousands of messages with each other to collaborate on the benchmark. This story only broke a few hours ago. There are already hints that this affects many other wikis that ma",
-   "link": "https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/"
+   "title": "Quoting Boris Cherny",
+   "date": "2026-09-11",
+   "summary": "Production code written by Claude should have a higher bar than if it was written by a human. At Anthropic, we have many guardrails in place to make sure this is happening: lots of lint rules, lots of tests, Claude-driven end to end tests, Claude-powered fuzzers running daily, automated code reviews and security reviews, automated code refactoring, and so on. Without these, you can end up with a mess that is hard to maintain down the line. &mdash; Boris Cherny Tags: claude , ai , claude-code , llms , coding-agents , ai-assisted-programming , generative-ai , agentic-engineering , boris-cherny ,",
+   "link": "https://simonwillison.net/2026/Sep/11/boris-cherny/"
   },
   {
    "source": "Lilian Weng",
@@ -86,6 +86,13 @@
    "date": "2026-06-24",
    "summary": "Scaling laws are one of the most critical empirical findings in deep learning. The observation is simple in form: the training loss $L$ decreases predictably as we scale up model size $N$, dataset size $D$, and compute $C$, following a power-law curve, which appears as a straight line on a log-log plot. We can view scaling laws as a framework for describing the relationship between compute, loss, model size and data; at its core, it is about how to allocate precious compute optimally between $N$ and $D$.",
    "link": "https://lilianweng.github.io/posts/2026-06-24-scaling-laws/"
+  },
+  {
+   "source": "Sebastian Raschka",
+   "title": "GPT-6 Astra, Looped Transformers, and Hidden Reasoning",
+   "date": "2026-09-09",
+   "summary": "A Look at Recurrent Depth, Hidden Chains of Thought, and Recent Research on Looping Transformer Blocks",
+   "link": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and"
   },
   {
    "source": "Sebastian Raschka",
@@ -117,6 +124,27 @@
   },
   {
    "source": "HuggingFace Blog",
+   "title": "Rebuilding AUTOMATIC1111 with Gradio Workflow",
+   "date": "2026-09-10",
+   "summary": "",
+   "link": "https://huggingface.co/blog/gradio-workflow-1111"
+  },
+  {
+   "source": "HuggingFace Blog",
+   "title": "IBM releases SOTA Granite Time Series PatchTST-FM-r2 model with commercial-friendly license",
+   "date": "2026-09-09",
+   "summary": "",
+   "link": "https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series"
+  },
+  {
+   "source": "HuggingFace Blog",
+   "title": "Safety for Whom? Refusing the Right Subset of a Topic, Not the Whole Topic",
+   "date": "2026-09-08",
+   "summary": "",
+   "link": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom"
+  },
+  {
+   "source": "HuggingFace Blog",
    "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder",
    "date": "2026-09-03",
    "summary": "",
@@ -145,31 +173,10 @@
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Real-Time Intelligence with IBM Time Series Models on Confluent",
-   "date": "2026-09-02",
-   "summary": "",
-   "link": "https://huggingface.co/blog/ibm-research/real-time-intelligence"
-  },
-  {
-   "source": "HuggingFace Blog",
    "title": "BenchMIRT: What are LLM benchmarks actually measuring?",
    "date": "2026-09-01",
    "summary": "",
    "link": "https://huggingface.co/blog/allenai/benchmirt"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "Introducing @huggingface/kernels: 200+ WebGPU Kernels for Local AI",
-   "date": "2026-09-01",
-   "summary": "",
-   "link": "https://huggingface.co/blog/webgpu-kernels"
-  },
-  {
-   "source": "HuggingFace Blog",
-   "title": "The Open ASR Leaderboard Adds Its First Global South Language",
-   "date": "2026-08-28",
-   "summary": "",
-   "link": "https://huggingface.co/blog/open-asr-leaderboard-global-south"
   },
   {
    "source": "Eugene Yan",
@@ -180,59 +187,66 @@
   },
   {
    "source": "OpenAI News",
-   "title": "An Alien Mind",
-   "date": "2026-09-06",
-   "summary": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
-   "link": "https://openai.com/index/an-alien-mind"
+   "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+   "date": "2026-09-14",
+   "summary": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
+   "link": "https://openai.com/index/perplexity-improving-accuracy-with-astra"
   },
   {
    "source": "OpenAI News",
-   "title": "Research acceleration: The view inside OpenAI",
-   "date": "2026-09-06",
-   "summary": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
-   "link": "https://openai.com/index/research-acceleration-view-inside-openai"
+   "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+   "date": "2026-09-11",
+   "summary": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second.",
+   "link": "https://openai.com/index/scaling-storage-one-billion-users-part-one"
   },
   {
    "source": "OpenAI News",
-   "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
-   "date": "2026-09-03",
-   "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
-   "link": "https://openai.com/index/daybreak-for-frontline-defenders"
+   "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+   "date": "2026-09-11",
+   "summary": "GPT‑6 Astra improves Devin’s ability to test software and show that it works, with the goal of helping engineers review less code and ship more.",
+   "link": "https://openai.com/index/cognition-devin-testing-with-astra"
   },
   {
    "source": "OpenAI News",
-   "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
-   "date": "2026-09-03",
-   "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
-   "link": "https://openai.com/index/legora-financial-statement-review-with-astra"
+   "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
+   "date": "2026-09-10",
+   "summary": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fight drug-resistant infections.",
+   "link": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials"
   },
   {
    "source": "OpenAI News",
-   "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
-   "date": "2026-09-03",
-   "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
-   "link": "https://openai.com/index/playco-game-prototyping-with-astra"
+   "title": "Now everyone can put data to work",
+   "date": "2026-09-10",
+   "summary": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI using natural language.",
+   "link": "https://openai.com/index/put-data-to-work"
   },
   {
    "source": "OpenAI News",
-   "title": "GPT-6 Astra: A new generation of intelligence",
-   "date": "2026-09-03",
-   "summary": "Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.",
-   "link": "https://openai.com/index/gpt-6-astra"
+   "title": "Introducing ChatGPT for Financial Services",
+   "date": "2026-09-10",
+   "summary": "Introducing ChatGPT for Financial Services, combining built-in financial data and GPT-6 Astra for research, modeling, and client-ready materials.",
+   "link": "https://openai.com/index/introducing-chatgpt-financial-services"
   },
   {
    "source": "OpenAI News",
-   "title": "Safety overview: GPT-6 Astra",
-   "date": "2026-09-03",
-   "summary": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.",
-   "link": "https://openai.com/index/safety-overview-gpt-6-astra"
+   "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
+   "date": "2026-09-10",
+   "summary": "OpenAI and GSA will offer eligible federal, state, local, and tribal governments $0 license fees, 50% off usage, and expanded cyber defense support.",
+   "link": "https://openai.com/index/expanding-ai-access-us-government"
   },
   {
    "source": "OpenAI News",
-   "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
-   "date": "2026-09-02",
-   "summary": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos into an inventory website in 15 minutes.",
-   "link": "https://openai.com/index/atv-big-air-tour"
+   "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
+   "date": "2026-09-10",
+   "summary": "GPT‑Live‑1 brings natural, full-duplex voice conversations to the API, with stronger instruction following, custom voices, and telephony support.",
+   "link": "https://openai.com/index/introducing-gpt-live-1-in-the-api"
+  },
+  {
+   "source": "Google Research",
+   "title": "ToolGrad: Efficient tool-use dataset generation with textual \"gradients\"",
+   "date": "2026-09-10",
+   "summary": "Machine Intelligence",
+   "link": "https://research.google/blog/toolgrad-efficient-tool-use-dataset-generation-with-textual-gradients/"
   },
   {
    "source": "Google Research",
@@ -282,13 +296,6 @@
    "date": "2026-08-25",
    "summary": "Human-Computer Interaction and Visualization",
    "link": "https://research.google/blog/agenthands-generating-interactive-hand-gestures-for-spatially-grounded-agent-conversations-in-xr/"
-  },
-  {
-   "source": "Google Research",
-   "title": "An AI tool for prioritizing candidate biomarkers from wearable sensor data",
-   "date": "2026-08-21",
-   "summary": "Generative AI",
-   "link": "https://research.google/blog/an-ai-tool-for-prioritizing-candidate-biomarkers-from-wearable-sensor-data/"
   }
  ]
 }
