@@ -1,48 +1,139 @@
 {
- "collected_at": "2026-09-14T02:37:12",
+ "collected_at": "2026-09-21T02:32:28",
  "arxiv": {
-  "status": "ok:0",
-  "papers": []
+  "status": "ok:12",
+  "papers": [
+   {
+    "title": "Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design",
+    "date": "2026-09-18",
+    "authors": "Hongyang Du, Lan Yan, Christian Flores",
+    "summary": "Professional graphic design is a long-horizon agentic task in which structured, editable artifacts emerge from many interdependent actions, yet outcomes admit no reliable programmatic oracle. We intro",
+    "link": "https://arxiv.org/abs/2609.22086v1"
+   },
+   {
+    "title": "Cross-sector generalization of accident-process role classification in occupational accident narratives",
+    "date": "2026-09-18",
+    "authors": "Aho Yapi, Pierre Latouche, Arnaud Guillin",
+    "summary": "Occupational accident narratives contain valuable information about work situations, unfavourable conditions, accident events, and their consequences. Automatically structuring these narratives can fa",
+    "link": "https://arxiv.org/abs/2609.22081v1"
+   },
+   {
+    "title": "CodeMidas: Scaling Agentic Coding RL Environments from Code Itself",
+    "date": "2026-09-18",
+    "authors": "Bowen Ye, Lei Li, Shicheng Li",
+    "summary": "Training capable coding agents via reinforcement learning (RL) requires diverse tasks with reliable verifiers. Open-source codebases offer a rich source of such tasks, while existing methods typically",
+    "link": "https://arxiv.org/abs/2609.22068v1"
+   },
+   {
+    "title": "Value-Sensitive Delegation in Everyday AI Agent Use: Evidence from OpenClaw",
+    "date": "2026-09-18",
+    "authors": "Renkai Ma, Ruyuan Wan, Xuan Lu",
+    "summary": "Users increasingly delegate work to autonomous AI agents, yet evaluations typically measure task completion rather than the values users prioritize. Using Value Sensitive Design, we analyzed, with LLM",
+    "link": "https://arxiv.org/abs/2609.22067v1"
+   },
+   {
+    "title": "BrainWideBench: Benchmarking large-scale pretraining and across-animal transfer in multi-region neural recordings",
+    "date": "2026-09-18",
+    "authors": "Alexandre Andre, Shivashriganesh P. Mahato, Vinam Arora",
+    "summary": "Advances in large-scale neural recording have made it possible to collect data across many animals and distributed brain regions, raising the question of whether this scale can be exploited to learn g",
+    "link": "https://arxiv.org/abs/2609.22064v1"
+   },
+   {
+    "title": "Predictable Failure in Multi-Hop Retrieval: Score-Distributional Confidence Scoring and Abstention",
+    "date": "2026-09-18",
+    "authors": "Andre Bacellar",
+    "summary": "Multi-hop retrieval failures are not uniformly distributed across queries: they cluster in structurally predictable subpopulations. We prove two results formalizing this structure. First (CWAR Reducib",
+    "link": "https://arxiv.org/abs/2609.22056v1"
+   },
+   {
+    "title": "Benchmarking World Models for Continual Learning on Compositional Tasks",
+    "date": "2026-09-18",
+    "authors": "Haoyu Zhou, Joe Watson, Anson Lei",
+    "summary": "A desirable property of a world model is the ability to learn continually across tasks, adapting to new environments without forgetting what the agent has already learnt. In particular, the ability to",
+    "link": "https://arxiv.org/abs/2609.22055v1"
+   },
+   {
+    "title": "Particle Competition and Cooperation for Robust Graph Convolutional Network Learning Under Label Noise",
+    "date": "2026-09-18",
+    "authors": "Fabricio Breve",
+    "summary": "Graph Convolutional Networks (GCNs) are highly sensitive to label noise, since corrupted supervision can propagate through the graph and degrade learned node representations. This work proposes PCC+GC",
+    "link": "https://arxiv.org/abs/2609.22053v1"
+   },
+   {
+    "title": "Available Guardrails: Certifying Selective Prediction across ML Systems",
+    "date": "2026-09-18",
+    "authors": "Parivesh Priye, Yufeng Wang, Haibin Ling",
+    "summary": "A selective predictor acts as a safety gate: it returns an output only when the prediction appears sufficiently trustworthy. Deployments increasingly require this reliability to be certified at a targ",
+    "link": "https://arxiv.org/abs/2609.22048v1"
+   },
+   {
+    "title": "An Interpretable Memory Decision Controller for LLM Agents Based on Three-Signal Complementarity: Decoupling Confidence and Consistency",
+    "date": "2026-09-18",
+    "authors": "Yiming Zhang, Jinghong Zhang, Haoran Zhao",
+    "summary": "Memory systems for large language models have focused predominantly on efficient retrieval, whereas the decision of whether retrieved memories should be trusted has received comparatively little atten",
+    "link": "https://arxiv.org/abs/2609.22043v1"
+   },
+   {
+    "title": "$λ$-Controlled GRPO: Turning Flow-Matching Ratio Instability into a Budgeted Resource",
+    "date": "2026-09-18",
+    "authors": "Yufeng Wang, Parivesh Priye, Meeshawn Marathe",
+    "summary": "Reinforcement learning is increasingly used to align image generators with reward signals, and Flow-GRPO recently extended this paradigm to flow-matching models by treating the denoising sampler as a ",
+    "link": "https://arxiv.org/abs/2609.22041v1"
+   },
+   {
+    "title": "Gricea: An Open Science Platform for Conversational AI Research",
+    "date": "2026-09-18",
+    "authors": "Nikhil Sharma, Yunlin Gong, Xinyang Cheng",
+    "summary": "We need studies on conversational AI (CAI) at scale to understand human behavior and shape CAI design. However, fragmented reporting of systems and study configurations hinders replication, extension,",
+    "link": "https://arxiv.org/abs/2609.22039v1"
+   }
+  ]
  },
  "pypi": {
-  "status": "ok:2/10",
+  "status": "ok:8/10",
   "libs": [
    {
     "pkg": "huggingface-hub",
-    "last_month": 308926552,
-    "last_week": 51952489
+    "last_month": 242007462,
+    "last_week": 52381091
    },
    {
     "pkg": "langchain",
-    "last_month": 194456906,
-    "last_week": 39682593
-   },
-   {
-    "pkg": "openai",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+    "last_month": 176686980,
+    "last_week": 39535241
    },
    {
     "pkg": "anthropic",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+    "last_month": 139463073,
+    "last_week": 33118304
    },
    {
     "pkg": "transformers",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
-   },
-   {
-    "pkg": "vllm",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
-   },
-   {
-    "pkg": "llama-index",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+    "last_month": 98762799,
+    "last_week": 21629511
    },
    {
     "pkg": "langgraph",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+    "last_month": 43805978,
+    "last_week": 9947221
    },
    {
     "pkg": "crewai",
+    "last_month": 6453644,
+    "last_week": 549919
+   },
+   {
+    "pkg": "llama-index",
+    "last_month": 3462409,
+    "last_week": 697228
+   },
+   {
+    "pkg": "vllm",
+    "last_month": 2256880,
+    "last_week": 408749
+   },
+   {
+    "pkg": "openai",
     "error": "HTTPError:HTTP Error 429: Too Many Requests"
    },
    {

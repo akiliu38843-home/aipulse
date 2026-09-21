@@ -1,200 +1,197 @@
 {
- "collected_at": "2026-09-14T02:37:10",
+ "collected_at": "2026-09-21T02:32:26",
  "hf": {
   "status": "ok:30 sort=trendingScore",
   "tag_freq": {
-   "text-generation": 9,
-   "image-text-to-text": 8,
-   "unknown": 3,
+   "image-text-to-text": 11,
+   "text-generation": 8,
+   "unknown": 4,
+   "text-classification": 2,
    "image-to-video": 2,
-   "fill-mask": 2,
+   "text-to-image": 1,
    "text-to-audio": 1,
-   "time-series-forecasting": 1,
-   "sentence-similarity": 1,
-   "image-text-to-video": 1,
-   "text-to-speech": 1,
-   "zero-shot-image-classification": 1
+   "image-text-to-video": 1
   },
   "trending": [
    {
+    "id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+    "pipeline": "text-generation",
+    "downloads": 1908396,
+    "likes": 1514
+   },
+   {
+    "id": "convaiinnovations/laya",
+    "pipeline": "text-classification",
+    "downloads": 0,
+    "likes": 1146
+   },
+   {
     "id": "deepseek-ai/DeepSeek-V4.1-Flash",
     "pipeline": "image-text-to-text",
-    "downloads": 244457,
-    "likes": 2229
+    "downloads": 496684,
+    "likes": 3439
    },
    {
-    "id": "openbmb/MiniCPM5-2B",
-    "pipeline": "text-generation",
-    "downloads": 150110,
-    "likes": 1345
+    "id": "Qwen/Qwen-Image-2.1",
+    "pipeline": "text-to-image",
+    "downloads": 183,
+    "likes": 819
    },
    {
-    "id": "Edge0/Edge0-35B-A3B-preview",
+    "id": "XingChen-AGI/Xing4.0-29B-A4B",
     "pipeline": "text-generation",
-    "downloads": 3552,
-    "likes": 1084
-   },
-   {
-    "id": "nex-agi/Nex-N2.5-mini",
-    "pipeline": "text-generation",
-    "downloads": 3970,
-    "likes": 759
+    "downloads": 12617,
+    "likes": 904
    },
    {
     "id": "Qwen/Qwen3.8-27B",
     "pipeline": "image-text-to-text",
-    "downloads": 7768964,
-    "likes": 14989
-   },
-   {
-    "id": "nex-agi/Nex-N2.5-Pro",
-    "pipeline": "text-generation",
-    "downloads": 30289,
-    "likes": 624
+    "downloads": 7331932,
+    "likes": 15865
    },
    {
     "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 769557,
-    "likes": 972
-   },
-   {
-    "id": "XHToken/Spark-X2.5-4B",
-    "pipeline": "text-generation",
-    "downloads": 21336,
-    "likes": 1155
+    "downloads": 1217204,
+    "likes": 1485
    },
    {
     "id": "m-a-p/YuE2-3B",
     "pipeline": "text-to-audio",
-    "downloads": 3707,
-    "likes": 419
+    "downloads": 17403,
+    "likes": 918
+   },
+   {
+    "id": "harshatheg/Qwen-2.5-1B-RLCD",
+    "pipeline": "text-generation",
+    "downloads": 0,
+    "likes": 479
    },
    {
     "id": "Lightricks/LTX-2.5",
     "pipeline": "image-to-video",
-    "downloads": 1548442,
-    "likes": 3750
+    "downloads": 1609559,
+    "likes": 4562
    },
    {
-    "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+    "id": "ukisai/Swift-Qwen3.8-27b",
     "pipeline": "image-text-to-text",
-    "downloads": 750591,
-    "likes": 640
+    "downloads": 10962,
+    "likes": 510
    },
    {
     "id": "unsloth/Qwen3.8-27B-GGUF",
     "pipeline": "unknown",
-    "downloads": 11005880,
-    "likes": 4017
+    "downloads": 6941478,
+    "likes": 4433
    },
    {
-    "id": "WarmBloodAban/Minimax-h3_Singularity",
-    "pipeline": "image-to-video",
-    "downloads": 123491,
-    "likes": 376
+    "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 1301417,
+    "likes": 1008
    },
    {
-    "id": "google/timesfm-3.0-pytorch",
-    "pipeline": "time-series-forecasting",
-    "downloads": 797832,
-    "likes": 777
+    "id": "AlexWortega/openjev",
+    "pipeline": "text-classification",
+    "downloads": 0,
+    "likes": 319
    },
    {
-    "id": "sentence-transformers/all-MiniLM-L6-v2",
-    "pipeline": "sentence-similarity",
-    "downloads": 252928721,
-    "likes": 5935
+    "id": "Comfy-Org/Qwen-Image-2.1",
+    "pipeline": "unknown",
+    "downloads": 120,
+    "likes": 282
    },
    {
-    "id": "dealignai/GLM-5.3-CYBERSECURITY-FP8",
+    "id": "prism-ml/Ternary-Bonsai-2-27B-mlx-2bit",
     "pipeline": "text-generation",
-    "downloads": 30310,
-    "likes": 433
-   },
-   {
-    "id": "MiniMaxAI/MiniMax-H3",
-    "pipeline": "image-text-to-video",
-    "downloads": 4819845,
-    "likes": 5242
-   },
-   {
-    "id": "openbmb/MiniCPM5-2B-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 99716,
-    "likes": 218
-   },
-   {
-    "id": "openai-community/gpt2",
-    "pipeline": "text-generation",
-    "downloads": 15158496,
-    "likes": 4045
-   },
-   {
-    "id": "tencent/AuK",
-    "pipeline": "text-to-speech",
-    "downloads": 1202,
-    "likes": 196
-   },
-   {
-    "id": "google-bert/bert-base-uncased",
-    "pipeline": "fill-mask",
-    "downloads": 46513338,
-    "likes": 3305
+    "downloads": 30043,
+    "likes": 285
    },
    {
     "id": "Qwen/Qwen3.8-Flash-Next",
     "pipeline": "image-text-to-text",
-    "downloads": 624390,
-    "likes": 5168
+    "downloads": 761112,
+    "likes": 5497
    },
    {
-    "id": "facebook/mms-300m",
+    "id": "ukisai/Swift-Qwen3.8-27B-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 136668,
+    "likes": 331
+   },
+   {
+    "id": "openbmb/MiniCPM5-2B",
+    "pipeline": "text-generation",
+    "downloads": 420622,
+    "likes": 1628
+   },
+   {
+    "id": "meta-llama/Llama-3.1-8B-Instruct",
+    "pipeline": "text-generation",
+    "downloads": 5910102,
+    "likes": 7772
+   },
+   {
+    "id": "MiniMaxAI/MiniMax-H3",
+    "pipeline": "image-text-to-video",
+    "downloads": 4057444,
+    "likes": 5527
+   },
+   {
+    "id": "TokenRhythm/NeoHorse-1-9B",
+    "pipeline": "text-generation",
+    "downloads": 11913,
+    "likes": 980
+   },
+   {
+    "id": "internlm/Atria-Dawn-Preview",
     "pipeline": "unknown",
-    "downloads": 12880,
-    "likes": 535
+    "downloads": 895,
+    "likes": 210
+   },
+   {
+    "id": "TaichuAI/ZDTaichu5.0-9B",
+    "pipeline": "image-text-to-text",
+    "downloads": 3750,
+    "likes": 213
+   },
+   {
+    "id": "WarmBloodAban/Minimax-h3_Singularity",
+    "pipeline": "image-to-video",
+    "downloads": 242751,
+    "likes": 572
+   },
+   {
+    "id": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 42965,
+    "likes": 191
+   },
+   {
+    "id": "dealignai/DeepSeek-V4.1-Flash-UNCENSORED-FP8",
+    "pipeline": "image-text-to-text",
+    "downloads": 34688,
+    "likes": 325
+   },
+   {
+    "id": "Edge0/Edge0-35B-A3B-preview",
+    "pipeline": "text-generation",
+    "downloads": 76669,
+    "likes": 3549
    },
    {
     "id": "zai-org/GLM-5.3-Flash",
     "pipeline": "image-text-to-text",
-    "downloads": 1576209,
-    "likes": 2308
+    "downloads": 3109084,
+    "likes": 2500
    },
    {
-    "id": "distilbert/distilbert-base-uncased",
-    "pipeline": "fill-mask",
-    "downloads": 7325282,
-    "likes": 1438
-   },
-   {
-    "id": "openai/clip-vit-base-patch32",
-    "pipeline": "zero-shot-image-classification",
-    "downloads": 21331361,
-    "likes": 1506
-   },
-   {
-    "id": "TokenRhythm/NeoHorse-1-4B",
-    "pipeline": "text-generation",
-    "downloads": 7979,
-    "likes": 1740
-   },
-   {
-    "id": "Agnes-AI/Agnes-3.0-Flash",
-    "pipeline": "image-text-to-text",
-    "downloads": 474,
-    "likes": 139
-   },
-   {
-    "id": "Alissonerdx/Minimax-H3-ComfyUI",
+    "id": "Mothersuperior/yue2-mothersuperior-realaudio-tokenizer-v4",
     "pipeline": "unknown",
-    "downloads": 11860,
-    "likes": 144
-   },
-   {
-    "id": "Qwen/Qwen-Drive-1.0-4B",
-    "pipeline": "image-text-to-text",
-    "downloads": 4119,
-    "likes": 196
+    "downloads": 0,
+    "likes": 159
    }
   ]
  },
@@ -216,7 +213,7 @@
   "hot_ai_stories": [
    {
     "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
-    "points": 94,
+    "points": 97,
     "url": "https://github.com/godot-pty/gpty"
    },
    {
@@ -238,6 +235,11 @@
     "title": "Show HN: Huzzah – a novel approach to coding with AI",
     "points": 384,
     "url": "https://www.danielvaughn.dev/posts/huzzah/"
+   },
+   {
+    "title": "ZCode, the GLM coding agent, silently uploads your Git history",
+    "points": 261,
+    "url": "https://tokenstead.ai/guides/zcode-silent-git-history-upload"
    }
   ],
   "status": "ok"

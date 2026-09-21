@@ -1,5 +1,5 @@
 {
- "collected_at": "2026-09-14T02:37:19",
+ "collected_at": "2026-09-21T02:32:35",
  "by_url": {
   "https://github.com/godot-pty/gpty": {
    "sum": "Godot-based Rust multi-PTY emulator desktop application - godot-pty/gpty",
@@ -19,6 +19,10 @@
   },
   "https://www.danielvaughn.dev/posts/huzzah/": {
    "sum": "A new experimental way to code with AI",
+   "status": "ok"
+  },
+  "https://tokenstead.ai/guides/zcode-silent-git-history-upload": {
+   "sum": "ZCode, the GLM coding agent from Z.ai, uploads full workspaces with .git history, LFS cache and reflogs to Aliyun OSS. UI toggles do not stop it.",
    "status": "ok"
   }
  }
