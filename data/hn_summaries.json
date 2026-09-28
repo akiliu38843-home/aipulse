@@ -1,28 +1,12 @@
 {
- "collected_at": "2026-09-21T02:32:35",
+ "collected_at": "2026-09-28T02:45:59",
  "by_url": {
   "https://github.com/godot-pty/gpty": {
    "sum": "Godot-based Rust multi-PTY emulator desktop application - godot-pty/gpty",
    "status": "ok"
   },
-  "https://github.com/onecli/onecli": {
-   "sum": "Open-source sandboxed agent harness for teams. Giving every employee a secured personal agent. - onecli/onecli",
-   "status": "ok"
-  },
-  "https://speko.ai/": {
-   "sum": "Every speech model, benchmarked language by language, wired into one API.",
-   "status": "ok"
-  },
-  "https://ozbrain.com": {
-   "sum": "The same source of truth behind every AI agent you already use.",
-   "status": "ok"
-  },
-  "https://www.danielvaughn.dev/posts/huzzah/": {
-   "sum": "A new experimental way to code with AI",
-   "status": "ok"
-  },
-  "https://tokenstead.ai/guides/zcode-silent-git-history-upload": {
-   "sum": "ZCode, the GLM coding agent from Z.ai, uploads full workspaces with .git history, LFS cache and reflogs to Aliyun OSS. UI toggles do not stop it.",
+  "https://github.com/devdotfast/whiteboard": {
+   "sum": "open-source canvas for thoughtful software design. Contribute to devdotfast/whiteboard development by creating an account on GitHub.",
    "status": "ok"
   }
  }
