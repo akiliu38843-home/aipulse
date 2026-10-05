@@ -1,199 +1,202 @@
 {
- "collected_at": "2026-09-28T02:45:55",
+ "collected_at": "2026-10-05T03:13:53",
  "hf": {
   "status": "ok:30 sort=trendingScore",
   "tag_freq": {
-   "image-text-to-text": 7,
-   "text-generation": 6,
-   "text-to-image": 5,
-   "text-classification": 4,
-   "automatic-speech-recognition": 2,
-   "unknown": 2,
+   "image-text-to-text": 10,
+   "text-generation": 5,
+   "text-to-image": 3,
+   "text-classification": 2,
+   "image-to-image": 2,
+   "image-to-video": 1,
+   "image-classification": 1,
    "text-ranking": 1,
    "voice-activity-detection": 1,
-   "image-to-video": 1,
+   "automatic-speech-recognition": 1,
+   "video-to-video": 1,
+   "image-text-to-video": 1,
    "token-classification": 1
   },
   "trending": [
    {
+    "id": "Cloudflare/clef",
+    "pipeline": "image-text-to-text",
+    "downloads": 4214,
+    "likes": 1227
+   },
+   {
     "id": "convaiinnovations/laya",
     "pipeline": "text-classification",
-    "downloads": 0,
-    "likes": 4108
+    "downloads": 3752,
+    "likes": 5166
    },
    {
     "id": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
     "pipeline": "text-to-image",
-    "downloads": 964220,
-    "likes": 2098
-   },
-   {
-    "id": "Qwen/Qwen-Image-2.1",
-    "pipeline": "text-to-image",
-    "downloads": 52804,
-    "likes": 2502
-   },
-   {
-    "id": "Edge0/Audio8-ASR-Infinite",
-    "pipeline": "automatic-speech-recognition",
-    "downloads": 19434,
-    "likes": 1133
-   },
-   {
-    "id": "XingChen-AGI/Xing4.0-29B-A4B",
-    "pipeline": "text-generation",
-    "downloads": 45028,
-    "likes": 1784
-   },
-   {
-    "id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
-    "pipeline": "text-generation",
-    "downloads": 3343748,
-    "likes": 2195
-   },
-   {
-    "id": "Altworld/Hemmingway-1",
-    "pipeline": "text-generation",
-    "downloads": 5904,
-    "likes": 740
-   },
-   {
-    "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
-    "pipeline": "text-generation",
-    "downloads": 75079,
-    "likes": 558
-   },
-   {
-    "id": "XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
-    "pipeline": "image-text-to-text",
-    "downloads": 8839,
-    "likes": 524
-   },
-   {
-    "id": "XingChen-AGI/TeleOCR",
-    "pipeline": "image-text-to-text",
-    "downloads": 27837,
-    "likes": 606
-   },
-   {
-    "id": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
-    "pipeline": "text-generation",
-    "downloads": 25661,
-    "likes": 491
-   },
-   {
-    "id": "Comfy-Org/Qwen-Image-2.1",
-    "pipeline": "unknown",
-    "downloads": 3987373,
-    "likes": 808
-   },
-   {
-    "id": "TaichuAI/ZDTaichu5.0-9B",
-    "pipeline": "image-text-to-text",
-    "downloads": 11612,
-    "likes": 1681
-   },
-   {
-    "id": "Qwen/Qwen3.8-27B",
-    "pipeline": "image-text-to-text",
-    "downloads": 6727629,
-    "likes": 16431
-   },
-   {
-    "id": "Contrastive-LM/CLM-v0.1-8B",
-    "pipeline": "text-ranking",
-    "downloads": 766,
-    "likes": 411
-   },
-   {
-    "id": "nvidia/Nemotron-3-Diarization",
-    "pipeline": "voice-activity-detection",
-    "downloads": 22514,
-    "likes": 410
+    "downloads": 1553744,
+    "likes": 3151
    },
    {
     "id": "Lightricks/LTX-2.5",
     "pipeline": "image-to-video",
-    "downloads": 1601089,
-    "likes": 5339
+    "downloads": 1626951,
+    "likes": 6322
+   },
+   {
+    "id": "Cloudflare/clef-flash",
+    "pipeline": "image-text-to-text",
+    "downloads": 6372,
+    "likes": 435
+   },
+   {
+    "id": "Aleph-Alpha/Kolibri-1",
+    "pipeline": "text-generation",
+    "downloads": 1135,
+    "likes": 407
+   },
+   {
+    "id": "Qwen/Qwen3.8-27B",
+    "pipeline": "image-text-to-text",
+    "downloads": 6821761,
+    "likes": 16940
+   },
+   {
+    "id": "Qwen/Qwen-Image-2.1",
+    "pipeline": "text-to-image",
+    "downloads": 90003,
+    "likes": 2951
+   },
+   {
+    "id": "PSRben/VisionHOPE",
+    "pipeline": "image-classification",
+    "downloads": 1516,
+    "likes": 403
+   },
+   {
+    "id": "Venastine-Research/Xing4.0-29B-A4B-GGUF",
+    "pipeline": "text-generation",
+    "downloads": 14361,
+    "likes": 293
+   },
+   {
+    "id": "Contrastive-LM/CLM-v0.1-8B",
+    "pipeline": "text-ranking",
+    "downloads": 3445,
+    "likes": 716
+   },
+   {
+    "id": "nvidia/Nemotron-3-Diarization",
+    "pipeline": "voice-activity-detection",
+    "downloads": 53014,
+    "likes": 674
+   },
+   {
+    "id": "orcarouter/OrcaSAQ-2-Cyber-27B-Uncensored-GGUF",
+    "pipeline": "text-generation",
+    "downloads": 14195,
+    "likes": 364
+   },
+   {
+    "id": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 1886975,
+    "likes": 558
    },
    {
     "id": "Viggle/Qwen-Image-2.1-viggle-turbo",
     "pipeline": "text-to-image",
-    "downloads": 133151,
-    "likes": 342
+    "downloads": 272896,
+    "likes": 588
    },
    {
-    "id": "inclusionAI/Ming-Image-0.1-Design",
-    "pipeline": "text-to-image",
-    "downloads": 0,
-    "likes": 302
-   },
-   {
-    "id": "pottokao/Qwen-Image-2.1-Text-Encoder-Heretic-GGUF",
-    "pipeline": "unknown",
-    "downloads": 145246,
-    "likes": 302
-   },
-   {
-    "id": "AlexWortega/openjev",
-    "pipeline": "text-classification",
-    "downloads": 0,
-    "likes": 610
-   },
-   {
-    "id": "yandex/AliceAI-Foundation-80B-A3B-Base",
-    "pipeline": "text-generation",
-    "downloads": 3456,
-    "likes": 349
-   },
-   {
-    "id": "akhilaaa3/Jev-Omni",
-    "pipeline": "text-classification",
-    "downloads": 248,
-    "likes": 272
-   },
-   {
-    "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+    "id": "TaichuAI/ZDTaichu5.0-9B",
     "pipeline": "image-text-to-text",
-    "downloads": 1608439,
-    "likes": 1780
+    "downloads": 12638,
+    "likes": 2859
    },
    {
-    "id": "unsloth/Qwen-Image-2.1-GGUF",
-    "pipeline": "text-to-image",
-    "downloads": 194341,
-    "likes": 271
+    "id": "SupersonicLabs/Julia-1",
+    "pipeline": "text-classification",
+    "downloads": 3657,
+    "likes": 416
    },
    {
-    "id": "netease-youdao/Confucius4-R2T2",
+    "id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+    "pipeline": "text-generation",
+    "downloads": 4045810,
+    "likes": 2418
+   },
+   {
+    "id": "FermionResearch/Phonon-2",
     "pipeline": "automatic-speech-recognition",
-    "downloads": 8243,
-    "likes": 438
+    "downloads": 2635,
+    "likes": 202
    },
    {
     "id": "deepseek-ai/DeepSeek-V4.1-Flash",
     "pipeline": "image-text-to-text",
-    "downloads": 651078,
-    "likes": 3814
+    "downloads": 798422,
+    "likes": 4097
    },
    {
-    "id": "apple/LensVLM-9B",
+    "id": "Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
+    "pipeline": "text-generation",
+    "downloads": 946,
+    "likes": 215
+   },
+   {
+    "id": "akatz-ai/MiniMax-H3-Character-Swap-LoRA",
+    "pipeline": "video-to-video",
+    "downloads": 15800,
+    "likes": 292
+   },
+   {
+    "id": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 1740,
-    "likes": 244
+    "downloads": 351230,
+    "likes": 260
    },
    {
-    "id": "convaiinnovations/laya-multilingual",
-    "pipeline": "text-classification",
-    "downloads": 0,
-    "likes": 306
+    "id": "Alissonerdx/BFS-Best-Face-Swap",
+    "pipeline": "image-to-image",
+    "downloads": 203086,
+    "likes": 1184
+   },
+   {
+    "id": "pablodawson/MiniMax-H3-360-Orbit-LoRA",
+    "pipeline": "image-text-to-video",
+    "downloads": 5742,
+    "likes": 187
+   },
+   {
+    "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 1636747,
+    "likes": 1960
+   },
+   {
+    "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 2164143,
+    "likes": 1424
    },
    {
     "id": "fastino/GLiNER2.5-Decide",
     "pipeline": "token-classification",
-    "downloads": 19757,
-    "likes": 208
+    "downloads": 53625,
+    "likes": 366
+   },
+   {
+    "id": "Qwen/Qwen3.8-Flash-Next",
+    "pipeline": "image-text-to-text",
+    "downloads": 1480842,
+    "likes": 5899
+   },
+   {
+    "id": "lilylilith/QI_2.1_AnyAngle",
+    "pipeline": "image-to-image",
+    "downloads": 0,
+    "likes": 127
    }
   ]
  },
@@ -219,8 +222,13 @@
     "url": "https://github.com/godot-pty/gpty"
    },
    {
+    "title": "Show HN: HN.watch – Videos of all Hacker News posts",
+    "points": 224,
+    "url": "https://hn.watch/"
+   },
+   {
     "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
-    "points": 417,
+    "points": 424,
     "url": "https://github.com/devdotfast/whiteboard"
    }
   ],
