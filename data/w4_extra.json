@@ -1,144 +1,146 @@
 {
- "collected_at": "2026-10-05T03:13:55",
+ "collected_at": "2026-10-12T03:29:08",
  "arxiv": {
   "status": "ok:12",
   "papers": [
    {
-    "title": "Less Decoder is More Encoder: Geometric Representation Learning from Novel View Synthesis",
-    "date": "2026-10-02",
-    "authors": "Keerthi Kaashyap, Dennis Anthony, Akshay Krishnan",
-    "summary": "This paper examines the role of Novel View Synthesis (NVS) in geometric representation learning. In principle, NVS should reason about 3D scene structure, thereby enabling transferable multi-view geom",
-    "link": "https://arxiv.org/abs/2610.03717v1"
+    "title": "Can Language Models Play the Wikipedia Game?",
+    "date": "2026-10-09",
+    "authors": "Alexander Hickey, Joanna Knight, James Bishop",
+    "summary": "Language models increasingly support or automate information retrieval from document collections too large to index. This task is difficult when it requires specialist linguistic or scientific knowled",
+    "link": "https://arxiv.org/abs/2610.13948v1"
    },
    {
-    "title": "4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes",
-    "date": "2026-10-02",
-    "authors": "Ruihong Shen, Žiga Kovačič, Peter Kulits",
-    "summary": "We introduce 4DCodeBench, a benchmark for 4D inverse graphics through code generation, in which agents reconstruct dynamic scenes from video as executable graphics programs. To accomplish this, agents",
-    "link": "https://arxiv.org/abs/2610.03715v1"
+    "title": "Hide and Seek: HIDE Concepts to SEEK explanations for black box models",
+    "date": "2026-10-09",
+    "authors": "Bhanu Tokas, Rahul Nair, Rockwell Jackson",
+    "summary": "Interpreting machine learning model predictions is a central challenge, particularly for black-box vision models. Concept-based attribution methods interpret models using human-understandable concepts",
+    "link": "https://arxiv.org/abs/2610.13935v1"
    },
    {
-    "title": "What Should World Models Forget? Stratified Retention for Continual Adaptation",
-    "date": "2026-10-02",
-    "authors": "Nishit Anand, Ramani Duraiswami, Dinesh Manocha",
-    "summary": "Continual learning treats degradation on previously seen data as evidence of failure, a convention inherited from settings with a stationary prediction target, where a correct label remains correct in",
-    "link": "https://arxiv.org/abs/2610.03713v1"
+    "title": "Constructive Bounds for the Topological Expressivity of Neural Networks",
+    "date": "2026-10-09",
+    "authors": "Kosio Beshkov",
+    "summary": "The expressivity of a neural network $Φ$ describes the class of functions that a network can express. The term topological expressivity refers to a family of measures particularly suited to understand",
+    "link": "https://arxiv.org/abs/2610.13931v1"
    },
    {
-    "title": "RNADyn: A Benchmark for Generating and Understanding RNA Dynamics",
-    "date": "2026-10-02",
-    "authors": "Yiming Huang, Lennart Bastian, Hanqun Cao",
-    "summary": "Ribonucleic acid (RNA) functions through conformational changes that are not fully captured by static structures. However, large-scale standardized RNA dynamics data remain limited, and existing appro",
-    "link": "https://arxiv.org/abs/2610.03712v1"
+    "title": "AI Models Can Provably Hide Arbitrary Capabilities",
+    "date": "2026-10-09",
+    "authors": "Andis Draguns, Sumeet Ramesh Motwani, Raymond Douglas",
+    "summary": "Capability evaluations aim to surface dangerous model behaviors before deployment, but their reliability depends on the assumption that hidden capabilities can be elicited. We show this assumption doe",
+    "link": "https://arxiv.org/abs/2610.13928v1"
    },
    {
-    "title": "EyeRobot 2.0: Active Gaze for Precise Manipulation without Wrist Cameras",
-    "date": "2026-10-02",
-    "authors": "Kush Hari, Justin Kerr, Nidhya Shivakumar",
-    "summary": "Inspired by human vision, we introduce a framework using active gaze to enable fine-grained bimanual manipulation with only a single stereo camera. EyeRobot 2.0 physically attends to a 3D fixation poi",
-    "link": "https://arxiv.org/abs/2610.03710v1"
+    "title": "KL Before and After Mixing: A Round-Complexity Separation in Parallel Sampling",
+    "date": "2026-10-09",
+    "authors": "Tianyi Wu",
+    "summary": "A parallel sampler can choose at random which coordinates to generate together. For a target $p$ and the output law $q_U$ of a schedule $U$ drawn afresh for each output, we compare the schedule-averag",
+    "link": "https://arxiv.org/abs/2610.13924v1"
    },
    {
-    "title": "From Mixing to Tearing: Graph Decomposition in Decentralized Optimization via Message Passing",
-    "date": "2026-10-02",
-    "authors": "Kuangyu Ding, Gesualdo Scutari",
-    "summary": "We study the minimization of sums of smooth strongly convex functions over undirected graphs, with each function held by one agent and communication restricted to neighbors in the graph. Existing dece",
-    "link": "https://arxiv.org/abs/2610.03709v1"
+    "title": "Goal-Oriented Bundle Management and Flow Control for Deep-Space Communications via Reinforcement Learning",
+    "date": "2026-10-09",
+    "authors": "Sajjad Baghaeea, Aimin Lib, Shanmugarajan Balasubramanian",
+    "summary": "Deep-space communications operate under intermittent connectivity, long propagation delays, and relay storage constraints. In such networks, the Bundle Protocol enables store-carry-forward communicati",
+    "link": "https://arxiv.org/abs/2610.13923v1"
    },
    {
-    "title": "LESSER: Post-Training Data Selection with Output-Layer Gradients",
-    "date": "2026-10-02",
-    "authors": "Lyuxin David Zhang, Eric Wong, Surbhi Goel",
-    "summary": "The choice of post-training data for large language models substantially affects downstream performance. Gradient-based data selection is a popular approach that ranks training data by how well their ",
-    "link": "https://arxiv.org/abs/2610.03702v1"
+    "title": "DyssomniaNN: Multi-Scale Spiking Neural Modeling of Human Sleep Disorders and Perceived Restedness",
+    "date": "2026-10-09",
+    "authors": "Daniel Szelogowski",
+    "summary": "Clinical sleep medicine repeatedly documents profound divergences between objective sleep duration and subjective daytime impairment, notably exemplified by sleep state misperception in paradoxical in",
+    "link": "https://arxiv.org/abs/2610.13918v1"
    },
    {
-    "title": "Language Models that Play Chess and Explain Their Moves",
-    "date": "2026-10-02",
-    "authors": "Adithya Bhaskar, Jeffrey Cheng, Danqi Chen",
-    "summary": "Modern chess engines are silent experts: they play at a superhuman level, but do not offer explanations for their play. On the other hand, language models (LMs) can generate plausible-sounding explana",
-    "link": "https://arxiv.org/abs/2610.03695v1"
+    "title": "Designing Protein Structures from Natural Language",
+    "date": "2026-10-09",
+    "authors": "Joseph Lee, Yanjing Li, Bo Qiang",
+    "summary": "A central challenge in de novo protein design is generating proteins with desired structural and functional properties. Existing design models typically require a dedicated input representation for ea",
+    "link": "https://arxiv.org/abs/2610.13917v1"
    },
    {
-    "title": "Transcriptome-informed multi-modal AI for predicting neoadjuvant therapy response from breast cancer biopsies",
-    "date": "2026-10-02",
-    "authors": "Jungkyu Park, Dhruva Biswas, Joseph Cappadona",
-    "summary": "Scarcity of labeled data limits development of deep learning biomarkers in oncology. We develop a two-stage AI model predicting pathological complete response (pCR) to neoadjuvant therapy in breast ca",
-    "link": "https://arxiv.org/abs/2610.03693v1"
+    "title": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
+    "date": "2026-10-09",
+    "authors": "Taoyong Cui, Pinxian Zeng, Wanghan Xu",
+    "summary": "Recursive self-improvement (RSI) aims to transform interaction experience into persistent improvements, yet external feedback is costly and world-model predictions may become unreliable as policies ev",
+    "link": "https://arxiv.org/abs/2610.13912v1"
    },
    {
-    "title": "Simulation-Free Learning of Population Dynamics with Wasserstein Lagrangian Residuals",
-    "date": "2026-10-02",
-    "authors": "Fedor Sergeev, Markus Heinonen, Daniel Waxman",
-    "summary": "The dynamics of cells, organisms, and fluids are often modeled as probability distributions evolving over time. Reconstructing and extrapolating this evolution from unpaired snapshots requires assumpt",
-    "link": "https://arxiv.org/abs/2610.03679v1"
+    "title": "When VLMs Destroy What They Know: Spatial Representations Fall Below Lexical Priors",
+    "date": "2026-10-09",
+    "authors": "Shubh Garg, Chen Shani",
+    "summary": "Vision-Language Models (VLMs) increasingly analyze and reason about images, yet it remains unclear whether their internal representations faithfully encode the structured relations required for such r",
+    "link": "https://arxiv.org/abs/2610.13910v1"
    },
    {
-    "title": "FrugalEvo: Towards Cost-Aware LLM-Guided Program Evolution",
-    "date": "2026-10-02",
-    "authors": "Hui Chen, Xuan Qi, James Xu Zhao",
-    "summary": "LLM-guided evolutionary methods, such as AlphaEvolve, have emerged as powerful approaches for challenging computational optimization problems, such as circle packing. However, prior work typically opt",
-    "link": "https://arxiv.org/abs/2610.03675v1"
+    "title": "Revisiting Tabular Deep Regression: Objectives and the Limits of Global Early Stopping",
+    "date": "2026-10-09",
+    "authors": "Danil Rudenko, Georgii Bulgakov, Nikolay Kartashev",
+    "summary": "While deep learning models for tabular data have recently received significant research attention, the choice of objective functions for regression tasks remains an understudied degree of freedom. Sev",
+    "link": "https://arxiv.org/abs/2610.13909v1"
    },
    {
-    "title": "Planning to Learn",
-    "date": "2026-10-02",
-    "authors": "Ian Osband",
-    "summary": "Policy-gradient methods are central to modern reinforcement learning, including LLM post-training. When they struggle, the usual suspects are exploration, credit assignment and action-sampling noise. ",
-    "link": "https://arxiv.org/abs/2610.03667v1"
+    "title": "Hitting-Time Bounds for Asynchronous Q-Learning",
+    "date": "2026-10-09",
+    "authors": "Yang Peng",
+    "summary": "We study the last iterate of standard asynchronous Q-learning from a single trajectory of a finite Markov decision process. The trajectory follows a fixed behavior policy whose state--action chain is ",
+    "link": "https://arxiv.org/abs/2610.13901v1"
    }
   ]
  },
  "pypi": {
-  "status": "ok:8/10",
+  "status": "ok:10/10",
   "libs": [
    {
+    "pkg": "openai",
+    "last_month": 295856631,
+    "last_week": 76138589
+   },
+   {
     "pkg": "huggingface-hub",
-    "last_month": 229655209,
-    "last_week": 59288257
+    "last_month": 232552563,
+    "last_week": 59498455
    },
    {
     "pkg": "langchain",
-    "last_month": 169844301,
-    "last_week": 40355002
+    "last_month": 170457766,
+    "last_week": 36001937
    },
    {
     "pkg": "anthropic",
-    "last_month": 147328552,
-    "last_week": 40152274
+    "last_month": 150199657,
+    "last_week": 41718558
    },
    {
     "pkg": "transformers",
-    "last_month": 94964346,
-    "last_week": 25270228
+    "last_month": 96323619,
+    "last_week": 24289038
    },
    {
     "pkg": "litellm",
-    "last_month": 91135527,
-    "last_week": 22562488
-   },
-   {
-    "pkg": "llama-index",
-    "last_month": 2904496,
-    "last_week": 671168
-   },
-   {
-    "pkg": "crewai",
-    "last_month": 2425479,
-    "last_week": 590014
-   },
-   {
-    "pkg": "vllm",
-    "last_month": 1840235,
-    "last_week": 494016
-   },
-   {
-    "pkg": "openai",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+    "last_month": 92239101,
+    "last_week": 21592037
    },
    {
     "pkg": "langgraph",
-    "error": "HTTPError:HTTP Error 429: Too Many Requests"
+    "last_month": 44769952,
+    "last_week": 12201110
+   },
+   {
+    "pkg": "llama-index",
+    "last_month": 2937852,
+    "last_week": 664217
+   },
+   {
+    "pkg": "crewai",
+    "last_month": 2442764,
+    "last_week": 633544
+   },
+   {
+    "pkg": "vllm",
+    "last_month": 1857414,
+    "last_week": 465993
    }
   ]
  }

@@ -1,8 +1,12 @@
 {
- "as_of": "2026-10-05",
+ "as_of": "2026-10-12",
  "foresight": [
   {
    "theme": "RAG",
+   "sources": 5
+  },
+  {
+   "theme": "多模态",
    "sources": 4
   },
   {
@@ -10,19 +14,15 @@
    "sources": 3
   },
   {
-   "theme": "多模态",
-   "sources": 3
-  },
-  {
    "theme": "AI安全/Responsible AI",
    "sources": 2
   },
   {
-   "theme": "Eval 评测",
+   "theme": "AI编码agent当硬技能",
    "sources": 2
   },
   {
-   "theme": "Serving 推理",
+   "theme": "Eval 评测",
    "sources": 2
   }
  ],
@@ -56,21 +56,22 @@
   "source": "W1 (2026-05-19, 63 岗样本中 22 个有 yearly salary)"
  },
  "salary_this_week_snapshot": {
-  "median_k": 177,
-  "n": 3,
+  "median_k": 155,
+  "n": 24,
   "note": "本周样本量不稳，仅辅助参考；以 salary baseline 为准"
  },
  "top_employers": [
-  "Booz Allen Hamilton",
-  "Capital One",
-  "Northrop Grumman",
-  "Credence",
-  "Steampunk"
+  "BV Teck",
+  "Serasaya",
+  "Autonomize AI",
+  "Thomson Reuters",
+  "Booz Allen Hamilton"
  ],
  "target_roles": [
   "AI Engineer",
   "ML Engineer",
-  "Machine Learning Engineer"
+  "Machine Learning Engineer",
+  "Prompt Engineer"
  ],
- "ai_jobs_total": 34
+ "ai_jobs_total": 67
 }
