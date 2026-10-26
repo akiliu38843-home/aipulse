@@ -1,8 +1,93 @@
 {
- "collected_at": "2026-10-19T02:33:29",
+ "collected_at": "2026-10-26T02:28:07",
  "arxiv": {
-  "status": "ok:0",
-  "papers": []
+  "status": "ok:12",
+  "papers": [
+   {
+    "title": "The Language of Instruction: Genre and Generative AI",
+    "date": "2026-10-23",
+    "authors": "James E. Dobson",
+    "summary": "This article argues that instruction-fine-tuned language models should be understood as implementing a genre, what is proposed as the instructional-conversational genre. This genre is an amalgamation ",
+    "link": "https://arxiv.org/abs/2610.32982v1"
+   },
+   {
+    "title": "SceneBloom: Agentic Indoor Environment Generation with Realistic and Diverse Layouts for Embodied Learning",
+    "date": "2026-10-23",
+    "authors": "Yuhan Liu, Lianhui Qin, Shenji Wan",
+    "summary": "Training generalizable embodied agents requires realistic, varied, and simulation-ready indoor environments. Language-guided methods support semantic planning and object-level reasoning, but precise s",
+    "link": "https://arxiv.org/abs/2610.32978v1"
+   },
+   {
+    "title": "RobustRLlib: A Unified Library and Benchmark for Robust Reinforcement Learning Algorithms",
+    "date": "2026-10-23",
+    "authors": "Xi Chen, Fengqi Hu, Zeyu Shen",
+    "summary": "Robust reinforcement learning (RL) is critical for reliable real-world deployment, where policies may fail under diverse shifts and disruptions. Existing robust RL algorithms offer a rich set of mecha",
+    "link": "https://arxiv.org/abs/2610.32971v1"
+   },
+   {
+    "title": "DexPort: A Hand-Held Skill Interface for Dexterous Hand Data Collection",
+    "date": "2026-10-23",
+    "authors": "Amber Xie, Jiawei Fu, Xiaofeng Guo",
+    "summary": "Collecting high-quality demonstrations remains a central bottleneck for learning dexterous manipulation. Teleoperation records executable robot actions, but it requires a complete robot setup and plac",
+    "link": "https://arxiv.org/abs/2610.32969v1"
+   },
+   {
+    "title": "Flownomaly: Single-Step Conditional-Mean Recovery for Few-Shot Anomaly Detection",
+    "date": "2026-10-23",
+    "authors": "Bernardo Perrone Ribeiro, Erkut Akdag, Egor Bondarev",
+    "summary": "Few-shot industrial anomaly detection requires modeling category-specific normality from only a handful of defect-free images. Common approaches tie inference to stored exemplars, impose rigid linear ",
+    "link": "https://arxiv.org/abs/2610.32964v1"
+   },
+   {
+    "title": "Measure Before You Train: Typed Decision Models vs. a Classical Baseline vs. a Generative LLM for Routing a Personal Multilingual Inbox",
+    "date": "2026-10-23",
+    "authors": "Federico Lucca",
+    "summary": "Personal email agents decide, for every message, what it is, whether it is urgent, whether to draft a reply, create a task, or ignore it. Their error rate is rarely measured: the stored labels were wr",
+    "link": "https://arxiv.org/abs/2610.32955v1"
+   },
+   {
+    "title": "Where Rounding Happens Matters: Rounding-Location Alignment Stabilizes LLM Reinforcement Learning",
+    "date": "2026-10-23",
+    "authors": "Yijing Ke, Tianle Cai, Ruosong Wang",
+    "summary": "Reinforcement learning for large language models often uses separate systems for inference and training. Even with identical weights and BF16 tensors, implementation differences can make an intended o",
+    "link": "https://arxiv.org/abs/2610.32951v1"
+   },
+   {
+    "title": "Beyond Discrete Tokens: Preserving Numerical Continuity in Medical Vision-Language Models",
+    "date": "2026-10-23",
+    "authors": "Dianye Huang, Jiamei Guo, Yue Zhou",
+    "summary": "Objective: To develop a unified vision-language model for prompt-conditioned quantitative ultrasound measurement that addresses the mismatch between continuous measurement targets and discrete token-b",
+    "link": "https://arxiv.org/abs/2610.32948v1"
+   },
+   {
+    "title": "Monetizing Intelligence: Advertising and Subscription Design on LLM Platforms",
+    "date": "2026-10-23",
+    "authors": "Yuhang Ji, Fasheng Xu, Tianjun Feng",
+    "summary": "Large language model (LLM) platforms introducing advertising must decide how much capability ad revenue should fund and what consumers should pay to avoid ads. We study a monopolistic platform that jo",
+    "link": "https://arxiv.org/abs/2610.32945v1"
+   },
+   {
+    "title": "Knowledge Distillation across Item and Code Spaces for Parallel Generative Recommendation",
+    "date": "2026-10-23",
+    "authors": "Yixuan Xu, Hailin Liu, Linxiang Peng",
+    "summary": "Generative recommendation with semantic IDs represents each item as a sequence of discrete codes derived from its semantic representation and predicts these codes to generate recommendations. Existing",
+    "link": "https://arxiv.org/abs/2610.32943v1"
+   },
+   {
+    "title": "If at First You Don't Succeed, Backtrack: Lightweight Recovery for Frozen VLAs",
+    "date": "2026-10-23",
+    "authors": "Thomas Landeg, Thierry Tambe",
+    "summary": "Vision-Language-Action (VLA) models perform well on robotic manipulation, yet remain brittle once their own actions carry them into states their training data barely covers. Recovering from such failu",
+    "link": "https://arxiv.org/abs/2610.32941v1"
+   },
+   {
+    "title": "Learning Positive Linear Combinations of ReLUs in Fully Polynomial Time",
+    "date": "2026-10-23",
+    "authors": "Ilias Diakonikolas, Jelena Diakonikolas, Puqian Wang",
+    "summary": "We study the fundamental problem of PAC learning positive linear combinations of $k$ arbitrary ReLU activations on $\\mathbb{R}^d$ with respect to the Gaussian distribution, in $L_2$ loss. We give the ",
+    "link": "https://arxiv.org/abs/2610.32940v1"
+   }
+  ]
  },
  "pypi": {
   "status": "ok:10/10",
@@ -10,52 +95,52 @@
    {
     "pkg": "openai",
     "last_month": 295856631,
-    "last_week": 81286857
+    "last_week": 83852628
    },
    {
     "pkg": "huggingface-hub",
     "last_month": 232552563,
-    "last_week": 62578174
+    "last_week": 63049972
    },
    {
     "pkg": "langchain",
     "last_month": 170457766,
-    "last_week": 37227452
+    "last_week": 37534014
    },
    {
     "pkg": "anthropic",
     "last_month": 150199657,
-    "last_week": 42327300
+    "last_week": 44777051
    },
    {
     "pkg": "transformers",
     "last_month": 96323619,
-    "last_week": 24852055
+    "last_week": 25738854
    },
    {
     "pkg": "litellm",
     "last_month": 92239101,
-    "last_week": 22855757
+    "last_week": 21539531
    },
    {
     "pkg": "langgraph",
     "last_month": 44769952,
-    "last_week": 12265808
+    "last_week": 13375460
    },
    {
     "pkg": "llama-index",
     "last_month": 2937852,
-    "last_week": 648361
+    "last_week": 435376
    },
    {
     "pkg": "crewai",
     "last_month": 2442764,
-    "last_week": 668642
+    "last_week": 628778
    },
    {
     "pkg": "vllm",
     "last_month": 1857414,
-    "last_week": 423782
+    "last_week": 524793
    }
   ]
  }

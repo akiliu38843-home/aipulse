@@ -1,14 +1,14 @@
 {
- "collected_at": "2026-10-19T02:33:20",
+ "collected_at": "2026-10-26T02:27:59",
  "source_status": {
   "Simon Willison": "ok:8",
   "Lilian Weng": "ok:0",
-  "Sebastian Raschka": "ok:4",
+  "Sebastian Raschka": "ok:5",
   "HuggingFace Blog": "ok:8",
   "Chip Huyen": "ok:0",
   "Eugene Yan": "ok:0",
   "Jay Alammar": "ok:0",
-  "Berkeley BAIR": "ok:2",
+  "Berkeley BAIR": "ok:1",
   "The Gradient": "ok:0",
   "DeepLearning.AI Batch": "empty (bozo:1)",
   "OpenAI News": "ok:8",
@@ -19,59 +19,66 @@
  "items": [
   {
    "source": "Simon Willison",
-   "title": "llm-tools-datasette 0.1.1",
-   "date": "2026-10-18",
-   "summary": "Release: llm-tools-datasette 0.1.1 When I switched LLM over to httpx2 in LLM 0.33 I forget that this would break any plugins which used httpx without directly depending on it. llm-tools-datasette was one of those plugins, now fixed. Tags: datasette , llm",
-   "link": "https://simonwillison.net/2026/Oct/18/llm-tools-datasette/"
+   "title": "battledrones v14: Compass Rose, a four player map",
+   "date": "2026-10-24",
+   "summary": "Release: battledrones v14: Compass Rose, a four player map I added four player online mode to Battledrones - previous maps were limited to two. Here's the initial prompt I used: Add a new map for a four player battle - four way rotational symmetry, up to four AI players, works with the WebSocket non-audio based multiplayer mode so up to four human players can join (any spare slots use AI) Claude Opus 5.5 added a new map called \"Compass Rose\" and modified the WebSockets multiplayer network code to support up to four players for that map, joining via share links or QR codes. The new teams use ro",
+   "link": "https://simonwillison.net/2026/Oct/24/battledrones/"
   },
   {
    "source": "Simon Willison",
-   "title": "llm-echo 0.5",
-   "date": "2026-10-18",
-   "summary": "Release: llm-echo 0.5 I'm working towards a new LLM release, and testing PRs caused me to revisit the llm-echo debug plugin. This plugin provides a \"model\" which doesn't involve an LLM at all - it just repeats back the prompts that have been fed to it. The new release now updates the simulated token usage counts to take tool calls, system prompts, and reasoning tokens into account. Example usage: uvx --with llm-echo llm -m echo 'hi there' -o thinking 1 --usage Outputs: First I consider the prompt, then I decide what to say. { \"prompt\": \"hi there\", \"system\": \"\", \"attachments\": [], \"stream\": tru",
-   "link": "https://simonwillison.net/2026/Oct/18/llm-echo/"
+   "title": "Quick Study",
+   "date": "2026-10-23",
+   "summary": "Tool: Quick Study Prompt to Claude Opus 5.5 High : Build an artifact where you open a photo and it rapidly (in a few seconds) paints a version of that photo using a canvas element and simulated paintbrush See also my previous experiment getting Claude Fable to simulate a watercolor illustration with P5.js. Quick Study uses Sobel edge detection , with no external libraries beyond Google Fonts. Tags: tools",
+   "link": "https://simonwillison.net/2026/Oct/23/quick-study-painter/"
   },
   {
    "source": "Simon Willison",
-   "title": "Inline rendering with document​.currentScript",
-   "date": "2026-10-17",
-   "summary": "Inline rendering with document​.currentScript Lean Rada describes a neat trick that takes advantage of the document.currentScript property. You can use that to drop in a tiny inline &lt;script&gt; element that replaces itself when the page loads: The year is &lt;script&gt; document.currentScript.replaceWith( new Date().getFullYear())&lt;/script&gt; If you define a shortcut function like this: $=(...n)=&gt;document.currentScript.replaceWith(...n) You get a tiny template language: The year is &lt;script&gt;$(new Date().getFullYear())&lt;/script&gt; Tags: javascript",
-   "link": "https://simonwillison.net/2026/Oct/17/document-currentscript/"
+   "title": "Introducing Kimi K3.1 Pro",
+   "date": "2026-10-23",
+   "summary": "Introducing Kimi K3.1 Pro Kimi K3.1 Pro landed on the Kimi API today - it's not yet open weights, but Moonshot promise \"Full model weights will be released by Nov 4, 2026\". They're also offering a \"Highspeed\" version that's 2-3x faster, at twice the price (except for input token cache hits, which are priced the same). The US dollar pricing is $2.00/million tokens for input and $10/million for output - the same as GPT-6.1 Sol and half the price of Claude Opus 5.5. Moonshot's own benchmarks show Kimi as approximately level with Opus 5.5 and GPT-6 Astra - beating them on a few benchmarks, coming ",
+   "link": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/"
   },
   {
    "source": "Simon Willison",
-   "title": "web-edit 0.1a2",
-   "date": "2026-10-17",
-   "summary": "Release: web-edit 0.1a2 web-edit ( previously ) is my tiny web app for browsing and editing files in a folder. I mainly built it for editing files on different machines via Tailscale. I added a \"copy to clipboard\" option for both text and image data. I needed this because I was running pelican prompts on a laptop from my phone (here's DeepSeek 4.1 Flash 1017 ) and I wanted an easy way to copy the resulting logs into a Gist. Tags: projects , pelican-riding-a-bicycle , deepseek",
-   "link": "https://simonwillison.net/2026/Oct/17/web-edit/"
+   "title": "DE STAAT - FREEDOM (Official Music Video)",
+   "date": "2026-10-22",
+   "summary": "DE STAAT - FREEDOM (Official Music Video) OK well this is a first for me... at 00:44 in this new music video by Dutch alternative rock band De Staat : The visual effects are credited to Matties Grooten of Fake it or Leave it . Via flir on Hacker News Tags: music , ai , generative-ai , pelican-riding-a-bicycle",
+   "link": "https://simonwillison.net/2026/Oct/22/de-staat-freedom/"
   },
   {
    "source": "Simon Willison",
-   "title": "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang",
-   "date": "2026-10-16",
-   "summary": "We think \"did a human read the code?\" is an imprecise proxy for \"what could go wrong with this change, and which check—automated or human—is the right one to catch it?\" Asking that question also changed when review happens. Before, review was a gate at the end of the road: write the code, open a PR, wait for your colleague. Now, review runs continuously, more like spellcheck while you write. Most changes have been reviewed and fixed by Claude at least once before a human is asked to look. This catches most routine mistakes, and saves team attention for higher-level questions and scrutiny. &mda",
-   "link": "https://simonwillison.net/2026/Oct/16/code-review/"
+   "title": "Donating Agent Skills to the Agentic AI Foundation",
+   "date": "2026-10-22",
+   "summary": "Donating Agent Skills to the Agentic AI Foundation News today from Anthropic: We’re committed to keeping Agent Skills open, community-driven, and vendor-neutral. Today, we are donating the standard to the Agentic AI Foundation (AAIF) under the Linux Foundation, which we co-founded with Block and OpenAI last year, and to which we donated the Model Context Protocol (MCP). I'm pleased to note I called this one last December , when Anthropic first declared skills to be an \"open standard\": I wouldn't be surprised to see this end up in the AAIF , recently the new home of the MCP specification. Fun s",
+   "link": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/"
   },
   {
    "source": "Simon Willison",
-   "title": "Chirp Pong",
-   "date": "2026-10-15",
-   "summary": "Tool: Chirp Pong Another game experiment - I wanted to see if it was feasible to have a two player game on two separate phones running in static HTML where the networking code uses chirps sent via the microphone. It seems to work! Build a two player competitive pong like game where two players use their phones close to each other and the game state is sent via audio noises which the web microphone API can interpret - but add graphical and gameplay twists to make it a lot more fun and intertwine than pong Claude Opus 5.5 Extra in Claude Code . Tags: game-design , ai , generative-ai , llms , cla",
-   "link": "https://simonwillison.net/2026/Oct/15/chirp-pong/"
+   "title": "Quoting Armin Ronacher",
+   "date": "2026-10-22",
+   "summary": "As fun as AI is, we built so much bad software over the last 30 years, and now the universe is punishing us for our sins. &mdash; Armin Ronacher Tags: security , generative-ai , armin-ronacher , ai , ai-security-research , llms",
+   "link": "https://simonwillison.net/2026/Oct/22/armin-ronacher/"
   },
   {
    "source": "Simon Willison",
-   "title": "Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO",
-   "date": "2026-10-15",
-   "summary": "Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO The phrase \"told investors\" appears four times in this FT article, which reports on Anthropic's day of hosting investors on Wednesday. Lots of details in here from \" people with knowledge of the matter \". Key things I learned from the article: Q1 revenue (Jan/Feb/Mar) was \"about $4.8bn\" Q2 (Apr/May/Jun) was $11.5bn Q3 (Jul/Aug/Sep) was $16.8bn In Q3: $1.70 in revenue for every $1 spent on \"computing power\" Adjusted operating margins (excluding stock-based compensation) were 11% This point about distillation is wo",
-   "link": "https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/"
+   "title": "Today's PHP Security Release, and How We're Strengthening PHP Security",
+   "date": "2026-10-21",
+   "summary": "Today&#x27;s PHP Security Release, and How We&#x27;re Strengthening PHP Security If you're running anything on PHP it's vital you upgrade - today's updates (across the entire PHP 8.x line) address two remote code execution holes, and there have been exploits circulating since last night, thanks to a leak in the coordinated disclosure process. This post from the PHP Foundation explain what went so wrong: On Tuesday, October 20th, at around 15:00 UTC, the two CVE IDs began circulating on online forums and social media. They came with a wrong release time and a wrong CVSS score of 10.0 (the actua",
+   "link": "https://simonwillison.net/2026/Oct/21/php-security-release/"
   },
   {
    "source": "Simon Willison",
-   "title": "LaTeX renderer",
-   "date": "2026-10-15",
-   "summary": "Tool: LaTeX renderer Inspired by Paul Ford and Aboard Foundary's new web app Tiny Little Office , which provides a suite of web app content editors (a Word Processor, Outliner, Presentation Builder, Spreadsheet, Calculator, Drawing Tool, Diagram Maker, Animator, Calendar, and Trip Planner). Tiny Little Office's signature trick is to store all of the document data in the #fragment section of the URL, so every document created using it becomes a bookmarkable and shareable link. It also has an llms.txt file telling agents how to construct URLs that will render as documents. Claude used that file ",
-   "link": "https://simonwillison.net/2026/Oct/15/latex/"
+   "title": "Panache — RTS Belle Époque pour mobile",
+   "date": "2026-10-21",
+   "summary": "Panache — RTS Belle Époque pour mobile Well this is delightful: I released Battle Drones yesterday under an Apache 2.0 License and there's already a French language fork which reskins the game to take place in steampunk 1900s France and adds an animated intro! Panache est un jeu de stratégie en temps réel pour mobile et navigateur, dans la France de la Belle Époque (vers 1900) : dirigeables, Fardiers à vapeur, Creusot cuirassés, automates en képi, Gargantua la forteresse marchante — et beaucoup de panache. You can play Panache here - it's worth clicking that link just to experience the new int",
+   "link": "https://simonwillison.net/2026/Oct/21/panache/"
+  },
+  {
+   "source": "Sebastian Raschka",
+   "title": "Building Reasoning Models from the Ground Up: A Full Video Course",
+   "date": "2026-10-24",
+   "summary": "Over 11 hours of coding videos on evaluation, inference-time scaling, reinforcement learning, and distillation, with Python and PyTorch.",
+   "link": "https://magazine.sebastianraschka.com/p/building-reasoning-models"
   },
   {
    "source": "Sebastian Raschka",
@@ -103,59 +110,59 @@
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline",
-   "date": "2026-10-16",
+   "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+   "date": "2026-10-23",
    "summary": "",
-   "link": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining"
+   "link": "https://huggingface.co/blog/allenai/litpivot"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
-   "date": "2026-10-16",
+   "title": "Does Your Model Run on AWS Trainium? Look It Up",
+   "date": "2026-10-23",
    "summary": "",
-   "link": "https://huggingface.co/blog/reflection-beam"
+   "link": "https://huggingface.co/blog/torch-neuronx-model-support"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
-   "date": "2026-10-15",
+   "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+   "date": "2026-10-22",
    "summary": "",
-   "link": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1"
+   "link": "https://huggingface.co/blog/microsoft/thinkingbox-training"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
-   "date": "2026-10-15",
+   "title": "Ensemble forecasting with IBM Granite time-series models",
+   "date": "2026-10-22",
    "summary": "",
-   "link": "https://huggingface.co/blog/meta-muse-spark-open"
+   "link": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Welcome FLUX.3 Image Klein in Diffusers",
-   "date": "2026-10-15",
+   "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
+   "date": "2026-10-21",
    "summary": "",
-   "link": "https://huggingface.co/blog/flux-3"
+   "link": "https://huggingface.co/blog/nvidia/kumo-relational"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost",
-   "date": "2026-10-14",
+   "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
+   "date": "2026-10-21",
    "summary": "",
-   "link": "https://huggingface.co/blog/allenai/hiro-acev2"
+   "link": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
-   "date": "2026-10-13",
+   "title": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.",
+   "date": "2026-10-21",
    "summary": "",
-   "link": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b"
+   "link": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "The model that didn't exist, so you made it yourself",
-   "date": "2026-10-08",
+   "title": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster",
+   "date": "2026-10-21",
    "summary": "",
-   "link": "https://huggingface.co/blog/building-with-ml-intern"
+   "link": "https://huggingface.co/blog/ibm-granite/granite-speech-5"
   },
   {
    "source": "Berkeley BAIR",
@@ -165,67 +172,74 @@
    "link": "http://bair.berkeley.edu/blog/2026/07/29/cuda-to-mlx-k-search/"
   },
   {
-   "source": "Berkeley BAIR",
-   "title": "Teaching LLMs to Update Beliefs for Efficient Long-Horizon Interaction",
-   "date": "2026-07-26",
-   "summary": "Overview of ABBEL compared to traditional recursive summarization. Beliefs replace the full interaction history as the agent’s working context, and belief grading improves performance by supervising the contents of each belief state.. As task horizons grow, LLM contexts can’t scale forever. Self-summarization enables concise, interpretable contexts, but at a significant performance cost, especially for human assistance domains where high quality data is scarce, e.g., collaborative code generation. We address this with ABBEL : a framework that isolates and supervises the information content of ",
-   "link": "http://bair.berkeley.edu/blog/2026/07/26/abbel/"
+   "source": "OpenAI News",
+   "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+   "date": "2026-10-23",
+   "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.",
+   "link": "https://openai.com/index/scaling-storage-one-billion-users-part-two"
   },
   {
    "source": "OpenAI News",
-   "title": "How Itaú is building generative AI for its entire customer base",
-   "date": "2026-10-16",
-   "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
-   "link": "https://openai.com/index/itau-generative-ai"
+   "title": "Securing our frontier model training environment",
+   "date": "2026-10-23",
+   "summary": "OpenAI explains how we strengthened containment for frontier model training and evaluation, including offline environments and high-compute red-teaming.",
+   "link": "https://openai.com/index/securing-our-frontier-model-training-environment"
   },
   {
    "source": "OpenAI News",
-   "title": "Benefit Street Partners answers questions faster with Codex",
-   "date": "2026-10-16",
-   "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
-   "link": "https://openai.com/index/benefit-street-partners"
+   "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
+   "date": "2026-10-23",
+   "summary": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.",
+   "link": "https://openai.com/index/openai-nask-ai-safety-security-partnership"
   },
   {
    "source": "OpenAI News",
-   "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-   "date": "2026-10-16",
-   "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
-   "link": "https://openai.com/index/stack-overflow-chatgpt-plugin"
+   "title": "Build more responsive apps with the Decisions API",
+   "date": "2026-10-22",
+   "summary": "Fast, focused, low-cost decisions for any application.",
+   "link": "https://openai.com/index/decisions-api"
   },
   {
    "source": "OpenAI News",
-   "title": "Bringing GPT-Rosalind to academic research labs",
-   "date": "2026-10-15",
-   "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
-   "link": "https://openai.com/index/introducing-the-rosalind-academic-plan"
+   "title": "What FDE means at OpenAI",
+   "date": "2026-10-22",
+   "summary": "What forward deployed engineering means at OpenAI",
+   "link": "https://openai.com/index/forward-deployed-engineering-means"
   },
   {
    "source": "OpenAI News",
-   "title": "Teaching students to think and learn through questions",
-   "date": "2026-10-15",
-   "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
-   "link": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions"
+   "title": "Uber brings ChatGPT Work to all employees with OpenAI",
+   "date": "2026-10-22",
+   "summary": "Uber is rolling out ChatGPT Work to more than 30,000 employees, helping teams research, analyze data, create presentations, and complete complex workflows.",
+   "link": "https://openai.com/index/uber-chatgpt-work-rollout"
   },
   {
    "source": "OpenAI News",
-   "title": "Sullivan & Cromwell brings legal expertise into agreement review",
-   "date": "2026-10-15",
-   "summary": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a draft agreement.",
-   "link": "https://openai.com/index/sullivan-cromwell"
+   "title": "How AT&T is rethinking in-house legal work with OpenAI",
+   "date": "2026-10-21",
+   "summary": "AT&amp;T is working with OpenAI to make legal knowledge easier to access. Learn how its LegalEdge team is rethinking intake and scaling legal judgment.",
+   "link": "https://openai.com/index/att-legal"
   },
   {
    "source": "OpenAI News",
-   "title": "Amp puts AI agents to work beyond code with OpenAI models",
-   "date": "2026-10-14",
-   "summary": "See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT.",
-   "link": "https://openai.com/index/amp-beyond-coding"
+   "title": "Broad access through consistent standards",
+   "date": "2026-10-21",
+   "summary": "How OpenAI works with distribution partners to uphold consistent safeguards, support responsible access, and clarify expectations in our Usage Policies.",
+   "link": "https://openai.com/index/broad-access-through-consistent-standards"
   },
   {
-   "source": "OpenAI News",
-   "title": "SentinelOne cuts malware analysis from weeks to hours",
-   "date": "2026-10-14",
-   "summary": "With OpenAI Daybreak, SentinelOne cuts weeks of malware analysis to hours, creating capacity to investigate more threats.",
-   "link": "https://openai.com/index/sentinelone"
+   "source": "Google Research",
+   "title": "Bringing foundational models to the front lines of TB screening",
+   "date": "2026-10-23",
+   "summary": "Generative AI",
+   "link": "https://research.google/blog/bringing-foundational-models-to-the-front-lines-of-tb-screening/"
+  },
+  {
+   "source": "Google Research",
+   "title": "Empowering frontline maternal care with AI-assisted ultrasound",
+   "date": "2026-10-21",
+   "summary": "Health & Bioscience",
+   "link": "https://research.google/blog/empowering-frontline-maternal-care-with-ai-assisted-ultrasound/"
   },
   {
    "source": "Google Research",
@@ -268,20 +282,6 @@
    "date": "2026-10-06",
    "summary": "Earth AI",
    "link": "https://research.google/blog/earth-ais-planetary-geospatial-foundation-models-for-global-public-health/"
-  },
-  {
-   "source": "Google Research",
-   "title": "Open and Emergent Problems in Agentic Privacy and Security: A Contextual Angle",
-   "date": "2026-10-05",
-   "summary": "Generative AI",
-   "link": "https://research.google/blog/open-and-emergent-problems-in-agentic-privacy-and-security-a-contextual-angle/"
-  },
-  {
-   "source": "Google Research",
-   "title": "Toward provably private learning from federated data",
-   "date": "2026-10-02",
-   "summary": "Mobile Systems",
-   "link": "https://research.google/blog/toward-provably-private-learning-from-federated-data/"
   }
  ]
 }
