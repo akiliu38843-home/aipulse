@@ -1,91 +1,91 @@
 {
- "collected_at": "2026-10-26T02:28:07",
+ "collected_at": "2026-11-02T03:37:58",
  "arxiv": {
   "status": "ok:12",
   "papers": [
    {
-    "title": "The Language of Instruction: Genre and Generative AI",
-    "date": "2026-10-23",
-    "authors": "James E. Dobson",
-    "summary": "This article argues that instruction-fine-tuned language models should be understood as implementing a genre, what is proposed as the instructional-conversational genre. This genre is an amalgamation ",
-    "link": "https://arxiv.org/abs/2610.32982v1"
+    "title": "From 1D Benchmarks to Complex 3D Geometries: Can Agents Reliably Specify Problems for Automated PDE Simulation?",
+    "date": "2026-10-30",
+    "authors": "Akshat Jani, Sakhinana Sagar Srinivas, Venkataramana Runkana",
+    "summary": "Turning an engineering request into a simulation requires consistent geometry, physics, boundary conditions, and numerical settings. Recent agent-assisted systems automate simulation setup, but succes",
+    "link": "https://arxiv.org/abs/2610.41267v1"
    },
    {
-    "title": "SceneBloom: Agentic Indoor Environment Generation with Realistic and Diverse Layouts for Embodied Learning",
-    "date": "2026-10-23",
-    "authors": "Yuhan Liu, Lianhui Qin, Shenji Wan",
-    "summary": "Training generalizable embodied agents requires realistic, varied, and simulation-ready indoor environments. Language-guided methods support semantic planning and object-level reasoning, but precise s",
-    "link": "https://arxiv.org/abs/2610.32978v1"
+    "title": "Rome Wasn't Built in One Turn: Replay-Grounded Reward Signals for Long-Horizon Freeciv Agents",
+    "date": "2026-10-30",
+    "authors": "Yanchen Liu, Xinyu Che, Brihi Joshi",
+    "summary": "Training language-model agents to play long-horizon strategy games is hard because deterministic feedback is sparse and often arrives only at the end of a game. In-game scores can offer dense signals,",
+    "link": "https://arxiv.org/abs/2610.41264v1"
    },
    {
-    "title": "RobustRLlib: A Unified Library and Benchmark for Robust Reinforcement Learning Algorithms",
-    "date": "2026-10-23",
-    "authors": "Xi Chen, Fengqi Hu, Zeyu Shen",
-    "summary": "Robust reinforcement learning (RL) is critical for reliable real-world deployment, where policies may fail under diverse shifts and disruptions. Existing robust RL algorithms offer a rich set of mecha",
-    "link": "https://arxiv.org/abs/2610.32971v1"
+    "title": "MEMIG: Self-evolving Memory Construction for Antibody Optimization",
+    "date": "2026-10-30",
+    "authors": "Yunhui Jang, Zach Wang, Jai Doshi",
+    "summary": "Memory has become central to self-evolving LLM agents, which store and retrieve experience from past rollouts to guide future decisions. Existing systems represent this experience as free-form natural",
+    "link": "https://arxiv.org/abs/2610.41245v1"
    },
    {
-    "title": "DexPort: A Hand-Held Skill Interface for Dexterous Hand Data Collection",
-    "date": "2026-10-23",
-    "authors": "Amber Xie, Jiawei Fu, Xiaofeng Guo",
-    "summary": "Collecting high-quality demonstrations remains a central bottleneck for learning dexterous manipulation. Teleoperation records executable robot actions, but it requires a complete robot setup and plac",
-    "link": "https://arxiv.org/abs/2610.32969v1"
+    "title": "A Unified Framework for Probability Estimation of Data-Dependent Events",
+    "date": "2026-10-30",
+    "authors": "Vitaly Feldman, Satyen Kale, Vinod Raman",
+    "summary": "We study the general problem of estimating $D(\\dde(S))$, the probability that an unknown distribution $D$ assigns to an event determined by a sample $S$ of $n$ i.i.d.\\ draws from $D$ through a known m",
+    "link": "https://arxiv.org/abs/2610.41244v1"
    },
    {
-    "title": "Flownomaly: Single-Step Conditional-Mean Recovery for Few-Shot Anomaly Detection",
-    "date": "2026-10-23",
-    "authors": "Bernardo Perrone Ribeiro, Erkut Akdag, Egor Bondarev",
-    "summary": "Few-shot industrial anomaly detection requires modeling category-specific normality from only a handful of defect-free images. Common approaches tie inference to stored exemplars, impose rigid linear ",
-    "link": "https://arxiv.org/abs/2610.32964v1"
+    "title": "Generative SDEs with Trainable Diffusion and Density-Based Losses",
+    "date": "2026-10-30",
+    "authors": "Angxiu Ni",
+    "summary": "We develop a divergence-kernel method for jointly optimizing neural SDE drift and diffusion fields and the initial Gaussian distribution, using losses that depend directly on the terminal density. In ",
+    "link": "https://arxiv.org/abs/2610.41243v1"
    },
    {
-    "title": "Measure Before You Train: Typed Decision Models vs. a Classical Baseline vs. a Generative LLM for Routing a Personal Multilingual Inbox",
-    "date": "2026-10-23",
-    "authors": "Federico Lucca",
-    "summary": "Personal email agents decide, for every message, what it is, whether it is urgent, whether to draft a reply, create a task, or ignore it. Their error rate is rarely measured: the stored labels were wr",
-    "link": "https://arxiv.org/abs/2610.32955v1"
+    "title": "Experts Exhibit Structured Redundancy: Structure-Preserving Expert Pruning for Mixture-of-Experts Large Language Models",
+    "date": "2026-10-30",
+    "authors": "Tian Wang, Yongding Tao, Yihong Dong",
+    "summary": "Sparse MoE mechanism significantly improves the trade-off between model capacity and inference efficiency. However, practical deployment still requires storing all experts, resulting in substantial me",
+    "link": "https://arxiv.org/abs/2610.41236v1"
    },
    {
-    "title": "Where Rounding Happens Matters: Rounding-Location Alignment Stabilizes LLM Reinforcement Learning",
-    "date": "2026-10-23",
-    "authors": "Yijing Ke, Tianle Cai, Ruosong Wang",
-    "summary": "Reinforcement learning for large language models often uses separate systems for inference and training. Even with identical weights and BF16 tensors, implementation differences can make an intended o",
-    "link": "https://arxiv.org/abs/2610.32951v1"
+    "title": "TRIDENT and SHAKTI: A Framework and Benchmark for Hindi AI-Text Detection",
+    "date": "2026-10-30",
+    "authors": "Shifali Agrahari, Sujit Kumar, Sanasam Ranbir Singh",
+    "summary": "As Large Language Models (LLMs) become increasingly multilingual, distinguishing human-written from AI-generated text is essential for maintaining information integrity. However, research remains Engl",
+    "link": "https://arxiv.org/abs/2610.41232v1"
    },
    {
-    "title": "Beyond Discrete Tokens: Preserving Numerical Continuity in Medical Vision-Language Models",
-    "date": "2026-10-23",
-    "authors": "Dianye Huang, Jiamei Guo, Yue Zhou",
-    "summary": "Objective: To develop a unified vision-language model for prompt-conditioned quantitative ultrasound measurement that addresses the mismatch between continuous measurement targets and discrete token-b",
-    "link": "https://arxiv.org/abs/2610.32948v1"
+    "title": "Coarse3D: Controllable and Faithful Sparse Structure Generation for Image-to-3D",
+    "date": "2026-10-30",
+    "authors": "Gaige Wang, Bowen Pan, Hao Ren",
+    "summary": "Coarse-to-fine 3D-native generation relies heavily on the first-stage sparse structure, which determines the global orientation and overall geometry for subsequent refinement. However, existing coarse",
+    "link": "https://arxiv.org/abs/2610.41231v1"
    },
    {
-    "title": "Monetizing Intelligence: Advertising and Subscription Design on LLM Platforms",
-    "date": "2026-10-23",
-    "authors": "Yuhang Ji, Fasheng Xu, Tianjun Feng",
-    "summary": "Large language model (LLM) platforms introducing advertising must decide how much capability ad revenue should fund and what consumers should pay to avoid ads. We study a monopolistic platform that jo",
-    "link": "https://arxiv.org/abs/2610.32945v1"
+    "title": "RTL-Interact: Training EDA-Interactive Models for Multi-Task RTL Design",
+    "date": "2026-10-30",
+    "authors": "Wenxuan Shi, Yaoyu Zhu, Di Huang",
+    "summary": "Large language models offer a promising route to register-transfer-level (RTL) design, but reliable implementations require checking and revision based on electronic design automation (EDA) tools' fee",
+    "link": "https://arxiv.org/abs/2610.41225v1"
    },
    {
-    "title": "Knowledge Distillation across Item and Code Spaces for Parallel Generative Recommendation",
-    "date": "2026-10-23",
-    "authors": "Yixuan Xu, Hailin Liu, Linxiang Peng",
-    "summary": "Generative recommendation with semantic IDs represents each item as a sequence of discrete codes derived from its semantic representation and predicts these codes to generate recommendations. Existing",
-    "link": "https://arxiv.org/abs/2610.32943v1"
+    "title": "Corroborative Learning: Mutual Enhancement through Task-Response Reconstruction",
+    "date": "2026-10-30",
+    "authors": "Zexing Zhang, Jichao Li, Tianyang Lei",
+    "summary": "In pattern analysis, models trained independently for the same task often develop complementary capabilities through differences in architecture, data, and optimization. Exploiting complementarity whi",
+    "link": "https://arxiv.org/abs/2610.41222v1"
    },
    {
-    "title": "If at First You Don't Succeed, Backtrack: Lightweight Recovery for Frozen VLAs",
-    "date": "2026-10-23",
-    "authors": "Thomas Landeg, Thierry Tambe",
-    "summary": "Vision-Language-Action (VLA) models perform well on robotic manipulation, yet remain brittle once their own actions carry them into states their training data barely covers. Recovering from such failu",
-    "link": "https://arxiv.org/abs/2610.32941v1"
+    "title": "A Positional Realizability Theory of Length Generalization in Single-Head Attention",
+    "date": "2026-10-30",
+    "authors": "Jiasong Han, Yunkai Chai, Jintao Wang",
+    "summary": "Why does length generalization (LG) depend so sharply on the positional encoding (PE)? Relative schemes extrapolate fixed offsets, absolute schemes fix positions, and neither handles growing offsets. ",
+    "link": "https://arxiv.org/abs/2610.41218v1"
    },
    {
-    "title": "Learning Positive Linear Combinations of ReLUs in Fully Polynomial Time",
-    "date": "2026-10-23",
-    "authors": "Ilias Diakonikolas, Jelena Diakonikolas, Puqian Wang",
-    "summary": "We study the fundamental problem of PAC learning positive linear combinations of $k$ arbitrary ReLU activations on $\\mathbb{R}^d$ with respect to the Gaussian distribution, in $L_2$ loss. We give the ",
-    "link": "https://arxiv.org/abs/2610.32940v1"
+    "title": "Beyond Response Scoring: An AI-aware Cognitive Supervision Framework for Automated Mathematical Short Answer Grading",
+    "date": "2026-10-30",
+    "authors": "Shengran Guo, Min Chi, Feifei Qiao",
+    "summary": "Transformer-based language models have achieved remarkable success in automated short answer grading (ASAG). However, current methods in ASAG struggle to comprehend, reason about and evaluate complex ",
+    "link": "https://arxiv.org/abs/2610.41215v1"
    }
   ]
  },
@@ -95,52 +95,52 @@
    {
     "pkg": "openai",
     "last_month": 295856631,
-    "last_week": 83852628
+    "last_week": 85437895
    },
    {
     "pkg": "huggingface-hub",
     "last_month": 232552563,
-    "last_week": 63049972
+    "last_week": 67522446
    },
    {
     "pkg": "langchain",
     "last_month": 170457766,
-    "last_week": 37534014
+    "last_week": 37058402
    },
    {
     "pkg": "anthropic",
     "last_month": 150199657,
-    "last_week": 44777051
+    "last_week": 46914523
    },
    {
     "pkg": "transformers",
     "last_month": 96323619,
-    "last_week": 25738854
+    "last_week": 27785926
    },
    {
     "pkg": "litellm",
     "last_month": 92239101,
-    "last_week": 21539531
+    "last_week": 23076594
    },
    {
     "pkg": "langgraph",
     "last_month": 44769952,
-    "last_week": 13375460
+    "last_week": 13602612
    },
    {
     "pkg": "llama-index",
     "last_month": 2937852,
-    "last_week": 435376
+    "last_week": 415045
    },
    {
     "pkg": "crewai",
     "last_month": 2442764,
-    "last_week": 628778
+    "last_week": 589367
    },
    {
     "pkg": "vllm",
     "last_month": 1857414,
-    "last_week": 524793
+    "last_week": 677190
    }
   ]
  }

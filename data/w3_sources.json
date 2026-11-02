@@ -1,200 +1,201 @@
 {
- "collected_at": "2026-10-26T02:28:06",
+ "collected_at": "2026-11-02T03:37:57",
  "hf": {
   "status": "ok:30 sort=trendingScore",
   "tag_freq": {
-   "text-generation": 11,
-   "image-text-to-text": 6,
-   "text-to-image": 4,
+   "text-generation": 10,
+   "image-text-to-text": 7,
+   "image-to-video": 2,
    "unknown": 2,
+   "any-to-any": 2,
+   "automatic-speech-recognition": 1,
+   "image-to-3d": 1,
    "image-to-image": 1,
-   "image-to-video": 1,
+   "text-to-image": 1,
    "text-to-speech": 1,
-   "time-series-forecasting": 1,
-   "image-to-text": 1,
-   "feature-extraction": 1,
-   "mask-generation": 1
+   "mask-generation": 1,
+   "video-to-video": 1
   },
   "trending": [
    {
     "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
     "pipeline": "image-text-to-text",
-    "downloads": 85275,
-    "likes": 2999
+    "downloads": 170353,
+    "likes": 4333
    },
    {
-    "id": "RecursiveSI/flint",
+    "id": "LiquidAI/LFM3-1.7B",
     "pipeline": "text-generation",
-    "downloads": 6444,
-    "likes": 862
+    "downloads": 37568,
+    "likes": 710
    },
    {
-    "id": "black-forest-labs/flux-3-image-klein-comfy",
-    "pipeline": "image-to-image",
-    "downloads": 660874,
-    "likes": 1607
+    "id": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
+    "pipeline": "automatic-speech-recognition",
+    "downloads": 29364,
+    "likes": 606
    },
    {
-    "id": "XHToken/Spark-X2.6-4B",
-    "pipeline": "text-generation",
-    "downloads": 3488,
-    "likes": 520
+    "id": "mistralai/Mistral-Large-4-1T-A52B",
+    "pipeline": "image-text-to-text",
+    "downloads": 4576,
+    "likes": 1453
    },
    {
-    "id": "Lightricks/LTX-2.5",
-    "pipeline": "image-to-video",
-    "downloads": 2107108,
-    "likes": 9343
+    "id": "baidu/Unlimited-OCR-2",
+    "pipeline": "image-text-to-text",
+    "downloads": 109519,
+    "likes": 525
    },
    {
     "id": "Nanbeige/Nanbeige4.3-33B",
     "pipeline": "text-generation",
-    "downloads": 0,
-    "likes": 389
+    "downloads": 15795,
+    "likes": 975
    },
    {
-    "id": "MiniMaxAI/MiniMax-M3.1-Flash",
-    "pipeline": "image-text-to-text",
-    "downloads": 7355,
-    "likes": 353
+    "id": "Lightricks/LTX-2.5",
+    "pipeline": "image-to-video",
+    "downloads": 2431846,
+    "likes": 10231
    },
    {
-    "id": "OpenMOSS-Team/MOSS-Image-SFT",
-    "pipeline": "text-to-image",
-    "downloads": 10757,
-    "likes": 729
+    "id": "ccore/Qwen3.5-4B-3D-Coder",
+    "pipeline": "unknown",
+    "downloads": 44825,
+    "likes": 489
    },
    {
-    "id": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
-    "pipeline": "text-to-image",
-    "downloads": 2235846,
-    "likes": 5043
+    "id": "Pika-Labs/Pika-H3-Flex",
+    "pipeline": "image-to-video",
+    "downloads": 404,
+    "likes": 315
+   },
+   {
+    "id": "speridlabs/idol",
+    "pipeline": "image-to-3d",
+    "downloads": 4194,
+    "likes": 307
+   },
+   {
+    "id": "black-forest-labs/flux-3-image-klein-comfy",
+    "pipeline": "image-to-image",
+    "downloads": 970633,
+    "likes": 2271
    },
    {
     "id": "Qwen/Qwen3.8-27B",
     "pipeline": "image-text-to-text",
-    "downloads": 7762014,
-    "likes": 18401
+    "downloads": 7892866,
+    "likes": 18934
    },
    {
-    "id": "fishaudio/drama-3",
-    "pipeline": "text-to-speech",
-    "downloads": 21375,
-    "likes": 1015
+    "id": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
+    "pipeline": "text-to-image",
+    "downloads": 2548468,
+    "likes": 5476
    },
    {
-    "id": "InternScience/Sage-A1.5",
+    "id": "XHToken/Spark-X2.6-4B",
     "pipeline": "text-generation",
-    "downloads": 3875,
-    "likes": 290
+    "downloads": 16707,
+    "likes": 948
+   },
+   {
+    "id": "LiquidAI/LFM3-Omni-2B",
+    "pipeline": "any-to-any",
+    "downloads": 8376,
+    "likes": 277
+   },
+   {
+    "id": "RecursiveSI/flint",
+    "pipeline": "text-generation",
+    "downloads": 26703,
+    "likes": 1296
+   },
+   {
+    "id": "Edge0/Audio8-TTS-Realistic-0.6b",
+    "pipeline": "text-to-speech",
+    "downloads": 4613,
+    "likes": 211
+   },
+   {
+    "id": "Diffuspace/Clover-35B-A3B-Preview",
+    "pipeline": "text-generation",
+    "downloads": 2352,
+    "likes": 205
+   },
+   {
+    "id": "LiquidAI/LFM3-VL-2B",
+    "pipeline": "image-text-to-text",
+    "downloads": 9121,
+    "likes": 201
+   },
+   {
+    "id": "burner22/numbat",
+    "pipeline": "unknown",
+    "downloads": 5846,
+    "likes": 210
    },
    {
     "id": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
     "pipeline": "text-generation",
-    "downloads": 412392,
-    "likes": 285
-   },
-   {
-    "id": "lodestones/Kromoss",
-    "pipeline": "text-to-image",
-    "downloads": 23972,
-    "likes": 260
-   },
-   {
-    "id": "dealignai/DeepSeek-V4.1-Flash-1017-UNCENSORED-FP8",
-    "pipeline": "image-text-to-text",
-    "downloads": 6792,
-    "likes": 369
-   },
-   {
-    "id": "unsloth/flint-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 103369,
-    "likes": 250
-   },
-   {
-    "id": "OpenMOSS-Team/MOSS-Image-Base",
-    "pipeline": "text-to-image",
-    "downloads": 7641,
-    "likes": 554
-   },
-   {
-    "id": "Comfy-Org/MOSS-Image",
-    "pipeline": "unknown",
-    "downloads": 2161961,
-    "likes": 453
-   },
-   {
-    "id": "mistralai/Timestral-209M",
-    "pipeline": "time-series-forecasting",
-    "downloads": 9765,
-    "likes": 370
-   },
-   {
-    "id": "datalab-to/indra-ocr",
-    "pipeline": "image-to-text",
-    "downloads": 4636,
-    "likes": 425
-   },
-   {
-    "id": "google/embeddinggemma-2",
-    "pipeline": "feature-extraction",
-    "downloads": 212769,
-    "likes": 2923
-   },
-   {
-    "id": "orcarouter/DeepSeek-V4.1-Flash-1017-abliterated-GGUF",
-    "pipeline": "text-generation",
-    "downloads": 7293,
-    "likes": 218
-   },
-   {
-    "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 1671015,
-    "likes": 2091
+    "downloads": 2294642,
+    "likes": 536
    },
    {
     "id": "facebook/sam3",
     "pipeline": "mask-generation",
-    "downloads": 1849059,
-    "likes": 5110
+    "downloads": 1891055,
+    "likes": 5646
    },
    {
-    "id": "HuggingFaceBio/Carbon-X",
-    "pipeline": "text-generation",
-    "downloads": 807,
-    "likes": 184
-   },
-   {
-    "id": "Comfy-Org/Fibo-2.0",
-    "pipeline": "unknown",
-    "downloads": 124557,
-    "likes": 179
-   },
-   {
-    "id": "orcarouter/OrcaCyber-Nano-1.0",
+    "id": "openbmb/MiniCPM-OCR-1.0",
     "pipeline": "image-text-to-text",
-    "downloads": 30330,
-    "likes": 254
+    "downloads": 3513,
+    "likes": 384
    },
    {
-    "id": "KRAFTON/Raon-1-mini-preview",
-    "pipeline": "text-generation",
-    "downloads": 1177,
-    "likes": 186
+    "id": "LiquidAI/LFM3-Audio-2B",
+    "pipeline": "any-to-any",
+    "downloads": 5688,
+    "likes": 178
    },
    {
-    "id": "jialinyyzz/humanizer",
+    "id": "AtomicChat/LFM3-1.7B-Uncensored-GGUF",
     "pipeline": "text-generation",
-    "downloads": 143152,
-    "likes": 2156
+    "downloads": 46155,
+    "likes": 181
    },
    {
-    "id": "ornith-ai/Ornith-1.5-122B",
+    "id": "LiquidAI/LFM3-1.7B-GGUF",
     "pipeline": "text-generation",
-    "downloads": 48477,
-    "likes": 177
+    "downloads": 150260,
+    "likes": 176
+   },
+   {
+    "id": "LiquidAI/d1-2B",
+    "pipeline": "image-text-to-text",
+    "downloads": 4256,
+    "likes": 159
+   },
+   {
+    "id": "Efficient-Large-Model/Open-H3-Regenerate-2K",
+    "pipeline": "video-to-video",
+    "downloads": 0,
+    "likes": 157
+   },
+   {
+    "id": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+    "pipeline": "text-generation",
+    "downloads": 83901,
+    "likes": 326
+   },
+   {
+    "id": "OBLITERATUS/DeepSeek-V4.1-Flash-1017-obliterated",
+    "pipeline": "text-generation",
+    "downloads": 520,
+    "likes": 157
    }
   ]
  },
@@ -225,14 +226,24 @@
     "url": "https://github.com/LargeModGames/spotatui"
    },
    {
-    "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
-    "points": 424,
-    "url": "https://github.com/devdotfast/whiteboard"
-   },
-   {
     "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
     "points": 163,
     "url": null
+   },
+   {
+    "title": "OpenAI's agents talked to each other through the CPU Cache",
+    "points": 362,
+    "url": "https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/"
+   },
+   {
+    "title": "R/open source bans all solo projects and projects using LLMs",
+    "points": 90,
+    "url": "https://www.reddit.com/r/opensource/comments/1xelcuf/your_tokens_arent_valuable_no_more_ai"
+   },
+   {
+    "title": "LFM2.5-24B-A2B: Built for fast on-device agents",
+    "points": 288,
+    "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b"
    }
   ],
   "status": "ok"
