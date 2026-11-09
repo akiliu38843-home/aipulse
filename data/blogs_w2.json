@@ -1,5 +1,5 @@
 {
- "collected_at": "2026-11-02T03:37:50",
+ "collected_at": "2026-11-09T03:49:51",
  "source_status": {
   "Simon Willison": "ok:8",
   "Lilian Weng": "ok:0",
@@ -19,59 +19,59 @@
  "items": [
   {
    "source": "Simon Willison",
-   "title": "If in doubt, delete the uv.lock file",
-   "date": "2026-11-01",
-   "summary": "I've been getting the occasional confusing Python dependency error since switching over to Python 3.15 and the rule I'm having to remember is: If in doubt, delete the uv.lock file Most of my projects are libraries which don't include a uv.lock file, since it's rude for a library dependency to lock versions for anything else that uses it. Running uv run pytest etc tends to leave uv.lock files lying around, which are listed in .gitignore and so do not get committed to my repositories. But... sometimes that uv.lock pins a version of a dependency that doesn't yet have a Python 3.15 wheel. An examp",
-   "link": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/"
+   "title": "parse_number() as a SQLite extension: C vs Rust",
+   "date": "2026-11-08",
+   "summary": "Research: parse_number() as a SQLite extension: C vs Rust I was out walking the dog when I got curious about how easy/difficult it would be to write a SQLite C extension that adds a parse_number() function for turning strings like -$1,234.56 or '12.5%' into numeric values that could be summed and sorted. I fired up regular Claude chat (Opus 5.5) and prompted : I'm thinking about a SQLite custom function 'parse_number(value)' that strips ',', '$', '£' and '%', handles a leading '-', and returns 'NULL' for anything it can’t parse Explore the difference between building this as a SQLite extension",
+   "link": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/"
   },
   {
    "source": "Simon Willison",
-   "title": "Quoting Kyle Kingsbury",
-   "date": "2026-11-01",
-   "summary": "More broadly, the use of LLMs erodes trust in documentation, in software, and in the organizations which produce them. Perhaps engineers will begin to treat any new software project with suspicion—the signals we used to rely on as markers of a mature system are now easier to counterfeit. [...] In the age of LLMs, what can maintainers do to ensure correct software and accurate documentation? Having done that work, how can they demonstrate its quality to users? &mdash; Kyle Kingsbury , Jepsen results for ParticleDB 1.1.4 Tags: kyle-kingsbury , llms , ai , generative-ai , ai-misuse",
-   "link": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/"
+   "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
+   "date": "2026-11-07",
+   "summary": "datasette #3046: Don&#x27;t serve link: rel=next HTTP headers to Firefox for HTML pages I was looking at the Firefox network panel today when I noticed that requests to a Datasette table page were triggering an HTTP prefetch to the next page of rows in that table. This was happening because Datasette pages serve an HTTP link header like this: link: &lt;https://latest.datasette.io/fixtures/compound_three_primary_keys?_next=a%2Cd%2Cv&gt;; rel=\"next\" This is bad. A tiny fraction of the visitors to one of those pages will click the \"next\" link, which means their browser is fetching unnecessary dat",
+   "link": "https://simonwillison.net/2026/Nov/7/link-rel-next/"
   },
   {
    "source": "Simon Willison",
-   "title": "How We Took Over ChatGPT Accounts",
-   "date": "2026-10-31",
-   "summary": "How We Took Over ChatGPT Accounts Parameter Labs describe an exploit they found against ChatGPT's implementation of the artifacts pattern (OpenAI used to call this \"Canvas\" but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are displayed in a sandboxed iframe. It's important that HTML in these stays tightly sandboxed to avoid untrusted code interacting with OpenAI APIs and accessing private data. Parameter found quite a complex attack chain. OpenAI use the MathLive JavaScript library as part of their graph support, and that library includes its ",
-   "link": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/"
+   "title": "Quoting Nilay Patel",
+   "date": "2026-11-06",
+   "summary": "The products aren't good enough to sell people on the costs. You cannot tell people that you have to listen to the whine of a data center in their backyard for AI overviews and some of the most hilarious deep fake slop in history. It's not worth it. It just isn't worth it to anyone. And agents aren't real and they might not be being used the way that anyone wants them to yet. All these companies are spending more than they're making on these products. Refrigerators holding blood storage in Europe are being hacked. The costs are too high. The benefits are not real. And if you connect that to co",
+   "link": "https://simonwillison.net/2026/Nov/6/nilay-patel/"
   },
   {
    "source": "Simon Willison",
-   "title": "datasette-llm 0.1a9",
-   "date": "2026-10-31",
-   "summary": "Release: datasette-llm 0.1a9 I have some big upgrades to Datasette Agent in the pipeline, but in the meantime here's a tiny user experience improvement to the underlying datasette-llm plugin. It now picks up the default model used by LLM , which means you can start using Datasette Agent without needing to explicitly configure a default model: uvx --with datasette-agent datasette content.db --internal internal.db Previously you would also need to specify a model with -s plugins.datasette-agent.default_model gpt-6-astra . Tags: datasette , llm , datasette-agent",
-   "link": "https://simonwillison.net/2026/Oct/31/datasette-llm/"
+   "title": "Quoting Paul Ford",
+   "date": "2026-11-05",
+   "summary": "The web browser is very, very, very powerful software for applications, and the cost of accessing that power is going down seemingly every day . &mdash; Paul Ford , The Web Is More Than Enough Tags: browsers , paul-ford , web-development",
+   "link": "https://simonwillison.net/2026/Nov/5/paul-ford/"
   },
   {
    "source": "Simon Willison",
-   "title": "dbreunig/nesformer",
-   "date": "2026-10-30",
-   "summary": "dbreunig/nesformer Inspired by qwenputer by Divyansh Agrawal, Drew Breunig baked a working emulator for a Nintendo Entertainment System 6502 CPU into the weights of Qwen3.5-4B. You can now play NES ROMs such as Super Mario Bros (very slowly) running inside Qwen! In a comment on Hacker News Drew reveals the Opus 5.5 prompts he used to build this system: Read this article and any relevant source code: https://divagr.com/blog/qwenputer. Then explore if you could emulate the chip and ram in a Nintendo Entertainment System (as people do today with FPGAs in MISTRs) using this technique. If so, what ",
-   "link": "https://simonwillison.net/2026/Oct/30/nesformer/"
+   "title": "datasette-llm 0.1a10",
+   "date": "2026-11-04",
+   "summary": "Release: datasette-llm 0.1a10 Fixes a bug that affected my agent.datasette.io demo site, where the set of available LLM models was not correctly restricted to just those in the configuration. Tags: datasette , llm",
+   "link": "https://simonwillison.net/2026/Nov/4/datasette-llm/"
   },
   {
    "source": "Simon Willison",
-   "title": "API credits benefit for eligible ChatGPT subscriptions",
-   "date": "2026-10-29",
-   "summary": "API credits benefit for eligible ChatGPT subscriptions Earlier this month Anthropic announced a generous new benefit for their Max and Team subscriptions: $100, $200, and $500 per month subscribers would get the equivalent quantity of (expiring) credits to use with the Anthropic API. OpenAI have now launched pretty much exactly the same deal: if you have a $100, $200, or $500 subscription plan with them you now get that same quantity of credits to apply to one of your API organizations. I maintain subscriptions with both companies, so this is great news for me! I may even ship some public-faci",
-   "link": "https://simonwillison.net/2026/Oct/29/api-credits/"
+   "title": "datasette-apps 0.3a0",
+   "date": "2026-11-04",
+   "summary": "Release: datasette-apps 0.3a0 Datasette Apps adds support for hosting and editing custom HTML applications inside of Datasette. These can be created by hand, but it's easier to create them using LLMs via Datasette Agent . This release improves that integration: Apps can now be tagged in Datasette Agent chat messages by typing # , which autocompletes from the apps the user has permission to view. New app_add_stored_queries() and app_remove_stored_queries() tools let the agent manage which stored queries an app is allowed to call. Granting a write query requires approval from the user first. app",
+   "link": "https://simonwillison.net/2026/Nov/4/datasette-apps/"
   },
   {
    "source": "Simon Willison",
-   "title": "Building a multiplayer game world with autonomous Fable-class models",
-   "date": "2026-10-29",
-   "summary": "How I Built the Most AI-Pilled Company in the World Don't be put off by the clickbait headline, this piece by Jacob Sansbury describing how they are building Spawn is a fascinating exploration of the bleeding edge of what's possible with agentic engineering against frontier models. Spawn is a massively multiplayer gaming environment where players can use prompts (to the in-game agent, Savi) to modify the game world. I fired it up on my phone for a few minutes and was able to prompt a castle into existence, then a dragon, then ride the dragon to fly around that castle. By Jacob's telling, Spawn",
-   "link": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/"
+   "title": "datasette-agent 0.5a0",
+   "date": "2026-11-03",
+   "summary": "Release: datasette-agent 0.5a0 This is a significant release of Datasette Agent . The most notable new feature is called the panel - it lets the agent chat open and then sit next to pages from Datasette, for example a table or query page. When combined with datasette-apps this means you can prompt a database-backed app into existence and then modify it from the chat that sits next to that app. You can try it by signing in with your GitHub account to agent.datasette.io . Tags: projects , datasette , datasette-agent",
+   "link": "https://simonwillison.net/2026/Nov/3/datasette-agent/"
   },
   {
    "source": "Simon Willison",
-   "title": "Quoting Ben Hylak",
-   "date": "2026-10-29",
-   "summary": "every product i use should just be a headless mcp, that feeds into an agent, where i never have to think about anything underneath. except for our product, of course. in our product, customers love the ui and love us very much. we're special that way. &mdash; Ben Hylak Tags: model-context-protocol , ai",
-   "link": "https://simonwillison.net/2026/Oct/29/ben-hylak/"
+   "title": "llm 0.37.1",
+   "date": "2026-11-03",
+   "summary": "Release: llm 0.37.1 A bugfix release for LLM , with contributions from Steven Huang , Tao An , Arjan Mossel , and XQ . Tags: llm",
+   "link": "https://simonwillison.net/2026/Nov/3/llm/"
   },
   {
    "source": "Sebastian Raschka",
@@ -110,115 +110,129 @@
   },
   {
    "source": "HuggingFace Blog",
-   "title": "nemotron-halloween",
-   "date": "2026-10-30",
+   "title": "ToyBlocks: A controlled world for robot learning and evaluation",
+   "date": "2026-11-06",
    "summary": "",
-   "link": "https://huggingface.co/blog/nvidia/nemotron-halloween"
+   "link": "https://huggingface.co/blog/allenai/toyblocks"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Granite Switch 4.1.1 — Update models like you update software",
-   "date": "2026-10-29",
+   "title": "Egyptian and Nigerian English join the Open ASR Leaderboard",
+   "date": "2026-11-06",
    "summary": "",
-   "link": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1"
+   "link": "https://huggingface.co/blog/open-asr-leaderboard-liva"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready",
-   "date": "2026-10-29",
+   "title": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
+   "date": "2026-11-05",
    "summary": "",
-   "link": "https://huggingface.co/blog/announcing-project-protostar"
+   "link": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
-   "date": "2026-10-29",
+   "title": "A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.",
+   "date": "2026-11-05",
    "summary": "",
-   "link": "https://huggingface.co/blog/mistral-large4"
+   "link": "https://huggingface.co/blog/phonon-tts"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
-   "date": "2026-10-29",
+   "title": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
+   "date": "2026-11-04",
    "summary": "",
-   "link": "https://huggingface.co/blog/anydecisionmodel"
+   "link": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Build specialized multimodal models with LFM3",
-   "date": "2026-10-27",
+   "title": "Palette: teaching a small model to build decks in your design language",
+   "date": "2026-11-03",
    "summary": "",
-   "link": "https://huggingface.co/blog/LiquidAI/lfm3"
+   "link": "https://huggingface.co/blog/ibm-research/palette-deck-building"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Can we trust LLMs to judge whether a research idea is novel?",
-   "date": "2026-10-27",
+   "title": "CWE-bench v2: More coverage, quality, and transparency",
+   "date": "2026-11-03",
    "summary": "",
-   "link": "https://huggingface.co/blog/allenai/novelty-bench"
+   "link": "https://huggingface.co/blog/cwe-bench"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Does Your Model Run on AWS Trainium? Look It Up",
-   "date": "2026-10-23",
+   "title": "Transformers Model Integration Contracts",
+   "date": "2026-11-03",
    "summary": "",
-   "link": "https://huggingface.co/blog/torch-neuronx-model-support"
+   "link": "https://huggingface.co/blog/transformers-mic"
   },
   {
    "source": "OpenAI News",
-   "title": "Making it easier for websites to express AI training preferences",
-   "date": "2026-10-30",
-   "summary": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to participating providers.",
-   "link": "https://openai.com/index/helping-websites-express-ai-training-preferences"
+   "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+   "date": "2026-11-06",
+   "summary": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.",
+   "link": "https://openai.com/index/partnering-with-hacktron"
   },
   {
    "source": "OpenAI News",
-   "title": "Community safety report and new protections for teens",
-   "date": "2026-10-30",
-   "summary": "OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commitment to public safety reporting.",
-   "link": "https://openai.com/index/community-safety-report-and-new-protections-for-teens"
+   "title": "Measuring how AI agents handle everyday wet-lab science",
+   "date": "2026-11-06",
+   "summary": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
+   "link": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science"
   },
   {
    "source": "OpenAI News",
-   "title": "Fair use benefits everyone",
-   "date": "2026-10-30",
-   "summary": "OpenAI shares excerpts from court briefs by creators, academics, accessibility advocates, and legal experts, among others, on how fair use supports AI training and innovation.",
-   "link": "https://openai.com/index/fair-use-benefits-everyone"
+   "title": "Australian universities are creating AI-native graduates",
+   "date": "2026-11-05",
+   "summary": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare students for an AI-enabled workforce.",
+   "link": "https://openai.com/index/australian-universities-ai-native-graduates"
   },
   {
    "source": "OpenAI News",
-   "title": "An updated Model Spec for more capable and beneficial AI",
-   "date": "2026-10-29",
-   "summary": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.",
-   "link": "https://openai.com/index/updated-model-spec"
+   "title": "Cult.fit builds operational muscle with Codex",
+   "date": "2026-11-05",
+   "summary": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.",
+   "link": "https://openai.com/index/cultfit-builds-with-codex"
   },
   {
    "source": "OpenAI News",
-   "title": "How we detect frontier model misalignment",
-   "date": "2026-10-29",
-   "summary": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
-   "link": "https://openai.com/index/how-we-detect-frontier-model-misalignment"
+   "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+   "date": "2026-11-05",
+   "summary": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, trained to stay within authorized scope.",
+   "link": "https://openai.com/index/introducing-gpt-6-cyber"
   },
   {
    "source": "OpenAI News",
-   "title": "How Ropes & Gray is developing AI for transactional diligence",
-   "date": "2026-10-29",
-   "summary": "Ropes & Gray is developing AI for transactional diligence with OpenAI. Lawyers review grouped documents, summaries, and reports before advising clients.",
-   "link": "https://openai.com/index/ropes-gray-ai-diligence"
+   "title": "Merge builds product and business tools with OpenAI technology",
+   "date": "2026-11-05",
+   "summary": "Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing. Its teams also use AI to plan executive dinners and prepare sales updates.",
+   "link": "https://openai.com/index/merge-builds-with-openai"
   },
   {
    "source": "OpenAI News",
-   "title": "Credit Saison achieves 954% ROI in a ChatGPT Enterprise pilot",
-   "date": "2026-10-29",
-   "summary": "Credit Saison’s ChatGPT Enterprise pilot delivered 954% ROI. See how leaders and employees helped turn the results into companywide adoption.",
-   "link": "https://openai.com/index/credit-saison"
+   "title": "Setting a new standard for responsible AI infrastructure",
+   "date": "2026-11-05",
+   "summary": "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development.",
+   "link": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure"
   },
   {
    "source": "OpenAI News",
-   "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
-   "date": "2026-10-28",
-   "summary": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.",
-   "link": "https://openai.com/index/openai-servicenow-partnership-expansion"
+   "title": "Flipsnack grows product signups with conversion optimization",
+   "date": "2026-11-05",
+   "summary": "Flipsnack focused its ChatGPT Ads campaigns on getting people to try its product, growing registrations while lowering the cost per signup.",
+   "link": "https://openai.com/ads/customers/flipsnack"
+  },
+  {
+   "source": "Google Research",
+   "title": "Detecting signs of hypertension using wearable sensors",
+   "date": "2026-11-05",
+   "summary": "Health & Bioscience",
+   "link": "https://research.google/blog/detecting-signs-of-hypertension-using-wearable-sensors/"
+  },
+  {
+   "source": "Google Research",
+   "title": "Agile Deliberation: How AI helps humans define the gray areas",
+   "date": "2026-11-04",
+   "summary": "Data Mining & Modeling",
+   "link": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/"
   },
   {
    "source": "Google Research",
@@ -261,20 +275,6 @@
    "date": "2026-10-14",
    "summary": "General Science",
    "link": "https://research.google/blog/analyzing-technical-documents-with-deep-review/"
-  },
-  {
-   "source": "Google Research",
-   "title": "Research@ 2026: 10 ways we're amplifying human ingenuity",
-   "date": "2026-10-14",
-   "summary": "General Science",
-   "link": "https://research.google/blog/research-2026-10-ways-were-amplifying-human-ingenuity/"
-  },
-  {
-   "source": "Google Research",
-   "title": "Does better work always mean better workers?",
-   "date": "2026-10-07",
-   "summary": "",
-   "link": "https://research.google/blog/does-better-work-always-mean-better-workers/"
   }
  ]
 }
