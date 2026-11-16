@@ -1,8 +1,12 @@
 {
- "as_of": "2026-11-09",
+ "as_of": "2026-11-16",
  "foresight": [
   {
    "theme": "RAG",
+   "sources": 4
+  },
+  {
+   "theme": "多模态",
    "sources": 4
   },
   {
@@ -10,19 +14,11 @@
    "sources": 3
   },
   {
-   "theme": "多模态",
-   "sources": 3
-  },
-  {
-   "theme": "AI安全/Responsible AI",
-   "sources": 2
-  },
-  {
    "theme": "Eval 评测",
    "sources": 2
   },
   {
-   "theme": "MLOps/LLMOps",
+   "theme": "Serving 推理",
    "sources": 2
   }
  ],
@@ -56,16 +52,16 @@
   "source": "W1 (2026-05-19, 63 岗样本中 22 个有 yearly salary)"
  },
  "salary_this_week_snapshot": {
-  "median_k": 165,
-  "n": 15,
+  "median_k": 105,
+  "n": 14,
   "note": "本周样本量不稳，仅辅助参考；以 salary baseline 为准"
  },
  "top_employers": [
-  "Atlassian",
+  "Ensisinfo Inc",
+  "Thomson Reuters",
   "Booz Allen Hamilton",
   "Optum",
-  "Qualcomm",
-  "TikTok USDS Joint Venture"
+  "Qualcomm"
  ],
  "target_roles": [
   "AI Engineer",
