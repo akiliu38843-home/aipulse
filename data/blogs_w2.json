@@ -1,12 +1,12 @@
 {
- "collected_at": "2026-11-16T03:58:59",
+ "collected_at": "2026-11-23T04:55:00",
  "source_status": {
   "Simon Willison": "ok:8",
   "Lilian Weng": "ok:0",
-  "Sebastian Raschka": "ok:5",
+  "Sebastian Raschka": "ok:4",
   "HuggingFace Blog": "ok:8",
   "Chip Huyen": "ok:0",
-  "Eugene Yan": "ok:0",
+  "Eugene Yan": "ok:1",
   "Jay Alammar": "ok:0",
   "Berkeley BAIR": "ok:1",
   "The Gradient": "ok:0",
@@ -19,59 +19,59 @@
  "items": [
   {
    "source": "Simon Willison",
-   "title": "datasette-maplibre 0.1a0",
-   "date": "2026-11-15",
-   "summary": "Release: datasette-maplibre 0.1a0 The first new Datasette geospatial plugin in quite a while! This one combines the excellent MapLibre GL library with OpenFreeMap , the free vector map server operated by Zsolt Ero (you should sponsor Zsolt on GitHub .) I built most of this with a single prompt to Claude Fable 5.2: Look at datasette-cluster-map and datasette-leaflet-geojson plugins, then look at ~/dev/tools/openfreemap-demo.html - then build a brand new Datasette plugin that uses maplibreGL and openfreemap and combines the features of those other two plugins - but be creative and think outside ",
-   "link": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/"
+   "title": "Select Styling Specimens",
+   "date": "2026-11-22",
+   "summary": "Tool: Select Styling Specimens I got frustrated at how HTML &lt;select&gt; boxes default to looking different in different browsers, and are (I think) quite ugly in Chrome: So I had Claude Fable 5.2 build me this page showing all of the ways they can be styled: Build an HTML page that shows all of the ways a select box can be styled, I plan to take screenshots in every desktop and mobile browser After some experimentation I've decided my favorite CSS for select boxes is this: select { appearance : none ; color : # 1f2933 ; padding : 0.5 em 2.25 em 0.5 em 0.75 em ; border : 1 px solid # c4cbd3 ",
+   "link": "https://simonwillison.net/2026/Nov/22/select-styling/"
   },
   {
    "source": "Simon Willison",
-   "title": "datasette 1.0a43",
-   "date": "2026-11-15",
-   "summary": "Release: datasette 1.0a43 I've been leaning hard into Claude Fable 5.2 to help knock things off the 1.0 milestone , which is now 53% complete. The biggest 1.0 item in this release is streaming support for output renderers - the built-in TSV and CSV export mechanisms now use this as well, and plugins can register themselves as capable of streaming every row in a table in one go via the new Response.stream() method. There are a couple of security fixes, one of which I deemed deserving of a GitHub advisory : private stored queries could be exposed, granting access to the title and SQL of the quer",
-   "link": "https://simonwillison.net/2026/Nov/15/datasette/"
+   "title": "Muru",
+   "date": "2026-11-21",
+   "summary": "Muru Graham Dumpleton started mod_wsgi 20 years ago, and has been thinking about the ideal way to serve Python web applications in production ever since. Muru is his new, AI-assisted Rust server that aims to provide the best possible tools for running ASGI and WSGI Python apps both in development and production. As he did with wrapture , he's been publishing an extraordinarily detailed account of the project as he works on it - as part of his development process. Here's everything he's published so far, all in the last three weeks: 2026-11-04 — Twenty years of mod_wsgi, and what comes next 202",
+   "link": "https://simonwillison.net/2026/Nov/21/muru/"
   },
   {
    "source": "Simon Willison",
-   "title": "datasette 0.65.6",
-   "date": "2026-11-15",
-   "summary": "Release: datasette 0.65.6 I backported a minor security fix from 1.0a43: Fixed a security issue where a database registered using add_database(db, name=..., route=...) with a route that differs from its name could be downloaded from /&lt;route&gt;.db by actors who were denied access to it. [...] Tags: security , datasette",
-   "link": "https://simonwillison.net/2026/Nov/15/datasette-2/"
+   "title": "Quoting Ravi Vakil",
+   "date": "2026-11-20",
+   "summary": "Alessandro Masullo has a proposed proof of [Generalized Riemann Hypothesis], and Brian Conrad has been looking closely at it for months and gave extensive feedback which is being incorporated, and it is so far looking good. It is all human, with no AI. The hope was to bring Alessandro to Stanford for a year to polish the writing and then announce it after running it by enough people. Now it seems best to put out the current draft. &mdash; Ravi Vakil , Hurried Announcement: Alessandro Masullo GRH Tags: mathematics",
+   "link": "https://simonwillison.net/2026/Nov/20/ravi-vakil/"
   },
   {
    "source": "Simon Willison",
-   "title": "datasette-apps 0.4a0",
-   "date": "2026-11-15",
-   "summary": "Release: datasette-apps 0.4a0 Datasette Apps are sandboxed HTML and JavaScript applications that live inside Datasette - think Claude Artifacts, but these ones can run SQL queries against your data. 0.4a0 adds support for linking: you can link to an app with #fragments in the URL and the app can see and use those, plus supported URL schemes are reported back to Datasette Agent so it can help write apps that link to each other. This means you can have e.g. an app that shows details about a specific record, and a completely separate app that searches those records and links to their representati",
-   "link": "https://simonwillison.net/2026/Nov/15/datasette-apps/"
+   "title": "Quoting Levent Alpöge",
+   "date": "2026-11-20",
+   "summary": "I believe I have, working with Claude, discovered a proof of the Riemann Hypothesis. In fact, the method easily extends much further, resolving the so-called Generalized Riemann Hypothesis, and I expect, with more time, the Extended Riemann Hypothesis too. Claude and I have also formalized the arguments without assumptions. It is natural to feel that this is an end, in my case a loss of a principal guiding light, but what I saw during the course of progress so amazed me that I believe it is one dawn across science of something far greater. [...] Claude and I have had a great time together with",
+   "link": "https://simonwillison.net/2026/Nov/20/levent-alpoge/"
   },
   {
    "source": "Simon Willison",
-   "title": "datasette-agent 0.6a0",
-   "date": "2026-11-15",
-   "summary": "Release: datasette-agent 0.6a0 Accumulated small fixes for Datasette Agent, my agent plugin for Datasette that lets you ask questions about your data. Most notably, it now adds an agent prompt directly to the Datasette homepage, with support for hash-mentions of tables and queries: Tags: datasette-agent , llm , datasette , llms , ai , generative-ai",
-   "link": "https://simonwillison.net/2026/Nov/15/datasette-agent/"
+   "title": "llm-gemini 0.38.1",
+   "date": "2026-11-20",
+   "summary": "Release: llm-gemini 0.38.1 Gemini 4 Carbon only supports low , medium and high reasoning levels - but Gemini 4 Hydrogen and Gemini 4 Neon both have an extra xhigh level. I missed that when I added those models to the llm-gemini plugin, which is now fixed in this dot release. The xhigh setting for Hydrogen makes a significant difference. I updated my Gemini 4 comparison grid - note how Hydrogen at high used 5,311 output tokens and cost 3.99 cents, but the same model at xhigh used 31,477 output tokens, cost 23.61 cents, and produced a pelican that's competitive with Gemini 4 Neon: Tags: gemini ,",
+   "link": "https://simonwillison.net/2026/Nov/20/llm-gemini/"
   },
   {
    "source": "Simon Willison",
-   "title": "datasette-llm 0.1a11",
-   "date": "2026-11-14",
-   "summary": "Release: datasette-llm 0.1a11 datasette-llm is the intermediate plugin for Datasette that supports configuring LLMs for use with other Datasette plugins. This release adds support for OpenAI-compatible endpoints, so you can configure Datasette to use an LLM hosted anywhere that talks the OpenAI pseudo-standard web protocol. This means that if you're running local models with LM Studio or Ollama or llama.cpp (which just hit v1.0.0 ) you can run Datasette via uvx like this: wget https://datasette.io/content.db uvx --with datasette-agent datasette \\ --root --secret 1 \\ -s plugins.datasette-llm.de",
-   "link": "https://simonwillison.net/2026/Nov/14/datasette-llm/"
+   "title": "Token fraud is here and it’s BAD (YouTube)",
+   "date": "2026-11-20",
+   "summary": "Token fraud is here and it’s BAD (YouTube) Claire Vo runs ChatPRD , an AI platform that helps product managers \"turn an idea into a spec\". The product has been live since the GPT-4 era, and Claire has been building it in public for much of that time. In this YouTube video (see also the accompanying Twitter post ) Claire describes the flood of token fraud she has seen from groups abusing the product's free trial, sometimes just to get free AI usage but often to resell tokens or run other commercial enterprises on top of the ChatPRD agent. I am funding a international Roblox and Fortnite map stu",
+   "link": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/"
   },
   {
    "source": "Simon Willison",
-   "title": "datasette-vega 0.7",
-   "date": "2026-11-14",
-   "summary": "Release: datasette-vega 0.7 A new release of Datasette's longest untouched plugin, for rendering charts (using Vega-Lite ) against data in a table or custom query. The last release was in July 2018! I finally bumped it for compatibility with the latest Datasette alphas, plus some cosmetic tweaks to make it work better with Datasette Lite . (Datasette Lite just gained the ability to run JavaScript plugins like this! I'll write more about that soon.) Since it works with Datasette Lite, the live demo in the README now links to this demo on Datasette Lite . Tags: datasette , datasette-lite",
-   "link": "https://simonwillison.net/2026/Nov/14/datasette-vega/"
+   "title": "PostgreSQL 19 Released",
+   "date": "2026-11-19",
+   "summary": "PostgreSQL 19 Released Most years PostgreSQL ships a new release in September, but this year's release came two months later thanks mainly to the flurry of issues that the PostgreSQL team needed to address as part of the ongoing AI-reported vulnerability apocalypse. This release was definitely worth the wait. My favorite new feature is this one: For applications that send reads to standbys, PostgreSQL 19 adds \"read-your-writes\" consistency with the new WAIT FOR LSN command. A session on a standby can use WAIT FOR LSN to wait until the standby has replayed the write-ahead log (WAL) up to a spec",
+   "link": "https://simonwillison.net/2026/Nov/19/postgresql-19/"
   },
   {
    "source": "Simon Willison",
-   "title": "datasette-cluster-map 0.19",
-   "date": "2026-11-13",
-   "summary": "Release: datasette-cluster-map 0.19 One of the oldest Datasette plugins, and still one of my favorites. It now works with Datasette 1.0a42, and depends on the new datasette-leaflet to ensure OpenStreetMap tiles are requested with a referrer header. Here's a map of power plants owned by California's PG&amp;E , also demonstrating Datasette's recently redesigned facets : Tags: datasette , geospatial , openstreetmap",
-   "link": "https://simonwillison.net/2026/Nov/13/datasette-cluster-map/"
+   "title": "llm-gemini 0.38",
+   "date": "2026-11-18",
+   "summary": "Release: llm-gemini 0.38 Today Google introduced Gemini 4 Neon . I wrote recently about how confusing the pricing for the Gemini 4 series was - Neon has somehow made this even worse. Previously the Gemini 4 lineup was Hydrogen, Argon, and Carbon - where Argon and Carbon were the same price , and Hydrogen was 3/4 of that price now but will be 1/4 of that price when the other two double an 1st December once their initial discount pricing expires. The Neon announcement pretends that Argon doesn't exist. Here's their new image explaining the model line-up: So the lineup now, from most to least exp",
+   "link": "https://simonwillison.net/2026/Nov/18/llm-gemini/"
   },
   {
    "source": "Sebastian Raschka",
@@ -102,67 +102,67 @@
    "link": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and"
   },
   {
-   "source": "Sebastian Raschka",
-   "title": "How Claude Watermarks AI-Generated Text",
-   "date": "2026-08-22",
-   "summary": "A 48-minute video walkthrough of token sampling, watermark detection, and removal",
-   "link": "https://magazine.sebastianraschka.com/p/claude-watermarking"
+   "source": "HuggingFace Blog",
+   "title": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
+   "date": "2026-11-20",
+   "summary": "",
+   "link": "https://huggingface.co/blog/inkling2mini"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
-   "date": "2026-11-13",
+   "title": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+   "date": "2026-11-20",
    "summary": "",
-   "link": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place"
+   "link": "https://huggingface.co/blog/harness-adapters-at-scale"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "XYBench: Helping with the problem behind the question",
-   "date": "2026-11-13",
+   "title": "DaisyRose-27B: Pushing the Frontier of Post-Training Efficiency",
+   "date": "2026-11-18",
    "summary": "",
-   "link": "https://huggingface.co/blog/allenai/xybench"
+   "link": "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
-   "date": "2026-11-13",
+   "title": "Why your fine-tuning job takes longer than the FLOPs say",
+   "date": "2026-11-18",
    "summary": "",
-   "link": "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
+   "link": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
-   "date": "2026-11-12",
+   "title": "Time-Series Models in the Streamhouse: A New Frontier and Use Cases",
+   "date": "2026-11-18",
    "summary": "",
-   "link": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite"
+   "link": "https://huggingface.co/blog/ibm-research/time-series-powered-streamhouse"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "The Definitive Fine-Tuning Guide for 3D Generation Models",
-   "date": "2026-11-12",
+   "title": "180B Parameters, 32GB of RAM: Pushing MoE Inference to the Limit with Transformers",
+   "date": "2026-11-18",
    "summary": "",
-   "link": "https://huggingface.co/blog/3d-lora-finetuning"
+   "link": "https://huggingface.co/blog/moe-expert-streaming"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
-   "date": "2026-11-11",
+   "title": "Rumble-2-Flash: an open 0.5B speech model for 40+ languages",
+   "date": "2026-11-18",
    "summary": "",
-   "link": "https://huggingface.co/blog/qvac/botpsy"
+   "link": "https://huggingface.co/blog/rumble-2-flash"
   },
   {
    "source": "HuggingFace Blog",
-   "title": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
-   "date": "2026-11-11",
+   "title": "Hugging Face and OpenRouter join forces to make open-weight models easy to run",
+   "date": "2026-11-16",
    "summary": "",
-   "link": "https://huggingface.co/blog/token-pooling"
+   "link": "https://huggingface.co/blog/openrouter"
   },
   {
-   "source": "HuggingFace Blog",
-   "title": "Pay for Hugging Face Hub with your Google Cloud Account",
-   "date": "2026-11-10",
-   "summary": "",
-   "link": "https://huggingface.co/blog/hub-gcp-marketplace"
+   "source": "Eugene Yan",
+   "title": "How Public Evals Work and Fail, and What Should Change",
+   "date": "2026-11-22",
+   "summary": "How to read eval scores and what to question, from a teardown of 12 benchmarks.",
+   "link": "https://eugeneyan.com/writing/public-evals"
   },
   {
    "source": "Berkeley BAIR",
@@ -173,59 +173,73 @@
   },
   {
    "source": "OpenAI News",
-   "title": "A step toward defining the Standard Model on a lattice",
-   "date": "2026-11-15",
-   "summary": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
-   "link": "https://openai.com/index/step-toward-defining-the-standard-model"
+   "title": "Perplexity and Intelligence",
+   "date": "2026-11-22",
+   "summary": "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities.",
+   "link": "https://openai.com/index/perplexity-and-intelligence"
   },
   {
    "source": "OpenAI News",
-   "title": "Our new blog for science",
-   "date": "2026-11-15",
-   "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-   "link": "https://openai.com/index/our-new-blog-for-science"
+   "title": "Combatting adversarial distillation",
+   "date": "2026-11-20",
+   "summary": "OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction.",
+   "link": "https://openai.com/index/combatting-adversarial-distillation"
   },
   {
    "source": "OpenAI News",
-   "title": "Introducing ChatGPT Wallet",
-   "date": "2026-11-13",
-   "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
-   "link": "https://openai.com/index/introducing-chatgpt-wallet"
+   "title": "Hebbia sees improvements in financial research with GPT-6 Astra",
+   "date": "2026-11-20",
+   "summary": "Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality.",
+   "link": "https://openai.com/business/customer-stories/hebbia"
   },
   {
    "source": "OpenAI News",
-   "title": "Shield helps technicians hand off legacy portal work with OpenAI",
-   "date": "2026-11-13",
-   "summary": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their judgment.",
-   "link": "https://openai.com/business/customer-stories/shield"
+   "title": "Can AI help scientists identify promising drug candidates?",
+   "date": "2026-11-20",
+   "summary": "MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery.",
+   "link": "https://openai.com/index/introducing-medchembench"
   },
   {
    "source": "OpenAI News",
-   "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
-   "date": "2026-11-12",
-   "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
-   "link": "https://openai.com/business/customer-stories/amplitude"
+   "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+   "date": "2026-11-19",
+   "summary": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
+   "link": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast"
   },
   {
    "source": "OpenAI News",
-   "title": "Gondola doubles revenue as its team builds more with Codex",
-   "date": "2026-11-12",
-   "summary": "Gondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and ChatGPT simplifying daily work.",
-   "link": "https://openai.com/business/customer-stories/gondola"
+   "title": "Deploying Daybreak Red",
+   "date": "2026-11-19",
+   "summary": "Explore a reference architecture for supervised security investigations with Daybreak Red, including safety controls, setup, and monitoring.",
+   "link": "https://openai.com/business/learn/deploying-daybreak-red"
   },
   {
    "source": "OpenAI News",
-   "title": "Holiday Extras is rethinking what it can build with Codex",
-   "date": "2026-11-12",
-   "summary": "With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilities for growth.",
-   "link": "https://openai.com/business/customer-stories/holidays-extras-codex"
+   "title": "See PR scans in action",
+   "date": "2026-11-19",
+   "summary": "Watch a walkthrough of PR scans and see how the presenter reviews scan results in a pull request workflow.",
+   "link": "https://openai.com/business/learn/pr-scans-demo"
   },
   {
    "source": "OpenAI News",
-   "title": "Supporting research on AI and children’s safety",
-   "date": "2026-11-12",
-   "summary": "OpenAI commits $2 million to research on AI and children’s safety. The work supports shared tools to measure risks and opportunities for young people.",
-   "link": "https://openai.com/index/children-first-declaration"
+   "title": "Get started with Daybreak Blue",
+   "date": "2026-11-19",
+   "summary": "Watch a walkthrough of onboarding to Daybreak Blue, with a closer look at the setup experience and how to get started.",
+   "link": "https://openai.com/business/learn/daybreak-blue-onboarding-demo"
+  },
+  {
+   "source": "Google Research",
+   "title": "How Google Duplex evolved to also call businesses for you in Gemini",
+   "date": "2026-11-20",
+   "summary": "Generative AI",
+   "link": "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini/"
+  },
+  {
+   "source": "Google Research",
+   "title": "A game you cannot win unless you have a quantum computer",
+   "date": "2026-11-19",
+   "summary": "Quantum",
+   "link": "https://research.google/blog/a-game-you-cannot-win-unless-you-have-a-quantum-computer/"
   },
   {
    "source": "Google Research",
@@ -268,20 +282,6 @@
    "date": "2026-10-27",
    "summary": "Education Innovation",
    "link": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/"
-  },
-  {
-   "source": "Google Research",
-   "title": "Bringing foundational models to the front lines of TB screening",
-   "date": "2026-10-23",
-   "summary": "Generative AI",
-   "link": "https://research.google/blog/bringing-foundational-models-to-the-front-lines-of-tb-screening/"
-  },
-  {
-   "source": "Google Research",
-   "title": "Empowering frontline maternal care with AI-assisted ultrasound",
-   "date": "2026-10-21",
-   "summary": "Health & Bioscience",
-   "link": "https://research.google/blog/empowering-frontline-maternal-care-with-ai-assisted-ultrasound/"
   }
  ]
 }

@@ -1,21 +1,21 @@
 {
- "as_of": "2026-11-16",
+ "as_of": "2026-11-23",
  "model": "deepseek-chat",
  "enterprise": {
   "NVDA": {
    "name": "NVIDIA Corporation",
-   "ai_strategy_one_line_zh": "以CUDA平台和全栈软硬件协同打造数据中心级AI基础设施，赋能各行业AI应用。",
-   "ai_strategy_one_line_en": "Builds data center-scale AI infrastructure with the CUDA platform and full-stack co-designed hardware and software.",
+   "ai_strategy_one_line_zh": "以全栈CUDA软硬件协同平台构建数据中心级AI基础设施，赋能云服务商、模型商与企业。",
+   "ai_strategy_one_line_en": "Builds full-stack, data-center-scale AI infrastructure via CUDA, co-designed hardware, software and models for CSPs, model makers and enterprises.",
    "canonical_theme": "Enterprise AI Platform",
    "concrete_bets": [
-    "CUDA software stack",
-    "Data center-scale AI infrastructure",
-    "Extreme co-design of chips, networking, systems, software"
+    "CUDA software stack and domain libraries",
+    "Data-center-scale extreme co-design (Blackwell)",
+    "Full-stack platform with AI models and services"
    ],
    "_usage": {
     "prompt_tokens": 654,
-    "completion_tokens": 130,
-    "total_tokens": 784,
+    "completion_tokens": 145,
+    "total_tokens": 799,
     "prompt_tokens_details": {
      "cached_tokens": 0
     },
@@ -25,18 +25,18 @@
   },
   "MSFT": {
    "name": "Microsoft Corporation",
-   "ai_strategy_one_line_zh": "负责任地让AI惠及大众，以Microsoft Cloud全栈AI平台和Copilot智能体提升生产力。",
-   "ai_strategy_one_line_en": "Democratize responsible AI across the full stack, led by Microsoft Cloud platform and Microsoft 365 Copilot agents.",
+   "ai_strategy_one_line_zh": "以负责任的全栈AI平台赋能个人与组织，通过智能云和Microsoft 365 Copilot及代理实现生产力变革并优先保障安全。",
+   "ai_strategy_one_line_en": "Empower every person and organization through a responsible, full-stack AI platform spanning the intelligent cloud and Microsoft 365 Copilot and agents, prioritizing security.",
    "canonical_theme": "Enterprise AI Platform",
    "concrete_bets": [
     "Microsoft Cloud AI platform wave",
     "Microsoft 365 Copilot and agents",
-    "AI-driven security and compliance"
+    "Security-first responsible AI"
    ],
    "_usage": {
     "prompt_tokens": 604,
-    "completion_tokens": 106,
-    "total_tokens": 710,
+    "completion_tokens": 141,
+    "total_tokens": 745,
     "prompt_tokens_details": {
      "cached_tokens": 384
     },
@@ -46,39 +46,39 @@
   },
   "PLTR": {
    "name": "Palantir Technologies Inc.",
-   "ai_strategy_one_line_zh": "通过AIP平台将生成式AI模型与企业本体及现有平台集成，实现企业和政府领域的负责任AI优势。",
-   "ai_strategy_one_line_en": "Integrate generative AI models with enterprise ontology and existing platforms via AIP for responsible AI advantage across enterprise and government.",
+   "ai_strategy_one_line_zh": "通过AIP平台将生成式AI与现有数据平台结合，实现企业及政府领域负责任AI优势。",
+   "ai_strategy_one_line_en": "Combine generative AI with existing data platforms via AIP to enable responsible AI advantage across enterprise and government.",
    "canonical_theme": "Enterprise AI Platform",
    "concrete_bets": [
     "AIP platform",
     "Ontology integration",
-    "Unified LLM access (open-source, self-hosted, commercial)"
+    "Gotham and Foundry AI enablement"
    ],
    "_usage": {
     "prompt_tokens": 660,
-    "completion_tokens": 134,
-    "total_tokens": 794,
+    "completion_tokens": 125,
+    "total_tokens": 785,
     "prompt_tokens_details": {
-     "cached_tokens": 0
+     "cached_tokens": 512
     },
-    "prompt_cache_hit_tokens": 0,
-    "prompt_cache_miss_tokens": 660
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 148
    }
   },
   "META": {
    "name": "Meta Platforms, Inc.",
-   "ai_strategy_one_line_zh": "通过AI投资赋能社交产品、Meta AI助手与AI眼镜，并布局下一代计算平台",
-   "ai_strategy_one_line_en": "Invest in AI to power social products, the Meta AI assistant, and AI glasses, while building the next computing platform.",
-   "canonical_theme": "Multimodal",
+   "ai_strategy_one_line_zh": "以AI驱动社交与沉浸式体验，通过Meta AI助手、AI眼镜及底层模型投资构建下一代计算平台。",
+   "ai_strategy_one_line_en": "AI-driven social and immersive experiences via Meta AI assistant, AI glasses, and foundational model investments for next-gen computing.",
+   "canonical_theme": "Foundation Models",
    "concrete_bets": [
-    "Meta AI assistant across apps, web, and AI glasses",
-    "AI-driven content ranking and discovery engine",
-    "Ray-Ban Meta and Oakley Meta AI glasses"
+    "Meta AI assistant",
+    "AI glasses (Ray-Ban Meta, Oakley Meta)",
+    "AI content ranking and discovery engine"
    ],
    "_usage": {
     "prompt_tokens": 702,
-    "completion_tokens": 117,
-    "total_tokens": 819,
+    "completion_tokens": 127,
+    "total_tokens": 829,
     "prompt_tokens_details": {
      "cached_tokens": 0
     },
@@ -90,87 +90,85 @@
  "blog": {
   "themes": [
    {
-    "name_zh": "Datasette插件生态",
-    "name_en": "Datasette Plugin Releases",
-    "canonical_signal": "LLM/生成式AI应用",
+    "name_zh": "模型评测与可信度",
+    "name_en": "Evals & Trust",
+    "canonical_signal": "Eval 评测",
     "member_indices": [
-     1,
-     2,
-     3,
-     4,
-     5,
+     21,
+     23,
+     25,
+     26,
      6,
-     7,
-     8
+     24
     ],
-    "evidence_one_line_zh": "Simon Willison集中发布Datasette及其地理、图表、地图、Agent与LLM插件的一批小版本更新。",
-    "evidence_one_line_en": "Simon Willison ships a batch of Datasette core and geospatial, charting, agent and LLM plugin releases."
+    "evidence_one_line_zh": "公共评测方法、困惑度指标、金融与药物领域评测、token欺诈与对抗蒸馏，均聚焦衡量与保障模型能力可信。",
+    "evidence_one_line_en": "Public benchmarks, perplexity, domain evals, token fraud, and adversarial distillation all address measuring and securing model capability."
    },
    {
-    "name_zh": "LLM原理与推理建模",
-    "name_en": "LLM Internals & Reasoning",
+    "name_zh": "推理部署与效率",
+    "name_en": "Serving & Efficiency",
+    "canonical_signal": "Serving 推理",
+    "member_indices": [
+     13,
+     14,
+     15,
+     16,
+     18,
+     20,
+     19,
+     17
+    ],
+    "evidence_one_line_zh": "本地小模型、harness适配、后训练效率、微调性能、MoE极限推理、开放权重托管、语音与时序模型部署。",
+    "evidence_one_line_en": "Local models, harness adapters, post-training efficiency, fine-tuning performance, MoE inference, open-weight hosting, speech and time-series deployment."
+   },
+   {
+    "name_zh": "LLM架构与训练",
+    "name_en": "LLM Architecture",
     "canonical_signal": "LLM/生成式AI应用",
     "member_indices": [
      9,
      10,
      11,
      12,
-     13
+     38
     ],
-    "evidence_one_line_zh": "Raschka从位置嵌入、推理模型课程、文本分类、循环Transformer到Claude水印等解释LLM内部机制。",
-    "evidence_one_line_en": "Raschka explains LLM internals from positional embeddings and reasoning-model courses to text classification, looped transformers and Claude watermarks."
+    "evidence_one_line_zh": "位置编码、推理模型课程、文本分类演进、循环Transformer与隐藏推理、持续学习睡眠框架等模型机制研究。",
+    "evidence_one_line_en": "Positional embeddings, reasoning-model courses, text-classification evolution, looped transformers, and continual-learning frameworks all study model mechanisms."
    },
    {
-    "name_zh": "开源本地模型工程",
-    "name_en": "Open-Source Local Model Tooling",
-    "canonical_signal": "Serving 推理",
-    "member_indices": [
-     14,
-     15,
-     16,
-     17,
-     18,
-     19,
-     20,
-     21
-    ],
-    "evidence_one_line_zh": "HuggingFace博客围绕llama.cpp v1.0、LLMON标记语言、嵌入池化、端侧小模型、3D微调与Hub计费等本地开源工程话题。",
-    "evidence_one_line_en": "HuggingFace posts cover local open-source engineering: llama.cpp v1.0, LLMON markup, embedding pooling, on-device small models, 3D fine-tuning and Hub billing."
-   },
-   {
-    "name_zh": "企业AI与Agent落地",
-    "name_en": "Enterprise AI Agent Adoption",
+    "name_zh": "AI产品与代理",
+    "name_en": "AI Products & Agents",
     "canonical_signal": "AI Agents/编排",
     "member_indices": [
-     23,
-     24,
-     25,
-     26,
-     27,
+     1,
+     8,
+     5,
+     2,
      28,
      29,
-     30
+     30,
+     27,
+     31
     ],
-    "evidence_one_line_zh": "OpenAI新闻集中于科学博客、ChatGPT Wallet及Shield、Amplitude、Gondola、Holiday Extras等企业用Codex/Agent提升生产力与安全研究。",
-    "evidence_one_line_en": "OpenAI news centers on a science blog, ChatGPT Wallet, plus Shield, Amplitude, Gondola and Holiday Extras using Codex/agents for enterprise productivity and safety research."
+    "evidence_one_line_zh": "Gemini模型接入、Python服务框架、Daybreak安全调查代理、PR扫描、性能工厂与Gemini语音代理等产品化代理能力。",
+    "evidence_one_line_en": "Gemini integrations, Python serving, Daybreak security agents, PR scans, performance workflows, and Gemini voice agents represent productized agent capabilities."
    },
    {
-    "name_zh": "AI科学健康应用",
-    "name_en": "AI for Science & Health",
-    "canonical_signal": "多模态",
+    "name_zh": "AI科学与数学",
+    "name_en": "AI for Science",
+    "canonical_signal": "OTHER",
     "member_indices": [
-     22,
-     31,
+     3,
+     4,
      32,
      33,
      34,
      35,
      36,
-     37,
-     38
+     37
     ],
-    "evidence_one_line_zh": "Google Research与BAIR展示可穿戴CKM风险、血压检测、TB筛查、超声母胎护理、语言探索及LLM持续学习等科学健康应用。",
-    "evidence_one_line_en": "Google Research and BAIR showcase wearables CKM risk, hypertension, TB screening, maternal ultrasound, language exploration and continual learning for science and health."
+    "evidence_one_line_zh": "黎曼猜想证明讨论、量子计算游戏、Antigravity科研、可穿戴健康风险、语言探索器与敏捷商讨等AI辅助科学探索。",
+    "evidence_one_line_en": "Riemann Hypothesis debates, quantum games, Antigravity research, wearable health, language explorer, and deliberation cover AI-assisted science."
    }
   ]
  },
@@ -179,14 +177,13 @@
    "多模态": "多模态",
    "具身/机器人AI": "具身/机器人AI",
    "RAG": "RAG",
-   "Enterprise AI Platform": "LLM/生成式AI应用",
-   "Foundation Models": "LLM/生成式AI应用",
+   "Enterprise AI Platform": "Enterprise AI Platform",
+   "Multimodal": "多模态",
    "LLM/生成式AI应用": "LLM/生成式AI应用",
-   "AI安全/Responsible AI": "AI安全/Responsible AI",
+   "Serving 推理": "Serving 推理",
    "AI Agents/编排": "AI Agents/编排",
    "MCP 协议": "MCP 协议",
    "Eval 评测": "Eval 评测",
-   "Serving 推理": "Serving 推理",
    "Python": "Python",
    "AWS/Azure 云": "AWS/Azure 云",
    "Docker/Kubernetes": "Docker/Kubernetes",
@@ -198,13 +195,16 @@
    "AI编码agent(Claude Code/Cursor)当必备技能": "AI编码agent当硬技能",
    "Token/成本可观测": "AI系统可观测性/成本",
    "Prompt injection/AI安全": "AI安全/Responsible AI",
+   "AI安全/Responsible AI": "AI安全/Responsible AI",
    "企业数据上的应用LLM": "LLM/生成式AI应用",
    "AI编码agent(Codex/Claude Code/Cursor)当技能": "AI编码agent当硬技能",
    "开放权重/微调(LoRA/DoRA)": "开放权重/微调(LoRA/DoRA)",
    "LLM架构(attention/MoE)": "LLM架构(attention/MoE)",
    "与AI协作的工作方式": "与AI协作的工作方式"
   },
-  "new_canonicals": [],
-  "notes": "All raw themes mapped to known canonicals. Spelling variants and related concepts folded: Enterprise AI Platform and Foundation Models under LLM/生成式AI应用; AI系统可观测性 and Token/成本可观测 under AI系统可观测性/成本; Prompt injection/AI安全 under AI安全/Responsible AI; both AI coding agent skill variants under AI编码agent当硬技能; 企业数据上的应用LLM under LLM/生成式AI应用."
+  "new_canonicals": [
+   "Enterprise AI Platform"
+  ],
+  "notes": "Mapped spelling/synonym variants to known canonicals: Multimodal->多模态; AI系统可观测性 and Token/成本可观测->AI系统可观测性/成本; Prompt injection/AI安全->AI安全/Responsible AI; 企业数据上的应用LLM->LLM/生成式AI应用; both AI编码agent variants->AI编码agent当硬技能. Proposed one new canonical 'Enterprise AI Platform' because 'Enterprise AI Platform' is a distinct platform-level theme not covered by known canonicals (closest known is MLOps/LLMOps or LLM/生成式AI应用, but it denotes enterprise AI platform strategy)."
  }
 }

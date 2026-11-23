@@ -1,202 +1,201 @@
 {
- "collected_at": "2026-11-16T03:59:05",
+ "collected_at": "2026-11-23T04:55:07",
  "hf": {
   "status": "ok:30 sort=trendingScore",
   "tag_freq": {
-   "image-text-to-text": 10,
-   "text-generation": 4,
-   "text-to-image": 4,
-   "unknown": 3,
+   "image-text-to-text": 12,
+   "unknown": 5,
+   "audio-to-audio": 2,
+   "text-to-image": 2,
+   "text-generation": 2,
+   "depth-estimation": 1,
+   "text-to-video": 1,
    "image-to-video": 1,
    "text-to-speech": 1,
-   "audio-to-audio": 1,
-   "image-to-3d": 1,
-   "image-to-image": 1,
    "mask-generation": 1,
-   "image-feature-extraction": 1,
-   "image-text-to-video": 1,
-   "automatic-speech-recognition": 1
+   "image-to-image": 1,
+   "image-segmentation": 1
   },
   "trending": [
    {
-    "id": "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
-    "pipeline": "text-generation",
-    "downloads": 27037,
-    "likes": 7556
-   },
-   {
-    "id": "MiniMaxAI/MiniMax-H3-Image",
-    "pipeline": "text-to-image",
-    "downloads": 571067,
-    "likes": 1200
-   },
-   {
-    "id": "Qwen/Qwen3.8-27B",
+    "id": "thinkingmachines/Inkling-2-Mini",
     "pipeline": "image-text-to-text",
-    "downloads": 6547772,
-    "likes": 20136
+    "downloads": 23543,
+    "likes": 5079
    },
    {
-    "id": "Lightricks/LTX-2.5",
-    "pipeline": "image-to-video",
-    "downloads": 2754355,
-    "likes": 12076
-   },
-   {
-    "id": "Comfy-Org/MiniMax-H3-Image",
-    "pipeline": "text-to-image",
-    "downloads": 1973388,
-    "likes": 415
-   },
-   {
-    "id": "Zyphra/ZONOS3-Mini",
-    "pipeline": "text-to-speech",
-    "downloads": 39862,
-    "likes": 403
-   },
-   {
-    "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+    "id": "unsloth/Inkling-2-Mini-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 1708637,
-    "likes": 3171
+    "downloads": 805993,
+    "likes": 915
    },
    {
-    "id": "thinkingmachines/Inkling-2-Small",
+    "id": "inworld/voice-isolator",
+    "pipeline": "audio-to-audio",
+    "downloads": 0,
+    "likes": 648
+   },
+   {
+    "id": "tencent/Hy4-flash",
     "pipeline": "image-text-to-text",
-    "downloads": 7329,
-    "likes": 347
+    "downloads": 6617,
+    "likes": 624
    },
    {
-    "id": "unsloth/Qwen3.8-27B-GGUF",
-    "pipeline": "unknown",
-    "downloads": 6566295,
-    "likes": 6003
+    "id": "harness-hub/Qwen3.8-27B-pi-adapted",
+    "pipeline": "image-text-to-text",
+    "downloads": 2831,
+    "likes": 995
+   },
+   {
+    "id": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 129693,
+    "likes": 516
    },
    {
     "id": "higurashi-ai/Haru-4B",
     "pipeline": "audio-to-audio",
-    "downloads": 2098,
-    "likes": 318
+    "downloads": 8608,
+    "likes": 897
    },
    {
-    "id": "speridlabs/idol",
-    "pipeline": "image-to-3d",
-    "downloads": 33423,
-    "likes": 2371
+    "id": "apple/DepthPro2",
+    "pipeline": "depth-estimation",
+    "downloads": 0,
+    "likes": 356
    },
    {
-    "id": "NousResearch/Arete-27B",
-    "pipeline": "text-generation",
-    "downloads": 7497,
-    "likes": 615
-   },
-   {
-    "id": "moonshotai/Kimi-K3.1-Pro",
+    "id": "Qwen/Qwen3.8-27B",
     "pipeline": "image-text-to-text",
-    "downloads": 46766,
-    "likes": 2109
+    "downloads": 6297396,
+    "likes": 20946
    },
    {
-    "id": "Edge0/Edge0-145B-NVFP4",
-    "pipeline": "text-generation",
-    "downloads": 41606,
-    "likes": 292
+    "id": "sensenova/SenseNova-Loop-9B",
+    "pipeline": "image-text-to-text",
+    "downloads": 1863,
+    "likes": 559
    },
    {
-    "id": "black-forest-labs/flux-3-image-klein-comfy",
-    "pipeline": "image-to-image",
-    "downloads": 1182267,
-    "likes": 3260
+    "id": "apple/FastFrames-L",
+    "pipeline": "text-to-video",
+    "downloads": 0,
+    "likes": 543
+   },
+   {
+    "id": "SulphurAI/Sulphur-3",
+    "pipeline": "unknown",
+    "downloads": 78931,
+    "likes": 804
+   },
+   {
+    "id": "Lightricks/LTX-2.5",
+    "pipeline": "image-to-video",
+    "downloads": 2993088,
+    "likes": 13088
    },
    {
     "id": "chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized",
     "pipeline": "text-to-image",
-    "downloads": 120618,
-    "likes": 320
+    "downloads": 381769,
+    "likes": 813
    },
    {
-    "id": "mradermacher/gemma-4-31B-it-ARA-heretic-GGUF",
+    "id": "meituan-longcat/LongCat-Video-Avatar-1.6",
     "pipeline": "unknown",
-    "downloads": 149532,
-    "likes": 298
+    "downloads": 3483,
+    "likes": 443
+   },
+   {
+    "id": "MiniMaxAI/MiniMax-H3-Image",
+    "pipeline": "text-to-image",
+    "downloads": 952024,
+    "likes": 1789
+   },
+   {
+    "id": "maxwell-model/Maxwell-V1-Flash",
+    "pipeline": "text-generation",
+    "downloads": 3317,
+    "likes": 363
+   },
+   {
+    "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+    "pipeline": "image-text-to-text",
+    "downloads": 1827784,
+    "likes": 3580
+   },
+   {
+    "id": "RadixArk/DaisyRose-27B",
+    "pipeline": "image-text-to-text",
+    "downloads": 1815,
+    "likes": 316
+   },
+   {
+    "id": "facebook/sam-3d-body-dinov3",
+    "pipeline": "unknown",
+    "downloads": 18709,
+    "likes": 1732
+   },
+   {
+    "id": "Sentinel7/h3",
+    "pipeline": "unknown",
+    "downloads": 0,
+    "likes": 1223
+   },
+   {
+    "id": "n4ze3m/tiny-voca",
+    "pipeline": "text-to-speech",
+    "downloads": 10768,
+    "likes": 425
    },
    {
     "id": "facebook/sam3",
     "pipeline": "mask-generation",
-    "downloads": 2011153,
-    "likes": 6664
+    "downloads": 1806893,
+    "likes": 7262
    },
    {
-    "id": "Cactus-Compute/mirage",
-    "pipeline": "image-text-to-text",
-    "downloads": 28553,
-    "likes": 323
+    "id": "unsloth/Qwen3.8-27B-GGUF",
+    "pipeline": "unknown",
+    "downloads": 7683660,
+    "likes": 6367
    },
    {
     "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
     "pipeline": "image-text-to-text",
-    "downloads": 460551,
-    "likes": 5739
+    "downloads": 515306,
+    "likes": 5923
    },
    {
-    "id": "Abiray/MiniMax-H3-Image-GGUF",
-    "pipeline": "text-to-image",
-    "downloads": 127803,
-    "likes": 237
+    "id": "thinkingmachines/Inkling-2-Small",
+    "pipeline": "image-text-to-text",
+    "downloads": 48974,
+    "likes": 747
+   },
+   {
+    "id": "black-forest-labs/flux-3-image-klein-comfy",
+    "pipeline": "image-to-image",
+    "downloads": 950169,
+    "likes": 3753
+   },
+   {
+    "id": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+    "pipeline": "text-generation",
+    "downloads": 203420,
+    "likes": 777
+   },
+   {
+    "id": "briaai/RMBG-3.0",
+    "pipeline": "image-segmentation",
+    "downloads": 225,
+    "likes": 336
    },
    {
     "id": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
     "pipeline": "image-text-to-text",
-    "downloads": 2139859,
-    "likes": 1792
-   },
-   {
-    "id": "meituan-longcat/LongCat-2.5",
-    "pipeline": "image-text-to-text",
-    "downloads": 1573,
-    "likes": 271
-   },
-   {
-    "id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
-    "pipeline": "image-text-to-text",
-    "downloads": 4202683,
-    "likes": 2178
-   },
-   {
-    "id": "ConceptCountry/qwen-concept-27b",
-    "pipeline": "unknown",
-    "downloads": 63964,
-    "likes": 269
-   },
-   {
-    "id": "Qwen/Qwen3.8-Flash-Next",
-    "pipeline": "image-text-to-text",
-    "downloads": 2997819,
-    "likes": 7159
-   },
-   {
-    "id": "facebook/dinov3-vitl16-pretrain-lvd1689m",
-    "pipeline": "image-feature-extraction",
-    "downloads": 687007,
-    "likes": 2291
-   },
-   {
-    "id": "MiniMaxAI/MiniMax-H3",
-    "pipeline": "image-text-to-video",
-    "downloads": 6057372,
-    "likes": 6949
-   },
-   {
-    "id": "pyannote/speaker-diarization-community-1",
-    "pipeline": "automatic-speech-recognition",
-    "downloads": 4905484,
-    "likes": 4434
-   },
-   {
-    "id": "LiquidAI/LFM3-1.7B",
-    "pipeline": "text-generation",
-    "downloads": 103744,
-    "likes": 1800
+    "downloads": 2266182,
+    "likes": 2085
    }
   ]
  },
@@ -218,7 +217,7 @@
   "hot_ai_stories": [
    {
     "title": "Ask HN: What are the most useful, concrete AI skills to independently learn?",
-    "points": 88,
+    "points": 95,
     "url": null
    },
    {
@@ -229,16 +228,6 @@
    {
     "title": "Launch HN: Kino AI (YC S23) – AI media manager and video editor",
     "points": 112,
-    "url": null
-   },
-   {
-    "title": "Show HN: Spotatui, a Spotify TUI/GUI without web API rate limits",
-    "points": 92,
-    "url": "https://github.com/LargeModGames/spotatui"
-   },
-   {
-    "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
-    "points": 163,
     "url": null
    },
    {
@@ -255,6 +244,11 @@
     "title": "Launch HN: Rivet (YC W23) – Scale and Orchestrate Agents on S3",
     "points": 123,
     "url": "https://github.com/rivet-dev/rivet"
+   },
+   {
+    "title": "Show HN: Mastra Factory, the open-source software factory we use to build Mastra",
+    "points": 158,
+    "url": null
    }
   ],
   "status": "ok"
